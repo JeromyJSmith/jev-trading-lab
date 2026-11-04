@@ -16,9 +16,14 @@ import { LEVELS } from "../lib/levels";
 import type { JevUsage } from "../lib/cost";
 import { STATIC } from "../lib/static";
 
-/** Patch 0009: in the static demo every run says where its answer came from (recorded live, offline mock, edited). */
+/** Patch 0009/0013: in the static demo every run says where its answer came from (recorded live, or run locally). */
 const staticNote = ref<{ source: string; label: string } | null>(null);
-const runLabel = STATIC ? "Run (demo)" : "Run live";
+const runLabel = STATIC ? "Run" : "Run live";
+/** Patch 0013: no real example set for this scenario (private data); the card stays, Run is disabled. */
+const needsData = computed(() => props.option.data_status === "needs_your_data" && !props.option.inputs.length);
+const setMeta = computed(() => props.option.sets?.[setIndex.value]);
+const SOURCE_NAME: Record<string, string> = { sec_edgar: "SEC EDGAR", news_store: "news", prices: "5m bars", derived: "derived" };
+const links = computed(() => (setMeta.value?.provenance ?? []).filter((p) => p.url).slice(0, 4));
 
 const props = defineProps<{ n: number; option: OptionMeta; agent?: boolean }>();
 
@@ -40,7 +45,7 @@ const setNames = computed(() => props.option.inputs.map((_, i) => `Set ${props.o
 
 function loadSet(i: number) {
   setIndex.value = i;
-  input.value = JSON.parse(JSON.stringify(props.option.inputs[i]));
+  input.value = JSON.parse(JSON.stringify(props.option.inputs[i] ?? {}));
   resetOutputs();
 }
 const running = ref(false);
@@ -184,6 +189,7 @@ async function run() {
         policy.value = data;
       } else if (event === "static-note") {
         staticNote.value = data;
+        if (data.source !== "recorded") { visualOpen.value = false; status.value = "Run locally for a live Jev answer"; }
       } else if (event === "option-error") {
         errorText.value = data.error;
         status.value = "Error";
@@ -220,7 +226,7 @@ async function run() {
       <span class="spacer"></span>
       <button v-if="agent" class="ghost" @click="loadSet(setIndex); chat?.restart()">New session</button>
       <button v-else class="ghost" :disabled="running" @click="resetExample">Reset</button>
-      <button v-if="!agent" class="run" :disabled="running" @click="run">{{ runLabel }} <kbd>⌘↵</kbd></button>
+      <button v-if="!agent" class="run" :disabled="running || needsData" :title="needsData ? 'needs your data' : ''" data-testid="run" @click="run">{{ runLabel }} <kbd>⌘↵</kbd></button>
     </div>
 
     <div v-if="agent" class="example agent">
@@ -238,10 +244,20 @@ async function run() {
       <section class="glass chat-panel">
         <h3>Agent</h3>
         <div class="meta">A real pi session in the sandbox repo. One line per thing that happens.</div>
-        <div v-if="STATIC" class="lane" data-testid="agent-static"><span class="pill warn">mock only</span><span>Static demo: agent sessions (a pi coding agent in a sandbox repo, levels 6 to 10 originals) are not run here. No session, no model call. Run the lab locally for real sessions.</span></div>
+        <div v-if="STATIC" class="lane" data-testid="agent-static"><span class="pill warn">run locally</span><span>Run locally for a live Jev answer: agent sessions (a pi coding agent in a sandbox repo, levels 6 to 10 originals) are not run on this static site. No session, no model call, no result shown.</span></div>
         <AgentChat v-else ref="chat" :key="option.key" :n="n" :option="option.key" :config="agentConfig" :prompt="agentPrompt" :then="agentThen" />
       </section>
 
+      <CodeView :file="option.file" :call="option.call" :code="option.code" :input="input" />
+    </div>
+
+    <div v-else-if="needsData" class="example">
+      <section class="glass" data-testid="needs-your-data">
+        <h3>Inputs</h3>
+        <h4>Input Examples</h4>
+        <div class="lane"><span class="pill warn">needs your data</span><span>needs your data: {{ (option.data_reason ?? "no public real source").replace(/^needs your data:\s*/, "") }}</span></div>
+        <div class="meta">No public real example set exists for this scenario, so nothing is bundled and Run is disabled. Supply your own real records (decisions/decisions/realdata/CONTRACT.md) and run the lab locally.</div>
+      </section>
       <CodeView :file="option.file" :call="option.call" :code="option.code" :input="input" />
     </div>
 
@@ -260,6 +276,15 @@ async function run() {
             @click="loadSet(i)"
           >{{ name }}</button>
         </div>
+        <div v-if="setMeta" class="set-card" data-testid="set-card">
+          <span class="pill">{{ setMeta.set_id }}</span>
+          <span class="pill warn" data-testid="unlabelled">{{ setMeta.label_status }}</span>
+          <span v-if="setMeta.derivation && setMeta.derivation !== 'real'" class="pill">{{ setMeta.derivation.replace(/_/g, " ") }}</span>
+          <span class="meta-inline">real market data<template v-if="setMeta.point_in_time_cutoff">, cutoff {{ setMeta.point_in_time_cutoff }}</template></span>
+          <span v-for="(p, j) in links" :key="j"><a :href="p.url" target="_blank" rel="noopener" data-testid="provenance">{{ SOURCE_NAME[p.source] ?? p.source }}{{ p.published_at ? ` ${p.published_at.slice(0, 10)}` : "" }}</a></span>
+          <span v-if="!links.length" class="meta-inline">{{ (setMeta.provenance[0]?.source && SOURCE_NAME[setMeta.provenance[0].source]) || "computed" }}, no public link</span>
+          <div v-if="STATIC && setMeta.excerpt_policy && setMeta.excerpt_policy.startsWith('news')" class="meta">News text shown as headline + link + an excerpt of at most 200 chars (publishing policy); the live run used the full item.</div>
+        </div>
         <SchemaForm v-if="option.input_schema" :key="option.key + setIndex" v-model="input" :schema="option.input_schema" :errors="schemaErrors" />
         <InputEditor v-else v-model="input" />
         <template v-if="sentHtml">
@@ -277,7 +302,7 @@ async function run() {
       <section class="glass">
         <h3>Outputs</h3>
         <div class="meta">{{ status }}</div>
-        <div v-if="staticNote" class="lane" data-testid="static-note"><span class="pill" :class="staticNote.source === 'recorded' ? 'ok' : 'warn'">{{ staticNote.source === "recorded" ? "recorded" : staticNote.source === "edited" ? "edited" : "mock" }}</span><span>{{ staticNote.label }}</span></div>
+        <div v-if="staticNote" class="lane" data-testid="static-note"><span class="pill" :class="staticNote.source === 'recorded' ? 'ok' : 'warn'">{{ staticNote.source === "recorded" ? "recorded" : "run locally" }}</span><span>{{ staticNote.label }}</span></div>
         <div ref="vizEl" class="viz-slot"></div>
         <template v-if="answersHtml">
           <h4>Answers</h4>

@@ -84,88 +84,215 @@
    },
    "inputs": [
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headline": "Coca-Cola declares quarterly dividend of $0.51",
-     "published_at": "2026-10-07T12:05:00Z",
-     "source": "newswire (synthetic)",
-     "symbol": "KO",
-     "venue": "NYSE"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headline": "Netflix Q3 revenue +15%, raises guide",
-     "published_at": "2026-10-07T12:05:00Z",
-     "source": "newswire (synthetic)",
-     "symbol": "NFLX",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headline": "Sage agrees to mixed cash-and-CVR offer with regulatory conditions",
-     "published_at": "2026-10-07T12:05:00Z",
-     "source": "newswire (synthetic)",
-     "symbol": "SAGE",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headline": "AMD to present at Nasdaq investor conference",
-     "published_at": "2026-10-07T12:05:00Z",
-     "source": "newswire (synthetic)",
-     "symbol": "AMD",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headline": "Super Micro to restate three years of results",
-     "published_at": "2026-10-07T12:05:00Z",
-     "source": "newswire (synthetic)",
-     "symbol": "SMCI",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headline": "Palantir wins $480M Army contract",
-     "published_at": "2026-10-07T12:05:00Z",
-     "source": "newswire (synthetic)",
-     "symbol": "PLTR",
-     "venue": "NYSE"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headline": "Apple to report on October 30",
-     "published_at": "2026-10-07T12:05:00Z",
-     "source": "newswire (synthetic)",
+     "body": "opens in new window\n PRESS RELEASE\n November 2, 2026\n September quarter records for total company revenue, iPhone revenue, and EPS\nServices revenue reaches new all-time high\n CUPERTINO, CALIFORNIA Ap…",
+     "data_cutoff": "2026-11-02T21:45:04Z",
+     "headline": "Apple reports fourth quarter results",
+     "published_at": "2026-11-02T21:30:04Z",
+     "source": "Apple Newsroom",
      "symbol": "AAPL",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headline": "Judge orders remedies in Google search antitrust case",
-     "published_at": "2026-10-07T12:05:00Z",
-     "source": "newswire (synthetic)",
-     "symbol": "GOOGL",
+     "body": "NVIDIA will host a conference call on Tuesday, November 17, at 2 p.m. PT (5 p.m. ET) to discuss its financial results for the third quarter of fiscal year 2027, which ended October 25, 2026.\nThe call…",
+     "data_cutoff": "2026-10-28T21:15:00Z",
+     "headline": "NVIDIA Sets Conference Call for Third-Quarter Financial Results",
+     "published_at": "2026-10-28T21:00:00Z",
+     "source": "NVIDIA Newsroom",
+     "symbol": "NVDA",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headline": "dividend",
-     "published_at": "2026-10-07T12:05:00Z",
-     "source": "newswire (synthetic)",
-     "symbol": "PNKX",
-     "venue": "OTC"
+     "body": "Align Technology Announces Fourth Quarter and Fiscal 2023 Results Align Technology Zeno Group Madelyn Valente Sarah Johnson (909) 833-5839 (828) 551-4201 [e-mail withheld] [e-mail withheld] ALIGN TECHNOLOGY ANNOUNCES FOURTH QUARTER AND FISCAL 2023 FINANCIAL RESULTS Unveils Next-Generation iTero Lumina™ Intraoral Scanner Featuring a 3X Wider Field of Capture 1 in a 50% Smaller Wand 2 that Delivers Faster Scanning, Higher Accuracy 3 , and Superior Visualization 4 for Greater Practice Efficiency Q4 and FY2023 total revenues up 6.1% year over year and up 3.4% year over year, respectively Major 2023 milestones: 17 million Invisalign® patients, 4 million Vivera™ retainers, and 100 thousand iTero™ scanner units • 2023 total revenues of $3.9 billion, Clear Aligner revenues of $3.2 billion and Systems and Services revenues of $662.9 million • 2023 revenues were unfavorably impacted by foreign exchange of approximately $ 36.3 million compared to 2022 (5) • 2023 operating margin of 16.7%, non-GAAP operating margin of 21.4%, and diluted net income per share of $5.81, non-GAAP diluted net income per share of $8.61 • 2023 operating margin was favorably impacted by foreign exchange of approximately 0.7 points compared to 2022 (5) • Repurchased $600 m illion of common stock in 2023 • Q4 total revenues of $956.7 million, and diluted net income per share of $1.64, non-GAAP diluted net income per share of $2.42 • Q4 revenues were unfavorably impacted by foreign exchange of approximately $12.8 million sequentially and favorably impacted by approximately $13.8 million year over year (5) TEMPE, Ariz., January 31, 2024 -- Align Technology, Inc. (Nasdaq: ALGN), a leading global medical device company that designs, manufactures, and sells the Invisalign® system of clear aligners, iTero™ intraoral scanners, and exocad™ CAD/CAM software for digital orthodontics and restorative dentistry, today reported financial results for the fourth quarter (\"Q4'23\") and year ended December 3",
+     "data_cutoff": "2024-01-31T21:18:24Z",
+     "headline": "Align Technology Announces Fourth Quarter and Fiscal 2023 Results Align Technology Zeno Group Madelyn Valente Sarah Johnson (909) 833-5839 (828) 551-4201 [e-mail withheld] [e-mail withheld] ALIGN TECHNOLOGY ANNOUNCES FOURTH Q",
+     "published_at": "2024-01-31T21:03:24Z",
+     "source": "SEC EDGAR 8-K Items 2.02, 9.01",
+     "symbol": "ALGN",
+     "venue": "NASDAQ"
+    },
+    {
+     "body": "UNAUDITED PRO FORMA CONDENSED COMBINED FINANCIAL STATEMENTS On April 10, 2024, Eliem Therapeutics, Inc. (“ Eliem ”) entered into an Agreement and Plan of Merger and Reorganization (the “ Acquisition Agreement ”) by and among Eliem, Tango Merger Sub, Inc., a Delaware corporation and a wholly owned subsidiary of Eliem (“ Transitory Subsidiary ”), Tenet Medicines, Inc., a Delaware corporation (“ Tenet ”), and, solely in his capacity as company equityholder representative, Stephen Thomas. The Acquisition Agreement provides for the acquisition of Tenet by Eliem through the merger of Transitory Subsidiary into Tenet, with Tenet surviving as a wholly owned subsidiary of Eliem (the “ Acquisition ”). Tenet is a privately held development stage biotechnology company focused on advancing TNT119, an anti-CD19 antibody designed for broad range of autoimmune disorders, including systemic lupus erythematosus, immune thrombocytopenia and membranous nephropathy. At the effective time of the Acquisition, by virtue of the Acquisition and without any action on the part of the holders of common stock of Tenet, (i) all issued and outstanding shares of common stock of Tenet and (ii) all securities convertible into shares of common stock of Tenet will be converted into the right to receive, in the aggregate, a number of shares of Eliem common stock (rounded to the nearest whole share) equal to fifteen and two-fifths percent (15.4%) of the outstanding shares of Eliem common stock (the “ Exchange Ratio ”) as of immediately following the closing of the Acquisition (and for the avoidance of doubt, before giving effect to the issuance of any securities pursuant to the Private Placement (as defined below)), calculated on a fully-diluted basis using the treasury stock method (including, for clarity, calculated by disregarding any out-of-the-money outstanding stock options of Eliem). Concurrently with the execution of the Acquisition Agreement, Eliem entered into a securities purchase agreement (t",
+     "data_cutoff": "2024-06-27T20:37:54Z",
+     "headline": "UNAUDITED PRO FORMA CONDENSED COMBINED FINANCIAL STATEMENTS On April 10, 2024, Eliem Therapeutics, Inc.",
+     "published_at": "2024-06-27T20:22:54Z",
+     "source": "SEC EDGAR 8-K Items 1.01, 2.01, 3.02, 5.02, 7.01, 8.01, 9.01",
+     "symbol": "CLYM",
+     "venue": "NASDAQ"
+    },
+    {
+     "body": "PublicSquare Grateful for Closure of Politically Motivated CFPB Investigation into Credova · Closure affirms Credova and PublicSquare’s responsible and transparent operations supporting the Second Amendment · End of this Biden-era, politically motivated investigation is a victory for freedom, for business, and for every American who refuses to yield to government overreach WEST PALM BEACH, FL — August 19, 2025 — PSQ Holdings, Inc. (NYSE: PSQH) (“PublicSquare” or the “Company”) was pleased to receive notification from the Consumer Financial Protection Bureau (“CFPB”) that it had formally closed the investigation into Credova Financial, LLC (“Credova”), a wholly owned subsidiary of PublicSquare. As the Bureau confirmed to Credova, it was closing the investigation because it “has determined that this investigation exemplifies the type of weaponization against disfavored industries and individuals that President Trump and Acting Director Vought are committed to ending,” and that “the record of this investigation clearly demonstrates that it was conducted in a biased manner that targeted Credova’s exercise of its constitutional rights and facilitation of others’ exercise of their constitutional rights.” The Bureau determined that its investigation of Credova “was not aimed at protecting consumers, but at suppressing activities protected by the First and Second Amendment.” “The conclusion of the CFPB’s investigation confirms the strength and integrity of our company and validates the trust our merchants and consumers place in us,” commented Michael Seifert, Chairman and CEO of PublicSquare. “This outcome is a win for our entire company, our board, our customers, and a 2nd Amendment community that has seen years of government attempts to regulate businesses like ours out of existence. We would like to thank President Trump, Acting Director Vought, CFPB Chief Legal Officer Mark Paoletta, CFPB Senior Adviser Jeff Clark, and the CFPB staff for their internal review of this in",
+     "data_cutoff": "2025-08-20T21:32:19Z",
+     "headline": "PublicSquare Grateful for Closure of Politically Motivated CFPB Investigation into Credova · Closure affirms Credova and PublicSquare’s responsible and transparent operations supporting the Second Amendment · End of this Biden-era, ...",
+     "published_at": "2025-08-20T21:17:19Z",
+     "source": "SEC EDGAR 8-K Items 8.01, 9.01",
+     "symbol": "PSQH",
+     "venue": "NYSE"
+    },
+    {
+     "body": "CULP ANNOUNCES FOURTH QUARTER AND FULL YEAR FISCAL 2025 RESULTS Completed Restructuring Provides Foundation for Improved Operating Performance in Fiscal 2026 HIGH POINT, N.C. (June 25, 2025) – Culp, Inc. (NYSE: CULP), a leading provider of fabrics for bedding and upholstery fabrics for residential and commercial furniture, today reported financial and operating results for the fourth quarter and fiscal year ended April 27, 2025. Iv Culp, President and Chief Executive Officer, commented, “Fiscal 2025 was a year of heavy lifting across CULP, and we are encouraged by the results of our work to transform our cost structure and better position the company for growth. Given the challenging revenue environment and tariff-related uncertainty that is evident and continues across the industry, we concentrated on what we can control and successfully executed on a variety of aggressive initiatives that should drive better operating leverage, particularly as market conditions improve. We also continued to play to our strength in providing the highest levels of service, product offerings and supply chain optionality to our customers, and we believe that our market share remains strong and continues to expand within certain targeted segments. “The recent sale of our manufacturing facility in Canada capped the completion of the restructuring plan we announced last year including facility closures and consolidations in our mattress fabrics division, as well as a transition to an asset-light, strategic sourcing model for certain major product lines. We are pleased to see the benefits of that plan reflected in our financial results, with a lower fixed cost base and increased efficiencies in our mattress fabrics division helping to drive improvement during the year and significantly better overall operating results for the quarter despite the pressured macro conditions. “In light of the continuing market softness, along with heightened tariff uncertainty, we are taking additional actio",
+     "data_cutoff": "2025-06-25T20:43:10Z",
+     "headline": "CULP ANNOUNCES FOURTH QUARTER AND FULL YEAR FISCAL 2025 RESULTS Completed Restructuring Provides Foundation for Improved Operating Performance in Fiscal 2026 HIGH POINT, N.C. (June 25, 2025) – Culp, Inc.",
+     "published_at": "2025-06-25T20:28:10Z",
+     "source": "SEC EDGAR 8-K Items 2.02, 7.01, 9.01",
+     "symbol": "CULP",
+     "venue": "NASDAQ"
+    },
+    {
+     "body": "UNAUDITED PRO FORMA COMBINED FINANCIAL INFORMATION Introduction On March 20, 2025, QXO, Inc. (“QXO” or the “Company”) entered into an Agreement and Plan of Merger (the “Merger Agreement”) with Beacon Roofing Supply, Inc., a Delaware corporation (“Beacon”), and Queen MergerCo, Inc., a Delaware corporation and wholly owned subsidiary of QXO (“Merger Sub”), pursuant to which QXO agreed to acquire Beacon for a purchase price of $124.35 per share of common stock of Beacon (the “Acquisition”). The Acquisition is expected to close on at or near the end of April 2025, subject to a majority of Beacon shares tendering in the Company’s outstanding tender offer and other customary closing conditions. Upon the closing of the Acquisition, Merger Sub will be merged with and into Beacon, with Beacon surviving the Acquisition as a wholly owned subsidiary of QXO. The unaudited pro forma combined financial information set forth below gives effect to the following (collectively, the “Transactions”): • the Acquisition, which is expected to close at or near the end of April 2025 (the “Closing”); • the expected incurrence of $4.55 billion of indebtedness, pursuant to a new senior secured term facility, a new asset-backed loan facility and the issuance of senior secured notes (collectively, the “Debt Financings”), and the use of proceeds therefrom to fund a portion of the consideration for the Acquisition, refinance certain Beacon indebtedness in connection with the Transactions and pay related fees and expenses; • the issuance of approximately 67.5 million shares of the Company’s common stock, par value $0.00001 per share (“Common Stock”), at a price of $12.30 per share pursuant to purchase agreements entered into on March 17, 2025 with certain institutional investors (the “Private Placement”), and the use of proceeds therefrom to pay a portion of the consideration for the Acquisition and related fees and expenses; and • the issuance of shares of our Common Stock in a contemplated public ",
+     "data_cutoff": "2025-04-16T21:14:11Z",
+     "headline": "UNAUDITED PRO FORMA COMBINED FINANCIAL INFORMATION Introduction On March 20, 2025, QXO, Inc.",
+     "published_at": "2025-04-16T20:59:11Z",
+     "source": "SEC EDGAR 8-K Items 8.01, 9.01",
+     "symbol": "QXO",
+     "venue": "NYSE"
+    },
+    {
+     "body": "Compass Diversified Discloses Non-Reliance on Financial Statements for Fiscal 2024 Amid an Ongoing Internal Investigation into its Subsidiary, Lugano Holding, Inc. The Company Intends to Delay Quarterly Earnings and Filing of 2025 Q1 Form 10-Q WESTPORT, Conn., May 7, 2025 (GLOBE NEWSWIRE) – Compass Diversified (NYSE: CODI) (“CODI”) today disclosed non-reliance on its financial statements for fiscal 2024 amid an ongoing internal investigation into its subsidiary, Lugano Holding, Inc. It also announced that it intends to delay the filing of its first quarter 2025 Form 10-Q. The Audit Committee of CODI’s Board of Directors promptly launched an investigation after CODI’s senior leadership was made aware of concerns about how Lugano was potentially financing inventory. The investigation, led by outside counsel and a forensic accounting firm, is ongoing but has preliminarily identified irregularities in Lugano’s non-CODI financing, accounting, and inventory practices. After discussing with senior leadership and investigators, the Audit Committee of CODI’s Board has concluded that the previously issued financial statements for 2024 require restatement and should no longer be relied upon. Effective May 7, 2025, Lugano’s founder and CEO, Moti Ferder, resigned from all of his positions at Lugano and will not receive any severance compensation. These issues are limited to Lugano, of which CODI owns approximately 60%, and the investigation is not focused on CODI’s other subsidiaries. “The company's Board of Directors continues to have confidence in CODI leadership and Compass Group Management, the company’s external manager,” said Larry Enterline, Chair of the CODI Board of Directors. “The company’s manager and its employees reacted swiftly and decisively in response to a concern regarding Lugano, elevating it immediately to our Audit Committee. They have been proactively engaged with the Audit Committee and our investigators throughout this process to both accelerate the inves",
+     "data_cutoff": "2025-05-07T20:27:40Z",
+     "headline": "Compass Diversified Discloses Non-Reliance on Financial Statements for Fiscal 2024 Amid an Ongoing Internal Investigation into its Subsidiary, Lugano Holding, Inc.",
+     "published_at": "2025-05-07T20:12:40Z",
+     "source": "SEC EDGAR 8-K Items 4.02, 7.01, 8.01, 9.01",
+     "symbol": "CODI",
+     "venue": "NYSE"
     }
    ],
    "expected": [
-    "cheap_rule",
-    "deep_review",
-    "analyst",
-    "cheap_rule",
-    "analyst",
-    "deep_review",
-    "cheap_rule",
-    "analyst",
-    "abstain"
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "sets": [
+    {
+     "set_id": "L5.A:b5d1ba921605",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2026-11-02T21:45:04Z",
+     "provenance": [
+      {
+       "source": "news_store",
+       "url": "https://apple.com/newsroom/2026/11/apple-reports-fourth-quarter-results",
+       "published_at": "2026-11-02T21:30:04Z",
+       "licence": "private research use; do not republish full text"
+      }
+     ],
+     "excerpt_policy": "news: headline + link + <=200-char excerpt"
+    },
+    {
+     "set_id": "L5.A:fe4427917899",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2026-10-28T21:15:00Z",
+     "provenance": [
+      {
+       "source": "news_store",
+       "url": "https://nvidianews.nvidia.com/news/nvidia-sets-conference-call-for-third-quarter-financial-results-6928873",
+       "published_at": "2026-10-28T21:00:00Z",
+       "licence": "private research use; do not republish full text"
+      }
+     ],
+     "excerpt_policy": "news: headline + link + <=200-char excerpt"
+    },
+    {
+     "set_id": "L5.A:90bce9fd16eb",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-01-31T21:18:24Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1097149/000109714924000007/algn-q423earningspressrele.htm",
+       "published_at": "2024-01-31T21:03:24Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real 8-K text found by EDGAR full-text search \"announces\""
+    },
+    {
+     "set_id": "L5.A:2252393d09d8",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-06-27T20:37:54Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1768446/000119312524170599/d692630dex996.htm",
+       "published_at": "2024-06-27T20:22:54Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real 8-K text found by EDGAR full-text search \"acquisition\""
+    },
+    {
+     "set_id": "L5.A:52305836dbc0",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2025-08-20T21:32:19Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1847064/000110465925080974/tm2524015d1_ex99-1.htm",
+       "published_at": "2025-08-20T21:17:19Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real 8-K text found by EDGAR full-text search \"investigation\""
+    },
+    {
+     "set_id": "L5.A:e032f51d0abd",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2025-06-25T20:43:10Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/723603/000095017025089974/culp-ex99_1.htm",
+       "published_at": "2025-06-25T20:28:10Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real 8-K text found by EDGAR full-text search \"announces\""
+    },
+    {
+     "set_id": "L5.A:5301aa2e9f03",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2025-04-16T21:14:11Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1236275/000114036125014209/ny20045603x4_ex99-2.htm",
+       "published_at": "2025-04-16T20:59:11Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real 8-K text found by EDGAR full-text search \"acquisition\""
+    },
+    {
+     "set_id": "L5.A:4d05659c77ee",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2025-05-07T20:27:40Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1345126/000134512625000021/pressreleaseofcodidated5725.htm",
+       "published_at": "2025-05-07T20:12:40Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real 8-K text found by EDGAR full-text search \"investigation\""
+    }
    ],
    "visual": {
     "fed": [
@@ -326,72 +453,11 @@
      }
     }
    },
-   "inputs": [
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "question": "what's my P&L on NVDA today?",
-     "symbol": "NVDA",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "question": "why did AMD drop 6% this morning?",
-     "symbol": "AMD",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "question": "can I trade SNOW while I'm on the deal team?",
-     "symbol": "SNOW",
-     "venue": "NYSE"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "question": "when does AAPL report?",
-     "symbol": "AAPL",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "question": "summarize the risks in TSLA's latest 10-Q",
-     "symbol": "TSLA",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "question": "should I double my position in SMCI after the restatement?",
-     "symbol": "SMCI",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "question": "list my open orders",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "question": "compare MSFT and GOOGL cloud growth last quarter",
-     "symbol": "MSFT",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "question": "price?",
-     "symbol": "PNKX",
-     "venue": "OTC"
-    }
-   ],
-   "expected": [
-    "data_lookup",
-    "research_model",
-    "analyst",
-    "data_lookup",
-    "research_model",
-    "analyst",
-    "data_lookup",
-    "research_model",
-    "abstain"
-   ],
+   "inputs": [],
+   "expected": [],
+   "sets": [],
+   "data_status": "needs_your_data",
+   "data_reason": "needs your data: the desk's own questions; no public real source",
    "visual": {
     "fed": [
      "symbol",
@@ -399,7 +465,7 @@
      "data_cutoff",
      "question"
     ],
-    "excerpt": "question",
+    "excerpt": null,
     "state_fields": [
      "question",
      "symbol"
@@ -552,71 +618,18 @@
      }
     }
    },
-   "inputs": [
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "task": "extract the dividend amount and pay date from this press release",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "task": "compare the last four 10-Qs of INTC and explain the margin trend",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "task": "decide whether we should cover our short before the merger vote",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "task": "tag each of these 40 headlines with its sector",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "task": "rebuild the revenue bridge for NVDA from segment disclosures",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "task": "figure out what the CFO meant on the private call yesterday",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "task": "check whether these two headlines report the same event",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "task": "write bull/base/bear scenarios for TSLA with probabilities from the 10-K risks",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "task": "x",
-     "venue": "OTC"
-    }
-   ],
-   "expected": [
-    "small_model",
-    "large_model",
-    "analyst",
-    "small_model",
-    "large_model",
-    "analyst",
-    "small_model",
-    "large_model",
-    "abstain"
-   ],
+   "inputs": [],
+   "expected": [],
+   "sets": [],
+   "data_status": "needs_your_data",
+   "data_reason": "needs your data: the user's own research tasks; no public real source",
    "visual": {
     "fed": [
      "venue",
      "data_cutoff",
      "task"
     ],
-    "excerpt": "task",
+    "excerpt": null,
     "state_fields": [
      "task"
     ],
@@ -774,73 +787,11 @@
      }
     }
    },
-   "inputs": [
-    {
-     "account": "paper",
-     "alert": "Nightly backtest finished in 41 minutes",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "venue": "NASDAQ"
-    },
-    {
-     "account": "paper",
-     "alert": "Fundamentals snapshot is 2 days stale",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "venue": "NASDAQ"
-    },
-    {
-     "account": "paper",
-     "alert": "Market data feed disconnected; last tick 4 minutes ago",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "venue": "NASDAQ"
-    },
-    {
-     "account": "paper",
-     "alert": "Paper strategy ORB_5m sent 240 orders in 60 seconds",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "venue": "NASDAQ"
-    },
-    {
-     "account": "paper",
-     "alert": "Dashboard redeployed, no changes to strategies",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "venue": "NASDAQ"
-    },
-    {
-     "account": "paper",
-     "alert": "Paper book drawdown reached 3% (limit 5%)",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "venue": "NASDAQ"
-    },
-    {
-     "account": "paper",
-     "alert": "Risk limit breached: gross exposure 162%",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "venue": "NASDAQ"
-    },
-    {
-     "account": "paper",
-     "alert": "Scheduler heartbeat ok",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "venue": "NASDAQ"
-    },
-    {
-     "account": "paper",
-     "alert": "x",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "venue": "OTC"
-    }
-   ],
-   "expected": [
-    "log_only",
-    "notify_desk",
-    "page_on_call",
-    "page_on_call",
-    "log_only",
-    "notify_desk",
-    "page_on_call",
-    "log_only",
-    "abstain"
-   ],
+   "inputs": [],
+   "expected": [],
+   "sets": [],
+   "data_status": "needs_your_data",
+   "data_reason": "needs your data: the user's own system alerts; no public real source",
    "visual": {
     "fed": [
      "venue",
@@ -848,7 +799,7 @@
      "data_cutoff",
      "alert"
     ],
-    "excerpt": "alert",
+    "excerpt": null,
     "state_fields": [
      "alert"
     ],
@@ -1015,88 +966,165 @@
    },
    "inputs": [
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "form": "S-8",
-     "headline": "Registration of shares for employee stock plan",
-     "published_at": "2026-10-07T12:05:00Z",
+     "body": "SEC Form 4 FORM 4 UNITED STATES SECURITIES AND EXCHANGE COMMISSION Washington, D.C. 20549 STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP Filed pursuant to Section 16(a) of the Securities Exchange Act of 1934 or Section 30(h) of the Investment Company Act of 1940 OMB APPROVAL OMB Number: 3235-0287 Estimated average burden hours per response: 0.5 Check this box if no longer subject to Section 16. Form 4 or Form 5 obligations may continue. See Instruction 1(b). Check this box to indicate that a transaction was made pursuant to a contract, instruction or written plan for the purchase or sale of equity securities of the issuer that is intended to satisfy the affirmative defense conditions of Rule 10b5-1(c). See Instruction 10. 1. Name and Address of Reporting Person * Parekh Kevan (Last) (First) (Middle) ONE APPLE PARK WAY (Street) CUPERTINO CA 95014 (City) (State) (Zip) 2. Issuer Name and Ticker or Trading Symbol Apple Inc. [ AAPL ] 5. Relationship of Reporting Person(s) to Issuer (Check all applicable) Director 10% Owner X Officer (give title below) Other (specify below) Senior Vice President, CFO 3. Date of Earliest Transaction (Month/Day/Year) 09/28/2025 4. If Amendment, Date of Original Filed (Month/Day/Year) 6. Individual or Joint/Group Filing (Check Applicable Line) X Form filed by One Reporting Person Form filed by More than One Reporting Person Table I - Non-Derivative Securities Acquired, Disposed of, or Beneficially Owned 1. Title of Security (Instr. 3) 2. Transaction Date (Month/Day/Year) 2A. Deemed Execution Date, if any (Month/Day/Year) 3. Transaction Code (Instr. 8) 4. Securities Acquired (A) or Disposed Of (D) (Instr. 3, 4 and 5) 5. Amount of Securities Beneficially Owned Following Reported Transaction(s) (Instr. 3 and 4) 6. Ownership Form: Direct (D) or Indirect (I) (Instr. 4) 7. Nature of Indirect Beneficial Ownership (Instr. 4) Code V Amount (A) or (D) Price Table II - Derivative Securities Acquired, Disposed of, or Beneficially Owned (e.g., puts, calls,",
+     "data_cutoff": "2025-09-30T22:50:16Z",
+     "form": "4",
+     "headline": "Apple Inc. 4",
+     "published_at": "2025-09-30T22:35:16Z",
      "symbol": "AAPL",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "form": "10-Q",
-     "headline": "Quarterly report with segment margin detail",
-     "published_at": "2026-10-07T12:05:00Z",
+     "body": "UNITED STATES SECURITIES AND EXCHANGE COMMISSION Washington, D.C. 20549 FORM 8-K CURRENT REPORT Pursuant to Section 13 or 15(d) of the Securities Exchange Act of 1934 Date of Report (Date of earliest event reported): September 26, 2025 INTEL CORPORATION (Exact name of registrant as specified in its charter) Delaware 000-06217 94-1672743 (State or other jurisdiction (Commission (IRS Employer of incorporation) File Number) Identification No.) 2200 Mission College Boulevard , Santa Clara , California 95054-1549 (Address of principal executive offices) (Zip Code) Registrant's telephone number, including area code: (408) 765-8080 Not Applicable (Former name or former address, if changed since last report) Check the appropriate box below if the Form 8-K filing is intended to simultaneously satisfy the filing obligation of the registrant under any of the following provisions ( see General Instruction A.2. below): ☐ Written communications pursuant to Rule 425 under the Securities Act (17 CFR 230.425) ☐ Soliciting material pursuant to Rule 14a-12 under the Exchange Act (17 CFR 240.14a-12) ☐ Pre-commencement communications pursuant to Rule 14d-2(b) under the Exchange Act (17 CFR 240.14d-2(b)) ☐ Pre-commencement communications pursuant to Rule 13e-4(c) under the Exchange Act (17 CFR 240.13e-4c)) Securities registered pursuant to Section 12(b) of the Act: Title of each class Trading Symbol(s) Name of each exchange on which registered Common stock, $0.001 par value INTC Nasdaq Global Select Market Indicate by check mark whether the registrant is an emerging growth company as defined in Rule 405 of the Securities Act of 1933 (§230.405 of this chapter) or Rule 12b-2 of the Securities Exchange Act of 1934 (§240.12b-2 of this chapter). Emerging growth company ☐ If an emerging growth company, indicate by check mark if the registrant has elected not to use the extended transition period for complying with any new or revised financial accounting standards provided pursuant to Section 1",
+     "data_cutoff": "2025-09-29T20:24:16Z",
+     "form": "8-K",
+     "headline": "INTEL CORP 8-K: Items 3.02 Unregistered Sales of Equity Securities",
+     "published_at": "2025-09-29T20:09:16Z",
      "symbol": "INTC",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "form": "10-K",
-     "headline": "Annual report; auditor includes going-concern paragraph",
-     "published_at": "2026-10-07T12:05:00Z",
-     "symbol": "CRVX",
+     "body": "TABLE OF CONTENTS UNITED STATES SECURITIES AND EXCHANGE COMMISSION Washington, D.C. 20549 SCHEDULE 14A Proxy Statement Pursuant to Section 14(a) of the Securities Exchange Act of 1934 (Amendment No. ) Filed by the Registrant ☒ Filed by a Party other than the Registrant ☐ Check the appropriate box: ​ ☐ Preliminary Proxy Statement ​ ☐ Confidential, for Use of the Commission Only (as permitted by Rule 14a-6(e)(2)) ​ ​ ☒ Definitive Proxy Statement ​ ☐ Definitive Additional Materials ​ ☐ Soliciting Material under §240.14a-12 ​ TESLA, INC. ​ (Name of Registrant as Specified In Its Charter) ​ (Name of Person(s) Filing Proxy Statement, if other than the Registrant) Payment of Filing Fee (Check all boxes that apply): ☒ No fee required. ​ ☐ Fee paid previously with preliminary materials. ​ ☐ Fee computed on table in exhibit required by Item 25(b) per Exchange Act Rules 14a6(i)(1) and 0-11 ​ TABLE OF CONTENTS TABLE OF CONTENTS Company Highlights TABLE OF CONTENTS Letter to Shareholders Dear Fellow Shareholders, Given your overwhelming support at last year’s shareholder meeting, we have now aligned our corporate home with our operational home in the State of Texas. It is clear to us that moving to Texas was the right choice for Tesla and for all of you. Here, we benefit from a corporate governance framework that enables boards to listen to, and act in accordance with, the will of shareholders, keeps them accountable to shareholders, and facilitates the bold decision-making necessary to drive extraordinary innovation. We have a platform for our big ideas and even bigger ambitions to grow and evolve, culminating in a revolutionary vision for humanity’s future and Tesla’s role in bringing that future to life. In our first year as a Texas corporation, Tesla delivered in a wide range of areas. To name just a few: we delivered our 8 millionth vehicle, deployed more than 37 GWh of energy storage from Q3 2024 through the end of Q2 2025 and launched our new Model Y in four factories acr",
+     "data_cutoff": "2025-09-17T20:53:45Z",
+     "form": "DEF 14A",
+     "headline": "Tesla, Inc. DEF 14A",
+     "published_at": "2025-09-17T20:38:45Z",
+     "symbol": "TSLA",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "form": "8-K",
-     "headline": "Appointment of new chief marketing officer",
-     "published_at": "2026-10-07T12:05:00Z",
-     "symbol": "PEP",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "form": "DEFM14A",
-     "headline": "Definitive merger proxy with CVR terms",
-     "published_at": "2026-10-07T12:05:00Z",
-     "symbol": "SAGE",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "form": "SC 13G",
-     "headline": "Vanguard reports 8.9% passive stake",
-     "published_at": "2026-10-07T12:05:00Z",
-     "symbol": "NVDA",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "form": "10-K",
-     "headline": "Annual report with new segment disclosure",
-     "published_at": "2026-10-07T12:05:00Z",
-     "symbol": "MSFT",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "form": "424B2",
-     "headline": "Pricing supplement for structured notes",
-     "published_at": "2026-10-07T12:05:00Z",
-     "symbol": "KO",
+     "body": "UNITED STATES SECURITIES AND EXCHANGE COMMISSION WASHINGTON, D.C. 20549 FORM 10-Q ☒ QUARTERLY REPORT PURSUANT TO SECTION 13 OR 15(d) OF THE SECURITIES EXCHANGE ACT OF 1934 For the quarterly period ended June 29, 2025 OR ☐ TRANSITION REPORT PURSUANT TO SECTION 13 OR 15(d) OF THE SECURITIES EXCHANGE ACT OF 1934 For the transition period from _______ to _______ COMMISSION FILE NUMBER 1-3619 ---- PFIZER INC . (Exact name of registrant as specified in its charter) Delaware 13-5315170 (State of Incorporation) (I.R.S. Employer Identification No.) 66 Hudson Boulevard East , New York , New York 10001-2192 (Address of principal executive offices) (zip code) ( 212 ) 733-2323 (Registrant’s telephone number including area code) Securities registered pursuant to Section 12(b) of the Act: Title of each class Trading Symbol(s) Name of each exchange on which registered Common Stock, $0.05 par value PFE New York Stock Exchange 1.000% Notes due 2027 PFE/27 New York Stock Exchange 2.875% Notes due 2029 PFE/29 New York Stock Exchange 3.250% Notes due 2032 PFE/32 New York Stock Exchange 3.875% Notes due 2037 PFE/37A New York Stock Exchange 4.250% Notes due 2045 PFE/45 New York Stock Exchange Indicate by check mark whether the registrant (1) has filed all reports required to be filed by Section 13 or 15(d) of the Securities Exchange Act of 1934 during the preceding 12 months (or for such shorter period that the registrant was required to file such reports), and (2) has been subject to such filing requirements for the past 90 days. Yes x No ☐ Indicate by check mark whether the registrant has submitted electronically every Interactive Data File required to be submitted pursuant to Rule 405 of Regulation S-T (§232.405 of this chapter) during the preceding 12 months (or for such shorter period that the registrant was required to submit such files). Yes x No ☐ Indicate by check mark whether the registrant is a large accelerated filer, an accelerated filer, a non-accelerated filer, a smaller re",
+     "data_cutoff": "2025-08-05T11:31:27Z",
+     "form": "10-Q",
+     "headline": "PFIZER INC 10-Q",
+     "published_at": "2025-08-05T11:16:27Z",
+     "symbol": "PFE",
      "venue": "NYSE"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "form": "10-K",
-     "headline": "annual",
-     "published_at": "2026-10-07T12:05:00Z",
-     "symbol": "PNKX",
-     "venue": "OTC"
+     "body": "S-8 1 ef20049219_s8.htm S-8 As filed with the Securities and Exchange Commission on September 26, 2025 Registration No.__________ UNITED STATES SECURITIES AND EXCHANGE COMMISSION Washington, D.C. 20549 FORM S-8 REGISTRATION STATEMENT UNDER THE SECURITIES ACT OF 1933 Apple Inc. (Exact name of Registrant as specified in its charter) California 94-2404110 (State or other jurisdiction of incorporation or organization) (I.R.S. Employer Identification No.) One Apple Park Way Cupertino, California 95014 (Address of principal executive offices) (Zip Code) Apple Inc. Deferred Compensation Plan (Full title of the plan) Katherine Adams Senior Vice President, General Counsel and Secretary Apple Inc. One Apple Park Way Cupertino, California 95014 (Name and address of agent for service) (408) 996-1010 (Telephone number, including area code, of agent for service) Indicate by check mark whether the Registrant is a large accelerated filer, an accelerated filer, a non-accelerated filer, a smaller reporting company, or an emerging growth company. See the definitions of “large accelerated filer,” “accelerated filer,” “smaller reporting company,” and “emerging growth company” in Rule 12b-2 of the Exchange Act. Large accelerated filer ☒ Accelerated filer ☐ Non-accelerated filer ☐ Smaller reporting company ☐ Emerging growth company ☐ If an emerging growth company, indicate by check mark if the registrant has elected not to use the extended transition period for complying with any new or revised financial accounting standards provided pursuant to Section 7(a)(2)(B) of the Securities Act. ☐ EXPLANATORY NOTE This Registration Statement on Form S-8 is being filed for the purpose of registering additional general unsecured obligations of Apple Inc. (the “Company” or the “Registrant”) to pay deferred compensation in the future in accordance with the terms of the Apple Inc. Deferred Compensation Plan (the “Deferred Compensation Plan”). The Company filed Registration Statements on Forms S-8 with ",
+     "data_cutoff": "2025-09-26T20:48:30Z",
+     "form": "S-8",
+     "headline": "Apple Inc. S-8",
+     "published_at": "2025-09-26T20:33:30Z",
+     "symbol": "AAPL",
+     "venue": "NASDAQ"
+    },
+    {
+     "body": "424B2 1 ny20048442x3_424b2.htm 424B2 TABLE OF CONTENTS Filed Pursuant to Rule 424(b)(2) Registration No. 333-282937 Prospectus Supplement (To Prospectus dated November 1, 2024) $4,500,000,000 Apple Inc. $1,500,000,000 4.000% Notes due 2028 $1,000,000,000 4.200% Notes due 2030 $1,000,000,000 4.500% Notes due 2032 $1,000,000,000 4.750% Notes due 2035 We are offering $1,500,000,000 of our 4.000% Notes due 2028 (the “2028 Notes”), $1,000,000,000 of our 4.200% Notes due 2030 (the “2030 Notes”), $1,000,000,000 of our 4.500% Notes due 2032 (the “2032 Notes”) and $1,000,000,000 of our 4.750% Notes due 2035 (the “2035 Notes” and, together with the 2028 Notes, the 2030 Notes and the 2032 Notes, the “notes”). We will pay interest on the 2028 Notes, the 2030 Notes, the 2032 Notes and the 2035 Notes semi-annually in arrears on May 12 and November 12 of each year, beginning on November 12, 2025. The 2028 Notes will mature on May 12, 2028, the 2030 Notes will mature on May 12, 2030, the 2032 Notes will mature on May 12, 2032 and the 2035 Notes will mature on May 12, 2035. We may redeem the notes in whole or in part at any time or from time to time at the redemption prices described under the heading “Description of the Notes—Optional Redemption” in this prospectus supplement. The notes will be issued only in minimum denominations of $2,000 and integral multiples of $1,000 in excess thereof. See “ Risk Factors ” beginning on page S- 5 to read about important factors you should consider before buying the notes. Neither the Securities and Exchange Commission nor any other regulatory body has approved or disapproved of these securities or passed upon the accuracy or adequacy of this prospectus supplement or the accompanying prospectus. Any representation to the contrary is a criminal offense. Public Offering Price (1) Underwriting Discounts Proceeds to Apple, Before Expenses Per Note Total Per Note Total Per Note Total 2028 Note 99.804% $1,497,060,000 0.100% $1,500,000 99.704% $1,495,",
+     "data_cutoff": "2025-05-06T20:46:12Z",
+     "form": "424B2",
+     "headline": "Apple Inc. 424B2",
+     "published_at": "2025-05-06T20:31:12Z",
+     "symbol": "AAPL",
+     "venue": "NASDAQ"
     }
    ],
    "expected": [
-    "skip",
-    "full_analysis",
-    "legal_review",
-    "summarize",
-    "legal_review",
-    "summarize",
-    "full_analysis",
-    "abstain",
-    "abstain"
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "sets": [
+    {
+     "set_id": "L5.E:72a94b21aaea",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2025-09-30T22:50:16Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/320193/000205091225000006/xslF345X05/wk-form4_1759271713.xml",
+       "published_at": "2025-09-30T22:35:16Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real filing; headline is code-built from EDGAR metadata"
+    },
+    {
+     "set_id": "L5.E:a258340a759d",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2025-09-29T20:24:16Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/50863/000005086325000159/intc-20250926.htm",
+       "published_at": "2025-09-29T20:09:16Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real filing; headline is code-built from EDGAR metadata"
+    },
+    {
+     "set_id": "L5.E:f43989ea14cf",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2025-09-17T20:53:45Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1318605/000110465925090866/tm252289-12_def14a.htm",
+       "published_at": "2025-09-17T20:38:45Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real filing; headline is code-built from EDGAR metadata"
+    },
+    {
+     "set_id": "L5.E:975a7c135793",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2025-08-05T11:31:27Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800325000138/pfe-20250629.htm",
+       "published_at": "2025-08-05T11:16:27Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real filing; headline is code-built from EDGAR metadata"
+    },
+    {
+     "set_id": "L5.E:72284bb7f5ff",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2025-09-26T20:48:30Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/320193/000114036125036313/ef20049219_s8.htm",
+       "published_at": "2025-09-26T20:33:30Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real filing; headline is code-built from EDGAR metadata"
+    },
+    {
+     "set_id": "L5.E:05c189fa6b56",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2025-05-06T20:46:12Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/320193/000114036125017543/ny20048442x3_424b2.htm",
+       "published_at": "2025-05-06T20:31:12Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real filing; headline is code-built from EDGAR metadata"
+    }
    ],
    "visual": {
     "fed": [
@@ -1283,73 +1311,11 @@
      }
     }
    },
-   "inputs": [
-    {
-     "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "message": "FB will trade as META starting Thursday; update the security master",
-     "venue": "NASDAQ"
-    },
-    {
-     "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "message": "SNOW added to the restricted list effective immediately",
-     "venue": "NASDAQ"
-    },
-    {
-     "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "message": "Borrow recalled on 2,000 GME; cover or re-locate by 3pm",
-     "venue": "NASDAQ"
-    },
-    {
-     "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "message": "NVDA 10-for-1 split effective June 10; adjust historical bars",
-     "venue": "NASDAQ"
-    },
-    {
-     "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "message": "Please pre-clear my personal purchase of AAPL",
-     "venue": "NASDAQ"
-    },
-    {
-     "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "message": "Paper account margin usage at 92%",
-     "venue": "NASDAQ"
-    },
-    {
-     "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "message": "Vendor corrected yesterday's close for KO from 61.20 to 62.10",
-     "venue": "NASDAQ"
-    },
-    {
-     "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "message": "A client asked us to keep a trade off the records",
-     "venue": "NASDAQ"
-    },
-    {
-     "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "message": "x",
-     "venue": "OTC"
-    }
-   ],
-   "expected": [
-    "ops",
-    "compliance",
-    "risk_desk",
-    "ops",
-    "compliance",
-    "risk_desk",
-    "ops",
-    "compliance",
-    "abstain"
-   ],
+   "inputs": [],
+   "expected": [],
+   "sets": [],
+   "data_status": "needs_your_data",
+   "data_reason": "needs your data: messages from the user's broker simulator and data vendors; no public real source",
    "visual": {
     "fed": [
      "venue",
@@ -1357,7 +1323,7 @@
      "data_cutoff",
      "message"
     ],
-    "excerpt": "message",
+    "excerpt": null,
     "state_fields": [
      "message"
     ],

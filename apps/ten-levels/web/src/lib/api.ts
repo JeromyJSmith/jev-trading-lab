@@ -21,6 +21,20 @@ export interface OptionMeta {
   outputs?: { outcome: string; meaning: string }[];
   /** Patch 0011: run-modal labels (fed fields, questions, outcome boxes, arrow labels), exported from the spec YAML. */
   visual?: Record<string, any>;
+  /** Patch 0013: one card per real example set (parallel to inputs), and the needs-your-data state (no sets). */
+  sets?: RealSetMeta[];
+  data_status?: "needs_your_data";
+  data_reason?: string;
+}
+
+export interface RealSetMeta {
+  set_id: string;
+  label_status: string;
+  derivation?: string;
+  point_in_time_cutoff?: string;
+  provenance: { source: string; url?: string; published_at?: string; licence?: string }[];
+  excerpt_policy?: string;
+  reason?: string;
 }
 
 export interface LevelPayload {

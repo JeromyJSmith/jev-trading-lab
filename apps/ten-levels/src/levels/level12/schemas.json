@@ -10,6 +10,7 @@
    "spec": "decisions/projects/chart-shapes/residual_pattern_family.yaml",
    "version": "1.1.0",
    "approval_status": "experimental",
+   "catalog_id": "L12.A",
    "questions": {
     "family": {
      "type": "choice",
@@ -141,154 +142,303 @@
    },
    "inputs": [
     {
-     "symbol": "SPY",
-     "timeframe": "5m",
-     "session_date": "2026-11-02",
-     "data_cutoff": "2026-11-02T15:30:00Z",
-     "features_cutoff": "2026-11-02T15:30:00Z",
      "bars": 78,
+     "data_cutoff": "2024-01-02T21:00:00Z",
      "features": {
-      "close_vs_open_pct": 2.4,
-      "range_pct": 2.6,
-      "residual_slope": 0.4,
-      "residual_r2": 0.93,
-      "max_up_pct": 2.5,
-      "max_down_pct": -0.1,
-      "extreme_time_frac": 0.98,
-      "mean_crossings": 1,
-      "open_gap_pct": 0.1,
-      "gap_size_class": "none",
+      "close_vs_open_pct": -1.0558268443975116,
+      "extreme_time_frac": 0.19480519480519481,
+      "gap_size_class": "small",
       "gap_threshold_pct": 0.25,
-      "real_gap_filled": false
+      "max_down_pct": -1.9355285733139715,
+      "max_up_pct": 0,
+      "mean_crossings": 0,
+      "open_gap_pct": -0.2698256005264854,
+      "range_pct": 1.9355285733139715,
+      "real_gap_filled": false,
+      "residual_r2": 0.010499253791260488,
+      "residual_slope": -0.01797909399361489
      },
-     "shape_summary": "Residual climbs steadily all session and closes at the high",
+     "features_cutoff": "2024-01-02T21:00:00Z",
      "gap_raw": {
-      "open_gap_pct": 0.1,
+      "gap_abs_pct": 0.2698256005264854,
+      "gap_atr_mult": null,
       "gap_filled": false,
-      "threshold_basis": "abs",
-      "min_gap_pct": 0.25
-     }
+      "min_gap_pct": 0.25,
+      "open_gap_pct": -0.2698256005264854,
+      "prior_atr_pct": null,
+      "threshold_basis": "abs"
+     },
+     "session_date": "2024-01-02",
+     "shape_summary": "zigzag signature D5 U4 D2 U1 D1 U1 D1 U1",
+     "symbol": "AMZN",
+     "timeframe": "5m"
     },
     {
-     "symbol": "SPY",
-     "timeframe": "5m",
-     "session_date": "2026-11-02",
-     "data_cutoff": "2026-11-02T15:30:00Z",
-     "features_cutoff": "2026-11-02T15:30:00Z",
      "bars": 78,
+     "data_cutoff": "2024-01-25T21:00:00Z",
      "features": {
-      "close_vs_open_pct": -1.2,
-      "range_pct": 3.0,
-      "residual_slope": -0.1,
-      "residual_r2": 0.2,
-      "max_up_pct": 1.8,
-      "max_down_pct": -1.3,
-      "extreme_time_frac": 0.15,
-      "mean_crossings": 2,
-      "open_gap_pct": 0.1,
-      "gap_size_class": "none",
+      "close_vs_open_pct": 0.19044321329639846,
+      "extreme_time_frac": 0.22077922077922077,
+      "gap_size_class": "small",
       "gap_threshold_pct": 0.25,
-      "real_gap_filled": false
+      "max_down_pct": -0.3512069647803706,
+      "max_up_pct": 0.6480015829046337,
+      "mean_crossings": 7,
+      "open_gap_pct": 0.43470700747696434,
+      "range_pct": 0.9992085476850043,
+      "real_gap_filled": false,
+      "residual_r2": 0.3610292914259351,
+      "residual_slope": -0.09218261288685434
      },
-     "shape_summary": "Strong rally in the first hour fully retraced; closes below the open",
+     "features_cutoff": "2024-01-25T21:00:00Z",
      "gap_raw": {
-      "open_gap_pct": 0.1,
+      "gap_abs_pct": 0.43470700747696434,
+      "gap_atr_mult": null,
       "gap_filled": false,
-      "threshold_basis": "abs",
-      "min_gap_pct": 0.25
-     }
+      "min_gap_pct": 0.25,
+      "open_gap_pct": 0.43470700747696434,
+      "prior_atr_pct": null,
+      "threshold_basis": "abs"
+     },
+     "session_date": "2024-01-25",
+     "shape_summary": "zigzag signature U2 D3 U1",
+     "symbol": "MSFT",
+     "timeframe": "5m"
     },
     {
-     "symbol": "SPY",
-     "timeframe": "5m",
-     "session_date": "2026-11-02",
-     "data_cutoff": "2026-11-02T15:30:00Z",
-     "features_cutoff": "2026-11-02T15:30:00Z",
      "bars": 78,
+     "data_cutoff": "2024-03-18T20:00:00Z",
      "features": {
-      "close_vs_open_pct": 0.05,
-      "range_pct": 0.6,
-      "residual_slope": 0.0,
-      "residual_r2": 0.02,
-      "max_up_pct": 0.3,
-      "max_down_pct": -0.3,
-      "extreme_time_frac": 0.5,
-      "mean_crossings": 14,
-      "open_gap_pct": 0.1,
-      "gap_size_class": "none",
-      "gap_threshold_pct": 0.25,
-      "real_gap_filled": false
-     },
-     "shape_summary": "Residual oscillates around zero all day, many crossings, no slope",
-     "gap_raw": {
-      "open_gap_pct": 0.1,
-      "gap_filled": false,
-      "threshold_basis": "abs",
-      "min_gap_pct": 0.25
-     }
-    },
-    {
-     "symbol": "SPY",
-     "timeframe": "5m",
-     "session_date": "2026-11-02",
-     "data_cutoff": "2026-11-02T15:30:00Z",
-     "features_cutoff": "2026-11-02T15:30:00Z",
-     "bars": 78,
-     "features": {
-      "close_vs_open_pct": -1.6,
-      "range_pct": 1.8,
-      "residual_slope": -0.2,
-      "residual_r2": 0.7,
-      "max_up_pct": 0.1,
-      "max_down_pct": -1.7,
-      "extreme_time_frac": 0.8,
-      "mean_crossings": 2,
-      "open_gap_pct": 1.5,
+      "close_vs_open_pct": -0.625799071394928,
+      "extreme_time_frac": 0.025974025974025976,
       "gap_size_class": "large",
       "gap_threshold_pct": 0.25,
-      "real_gap_filled": true
+      "max_down_pct": -0.9218760514097313,
+      "max_up_pct": 2.036605881165454,
+      "mean_crossings": 1,
+      "open_gap_pct": 5.214343870579485,
+      "range_pct": 2.9584819325751854,
+      "real_gap_filled": false,
+      "residual_r2": 0.8548680376210438,
+      "residual_slope": -0.4351875987445766
      },
-     "shape_summary": "Opens with a 1.5% gap up that is closed back to the prior close by the afternoon",
+     "features_cutoff": "2024-03-18T20:00:00Z",
      "gap_raw": {
-      "open_gap_pct": 1.5,
-      "gap_filled": true,
-      "threshold_basis": "abs",
-      "min_gap_pct": 0.25
-     }
+      "gap_abs_pct": 5.214343870579485,
+      "gap_atr_mult": null,
+      "gap_filled": false,
+      "min_gap_pct": 0.25,
+      "open_gap_pct": 5.214343870579485,
+      "prior_atr_pct": null,
+      "threshold_basis": "abs"
+     },
+     "session_date": "2024-03-18",
+     "shape_summary": "zigzag signature D1 U1 D3 F",
+     "symbol": "GOOGL",
+     "timeframe": "5m"
     },
     {
-     "symbol": "SPY",
-     "timeframe": "5m",
-     "session_date": "2026-11-02",
-     "data_cutoff": "2026-11-02T15:30:00Z",
-     "features_cutoff": "2026-11-02T16:00:00Z",
      "bars": 78,
+     "data_cutoff": "2024-05-22T20:00:00Z",
      "features": {
-      "close_vs_open_pct": 2.4,
-      "range_pct": 2.6,
-      "residual_slope": 0.4,
-      "residual_r2": 0.93,
-      "mean_crossings": 1,
-      "open_gap_pct": 0.1,
+      "close_vs_open_pct": 0.10695435839012113,
+      "extreme_time_frac": 0.8961038961038961,
       "gap_size_class": "none",
       "gap_threshold_pct": 0.25,
-      "real_gap_filled": false
+      "max_down_pct": -0.6417261503406269,
+      "max_up_pct": 0.47748145736938863,
+      "mean_crossings": 6,
+      "open_gap_pct": 0.23772344838837167,
+      "range_pct": 1.1192076077100155,
+      "real_gap_filled": false,
+      "residual_r2": 0.7953337045209516,
+      "residual_slope": -0.15117823500820166
      },
-     "shape_summary": "",
+     "features_cutoff": "2024-05-22T20:00:00Z",
      "gap_raw": {
-      "open_gap_pct": 0.1,
+      "gap_abs_pct": 0.23772344838837167,
+      "gap_atr_mult": null,
+      "gap_filled": true,
+      "min_gap_pct": 0.25,
+      "open_gap_pct": 0.23772344838837167,
+      "prior_atr_pct": null,
+      "threshold_basis": "abs"
+     },
+     "session_date": "2024-05-22",
+     "shape_summary": "zigzag signature D1 U1 D3 U2",
+     "symbol": "MSFT",
+     "timeframe": "5m"
+    },
+    {
+     "bars": 78,
+     "data_cutoff": "2024-06-07T20:00:00Z",
+     "features": {
+      "close_vs_open_pct": 0.9142523169408001,
+      "extreme_time_frac": 0.5844155844155844,
+      "gap_size_class": "medium",
+      "gap_threshold_pct": 0.25,
+      "max_down_pct": -1.4344159639308574,
+      "max_up_pct": 1.5462970693829847,
+      "mean_crossings": 3,
+      "open_gap_pct": -0.9686501325020802,
+      "range_pct": 2.980713033313842,
+      "real_gap_filled": true,
+      "residual_r2": 0.5382722531103261,
+      "residual_slope": 0.2905911347047997
+     },
+     "features_cutoff": "2024-06-07T20:00:00Z",
+     "gap_raw": {
+      "gap_abs_pct": 0.9686501325020802,
+      "gap_atr_mult": null,
+      "gap_filled": true,
+      "min_gap_pct": 0.25,
+      "open_gap_pct": -0.9686501325020802,
+      "prior_atr_pct": null,
+      "threshold_basis": "abs"
+     },
+     "session_date": "2024-06-07",
+     "shape_summary": "zigzag signature U4 D2 U1 F",
+     "symbol": "NVDA",
+     "timeframe": "5m"
+    },
+    {
+     "bars": 78,
+     "data_cutoff": "2024-08-02T20:00:00Z",
+     "features": {
+      "close_vs_open_pct": -0.9697204780722002,
+      "extreme_time_frac": 0.7402597402597403,
+      "gap_size_class": "large",
+      "gap_threshold_pct": 0.25,
+      "max_down_pct": -1.8642876190937963,
+      "max_up_pct": 0,
+      "mean_crossings": 0,
+      "open_gap_pct": -1.0933940774487505,
+      "range_pct": 1.8642876190937963,
+      "real_gap_filled": false,
+      "residual_r2": 0.026556583938536105,
+      "residual_slope": -0.025054917868583233
+     },
+     "features_cutoff": "2024-08-02T20:00:00Z",
+     "gap_raw": {
+      "gap_abs_pct": 1.0933940774487505,
+      "gap_atr_mult": null,
       "gap_filled": false,
-      "threshold_basis": "abs",
-      "min_gap_pct": 0.25
-     }
+      "min_gap_pct": 0.25,
+      "open_gap_pct": -1.0933940774487505,
+      "prior_atr_pct": null,
+      "threshold_basis": "abs"
+     },
+     "session_date": "2024-08-02",
+     "shape_summary": "zigzag signature D5 U1 D1 U2 D1 U1 D1 U2 D1 U1 D2 U2 D1 U1 D1 U1",
+     "symbol": "MSFT",
+     "timeframe": "5m"
     }
    ],
    "expected": [
-    "trend_day",
-    "reversal",
-    "range",
-    "gap_fill",
-    "abstain"
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "sets": [
+    {
+     "set_id": "L12.A:675864bc0f60",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2024-01-02T21:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AMZN",
+       "published_at": "2024-01-02T21:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "residual features computed in code from real 5m bars (frozen ablation draw, 2024 out-of-sample)"
+    },
+    {
+     "set_id": "L12.A:f86e581b659c",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2024-01-25T21:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=MSFT",
+       "published_at": "2024-01-25T21:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "residual features computed in code from real 5m bars (frozen ablation draw, 2024 out-of-sample)"
+    },
+    {
+     "set_id": "L12.A:ce7f91cf0947",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2024-03-18T20:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=GOOGL",
+       "published_at": "2024-03-18T20:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "residual features computed in code from real 5m bars (frozen ablation draw, 2024 out-of-sample)"
+    },
+    {
+     "set_id": "L12.A:125f8794e06d",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2024-05-22T20:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=MSFT",
+       "published_at": "2024-05-22T20:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "residual features computed in code from real 5m bars (frozen ablation draw, 2024 out-of-sample)"
+    },
+    {
+     "set_id": "L12.A:baa58364dfe1",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2024-06-07T20:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=NVDA",
+       "published_at": "2024-06-07T20:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "residual features computed in code from real 5m bars (frozen ablation draw, 2024 out-of-sample)"
+    },
+    {
+     "set_id": "L12.A:6ac153e0db0e",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2024-08-02T20:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=MSFT",
+       "published_at": "2024-08-02T20:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "residual features computed in code from real 5m bars (frozen ablation draw, 2024 out-of-sample)"
+    }
    ],
    "visual": {
     "fed": [
@@ -457,6 +607,7 @@
    "spec": "decisions/projects/chart-shapes/residual_pattern_family_nogap.yaml",
    "version": "1.0.0",
    "approval_status": "experimental",
+   "catalog_id": "L12.B",
    "questions": {
     "family": {
      "type": "choice",
@@ -587,154 +738,303 @@
    },
    "inputs": [
     {
-     "symbol": "SPY",
-     "timeframe": "5m",
-     "session_date": "2026-11-02",
-     "data_cutoff": "2026-11-02T15:30:00Z",
-     "features_cutoff": "2026-11-02T15:30:00Z",
      "bars": 78,
+     "data_cutoff": "2024-01-02T21:00:00Z",
      "features": {
-      "close_vs_open_pct": 2.4,
-      "range_pct": 2.6,
-      "residual_slope": 0.4,
-      "residual_r2": 0.93,
-      "max_up_pct": 2.5,
-      "max_down_pct": -0.1,
-      "extreme_time_frac": 0.98,
-      "mean_crossings": 1,
-      "open_gap_pct": 0.1,
-      "gap_size_class": "none",
+      "close_vs_open_pct": -1.0558268443975116,
+      "extreme_time_frac": 0.19480519480519481,
+      "gap_size_class": "small",
       "gap_threshold_pct": 0.25,
-      "real_gap_filled": false
+      "max_down_pct": -1.9355285733139715,
+      "max_up_pct": 0,
+      "mean_crossings": 0,
+      "open_gap_pct": -0.2698256005264854,
+      "range_pct": 1.9355285733139715,
+      "real_gap_filled": false,
+      "residual_r2": 0.010499253791260488,
+      "residual_slope": -0.01797909399361489
      },
-     "shape_summary": "Residual climbs steadily all session and closes at the high",
+     "features_cutoff": "2024-01-02T21:00:00Z",
      "gap_raw": {
-      "open_gap_pct": 0.1,
+      "gap_abs_pct": 0.2698256005264854,
+      "gap_atr_mult": null,
       "gap_filled": false,
-      "threshold_basis": "abs",
-      "min_gap_pct": 0.25
-     }
+      "min_gap_pct": 0.25,
+      "open_gap_pct": -0.2698256005264854,
+      "prior_atr_pct": null,
+      "threshold_basis": "abs"
+     },
+     "session_date": "2024-01-02",
+     "shape_summary": "zigzag signature D5 U4 D2 U1 D1 U1 D1 U1",
+     "symbol": "AMZN",
+     "timeframe": "5m"
     },
     {
-     "symbol": "SPY",
-     "timeframe": "5m",
-     "session_date": "2026-11-02",
-     "data_cutoff": "2026-11-02T15:30:00Z",
-     "features_cutoff": "2026-11-02T15:30:00Z",
      "bars": 78,
+     "data_cutoff": "2024-01-25T21:00:00Z",
      "features": {
-      "close_vs_open_pct": -1.2,
-      "range_pct": 3.0,
-      "residual_slope": -0.1,
-      "residual_r2": 0.2,
-      "max_up_pct": 1.8,
-      "max_down_pct": -1.3,
-      "extreme_time_frac": 0.15,
-      "mean_crossings": 2,
-      "open_gap_pct": 0.1,
-      "gap_size_class": "none",
+      "close_vs_open_pct": 0.19044321329639846,
+      "extreme_time_frac": 0.22077922077922077,
+      "gap_size_class": "small",
       "gap_threshold_pct": 0.25,
-      "real_gap_filled": false
+      "max_down_pct": -0.3512069647803706,
+      "max_up_pct": 0.6480015829046337,
+      "mean_crossings": 7,
+      "open_gap_pct": 0.43470700747696434,
+      "range_pct": 0.9992085476850043,
+      "real_gap_filled": false,
+      "residual_r2": 0.3610292914259351,
+      "residual_slope": -0.09218261288685434
      },
-     "shape_summary": "Strong rally in the first hour fully retraced; closes below the open",
+     "features_cutoff": "2024-01-25T21:00:00Z",
      "gap_raw": {
-      "open_gap_pct": 0.1,
+      "gap_abs_pct": 0.43470700747696434,
+      "gap_atr_mult": null,
       "gap_filled": false,
-      "threshold_basis": "abs",
-      "min_gap_pct": 0.25
-     }
+      "min_gap_pct": 0.25,
+      "open_gap_pct": 0.43470700747696434,
+      "prior_atr_pct": null,
+      "threshold_basis": "abs"
+     },
+     "session_date": "2024-01-25",
+     "shape_summary": "zigzag signature U2 D3 U1",
+     "symbol": "MSFT",
+     "timeframe": "5m"
     },
     {
-     "symbol": "SPY",
-     "timeframe": "5m",
-     "session_date": "2026-11-02",
-     "data_cutoff": "2026-11-02T15:30:00Z",
-     "features_cutoff": "2026-11-02T15:30:00Z",
      "bars": 78,
+     "data_cutoff": "2024-03-18T20:00:00Z",
      "features": {
-      "close_vs_open_pct": 0.05,
-      "range_pct": 0.6,
-      "residual_slope": 0.0,
-      "residual_r2": 0.02,
-      "max_up_pct": 0.3,
-      "max_down_pct": -0.3,
-      "extreme_time_frac": 0.5,
-      "mean_crossings": 14,
-      "open_gap_pct": 0.1,
-      "gap_size_class": "none",
-      "gap_threshold_pct": 0.25,
-      "real_gap_filled": false
-     },
-     "shape_summary": "Residual oscillates around zero all day, many crossings, no slope",
-     "gap_raw": {
-      "open_gap_pct": 0.1,
-      "gap_filled": false,
-      "threshold_basis": "abs",
-      "min_gap_pct": 0.25
-     }
-    },
-    {
-     "symbol": "SPY",
-     "timeframe": "5m",
-     "session_date": "2026-11-02",
-     "data_cutoff": "2026-11-02T15:30:00Z",
-     "features_cutoff": "2026-11-02T15:30:00Z",
-     "bars": 78,
-     "features": {
-      "close_vs_open_pct": -1.6,
-      "range_pct": 1.8,
-      "residual_slope": -0.2,
-      "residual_r2": 0.7,
-      "max_up_pct": 0.1,
-      "max_down_pct": -1.7,
-      "extreme_time_frac": 0.8,
-      "mean_crossings": 2,
-      "open_gap_pct": 1.5,
+      "close_vs_open_pct": -0.625799071394928,
+      "extreme_time_frac": 0.025974025974025976,
       "gap_size_class": "large",
       "gap_threshold_pct": 0.25,
-      "real_gap_filled": true
+      "max_down_pct": -0.9218760514097313,
+      "max_up_pct": 2.036605881165454,
+      "mean_crossings": 1,
+      "open_gap_pct": 5.214343870579485,
+      "range_pct": 2.9584819325751854,
+      "real_gap_filled": false,
+      "residual_r2": 0.8548680376210438,
+      "residual_slope": -0.4351875987445766
      },
-     "shape_summary": "Opens with a 1.5% gap up that is closed back to the prior close by the afternoon",
+     "features_cutoff": "2024-03-18T20:00:00Z",
      "gap_raw": {
-      "open_gap_pct": 1.5,
-      "gap_filled": true,
-      "threshold_basis": "abs",
-      "min_gap_pct": 0.25
-     }
+      "gap_abs_pct": 5.214343870579485,
+      "gap_atr_mult": null,
+      "gap_filled": false,
+      "min_gap_pct": 0.25,
+      "open_gap_pct": 5.214343870579485,
+      "prior_atr_pct": null,
+      "threshold_basis": "abs"
+     },
+     "session_date": "2024-03-18",
+     "shape_summary": "zigzag signature D1 U1 D3 F",
+     "symbol": "GOOGL",
+     "timeframe": "5m"
     },
     {
-     "symbol": "SPY",
-     "timeframe": "5m",
-     "session_date": "2026-11-02",
-     "data_cutoff": "2026-11-02T15:30:00Z",
-     "features_cutoff": "2026-11-02T16:00:00Z",
      "bars": 78,
+     "data_cutoff": "2024-05-22T20:00:00Z",
      "features": {
-      "close_vs_open_pct": 2.4,
-      "range_pct": 2.6,
-      "residual_slope": 0.4,
-      "residual_r2": 0.93,
-      "mean_crossings": 1,
-      "open_gap_pct": 0.1,
+      "close_vs_open_pct": 0.10695435839012113,
+      "extreme_time_frac": 0.8961038961038961,
       "gap_size_class": "none",
       "gap_threshold_pct": 0.25,
-      "real_gap_filled": false
+      "max_down_pct": -0.6417261503406269,
+      "max_up_pct": 0.47748145736938863,
+      "mean_crossings": 6,
+      "open_gap_pct": 0.23772344838837167,
+      "range_pct": 1.1192076077100155,
+      "real_gap_filled": false,
+      "residual_r2": 0.7953337045209516,
+      "residual_slope": -0.15117823500820166
      },
-     "shape_summary": "",
+     "features_cutoff": "2024-05-22T20:00:00Z",
      "gap_raw": {
-      "open_gap_pct": 0.1,
+      "gap_abs_pct": 0.23772344838837167,
+      "gap_atr_mult": null,
+      "gap_filled": true,
+      "min_gap_pct": 0.25,
+      "open_gap_pct": 0.23772344838837167,
+      "prior_atr_pct": null,
+      "threshold_basis": "abs"
+     },
+     "session_date": "2024-05-22",
+     "shape_summary": "zigzag signature D1 U1 D3 U2",
+     "symbol": "MSFT",
+     "timeframe": "5m"
+    },
+    {
+     "bars": 78,
+     "data_cutoff": "2024-06-07T20:00:00Z",
+     "features": {
+      "close_vs_open_pct": 0.9142523169408001,
+      "extreme_time_frac": 0.5844155844155844,
+      "gap_size_class": "medium",
+      "gap_threshold_pct": 0.25,
+      "max_down_pct": -1.4344159639308574,
+      "max_up_pct": 1.5462970693829847,
+      "mean_crossings": 3,
+      "open_gap_pct": -0.9686501325020802,
+      "range_pct": 2.980713033313842,
+      "real_gap_filled": true,
+      "residual_r2": 0.5382722531103261,
+      "residual_slope": 0.2905911347047997
+     },
+     "features_cutoff": "2024-06-07T20:00:00Z",
+     "gap_raw": {
+      "gap_abs_pct": 0.9686501325020802,
+      "gap_atr_mult": null,
+      "gap_filled": true,
+      "min_gap_pct": 0.25,
+      "open_gap_pct": -0.9686501325020802,
+      "prior_atr_pct": null,
+      "threshold_basis": "abs"
+     },
+     "session_date": "2024-06-07",
+     "shape_summary": "zigzag signature U4 D2 U1 F",
+     "symbol": "NVDA",
+     "timeframe": "5m"
+    },
+    {
+     "bars": 78,
+     "data_cutoff": "2024-08-02T20:00:00Z",
+     "features": {
+      "close_vs_open_pct": -0.9697204780722002,
+      "extreme_time_frac": 0.7402597402597403,
+      "gap_size_class": "large",
+      "gap_threshold_pct": 0.25,
+      "max_down_pct": -1.8642876190937963,
+      "max_up_pct": 0,
+      "mean_crossings": 0,
+      "open_gap_pct": -1.0933940774487505,
+      "range_pct": 1.8642876190937963,
+      "real_gap_filled": false,
+      "residual_r2": 0.026556583938536105,
+      "residual_slope": -0.025054917868583233
+     },
+     "features_cutoff": "2024-08-02T20:00:00Z",
+     "gap_raw": {
+      "gap_abs_pct": 1.0933940774487505,
+      "gap_atr_mult": null,
       "gap_filled": false,
-      "threshold_basis": "abs",
-      "min_gap_pct": 0.25
-     }
+      "min_gap_pct": 0.25,
+      "open_gap_pct": -1.0933940774487505,
+      "prior_atr_pct": null,
+      "threshold_basis": "abs"
+     },
+     "session_date": "2024-08-02",
+     "shape_summary": "zigzag signature D5 U1 D1 U2 D1 U1 D1 U2 D1 U1 D2 U2 D1 U1 D1 U1",
+     "symbol": "MSFT",
+     "timeframe": "5m"
     }
    ],
    "expected": [
-    "trend_day",
-    "reversal",
-    "range",
-    "gap_fill",
-    "abstain"
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "sets": [
+    {
+     "set_id": "L12.B:675864bc0f60",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2024-01-02T21:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AMZN",
+       "published_at": "2024-01-02T21:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "residual features computed in code from real 5m bars (frozen ablation draw, 2024 out-of-sample)"
+    },
+    {
+     "set_id": "L12.B:f86e581b659c",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2024-01-25T21:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=MSFT",
+       "published_at": "2024-01-25T21:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "residual features computed in code from real 5m bars (frozen ablation draw, 2024 out-of-sample)"
+    },
+    {
+     "set_id": "L12.B:ce7f91cf0947",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2024-03-18T20:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=GOOGL",
+       "published_at": "2024-03-18T20:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "residual features computed in code from real 5m bars (frozen ablation draw, 2024 out-of-sample)"
+    },
+    {
+     "set_id": "L12.B:125f8794e06d",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2024-05-22T20:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=MSFT",
+       "published_at": "2024-05-22T20:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "residual features computed in code from real 5m bars (frozen ablation draw, 2024 out-of-sample)"
+    },
+    {
+     "set_id": "L12.B:baa58364dfe1",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2024-06-07T20:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=NVDA",
+       "published_at": "2024-06-07T20:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "residual features computed in code from real 5m bars (frozen ablation draw, 2024 out-of-sample)"
+    },
+    {
+     "set_id": "L12.B:6ac153e0db0e",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2024-08-02T20:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=MSFT",
+       "published_at": "2024-08-02T20:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "residual features computed in code from real 5m bars (frozen ablation draw, 2024 out-of-sample)"
+    }
    ],
    "visual": {
     "fed": [
@@ -875,6 +1175,600 @@
     ],
     "arrows": {
      "input": "state built from symbol, timeframe, features, shape_summary (data ≤ data_cutoff)",
+     "guards": "guards in code first: future_features, missing_features, too_few_bars",
+     "output": "gate → decide in code",
+     "output_detail": "family conf 0.55 · min bars 30"
+    }
+   }
+  },
+  {
+   "key": "C",
+   "id": "residual_pattern_path",
+   "name": "Residual pattern path",
+   "blurb": "Ablation arm C: name the intraday pattern family from a compact path sequence only (no derived features).",
+   "spec": "decisions/projects/chart-shapes/residual_pattern_path.yaml",
+   "version": "1.0.0",
+   "approval_status": "experimental",
+   "catalog_id": "L12.C",
+   "questions": {
+    "family": {
+     "type": "choice",
+     "instructions": "Which intraday pattern family does the price path for `symbol` on `timeframe` describe? `residual_pct_30m` is price minus the session open in pct of open at each half hour (10:00 to 16:00 ET); `normalized_30m` is the same path z-scored; `pivot_sequence` is its zigzag pivots.",
+     "criteria": {
+      "trend_day": "The path moves steadily one way for most of the session and closes near its extreme",
+      "reversal": "A strong move early in the session is fully retraced and the session closes on the other side of the open",
+      "range": "The path oscillates around the open (0) with repeated crossings, small net change and no persistent drift",
+      "unclear": "The path is contradictory or too weak to name a family",
+      "other": "A recognisable pattern that is none of the above"
+     }
+    },
+    "clarity": {
+     "type": "score",
+     "instructions": "How clearly does the path show a single pattern?",
+     "criteria": [
+      "Mixed or contradictory path",
+      "One pattern is suggested but weak",
+      "One pattern is clear along the whole path"
+     ]
+    }
+   },
+   "review_floor": 0.5,
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "symbol",
+     "timeframe",
+     "session_date",
+     "data_cutoff",
+     "features_cutoff",
+     "bars",
+     "path"
+    ],
+    "properties": {
+     "symbol": {
+      "type": "string",
+      "minLength": 1
+     },
+     "timeframe": {
+      "type": "string",
+      "minLength": 1
+     },
+     "session_date": {
+      "type": "string"
+     },
+     "data_cutoff": {
+      "type": "string",
+      "description": "decision cutoff (RFC3339 with timezone)"
+     },
+     "features_cutoff": {
+      "type": "string",
+      "description": "last bar time used to compute the path"
+     },
+     "bars": {
+      "type": "integer",
+      "minimum": 0
+     },
+     "path": {
+      "type": "object",
+      "required": [
+       "residual_pct_30m",
+       "normalized_30m",
+       "pivots"
+      ],
+      "additionalProperties": false,
+      "properties": {
+       "residual_pct_30m": {
+        "type": "array",
+        "items": {
+         "type": "number"
+        },
+        "minItems": 13,
+        "maxItems": 13,
+        "description": "price minus open, pct of open, at 10:00..16:00 ET"
+       },
+       "normalized_30m": {
+        "type": "array",
+        "items": {
+         "type": "number"
+        },
+        "minItems": 13,
+        "maxItems": 13,
+        "description": "z-scored path at the same 13 points"
+       },
+       "pivots": {
+        "type": "string",
+        "description": "zigzag pivot sequence (U/D + size bucket, F = end)"
+       }
+      }
+     }
+    },
+    "additionalProperties": false
+   },
+   "inputs": [
+    {
+     "bars": 78,
+     "data_cutoff": "2024-01-02T21:00:00Z",
+     "features_cutoff": "2024-01-02T21:00:00Z",
+     "path": {
+      "normalized_30m": [
+       -0.686,
+       -1.909,
+       -1.287,
+       0.637,
+       1.308,
+       0.47,
+       0.176,
+       0.396,
+       -0.185,
+       -0.075,
+       -0.606,
+       -0.656,
+       0.597
+      ],
+      "pivots": "D5 U4 D2 U1 D1 U1 D1 U1",
+      "residual_pct_30m": [
+       -1.478,
+       -1.881,
+       -1.676,
+       -1.043,
+       -0.822,
+       -1.098,
+       -1.194,
+       -1.122,
+       -1.313,
+       -1.277,
+       -1.452,
+       -1.468,
+       -1.056
+      ]
+     },
+     "session_date": "2024-01-02",
+     "symbol": "AMZN",
+     "timeframe": "5m"
+    },
+    {
+     "bars": 78,
+     "data_cutoff": "2024-01-25T21:00:00Z",
+     "features_cutoff": "2024-01-25T21:00:00Z",
+     "path": {
+      "normalized_30m": [
+       -0.542,
+       0.884,
+       1.726,
+       1.277,
+       1.077,
+       0.43,
+       0.463,
+       0.446,
+       -1.041,
+       -1.488,
+       -0.979,
+       -1.256,
+       0.136
+      ],
+      "pivots": "U2 D3 U1",
+      "residual_pct_30m": [
+       -0.005,
+       0.406,
+       0.648,
+       0.519,
+       0.461,
+       0.275,
+       0.284,
+       0.279,
+       -0.148,
+       -0.277,
+       -0.131,
+       -0.21,
+       0.19
+      ]
+     },
+     "session_date": "2024-01-25",
+     "symbol": "MSFT",
+     "timeframe": "5m"
+    },
+    {
+     "bars": 78,
+     "data_cutoff": "2024-03-18T20:00:00Z",
+     "features_cutoff": "2024-03-18T20:00:00Z",
+     "path": {
+      "normalized_30m": [
+       0.771,
+       1.46,
+       1.479,
+       1.434,
+       0.497,
+       -0.128,
+       -0.707,
+       -0.452,
+       -0.571,
+       -0.734,
+       -1.248,
+       -1.21,
+       -1.066
+      ],
+      "pivots": "D1 U1 D3 F",
+      "residual_pct_30m": [
+       0.996,
+       1.605,
+       1.622,
+       1.581,
+       0.754,
+       0.202,
+       -0.31,
+       -0.084,
+       -0.189,
+       -0.333,
+       -0.787,
+       -0.754,
+       -0.626
+      ]
+     },
+     "session_date": "2024-03-18",
+     "symbol": "GOOGL",
+     "timeframe": "5m"
+    },
+    {
+     "bars": 78,
+     "data_cutoff": "2024-05-22T20:00:00Z",
+     "features_cutoff": "2024-05-22T20:00:00Z",
+     "path": {
+      "normalized_30m": [
+       0.847,
+       1.388,
+       0.592,
+       0.92,
+       0.385,
+       -0.111,
+       -0.198,
+       0.438,
+       -0.293,
+       -1.613,
+       -1.39,
+       -1.338,
+       0.394
+      ],
+      "pivots": "D1 U1 D3 U2",
+      "residual_pct_30m": [
+       0.251,
+       0.423,
+       0.17,
+       0.274,
+       0.104,
+       -0.054,
+       -0.081,
+       0.121,
+       -0.112,
+       -0.531,
+       -0.46,
+       -0.444,
+       0.107
+      ]
+     },
+     "session_date": "2024-05-22",
+     "symbol": "MSFT",
+     "timeframe": "5m"
+    },
+    {
+     "bars": 78,
+     "data_cutoff": "2024-06-07T20:00:00Z",
+     "features_cutoff": "2024-06-07T20:00:00Z",
+     "path": {
+      "normalized_30m": [
+       -1.076,
+       -1.406,
+       -0.976,
+       -1.189,
+       -0.886,
+       0.793,
+       1.34,
+       1.029,
+       1.102,
+       0.16,
+       0.611,
+       0.628,
+       0.88
+      ],
+      "pivots": "U4 D2 U1 F",
+      "residual_pct_30m": [
+       -0.539,
+       -0.785,
+       -0.465,
+       -0.624,
+       -0.398,
+       0.849,
+       1.256,
+       1.025,
+       1.079,
+       0.379,
+       0.714,
+       0.726,
+       0.914
+      ]
+     },
+     "session_date": "2024-06-07",
+     "symbol": "NVDA",
+     "timeframe": "5m"
+    },
+    {
+     "bars": 78,
+     "data_cutoff": "2024-08-02T20:00:00Z",
+     "features_cutoff": "2024-08-02T20:00:00Z",
+     "path": {
+      "normalized_30m": [
+       0.766,
+       0.442,
+       -0.365,
+       -1.008,
+       0.232,
+       -0.137,
+       -0.886,
+       -0.718,
+       -0.483,
+       0.449,
+       -0.81,
+       0.997,
+       1.627
+      ],
+      "pivots": "D5 U1 D1 U2 D1 U1 D1 U2 D1 U1 D2 U2 D1 U1 D1 U1",
+      "residual_pct_30m": [
+       -1.218,
+       -1.312,
+       -1.544,
+       -1.73,
+       -1.372,
+       -1.479,
+       -1.695,
+       -1.646,
+       -1.578,
+       -1.309,
+       -1.673,
+       -1.152,
+       -0.97
+      ]
+     },
+     "session_date": "2024-08-02",
+     "symbol": "MSFT",
+     "timeframe": "5m"
+    }
+   ],
+   "expected": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "sets": [
+    {
+     "set_id": "L12.C:4c3dee44e5fa",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2024-01-02T21:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AMZN",
+       "published_at": "2024-01-02T21:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "residual features computed in code from real 5m bars (frozen ablation draw, 2024 out-of-sample)"
+    },
+    {
+     "set_id": "L12.C:f24a512d0085",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2024-01-25T21:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=MSFT",
+       "published_at": "2024-01-25T21:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "residual features computed in code from real 5m bars (frozen ablation draw, 2024 out-of-sample)"
+    },
+    {
+     "set_id": "L12.C:edef827b9ac4",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2024-03-18T20:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=GOOGL",
+       "published_at": "2024-03-18T20:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "residual features computed in code from real 5m bars (frozen ablation draw, 2024 out-of-sample)"
+    },
+    {
+     "set_id": "L12.C:5bd6e14d4fc3",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2024-05-22T20:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=MSFT",
+       "published_at": "2024-05-22T20:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "residual features computed in code from real 5m bars (frozen ablation draw, 2024 out-of-sample)"
+    },
+    {
+     "set_id": "L12.C:157bb557c9cc",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2024-06-07T20:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=NVDA",
+       "published_at": "2024-06-07T20:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "residual features computed in code from real 5m bars (frozen ablation draw, 2024 out-of-sample)"
+    },
+    {
+     "set_id": "L12.C:b030bc260bba",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2024-08-02T20:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=MSFT",
+       "published_at": "2024-08-02T20:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "residual features computed in code from real 5m bars (frozen ablation draw, 2024 out-of-sample)"
+    }
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "session_date",
+     "data_cutoff",
+     "features_cutoff",
+     "timeframe",
+     "bars",
+     "path"
+    ],
+    "excerpt": "data_cutoff",
+    "state_fields": [
+     "symbol",
+     "timeframe",
+     "residual_pct_30m",
+     "normalized_30m",
+     "pivot_sequence"
+    ],
+    "questions": [
+     {
+      "id": "family",
+      "type": "choice",
+      "short": "family",
+      "text": "Which intraday pattern family does the price path for `symbol` on `timeframe` describe? `residual_pct_30m` is price minus the session open in pct of open at each half hour (10:00 to 16:00 ET); `normalized_30m` is the same path z-scored; `pivot_sequence` is its zigzag pivots.",
+      "options": [
+       "trend_day",
+       "reversal",
+       "range",
+       "unclear",
+       "other"
+      ]
+     },
+     {
+      "id": "clarity",
+      "type": "score",
+      "short": "clarity",
+      "text": "How clearly does the path show a single pattern?",
+      "options": [
+       "Mixed or contradictory path",
+       "One pattern is suggested but weak",
+       "One pattern is clear along the whole path"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "trend_day",
+      "meaning": "one-way session",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "reversal",
+      "meaning": "early move retraced through the open",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "range",
+      "meaning": "oscillation around the baseline",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "unclear",
+      "meaning": "abstain label",
+      "when": [
+       "family conf < 0.55"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "other",
+      "meaning": "abstain label",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any call",
+      "when": [
+       "features use bars after the decision cutoff (future data)",
+       "a required path field is missing"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "insufficient_bars",
+      "meaning": "too few bars (no call)",
+      "when": [
+       "too few bars to classify a session shape"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "=family.choice",
+      "meaning": "=family.choice",
+      "when": [
+       "family ∈ unclear/other",
+       "otherwise"
+      ],
+      "more": 0,
+      "stages": [
+       "gate",
+       "decide"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, timeframe, path (data ≤ data_cutoff)",
      "guards": "guards in code first: future_features, missing_features, too_few_bars",
      "output": "gate → decide in code",
      "output_detail": "family conf 0.55 · min bars 30"

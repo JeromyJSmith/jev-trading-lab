@@ -78,88 +78,159 @@
    },
    "inputs": [
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "Item 8 ... Substantial doubt about the Company's ability to continue as a going concern exists. Management plans include raising additional capital.",
-     "filed_at": "2026-10-07T12:05:00Z",
+     "data_cutoff": "2024-03-21T12:33:00Z",
+     "document": "Our business strategy may be unsuccessful and we may be unable to address the risks we face in a cost-effective manner, if at all. If we are unable to successfully accomplish these tasks, our business will be harmed.\n\n7\n\nTable of Contents\n\nOur success and longevity depend on our ability to generate profits from future operations and obtain sufficient capital through financing transactions to refinance our debt obligations, pay any contingent consideration owed to former Reflect stockholders, and meet our other business obligations .\n\nThe report of our independent registered public accounting firm on our Consolidated Financial Statements for the fiscal year ended December 31, 2023 included an explanatory paragraph indicating that there is substantial doubt as to our ability to continue as a going concern within one year after that date that the Consolidated Financial Statements are issued.\n\nAt December 31, 2023, the Company has an accumulated deficit of $53,346, negative working capital of $1,587, including current debt obligations of $3,690, and cash of $2,910. For the year ended December 31, 2023, the Company generated operating income of $1,346 and generated positive net cash flows from operations of $5,167. Pursuant to the Second Amended and Restated Credit and Security Agreement (the \"Credit Agreement\") between the Company and Slipstream, the Company is required and began to make monthly repayments of principal on the Consolidation Term Loan on September 1, 2023. The monthly principal payment is approximately $370 and will continue on the first day of each month thereafter until the Maturity Date on February 17, 2025, with total principal repayments of $4,037 during the twelve months subsequent to the reporting date of our Consolidated Financial Statements. In addition, the Company is required to repay the principal balance on the Acquisition Term Loan of $10,000 at maturity and resolve the contingent consideration (described below), currently estimated for accounting purposes at $11,208, each of which mature on February 17, 2025 and collectively raises substantial doubt about the Company's ability to continue as a going concern under the technical framework within ASU 205-40. See “ Note 1: Nature of Organization of Organization and Operations- Liquidity and Financial Consideration “ to the Company’s Consolidated Financial Statements contained in this Report for a description of our payment obligations under the Credit Agreement.\n\nThe merger agreement in which we acquired Reflect requires us to pay to former Reflect stockholders additional contingent cash consideration after February 17, 2025 (subject to a six-month extension under certain circumstances), if the closing price of our shares of common stock on such date is less than $6.40 per share (the \"Guaranteed Price\"). The actual amount of such contingent consideration cannot be determined until such time, but our financial statements reflect $11,208 as the amount of such payment as of December 31, 2023, which include an increase in the Guaranteed Price to reflect the Company’s 1-for-3 reverse stock split that occurred on March 23, 2023. See “ Note 5 Business Combinations ” to the Company’s Consolidated Financial Statements contained in this Report for a description of our obligations to pay the contingent consideration.\n\nWe do not anticipate that we will have adequate funds from our operations to satisfy these obligations in February 2025. In response to these conditions, the Company plans to evaluate its available options for refinancing, via recapitalization, debt financing or equity financing, its upcoming obligations associated with the Acquisition Term Loan, Consolidation Term Loan, and contingent consideration. However, these plans have not been finalized, are subject to market conditions, and are not within the Company’s control, and therefore cannot be deemed probable. As a result, the Company has concluded that management's plans do not alleviate substantial…",
+     "filed_at": "2024-03-21T12:18:00Z",
      "form": "10-K",
-     "symbol": "CRVX",
+     "symbol": "CREX",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "We generated $118B of operating cash flow and hold $75B in cash.",
-     "filed_at": "2026-10-07T12:05:00Z",
+     "data_cutoff": "2024-03-29T17:59:09Z",
+     "document": "Our accounting policies are more fully described in Note C of the financial statements to this Annual Report on Form 10-K. As disclosed in Note C, the preparation of financial statements in conformity with generally accepted accounting principles requires management to make estimates and assumptions about future events that affect the amounts reported in the financial statements and accompanying notes. Actual results could differ significantly from those estimates. We believe that the following discussion addresses our most critical accounting estimates, which are those that are most important to the portrayal of our financial condition and results of operations and require management’s most difficult, subjective and complex judgments.\n\nAssessment of our Ability to Continue as a Going Concern\n\nIn accordance with (“ASC”) 205-40, “Presentation of Financial Statements – Going Concern”, the Company continually evaluates whether there are conditions or events, considered in the aggregate, that raise substantial doubt about the Company's ability to continue as a going concern within one year after the date that the consolidated financial statements are issued. Milestone Scientific has incurred operating losses and negative cash flows from operating activities in virtually each year since its inception.\n\nThe Company has evaluated whether there are conditions or events, considered in the aggregate, that raise substantial doubt about the Company's ability to continue as a going concern within one year after the date that the consolidated financial statements are issued. The Company has incurred total losses since inception of $123.3 million. The operating losses were $7.1 million and $8.8 million, for the years ended December 31, 2023, and 2022, respectively. On December 31, 2023, Milestone Scientific had cash and cash equivalents and marketable securities of approximately $6.0 million and working capital of approximately $7.7 million. For the twelve months ended December 31, 2023 and 2022, we had cash flows used in operating activities of approximately $5.3 million and $6.0 million, respectively.\n\nManagement has prepared cashflow forecasts covering a period of 12 months from the date of issuance of these financial statements. These forecasts include several revenue and operating expense assumptions which indicate that the Company’s current cash and liquidity is sufficient to finance the operating requirements for at least the next 12 months. Additionally, the Company was approved on September 12, 2023 to sell Net Operating Losses through the New Jersey Technology Business Tax Certificate Transfer Program (“NJ NOL Program”), a program administered by the New Jersey Economic Development Authority (“NJEDA”). Management believes this program will generate positive cash flow in the near future. Milestone Scientific is actively pursuing the generation of positive cash flows from operating activities through an increase in revenue from its dental business worldwide, the generation of revenue from its medical devices and disposables business in the United States and worldwide, and a reduction in operating expenses. However, the Company’s continued operations will depend on its ability to raise additional capital through various potential sources until it achieves profitability, if ever.\n\nInventories\n\nInventories principally consist of finished goods and component parts stated at the lower of cost (first-in, first-out method) or net realizable value. Inventory quantities on hand are reviewed on a quarterly basis and a provision for excess and obsolete inventory is recorded if required based on past and expected future sales, potential technological obsolescence and product expiration requirement and regulations.\n\n25\n\nResults of Operations\n\nThe following table sets forth the consolidated results of operations for the year ended December 31, 2023 compared to the year ended December 31, 2022.\n\nYear end December 31, 2023, compared to year ended D…",
+     "filed_at": "2024-03-29T17:44:09Z",
      "form": "10-K",
-     "symbol": "MSFT",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "Substantial doubt previously disclosed has been alleviated by the $200M financing completed in Q3.",
-     "filed_at": "2026-10-07T12:05:00Z",
-     "form": "10-K",
-     "symbol": "BLNK",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "Report of Independent Registered Public Accounting Firm: ... raise substantial doubt about its ability to continue as a going concern.",
-     "filed_at": "2026-10-07T12:05:00Z",
-     "form": "10-K",
-     "symbol": "MULN",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "Risk factors: global economic conditions could materially adversely affect the Company.",
-     "filed_at": "2026-10-07T12:05:00Z",
-     "form": "10-K",
-     "symbol": "AAPL",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "Cash will fund operations only into Q1; these conditions raise substantial doubt about our ability to continue as a going concern.",
-     "filed_at": "2026-10-07T12:05:00Z",
-     "form": "10-K",
-     "symbol": "GRWX",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "Liquidity: we believe cash and credit lines are sufficient for the next 12 months.",
-     "filed_at": "2026-10-07T12:05:00Z",
-     "form": "10-K",
-     "symbol": "KO",
+     "symbol": "MLSS",
      "venue": "NYSE"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "  ",
-     "filed_at": "2026-10-07T12:05:00Z",
+     "data_cutoff": "2024-02-26T21:50:12Z",
+     "document": "Our software products are complex and may contain undetected defects. If we discover software defects in our products, we may experience delayed or lost revenues during the period it takes to correct these problems. Defects, whether actual or perceived, could result in adverse publicity, loss of revenues, product returns, a delay in market acceptance of our products, loss of competitive position or claims against us by customers. Any such problems could be costly to remedy and could cause interruptions, delays, or cessation of our product sales, which could cause us to lose existing or prospective customers and could negatively affect our results of operations.\n\nFinancial, Investment and Indebtedness Risks\n\nIf we are unable to meet our obligations as they become due over the next twelve months, the Company may not be able to continue as a going concern.\n\nAs indicated in the report provided from our independent registered public accounting firm, the Company's present financial situation raises substantial doubt about the Company's ability to continue as a going concern without additional capital becoming available to the Company. While the accompanying financial statements have been prepared assuming that the Company will continue as a going concern, continued operations are dependent upon our ability to execute according to plans, which may include reducing expenditures, obtaining further operational efficiencies, completing equity or debt financings, or securing commercial lines of credit, and ultimately generating profitable operational results. Such financing or lines of credit may not be available on reasonable terms or at all. While the business plans we have established may enable us to meet our financial obligations as they become due over the next twelve months and maintain our current level of operating activities, our ability to continue as a going concern is substantially dependent upon multiple factors, which primarily include those factors set forth above. In order to preserve liquidity, we may also take one or more of the following additional actions:\n\n• Implement additional restructuring and cost reductions,\n\n• Secure a revolving line of credit,\n\n• Dispose of one or more product lines and/or,\n\n• Sell or license intellectual property.\n\nShould we become unable to continue in the normal course of operations, adjustments would be required to the amounts and classifications of assets and liabilities within our consolidated financial statements, and these adjustments could be significant. Our consolidated financial statements do not reflect the adjustments or reclassifications of assets and liabilities that would be necessary if we were to become unable to continue as a going concern.\n\nWe may raise additional capital through the issuance of equity or convertible debt securities or by entering into borrowing arrangements in order to meet our capital needs. Additional funds to allow us to meet our capital needs may not be available on terms acceptable to us or at all.\n\n11\n\nTable of Contents\n\nIt is likely that we may need or choose to obtain additional financing to fund our future activities. We could raise these funds by selling more stock to the public or to selected investors, or by entering into borrowing arrangements. We may not be able to obtain additional funds on favorable terms, or at all. If adequate funds are not available, we may be required to curtail our operations or other business activities significantly or to obtain funds through arrangements with strategic partners or others that may require us to relinquish rights to certain technologies or potential markets.\n\nIt is possible that our future capital requirements may vary materially from those currently anticipated. The amount of capital that we will need in the future will depend on many factors, including but not limited to:\n\n• the launch and market acceptance of our products;\n\n• the levels of promotion and advertising that will be required to launch…",
+     "filed_at": "2024-02-26T21:35:12Z",
      "form": "10-K",
-     "symbol": "AAPL",
+     "symbol": "SMSI",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "Substantial doubt about the Company's ability to continue as a going concern exists. Management plans include raising additional capital.",
-     "filed_at": "2026-10-07T15:30:00Z",
+     "data_cutoff": "2024-03-11T20:36:08Z",
+     "document": "• Conducting a portion of our operations through joint ventures in which we do not have 100% ownership interest, and which are not operated solely for the benefit of our stockholders, exposes us and our stockholders to risks and uncertainties, many of which are outside of our control.\n\n• Our projects are in the development and construction phases, and the success of such projects is unpredictable; as such, positive cash flows and even revenues will be several years away, if they occur at all.\n\n• We will be required to seek additional debt and equity financing in the future to complete future phases of the Rio Grande LNG Facility and the development of CCS projects and may not be able to secure such financing on acceptable terms, or at all.\n\n• There is substantial doubt about our ability to continue as a going concern.\n\n• The Rio Grande LNG Facility’s operations will be substantially dependent on the development and operation of the Pipeline by Enbridge and its affiliates.\n\n• We may be subject to risks related to doing business in, and having counterparties based in, foreign countries.\n\n• Costs for the Rio Grande LNG Facility and CCS projects are subject to various factors.We will be dependent on third-party contractors for the successful completion of the Rio Grande LNG Facility and CCS projects, and these contractors may be unable to complete the Rio Grande LNG Facility or CCS projects or may build a non-conforming Rio Grande LNG Facility or CCS projects.\n\n• Our ability to generate cash is substantially dependent upon us entering into satisfactory contracts with third parties and the performance of those third parties under those contracts.\n\n• Our exposure to the performance and credit risks of counterparties may adversely affect our operating results, liquidity and access to financing.\n\n• Our construction and operations activities will be subject to a number of development risks, operational hazards, regulatory approvals and other risks which may not be fully covered by insurance, and which could cause cost overruns and delays that could have a material adverse effect on our business, results of operations, financial condition, liquidity and prospects.\n\n• Failure of exported LNG to be a competitive source of energy for international markets could adversely affect our customers and could materially and adversely affect our business, contracts, financial condition, operating results, cash flow, liquidity and prospects.\n\n• Decreases in the global demand for and price of natural gas (versus the price of imported LNG) could lead to reduced development of LNG projects worldwide.\n\n• There may be shortages of LNG vessels worldwide, which could have a material adverse effect on our business, results of operations, financial condition, liquidity and prospects.\n\n• The operation of the Rio Grande LNG Facility and any CCS project may be subject to significant operating hazards and uninsured risks, one or more of which may create significant liabilities and losses that could have a material adverse effect on our business, results of operations, financial condition, liquidity and prospects.\n\nRisks Related to Governmental Regulation\n\n• The construction and operation of the Rio Grande LNG Facility remains subject to further governmental approvals, and some approvals may be subject to further conditions, review and/or revocation and other legal and regulatory risks, which may result in delays, increased costs or decreased cash flows.\n\n6\n\nTable of Contents\n\n• The Rio Grande LNG Facility will be subject to a number of environmental laws and regulations that impose significant compliance costs, and existing and future environmental and similar laws and regulations could result in increased compliance costs, liabilities or additional operating restrictions.\n\n• Changes in legislation and regulations or interpretations thereof, such as those relating to the importation and exportation of LNG and incentives for reduction of emissions, could have a…",
+     "filed_at": "2024-03-11T20:21:08Z",
      "form": "10-K",
-     "symbol": "CRVX",
+     "symbol": "NEXT",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2024-06-05T21:42:22Z",
+     "document": "It is possible that we may discover significant deficiencies or material weaknesses in our internal control over financial reporting in the future. For example, internal control over financial reporting may not achieve their intended objectives. Control processes that involve human diligence and compliance, such as our disclosure controls and procedures and internal control over financial reporting, are subject to lapses in judgment and breakdowns resulting from human failures. Controls can also be circumvented by collusion or improper management-override of such controls. Because of such limitations, there are risks that material misstatements due to error or fraud may not be prevented or detected, and that information may not be reported on a timely basis.\n\nBased on our limited cash resources, history of significant losses, and negative cash flow, our independent registered public accounting firm has included an explanatory paragraph in their opinion as to the substantial doubt about our ability to continue as a going concern.\n\nDue to, among other factors, our history of significant losses, limited cash resources, and negative cash flow, our independent registered public accounting firm has included an explanatory paragraph in their opinion for the year ended December 31, 2023 as to the substantial doubt about our ability to continue as a going concern. Our financial statements have been prepared in accordance with accounting principles generally accepted in the United States, which contemplate that we will continue to operate as a going concern. Our financial statements do not contain any adjustments that might result if we are unable to continue as a going concern.\n\nWe have historically not generated significant revenue and have sustained substantial operating losses.\n\nIn order to increase revenue, we have developed a direct sales force and anticipate the need to retain additional sales, marketing and technical support personnel and may need to incur substantial expenses. We cannot assure you that we will be able to secure these necessary resources, that a significant market for our technologies will develop, or that we will be able to achieve our targeted revenue. If we are unable to achieve revenue or raise capital sufficient to cover our ongoing operating expenses, we will be required to scale back operations, including marketing and research initiatives, or in the extreme case, discontinue operations.\n\n9\n\nTable of Contents\n\nWe may need to obtain additional financing to execute our business plan over the long-term, which may not be available. If we are unable to raise additional capital or generate significant revenue, we may not be able to continue operations.\n\nWe have historically financed our operations through access to the capital markets by issuing secured and convertible debt securities, convertible preferred stock, common stock, and through factoring receivables. We currently require approximately $732,000 per month to conduct our operations, a monthly amount that we have been unable to consistently achieve through revenue generation. During 2023, we generated approximately $9.0 million of revenue, which is below our average monthly requirements. If we are unable to generate sufficient revenue to cover operating expenses and fund our business plan, we will need to obtain additional third-party financing. We may, therefore, need to obtain additional financing through the issuance of debt or equity securities. We cannot assure you that we will be able to secure any such additional financing on terms acceptable to us or at all. If we cannot obtain such financing, we will not be able to execute our business plan, will be required to reduce operating expenses, and in the extreme case, discontinue operations.\n\nThe delayed filing of this annual report has made us currently ineligible to use a registration statement on Form S-3 to register the offer and sale of securities, which could adversely affect our ability to ra…",
+     "filed_at": "2024-06-05T21:27:22Z",
+     "form": "10-K",
+     "symbol": "BKYI",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2024-03-25T20:31:14Z",
+     "document": "The Company has generated losses and negative operating cashflows since its inception and has relied on external sources of financing to support the cash flow from operations. The Company attributes losses to non-capital expenditures related to the scaling of existing products and services, development of new products and services and marketing efforts associated with these existing and new products and services. As of and for the year ended December 31, 2023, the Company had working capital from continuing operations of\n$8,100,000 and a loss from continuing operations of\n$45,685,000.\n\nOur cash increased by $13,245,000 for the year ended December 31, 2023 primarily due to net cash provided by financing activities of\n$45,602,000 which was offset by the net cash used in operating activities of\n$32,627,000.\n\nBased on the Company's current business plan assumptions and the expected cash burn rate, the Company believes that the existing cash is insufficient to fund its current level of operations for the next twelve months following the issuance of these consolidated financial statements. These factors raise substantial doubt regarding the Company’s ability to continue as a going concern.\n\nThe Company's ability to generate positive operating results and execute its business strategy will depend on (i) its ability to continue the growth of its customer base, (ii) its ability to continue to improve its quarterly financial metrics such as net loss and cash used from operating activities (iii) the continued performance of its contractors, subcontractors and vendors, (iv) its ability to maintain and build good relationships with investors, lenders and other financial intermediaries, (v) its ability to maintain timely collections from existing customers, and (vi) the ability to scale its business processes. To the extent that events outside of the Company's control have a significant negative impact on economic and/or market conditions, they could affect payments from customers, services and supplies from vendors, its ability to continue to secure and implement new business, raise capital, and otherwise, depending on the severity of such impact, materially adversely affect its operating results.\n\n49\n\nTable of Contents\n\nBalance Sheet Arrangements, Contractual Obligations and Commitments\n\nAs of the date of this Annual Report on Form 10-K, we did not have any off-balance sheet arrangements that have had or are reasonably likely to have a material effect on our financial condition, revenues or expenses, results of operations, liquidity, capital resources or capital expenditures.\n\nCritical Accounting Estimates\n\nOur discussion and analysis of our financial condition and results of our operations is based upon our audited consolidated financial statements as of and for the years ended December 31, 2023 and 2022, which have been prepared in accordance with U.S. GAAP. The preparation of these consolidated financial statements requires us to make estimates and assumptions that affect the reported amounts of assets, liabilities, revenue, costs and expenses, and related disclosures. On an ongoing basis, we evaluate our estimates and assumptions based on historical experience and on various other assumptions that we believe are reasonable under the circumstances. Our actual results could differ from these estimates under different assumptions or conditions.\n\nWe believe the application of the estimates inherently required therein, are reasonable. These estimates are periodically reevaluated, and adjustments are made when facts and circumstances dictate a change. Rekor bases its estimates on historical experience and on various other assumptions that the management of Rekor believes to be reasonable under the circumstances, the results of which form management’s basis for making judgments about the carrying values of assets and liabilities that may not be readily apparent from other sources. Actual results may differ from these estimates under differe…",
+     "filed_at": "2024-03-25T20:16:14Z",
+     "form": "10-K",
+     "symbol": "REKR",
      "venue": "NASDAQ"
     }
    ],
    "expected": [
-    "flag_going_concern",
-    "clear",
-    "clear",
-    "flag_going_concern",
-    "clear",
-    "flag_going_concern",
-    "clear",
-    "abstain",
-    "abstain"
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "sets": [
+    {
+     "set_id": "L8.A:6110176b33a6",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-03-21T12:33:00Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1356093/000143774924008777/crex20231231_10k.htm",
+       "published_at": "2024-03-21T12:18:00Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "found by EDGAR full-text search; verbatim passage"
+    },
+    {
+     "set_id": "L8.A:b779f27875f1",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-03-29T17:59:09Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/855683/000143774924010029/mlss20231231_10k.htm",
+       "published_at": "2024-03-29T17:44:09Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "found by EDGAR full-text search; verbatim passage"
+    },
+    {
+     "set_id": "L8.A:6518892b3cc0",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-02-26T21:50:12Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/948708/000094870824000009/smsi-20231231.htm",
+       "published_at": "2024-02-26T21:35:12Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "found by EDGAR full-text search; verbatim passage"
+    },
+    {
+     "set_id": "L8.A:7bfb1d5e4fbb",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-03-11T20:36:08Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1612720/000162828024010236/next-20231231.htm",
+       "published_at": "2024-03-11T20:21:08Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "found by EDGAR full-text search; verbatim passage"
+    },
+    {
+     "set_id": "L8.A:53c001acad6e",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-06-05T21:42:22Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1019034/000143774924019357/bkyi20231231_10k.htm",
+       "published_at": "2024-06-05T21:27:22Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "found by EDGAR full-text search; verbatim passage"
+    },
+    {
+     "set_id": "L8.A:ed9335994170",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-03-25T20:31:14Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1697851/000143774924009219/rekr20231231_10k.htm",
+       "published_at": "2024-03-25T20:16:14Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "found by EDGAR full-text search; verbatim passage"
+    }
    ],
    "visual": {
     "fed": [
@@ -334,88 +405,153 @@
    },
    "inputs": [
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "Item 4.01: Ernst & Young resigned as independent auditor, citing concerns about governance.",
-     "filed_at": "2026-10-07T12:05:00Z",
+     "data_cutoff": "2023-09-25T20:35:14Z",
+     "document": "Item 4.01. Changes in Registrant's Certifying Accountant.\n\nEngagement of New Independent Registered Public Accounting Firm\n\nOn September 22, 2023, Genprex, Inc. (the “Company”), upon the approval of the Audit Committee of the Company's Board of Directors, engaged WithumSmith+Brown, PC (“Withum”) as the Company’s new independent registered public accounting firm commencing with the Company’s third fiscal quarter ending September 30, 2023 and for the fiscal year ending December 31, 2023.\n\nDuring the Company’s two most recent fiscal years ended December 31, 2021 and 2022, and the subsequent interim period through the date of Withum's engagement, neither the Company nor anyone acting on its behalf consulted with Withum regarding either of the following: (i) the application of accounting principles to a specified transaction, either completed or proposed; or the type of audit opinion that might be rendered on the Company’s financial statements, and neither a written report nor oral advice was provided to the Company that Withum concluded was an important factor considered by the Company in reaching a decision as to the accounting, auditing or financial reporting issue, or (ii) any matter that was either the subject of a disagreement, as defined in Item 304(a)(1)(iv) of Regulation S-K and the related instructions, or a “reportable event,” as described in Item 304(a)(1)(v) of Regulation S-K.",
+     "filed_at": "2023-09-25T20:20:14Z",
      "form": "8-K",
-     "symbol": "SMCI",
+     "symbol": "GNPX",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "Item 4.01: The audit committee approved dismissing KPMG and engaging Deloitte following an RFP. No disagreements.",
-     "filed_at": "2026-10-07T12:05:00Z",
+     "data_cutoff": "2024-07-19T20:16:32Z",
+     "document": "Item 4.01\nChanges in Registrant's Certifying Accountant.\n\nOn July 16, 2024, the Audit Committee of the Board of Directors\nof Traws Pharma, Inc. (the “Company”) engaged KPMG LLP (“KPMG”) as the Company’s new independent registered\npublic accounting firm for the year ended December 31, 2024.\n\nDuring the fiscal years ended December 31, 2023 and December 31,\n2022, and the interim period through July 16, 2024, the Company did not consult with KPMG regarding: (i) the application of\naccounting principles to a specified transaction, either proposed or completed, or the type of audit opinion that might be rendered on\nthe Company’s financial statements, and neither a written report nor oral advice was provided to the Company that KPMG concluded\nwas an important factor considered by the Company in reaching a decision as to the accounting, auditing or financial reporting issue;\nor (ii) any matter that was either the subject of a “disagreement” (as that term is defined in Item 304(a)(1)(iv) of\nRegulation S-K and the related instructions) or a “reportable event” (as that term is defined in Item 304(a)(1)(v) of\nRegulation S-K).\n\nThe Company has requested Ernst and Young LLP to furnish it a letter\naddressed to the U.S Securities and Exchange Commission (\"SEC\") stating whether it agrees with the above statements. A copy\nof that letter, dated July 19, 2024 is filed as Exhibit 16.1 to this Form 8-K.",
+     "filed_at": "2024-07-19T20:01:32Z",
      "form": "8-K",
-     "symbol": "PEP",
+     "symbol": "TRAW",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "Item 2.02: Results of operations.",
-     "filed_at": "2026-10-07T12:05:00Z",
+     "data_cutoff": "2024-01-30T19:36:51Z",
+     "document": "ITEM 4.01\n\nCHANGES IN REGISTRANT'S CERTIFYING ACCOUNTANT.\n\nThe Audit Committee of the Board of Directors (the “Audit Committee”) of RGC Resources, Inc. (the “Company”) recently conducted an audit tender process to determine the Company’s independent registered public accounting firm for the fiscal year ending September 30, 2024. The Committee invited several PCAOB registered public accounting firms to participate in this process.\n\nOn January 26, 2024, the Audit Committee approved the engagement of Deloitte & Touche LLP (“Deloitte”) as the Company’s independent registered public accounting firm for the Company’s fiscal year ending September 30, 2024, effective immediately.\n\nDuring the fiscal years ended September 30, 2022, and September 30, 2023, and the subsequent interim periods through January 26, 2024, neither the Company nor anyone acting on its behalf has consulted with Deloitte about (i) the application of accounting principles to a specific transaction, either completed or proposed, or the type of audit opinion that might be rendered on the Company’s financial statements, and neither a written report nor oral advice was provided to the Company as to any accounting, auditing, or financial reporting issue, (ii) any matter that was the subject of a disagreement within the meaning of Item 304(a)(1)(iv) of Regulation S-K, or (iii) any reportable event within the meaning of Item 304(a)(1)(v) of Regulation S-K.\n\nThe resignation of the Company’s former independent registered public accounting firm was reported on a Form 8-K filed on January 11, 2024.",
+     "filed_at": "2024-01-30T19:21:51Z",
      "form": "8-K",
-     "symbol": "AAPL",
+     "symbol": "RGCO",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "Item 4.01: The company dismissed its auditor. There was a disagreement regarding revenue recognition.",
-     "filed_at": "2026-10-07T12:05:00Z",
+     "data_cutoff": "2024-05-13T20:20:55Z",
+     "document": "Item 4.01. Changes in Registrant's Certifying Accountant.\n\nAppointment of New Independent Registered Public Accounting Firm\n\nOn May 7, 2024, the Audit Committee of the Board of Directors (the “Board”) of Wrap Technologies, Inc., a Delaware corporation (the “Company”), engaged HTL International, LLC (“HTL”) as the Company’s independent registered public accounting firm for the fiscal year ended December 31, 2023, effective May 7, 2024. In connection with the engagement, HTL will prepare the report on the Company’s consolidated financial statements for the year ended December 31, 2023.\n\nDuring the fiscal years ended December 31, 2022 and December 31, 2021, and the subsequent interim period through May 7, 2024, neither the Company nor anyone on its behalf has consulted with HTL regarding (i) the application of accounting principles to any specified transaction, either completed or proposed, or the type of audit opinion that might be rendered on the Company's consolidated financial statements, and neither a written report nor oral advice was provided to the Company that HTL concluded was an important factor considered by the Company in reaching a decision as to any accounting, auditing or financial reporting issue, or (ii) any matter that was either the subject of a “disagreement” as defined in Item 304(a)(1)(iv) of Regulation S-K, or a “reportable event” as defined in Item 304(a)(1)(v) of Regulation S-K.",
+     "filed_at": "2024-05-13T20:05:55Z",
      "form": "8-K",
-     "symbol": "FRDX",
+     "symbol": "WRAP",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "Item 4.01: Auditor change following the merger of the audit firms; no disagreements or reportable events.",
-     "filed_at": "2026-10-07T12:05:00Z",
+     "data_cutoff": "2023-06-02T21:33:31Z",
+     "document": "Item 4.01 Changes in Registrant's Certifying Accountant.\n\nAs previously reported, on May 18, 2023, the Audit Committee of the Board of Directors of Cumberland Pharmaceuticals Inc. (the \"Company\"), notified Carr, Riggs & Ingram, LLC (“CRI”) of the Company's decision to appoint CRI as its independent registered public accounting firm for the year ending December 31, 2023. The appointment of CRI was subject to the execution of an engagement letter and the related completion of CRI’s final client acceptance procedures.\n\nOn May 30, 2023, the Company completed the needed arrangements and engaged CRI as its independent registered public accounting firm for the fiscal year ending December 31, 2023, beginning with the interim period ending June 30, 2023.\n\nDuring the Company's fiscal years ended December 31, 2022 and 2021, and the subsequent interim period through May 30, 2023, neither the Company, nor anyone on its behalf, consulted with CRI regarding (i) the application of accounting principles to a specified transaction, either completed or proposed; or the type of audit opinion that might be rendered on the Company's consolidated financial statements, and neither a written report nor oral advice was provided to the Company that CRI concluded was an important factor considered by the Company in reaching a decision as to an accounting, auditing or financial reporting issue; or (ii) any matter that was either the subject of a “disagreement” (as that term is defined in Item 304(a)(1)(iv) of Regulation S-K and the related instructions) or a “reportable event” (as that term is defined in Item 304(a)(1)(v) of Regulation S-K).",
+     "filed_at": "2023-06-02T21:18:31Z",
      "form": "8-K",
-     "symbol": "KO",
-     "venue": "NYSE"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "Item 4.01: Auditor declined to stand for reappointment; a material weakness was reported.",
-     "filed_at": "2026-10-07T12:05:00Z",
-     "form": "8-K",
-     "symbol": "QBTZ",
+     "symbol": "CPIX",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "Item 5.02: Director appointment to the audit committee.",
-     "filed_at": "2026-10-07T12:05:00Z",
+     "data_cutoff": "2023-11-09T22:40:09Z",
+     "document": "Item 4.01. Changes in Registrant's Certifying Accountant.\n\nAs previously disclosed, on August 1, 2023, PharmaCyte\nBiotech, Inc. (the “Company”) was informed by Armanino LLP (“Armanino”), the Company’s then current\nindependent registered public accounting firm, that Armanino would resign as the Company’s independent auditor (not related\nto any actions taken by the Company). Armanino advised the Company that its decision to resign was due solely to Armanino’s decision\nto exit from the practice of providing financial statement audit services to all its public company engagements.\n\nOn November 5, 2023, the Company engaged Marcum\nLLP (“Marcum”) as its new independent registered public accounting firm.\n\nDuring the two fiscal years ended December 31, 2021 and 2022, and the\nsubsequent interim period through November 5, 2023, the Company has not consulted with Marcum regarding either: (i) the application of\naccounting principles to any specified transaction, either completed or proposed, or the type of audit opinion that might be rendered\non the Company's financial statements; or (ii) any matter that was either the subject of a disagreement (as defined in Regulation S-K,\nItem 304(a)(1)(iv) and the related instructions) or reportable event (as defined in Regulation S-K, Item 304(a)(1)(v)).",
+     "filed_at": "2023-11-09T22:25:09Z",
      "form": "8-K",
-     "symbol": "MSFT",
+     "symbol": "PMCB",
      "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "Item 4.01: Company dismissed its auditor; no disagreements.",
-     "filed_at": "2026-10-07T12:05:00Z",
-     "form": "8-K",
-     "symbol": "COST",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "x",
-     "filed_at": "2026-10-07T12:05:00Z",
-     "form": "8-K",
-     "symbol": "PNKX",
-     "venue": "OTC"
     }
    ],
    "expected": [
-    "red_flag",
-    "note",
-    "clear",
-    "red_flag",
-    "note",
-    "red_flag",
-    "clear",
-    "note",
-    "abstain"
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "sets": [
+    {
+     "set_id": "L8.B:a02a8f5b41f2",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2023-09-25T20:35:14Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1595248/000143774923026696/gnpx20230920_8k.htm",
+       "published_at": "2023-09-25T20:20:14Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted"
+    },
+    {
+     "set_id": "L8.B:3486967a1451",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-07-19T20:16:32Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1130598/000110465924081155/tm2419807d1_8k.htm",
+       "published_at": "2024-07-19T20:01:32Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted"
+    },
+    {
+     "set_id": "L8.B:1c00211b14ab",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-01-30T19:36:51Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1069533/000143774924002544/rgco20240130_8k.htm",
+       "published_at": "2024-01-30T19:21:51Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted"
+    },
+    {
+     "set_id": "L8.B:78e72efc2e11",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-05-13T20:20:55Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1702924/000143774924016228/wrap20240513_8k.htm",
+       "published_at": "2024-05-13T20:05:55Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted"
+    },
+    {
+     "set_id": "L8.B:7abfdca0999d",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2023-06-02T21:33:31Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1087294/000162828023020697/cpix-20230530.htm",
+       "published_at": "2023-06-02T21:18:31Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted"
+    },
+    {
+     "set_id": "L8.B:49d9a59cb4e3",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2023-11-09T22:40:09Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1157075/000168316823007830/pharmacyte_8k.htm",
+       "published_at": "2023-11-09T22:25:09Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted"
+    }
    ],
    "visual": {
     "fed": [
@@ -604,88 +740,153 @@
    },
    "inputs": [
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "Item 1A: We recently lost our largest customer, which accounted for 38% of revenue.",
-     "filed_at": "2026-10-07T12:05:00Z",
-     "form": "10-Q",
-     "symbol": "BASK",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "Item 1A: There have been no material changes to the risk factors disclosed in our 10-K.",
-     "filed_at": "2026-10-07T12:05:00Z",
+     "data_cutoff": "2024-08-01T22:18:34Z",
+     "document": "Item 1A. Risk Factors\n\nThe Company’s business, reputation, results of operations, financial condition and stock price can be affected by a number of factors, whether currently known or unknown, including those described in Part I, Item 1A of the 2023 Form 10-K and Part II, Item 1A of the Form 10-Q for the quarter ended March 30, 2024 (the “second quarter 2024 Form 10-Q”), in each case under the heading “Risk Factors.” When any one or more of these risks materialize from time to time, the Company’s business, reputation, results of operations, financial condition and stock price can be materially and adversely affected. Except for the risk factor disclosed in Part II, Item 1A of the second quarter 2024 Form 10-Q , which is hereby incorporated by reference into this Part II, Item 1A of this Form 10-Q, there have been no material changes to the Company’s risk factors since the 2023 Form 10-K.\n\nApple Inc. | Q3 2024 Form 10-Q | 19",
+     "filed_at": "2024-08-01T22:03:34Z",
      "form": "10-Q",
      "symbol": "AAPL",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "Item 1A: The DOJ has opened an investigation into our export practices.",
-     "filed_at": "2026-10-07T12:05:00Z",
+     "data_cutoff": "2024-09-25T20:16:59Z",
+     "document": "ITEM 1A. RISK FACTORS\n\nAs previously discussed, our actual results could differ materially from our forward-looking statements. Below we discuss some of the factors that could cause these differences. The occurrence of these and many other factors described in this report, and factors that we do not presently know or that we currently believe to be immaterial, could materially and adversely affect our operations, performance and financial condition. Many factors affect more than one category and the factors are not in order of significance or probability of occurrence because they have been grouped by categories.\n\nRisks Related to Our Ability to Grow Our Business\n\nWe may be unsuccessful at innovating in response to rapid technological changes to meet customer needs, which could cause our operating results to suffer.\n\nWe operate in rapidly evolving markets and expect the pace of innovation to continue to accelerate. We must continually introduce new, and enhance existing, products, services and solutions to retain customers and attract new customers. Developing new products is complex and may not be profitable, and our investments in new technologies are speculative and may not yield the expected business or financial benefits. The commercial success of new or enhanced products, services and solutions depends on a number of factors, including timely and successful development; effective distribution and marketing; market acceptance; compatibility with existing and emerging standards, platforms, software delivery methods and technologies; accurately predicting and anticipating customer needs and expectations and the direction of technological change; identifying and innovating in the right technologies; and differentiation from other products, services and solutions. If we fail to anticipate or identify technological trends or fail to devote appropriate resources to adapt to such trends, our business could be harmed. For example, generative artificial intelligence technologies provide new ways of marketing, creating content and interacting with documents that could disrupt industries in which we operate, and our business may be harmed if we fail to invest or adapt. While we have released new generative artificial intelligence products, such as Adobe Firefly, and are focused on enhancing the artificial intelligence (“AI”) capabilities of such products and incorporating AI into existing products, services and solutions, there can be no assurance that our products will be successful or that we will innovate effectively to keep pace with the rapid evolution of AI across our Creative Cloud, Document Cloud and Experience Cloud. If we do not successfully innovate, adapt to rapid technological changes and meet customer needs, our business and our financial results may be harmed.\n\nIssues relating to the development and use of AI, including generative AI, in our offerings may result in reputational harm, liability and adverse financial results.\n\nSocial and ethical issues relating to the use of AI, including generative AI, in our offerings may result in reputational harm, liability and additional costs. We are increasingly incorporating AI technologies into many of our offerings. If our AI development, deployment, content labeling or governance is ineffective or inadequate, it may result in incidents that impair the public acceptance of AI solutions or cause harm to individuals, customers or society, or result in our offerings not working as intended or producing unexpected outcomes.\n\nAround the world, AI regulation is in the nascent stages of development. The evolving AI regulatory environment may increase our research and development costs, increase our liability related to the use of AI by our customers or users that are beyond our control and result in inconsistencies in evolving legal frameworks across jurisdictions. While we have taken a responsible approach to the development and use of AI in our offerings, there can be no guarante…",
+     "filed_at": "2024-09-25T20:01:59Z",
      "form": "10-Q",
-     "symbol": "SMCI",
+     "symbol": "ADBE",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "Item 1A: Economic conditions, competition and regulation could affect results.",
-     "filed_at": "2026-10-07T12:05:00Z",
+     "data_cutoff": "2024-07-31T20:35:22Z",
+     "document": "ITEM 1A. RISK FACTORS\n\nThe risks and uncertainties described below are not the only ones we face. If any of the following risks actually occurs, our business, financial condition or results of operations could be materially adversely affected. In addition, you should consider the interrelationship and compounding effects of two or more risks occurring simultaneously.\n\nRisk Factors Summary\n\nThe following is a summary of the principal risks that could adversely affect our business, financial condition and results of operations.\n\nEconomic and Strategic Risks\n\n• Intel Corporation’s dominance of the microprocessor market and its aggressive business practices may limit our ability to compete effectively on a level playing field.\n\n• Nvidia’s dominance in the graphics processing unit market and its aggressive business practices may limit our ability to compete effectively on a level playing field.\n\n• The markets in which our products are sold are highly competitive and rapidly evolving.\n\n• The semiconductor industry is highly cyclical and has experienced severe downturns.\n\n• The demand for our products depends in part on the market conditions in the industries into which they are sold. There may be fluctuations in demand for our products or a market decline in any of these industries.\n\n• The success of our business depends on our ability to introduce products on a timely basis with features and performance levels that provide value to our customers while supporting significant industry transitions.\n\n• The loss of a significant customer may have a material adverse effect on us.\n\n• Economic and market uncertainty may adversely impact our business and operating results.\n\n• Our operating results are subject to quarterly and seasonal sales patterns.\n\n• If we cannot adequately protect our technology or other intellectual property through patents, copyrights, trade secrets, trademarks and other measures, we may lose a competitive advantage and incur significant expenses.\n\n• Unfavorable currency exchange rate fluctuations could adversely affect us.\n\nOperational and Technology Risks\n\n• We rely on third parties to manufacture our products, and if they are unable to do so on a timely basis in sufficient quantities and using competitive technologies, our business could be materially adversely affected.\n\n• Essential equipment, materials, substrates or manufacturing processes may not be available to us.\n\n• We may fail to achieve expected manufacturing yields for our products.\n\n• Our revenue from our semi-custom System-on-Chip (SoC) products is dependent upon our semi-custom SoC products being incorporated into customers’ products and the success of those products.\n\n• Our products may be subject to security vulnerabilities that could have a material adverse effect on us.\n\n27\n\nTable of Contents\n\n• IT outages, data loss, data breaches and cyberattacks could disrupt operations and compromise our intellectual property or other sensitive information, be costly to remediate or cause significant damage to our business, reputation, financial condition and results of operations.\n\n• Uncertainties involving the ordering and shipment of our products could materially adversely affect us.\n\n• Our ability to design and introduce new products includes the use of third-party intellectual property.\n\n• We depend on third-party companies for the design, manufacture and supply of motherboards, software, memory and other computer platform components to support our business and products.\n\n• If we lose Microsoft Corporation’s support for our products or other software vendors do not design and develop software to run on our products, our ability to sell our products could be materially adversely affected.\n\n• Our reliance on third-party distributors and add-in-board (AIB) partners subjects us to certain risks.\n\n• Our business depends on the proper functioning of our internal business processes and information systems.\n\n• Our products may not be compatible with some or all i…",
+     "filed_at": "2024-07-31T20:20:22Z",
      "form": "10-Q",
-     "symbol": "KO",
-     "venue": "NYSE"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "Item 1A: We may breach the minimum liquidity covenant under our credit facility next quarter.",
-     "filed_at": "2026-10-07T12:05:00Z",
-     "form": "10-Q",
-     "symbol": "CRVX",
+     "symbol": "AMD",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "Item 1A: Refer to our Annual Report.",
-     "filed_at": "2026-10-07T12:05:00Z",
+     "data_cutoff": "2024-08-06T23:09:26Z",
+     "document": "Item 1A. Risk Factors —Our current products and products in development cannot be sold without regulatory approval. Such issues may also delay the approval of product candidates we have submitted for regulatory review, even if such product candidates are not directly related to the products, devices or processes at issue with regulators. Because our third-party contract manufacturers and certain of our third-party service providers are subject to the FDA and foreign regulatory authorities, alternative qualified third-party contract manufacturers and third-party service providers may not be available on a timely basis, or at all. If we or our third-party contract manufacturers or third-party service providers cease or interrupt production or if our third-party contract manufacturers and third-party service providers fail to supply materials, products or services to us, we may experience delayed shipments, delays in our clinical trials, supply constraints, contract disputes, stock-outs and/or recalls of our products. Additionally, we distribute a substantial volume of our commercial products through our primary distribution centers in Louisville, Kentucky for the United States and in Breda, Netherlands for Europe and much of the rest of the world. We also conduct most of the labeling and packaging of our products distributed in Europe and much of the rest of the world in Breda. Our ability to timely supply products is dependent on the uninterrupted and efficient operations of our distribution and logistics centers, our third-party logistics providers and our labeling and packaging facility in Breda. Further, we rely on commercial transportation, including air and sea freight, for the\n\n52\n\ndistribution of our products to our customers, which has been negatively affected by the COVID-19 pandemic, labor unrest, natural disasters and geopolitical security threats.\n\nChanges in laws or regulations with respect to the use and/or presence of certain chemicals in our products or the components used in the research, development, manufacture and/or packaging of our products could also disrupt or restrict our ability to develop, produce or sell our products in the affected jurisdictions. For example, the EU, the U.S. Congress, the U.S. Environmental Protection Agency, and several U.S. states are considering legislation and/or policies to address the presence, and/or use, of certain chemicals in certain of the components used in the manufacture or packaging of commercial products, including chemicals known as per- and polyfluorinated substances (PFAS). Proposed legislation in several jurisdictions is under consideration to prohibit or otherwise regulate the importation, manufacture, or distribution of goods containing PFAS, and some such proposals do not provide exemptions for drug products, medical devices, their packaging, or the materials used in the research, development, or manufacture of such products or devices. For example, the EU is considering a ban on PFAS in the manufacturing and packaging of pharmaceutical products that could affect pharmaceutical research and development activities and distribution. Some proposals, if enacted without exemptions for pharmaceutical products, and materials used in their research, development, and manufacture, may cause significant disruptions to our ability to manufacture and supply products to the affected jurisdictions, potentially resulting in a material adverse effect on our business. Additionally, certain jurisdictions and regulatory agencies, including the FDA and EMA, require testing for the presence of nitrosamine impurities in small molecule drugs that are at risk of containing microcrystalline cellulose as an excipient. We are following the regulatorily defined process of evaluating and testing of potentially impacted small molecule products. Testing of our cinacalcet product has indicated the presence of nitrosamines in certain lots above established limits. As a result of such testing…",
+     "filed_at": "2024-08-06T22:54:26Z",
      "form": "10-Q",
-     "symbol": "MSFT",
+     "symbol": "AMGN",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "Item 1A: New tariffs on Vietnam imports, where we make 50% of footwear, could cut margins 300bps.",
-     "filed_at": "2026-10-07T12:05:00Z",
+     "data_cutoff": "2024-08-01T22:54:50Z",
+     "document": "Item 1A. Risk Factors\n\nPlease carefully consider the following discussion of significant factors, events, and uncertainties that make an investment in our securities risky. The events and consequences discussed in these risk factors could, in circumstances we may or may not be able to accurately predict, recognize, or control, have a material adverse effect on our business, growth, reputation, prospects, financial condition, operating results (including components of our financial results), cash flows, liquidity, and stock price. These risk factors do not identify all risks that we face; our operations could also be affected by factors, events, or uncertainties that are not presently known to us or that we currently do not consider to present significant risks to our operations. In addition to the factors discussed in Item 2 of Part I, “Management’s Discussion and Analysis of Financial Condition and Results of Operations,” and in the risk factors below, global economic and geopolitical conditions and additional or unforeseen circumstances, developments, or events may give rise to or amplify many of the risks discussed below. Many of the risks discussed below also impact our customers, including third-party sellers, which could indirectly have a material adverse effect on us.\n\nBusiness and Industry Risks\n\nWe Face Intense Competition\n\nOur businesses are rapidly evolving and intensely competitive, and we have many competitors across geographies, including cross-border competition, and in different industries, including physical, e-commerce, and omnichannel retail, e-commerce services, web and infrastructure computing services, electronic devices, digital content, advertising, grocery, and transportation and logistics services. Some of our current and potential competitors have greater resources, longer histories, more customers, and/or greater brand recognition, particularly with our newly-launched products and services and in our newer geographic regions. They may secure better terms from vendors, adopt more aggressive pricing, and devote more resources to technology, infrastructure, fulfillment, and marketing.\n\nCompetition continues to intensify, including with the development of new business models and the entry of new and well-funded competitors, and as our competitors enter into business combinations or alliances and established companies in other market segments expand to become competitive with our business. In addition, new and enhanced technologies, including search, web and infrastructure computing services, practical applications of artificial intelligence and machine learning, digital content, and electronic devices continue to increase our competition. The internet facilitates competitive entry and comparison shopping, which enhances the ability of new, smaller, or lesser known businesses to compete against us. As a result of competition, our product and service offerings may not be successful, we may fail to gain or may lose business, and we may be required to increase our spending or lower prices, any of which could materially reduce our sales and profits.\n\nOur Expansion into New Products, Services, Technologies, and Geographic Regions Subjects Us to Additional Risks\n\nWe may have limited or no experience in our newer market segments, and our customers may not adopt our product or service offerings. These offerings, which can present new and difficult technology challenges, may subject us to claims if customers of these offerings experience, or are otherwise impacted by, service disruptions, delays, setbacks, or failures or quality issues. In addition, profitability or other intended benefits, if any, in our newer activities may not meet our expectations, and we may not be successful enough in these newer activities to recoup our investments in them, which investments are often significant. Failure to realize the benefits of amounts we invest in new technologies, products, or services could result in the value of t…",
+     "filed_at": "2024-08-01T22:39:50Z",
      "form": "10-Q",
-     "symbol": "NKE",
-     "venue": "NYSE"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "Item 1A: Cyber attacks could disrupt operations.",
-     "filed_at": "2026-10-07T12:05:00Z",
-     "form": "10-Q",
-     "symbol": "PEP",
+     "symbol": "AMZN",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "x",
-     "filed_at": "2026-10-07T15:30:00Z",
+     "data_cutoff": "2024-09-11T20:52:29Z",
+     "document": "Item 1A. Risk Factors\n\nOur business, operations and financial results are subject to various risks and uncertainties, including those described below, that could adversely affect our business, financial condition, results of operations, cash flows, and the trading price of our common stock. The following material factors, among others, could cause our actual results to differ materially from historical results and those expressed in forward-looking statements made by us or on our behalf in filings with the SEC, press releases, communications with investors and oral statements.\n\nRisk Factors Summary\n\nThe following is a summary of the material risks that could adversely affect our business, operations and financial results.\n\n35\n\nTable of Contents\n\nRisks Related to Our Business\n\n• Adverse global economic conditions could have a negative effect on us.\n\n• Our business is subject to various governmental regulations and trade restrictions.\n\n• Global political and economic conditions and other factors related to our international operations could adversely affect us.\n\n• The failure to realize the expected benefits from the VMware Merger may adversely affect our business and the value of our common stock.\n\n• We have pursued, and may in the future pursue, acquisitions, investments, joint ventures and dispositions, which could adversely affect our results of operations.\n\n• We are subject to risks associated with our distributors and other channel partners.\n\n• We are dependent on senior management and if we are unable to attract and retain qualified personnel, we may not be able to execute our business strategy effectively.\n\n• Cyber security threats or other security breaches, or any other impairment of the confidentiality, integrity or availability of our information technology (“IT”) systems, or those of one or more of our corporate infrastructure vendors, could have a material adverse effect on our business.\n\n• We operate in the highly cyclical semiconductor industry.\n\n• A reduction in demand or loss of one or more of our significant customers may adversely affect our business.\n\n• Dependence on contract manufacturing and suppliers of critical components within our supply chain may adversely affect our ability to bring products to market.\n\n• We purchase a significant amount of the materials used in our products from a limited number of suppliers.\n\n• Failure to adjust our manufacturing and supply chain to accurately meet customer demand could adversely affect our results of operations.\n\n• Winning business in the semiconductor solutions industry is subject to a lengthy process that often requires us to incur significant expense, from which we may ultimately generate no revenue.\n\n• A prolonged disruption of our or our suppliers’ manufacturing facilities, research and development facilities, warehouses or other significant operations could have a material adverse effect on us.\n\n• We may be unable to maintain appropriate manufacturing capacity or product yields at our own manufacturing facilities.\n\n• We may be involved in legal proceedings that could adversely affect our business.\n\n• If demand for our data center virtualization products is less than anticipated, our business could be adversely affected.\n\n• Failure of our software products to manage and secure IT infrastructures and environments could have a material adverse effect on our business.\n\n• The growth of our software business depends on customer acceptance of our newer products and services.\n\n• Incompatibility of our software products with operating environments, platforms, or third-party products may adversely affect demand for our products and services.\n\n• Failure to enter into software license agreements on a satisfactory basis could adversely affect us.\n\n• Licensed third party software used in our products may not be available to us in the future.\n\n• Our use of open source software in certain products and services could materially adversely affect our business, financial condi…",
+     "filed_at": "2024-09-11T20:37:29Z",
      "form": "10-Q",
-     "symbol": "BASK",
+     "symbol": "AVGO",
      "venue": "NASDAQ"
     }
    ],
    "expected": [
-    "review_risk",
-    "no_change",
-    "review_risk",
-    "no_change",
-    "review_risk",
-    "no_change",
-    "review_risk",
-    "no_change",
-    "abstain"
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "sets": [
+    {
+     "set_id": "L8.C:f74f3171635d",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-08-01T22:18:34Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000081/aapl-20240629.htm",
+       "published_at": "2024-08-01T22:03:34Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted"
+    },
+    {
+     "set_id": "L8.C:8bceba5e6c95",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-09-25T20:16:59Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634324000208/adbe-20240830.htm",
+       "published_at": "2024-09-25T20:01:59Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted"
+    },
+    {
+     "set_id": "L8.C:63e381fd83e4",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-07-31T20:35:22Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248824000123/amd-20240629.htm",
+       "published_at": "2024-07-31T20:20:22Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted"
+    },
+    {
+     "set_id": "L8.C:b0d52c45ecba",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-08-06T23:09:26Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815424000035/amgn-20240630.htm",
+       "published_at": "2024-08-06T22:54:26Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted"
+    },
+    {
+     "set_id": "L8.C:131aeee24250",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-08-01T22:54:50Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872424000130/amzn-20240630.htm",
+       "published_at": "2024-08-01T22:39:50Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted"
+    },
+    {
+     "set_id": "L8.C:1c25195be0c2",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-09-11T20:52:29Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016824000099/avgo-20240804.htm",
+       "published_at": "2024-09-11T20:37:29Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted"
+    }
    ],
    "visual": {
     "fed": [
@@ -863,88 +1064,153 @@
    },
    "inputs": [
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "CFO: we are raising our Q4 outlook to $37B; demand exceeds supply into next year.",
-     "filed_at": "2026-10-07T12:05:00Z",
-     "form": "transcript",
-     "symbol": "NVDA",
+     "data_cutoff": "2024-08-01T20:21:02Z",
+     "document": "• Announced an AUD $2 billion strategic partnership with the Australian Government to provide a “Top Secret” AWS Cloud to enhance the nation’s defense and intelligence capabilities.\n\n• Added Austin and Miami to where self-driving robotaxi Zoox is deploying its test fleet on public roads.\n\n• Ranked No. 2 on LinkedIn’s Top Companies list and No. 1 in the technology sector.\n\n• Announced that all electricity consumed by Amazon’s operations, including its data centers, was matched with 100% renewable energy in 2023.\n\n• Replaced 95% of plastic air pillows in Amazon’s delivery packaging in North America with paper filler.\n\n• Announced an additional $1.4 billion commitment to Amazon’s Housing Equity Fund for affordable homes.\n\nFor additional highlights from the quarter, visit aboutamazon.com/q2-2024-earnings.\n\nFinancial Guidance\n\nThe following forward-looking statements reflect Amazon.com’s expectations as of August 1, 2024, and are subject to substantial uncertainty. Our results are inherently unpredictable and may be materially affected by many factors, such as fluctuations in foreign exchange rates, changes in global economic and geopolitical conditions and customer demand and spending (including the impact of recessionary fears), inflation, interest rates, regional labor market constraints, world events, the rate of growth of the internet, online commerce, cloud services, and new and emerging technologies, and the various factors detailed below.\n\nThird Quarter 2024 Guidance\n\n• Net sales are expected to be between $154.0 billion and $158.5 billion, or to grow between 8% and 11% compared with third quarter 2023. This guidance anticipates an unfavorable impact of approximately 90 basis points from foreign exchange rates.\n\n• Operating income is expected to be between $11.5 billion and $15.0 billion, compared with $11.2 billion in third quarter 2023.\n\n• This guidance assumes, among other things, that no additional business acquisitions, restructurings, or legal settlements are concluded.\n\nConference Call Information\n\nA conference call will be webcast live today at 2:30 p.m. PT/5:30 p.m. ET, and will be available for at least three months at amazon.com/ir. This call will contain forward-looking statements and other material information regarding the Company’s financial and operating results.\n\nForward-Looking Statements\n\nThese forward-looking statements are inherently difficult to predict. Actual results and outcomes could differ materially for a variety of reasons, including, in addition to the factors discussed above, the amount that Amazon.com invests in new business opportunities and the timing of those investments, the mix of products and services sold to customers, the mix of net sales derived from products as compared with services, the extent to which we owe income or other taxes, competition, management of growth, potential fluctuations in operating results, international growth and expansion, the outcomes of claims, litigation, government investigations, and other proceedings, fulfillment, sortation, delivery, and data center optimization, risks of inventory management, variability in demand, the degree to which the Company enters into, maintains, and develops commercial agreements, proposed and completed acquisitions and strategic transactions, payments risks, and risks of fulfillment throughput and productivity. Other risks and uncertainties include, among others, risks related to new products, services, and technologies, security breaches, system interruptions, government regulation and taxation, and fraud. In addition, global economic and geopolitical conditions and additional or unforeseen circumstances, developments, or events may give rise to or amplify many of these risks. More information about factors that potentially could affect Amazon.com’s financial",
+     "filed_at": "2024-08-01T20:06:02Z",
+     "form": "8-K",
+     "symbol": "AMZN",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "CFO: we are lowering full-year revenue guidance to down mid-single digits.",
-     "filed_at": "2026-10-07T12:05:00Z",
-     "form": "transcript",
-     "symbol": "NKE",
-     "venue": "NYSE"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "CEO: we reaffirm our full-year outlook.",
-     "filed_at": "2026-10-07T12:05:00Z",
-     "form": "transcript",
-     "symbol": "PEP",
+     "data_cutoff": "2024-09-05T20:36:56Z",
+     "document": "Exhibit 99.1\n\nBroadcom Inc. Announces Third Quarter Fiscal Year 2024 Financial Results and Quarterly Dividend\n\n• Revenue of $13,072 million for the third quarter, up 47 percent from the prior year period\n\n• GAAP net loss of $1,875 million for the third quarter (1) ; Non-GAAP net income of $6,120 million for the third quarter\n\n• Adjusted EBITDA of $8,223 million for the third quarter, or 63 percent of revenue\n\n• GAAP diluted loss per share of $0.40 for the third quarter; Non-GAAP diluted EPS of $1.24 for the third quarter\n\n• Cash from operations of $4,963 million for the third quarter, less capital expenditures of $172 million, resulted in $4,791 million of free cash flow, or 37 percent of revenue\n\n• Quarterly common stock dividend of $0.53 per share\n\n• Fourth quarter fiscal year 2024 revenue guidance of approximately $14.0 billion including contribution from VMware, an increase of 51 percent from the prior year period\n\n• Fourth quarter fiscal year 2024 Adjusted EBITDA guidance of approximately 64 percent of projected revenue (2)\n\nPALO ALTO, Calif. – September 5, 2024 – Broadcom Inc. (Nasdaq: AVGO), a global technology leader that designs, develops and supplies semiconductor and infrastructure software solutions, today reported financial results for its third quarter of fiscal year 2024, ended August 4, 2024, provided guidance for its fourth quarter of fiscal year 2024 and announced its quarterly dividend.\n\n“Broadcom’s third quarter results reflect continued strength in our AI semiconductor solutions and VMware. We expect revenue from AI to be $12 billion for fiscal year 2024 driven by Ethernet networking and custom accelerators for AI data centers,” said Hock Tan, President and CEO of Broadcom Inc. “The transformation of VMware continues to progress very well. The integration of VMware is driving adjusted EBITDA margin to 64% of revenue as we exit fiscal year 2024.”\n\n“Consolidated revenue grew 47% year-over-year to $13.1 billion, including the contribution from VMware, and was up 4% year-over-year, excluding VMware. Adjusted EBITDA increased 42% year-over-year to $8.2 billion,” said Kirsten Spears, CFO of Broadcom Inc. “Free cash flow, excluding restructuring and integration in the quarter, was $5.3 billion, up 14% year-over-year.”\n\n________________________________\n\n(1) GAAP net loss of $1,875 million for the third quarter included a one-time discrete non-cash tax provision of $4.5 billion from the impact of an intra-group transfer of certain IP rights to the United States as a result of supply chain realignment.\n\n(2) The Company is not readily able to provide a reconciliation of the projected non-GAAP financial information presented to the relevant projected GAAP measure without unreasonable effort.\n\n1\n\nThird Quarter Fiscal Year 2024 Financial Highlights\n\nGAAP Non-GAAP\n\n(Dollars in millions, except per share data) Q3 24 Q3 23 Change Q3 24 Q3 23 Change\n\nNet revenue $ 13,072 $ 8,876 +47 % $ 13,072 $ 8,876 +47 %\n\nNet income (loss) $ (1,875) $ 3,303 -$5,178 $ 6,120 $ 4,596 +$1,524\n\nEarnings (loss) per common share - diluted $ (0.40) $ 0.77 -$1.17 $ 1.24 $ 1.05 +$0.19\n\n(Dollars in millions) Q3 24 Q3 23 Change\n\nCash flow from operations $ 4,963 $ 4,719 +$244\n\nAdjusted EBITDA $ 8,223 $ 5,801 +$2,422\n\nFree cash flow $ 4,791 $ 4,597 +$194\n\nNet revenue by segment\n\n(Dollars in millions) Q3 24 Q3 23 Change\n\nSemiconductor solutions $ 7,274 56 % $ 6,941 78 % +5 %\n\nInfrastructure software 5,798 44 1,935 22 +200 %\n\nTotal net revenue $ 13,072 100 % $ 8,876 100 %\n\nThe Company’s cash and cash equivalents at the end of the fiscal quarter were $9,952 million, compared to $9,809 million at the end of the prior quarter.\n\nDuring the third fiscal quarter, the Company generated $4,963 million in cash from operations and spent $172 million on capital expenditures. Th",
+     "filed_at": "2024-09-05T20:21:56Z",
+     "form": "8-K",
+     "symbol": "AVGO",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "CFO: we nudge guidance up slightly, but visibility is poor and risks remain.",
-     "filed_at": "2026-10-07T12:05:00Z",
-     "form": "transcript",
-     "symbol": "INTC",
+     "data_cutoff": "2024-08-01T20:15:57Z",
+     "document": "Q2’24 Results The increase in provisions for doubtful accounts was due to two factors: 1) the faster pace of growth in credit originations in Q2'24 (+79% YoY) versus consolidated revenue (+42% YoY); and 2) a higher share of the portfolio coming from the credit card which, as discussed earlier, has higher provisions relative to revenue than our other loan products. We also scaled G&A, Product Development and Sales & Marketing expenses on a reported basis, with 2.8ppts of operating leverage. This reflects our continued focus on operational efficiency and ability to deliver cost dilution as the business scales. At the country level, in Q2'24 we saw higher margins YoY in Brazil (once the impact of shipping reporting updates is excluded) due to strong cost dilution, and less YoY pressure on margins in Argentina than in Q1'24 due to better GMV trends, less pressure on shipping costs and lower funding costs in Fintech. Margins in Mexico were pressured primarily by: 1) higher provisioning due to growth of the credit business; and 2) higher shipping operating costs due to greater seasonal cost headwinds around the Hot Sale event combined with the pressures of operating with limited spare capacity in our fulfillment network. Net income rose 103% YoY to $531mn, supported by growth in EBIT and a reduction of FX losses related to Argentina. Lower FX losses are a partly function of the narrowing of the gap between the official and blue chip swap exchange rates in Argentina, which is a positive impact of the devaluation of the Argentine Peso (which negatively impacted income from operations). In Q2'24, our net income margin of 10.5% was the highest in the last eight years. Mercado Libre is generating cash even as we continue to invest to seed future growth opportunities. This quarter we are introducing \"adjusted free cash flow\" as a new non-GAAP financial measure that we believe will help investors better understand the cash generation of our operations. A full explanation can be found in the \"Non-GAAP Financial Measures\" section of this document. Adjusted free cash flow was $678mn in Q2'24 (vs. $145mn in Q2'23) and $838mn year-to-date, even with higher capex ($184mn in Q2'24), and funding of the credit portfolio. Our strong cash flow generation, coupled with the reduction in our leverage ratios in recent quarters, led to S&P revising its credit rating outlook on Mercado Libre to \"Positive\" in June. Looking Ahead Tomorrow, August 2, 2024, marks 25 years since we founded Mercado Libre with the mission of democratizing commerce and financial services in Latin America. Over those 25 years, we have built a sustainable company that provides millions of small- and medium-sized businesses with the tools they need to compete with larger players; we have enabled the shift to online retail by providing tens of millions of consumers with world-class levels of service; and we have included millions of people into the financial system across the region for the first time. These are notable achievements, but they are also just a baseline from which we think about our even bigger ambitions to deliver on our mission at an even greater scale. Yet, looking ahead we believe we have more opportunities than we ever have had in our history and we are excited to pursue them with the culture of entrepreneurship, excellence and innovation that has served us so well for the last 25 years. As we always say: the best is yet to come. 5\n\nThe following table summarizes certain key performance metrics for the six and three-month periods ended June 30, 2024 and 2023. Year-over-year USD Growth Rates by Quarter Consolidated net revenues and financial income (1) Q2’23 Q3’23 Q4’23 Q1’24 Q2’24 Brazil 25 % 40 % 44 % 57 % 51 % Argentina 42 % 32 % 32 % (22) % 1 % Mexico 67 % 68 % 51 % 59 % 66 % Commerce 38 % 45 % 48 % 49 % 53 % Fintech 34 % 40 % 34 % 22 % 28 % Total Meli 36 % 43 % 42 % 36 % 42 % Gross merchandise volume Q2’23 Q3’23 Q4’23 Q1’24 Q2’24 Brazil 24 % 38 % 43 % 36 % 30 %…",
+     "filed_at": "2024-08-01T20:00:57Z",
+     "form": "8-K",
+     "symbol": "MELI",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "CEO: we do not provide guidance; we are proud of our team.",
-     "filed_at": "2026-10-07T12:05:00Z",
-     "form": "transcript",
-     "symbol": "AAPL",
+     "data_cutoff": "2024-07-30T20:18:22Z",
+     "document": "The following table reconciles our financial results for the fiscal year ended June 30, 2024, reported in accordance with generally accepted accounting principles (GAAP) to non-GAAP financial results. Additional information regarding our non-GAAP definition is provided below. All growth comparisons relate to the corresponding period in the last fiscal year.\n\nTwelve Months Ended June 30,\n\n($ in millions, except per share amounts)\n\nRevenue\n\nOperating\nIncome\n\nNet Income\n\nDiluted\nEarnings\nper Share\n\n2023 As Reported (GAAP)\n\n$211,915\n\n$88,523\n\n$72,361\n\n$9.68\n\nSeverance, hardware-related impairment, and lease consolidation costs\n\n-\n\n1,171\n\n946\n\n0.13\n\n2023 As Adjusted (non-GAAP)\n\n$211,915\n\n$89,694\n\n$73,307\n\n$9.81\n\n2024 As Reported (GAAP)\n\n$245,122\n\n$109,433\n\n$88,136\n\n$11.80\n\nPercentage Change Y/Y (GAAP)\n\n16%\n\n24%\n\n22%\n\n22%\n\nPercentage Change Y/Y Constant Currency\n\n15%\n\n23%\n\n21%\n\n21%\n\nPercentage Change Y/Y (non-GAAP)\n\n16%\n\n22%\n\n20%\n\n20%\n\nPercentage Change Y/Y (non-GAAP) Constant Currency\n\n15%\n\n21%\n\n20%\n\n20%\n\nBusiness Outlook\n\nMicrosoft will provide forward-looking guidance in connection with this quarterly earnings announcement on its earnings conference call and webcast.\n\nQuarterly Highlights, Product Releases, and Enhancements\n\nEvery quarter Microsoft delivers hundreds of products, either as new releases, services, or enhancements to current products and services. These releases are a result of significant research and development investments, made over multiple years, designed to help customers be more productive and secure and to deliver differentiated value across the cloud and the edge.\n\nHere are the major product releases and other highlights for the quarter, organized by product categories, to help illustrate how we are accelerating innovation across our businesses while expanding our market opportunities.\n\nEnvironmental, Social, and Governance (ESG)\n\nTo learn more about Microsoft’s corporate governance and our environmental and social practices, please visit our investor relations Board and ESG website and reporting at Microsoft.com/transparency .\n\nWebcast Details\n\nSatya Nadella, chairman and chief executive officer, Amy Hood, executive vice president and chief financial officer, Alice Jolla, chief accounting officer, Keith Dolliver, corporate secretary and deputy general counsel, and Brett Iversen, vice president of investor relations, will host a conference call and webcast at 2:30 p.m. Pacific time (5:30 p.m. Eastern time) today to discuss details of the company’s performance for the quarter and certain forward-looking\n\ninformation. The session may be accessed at http://www.microsoft.com/en-us/investor . The webcast will be available for replay through the close of business on July 30, 2025.\n\nNon-GAAP Definition\n\nQ2 charge. In the second quarter of fiscal year 2023, Microsoft recorded costs related to decisions announced on January 18th, 2023, including employee severance expenses, impairment charges resulting from changes to our hardware portfolio, and costs related to lease consolidation activities.\n\nMicrosoft has provided non-GAAP financial measures related to the Q2 charge to aid investors in better understanding our performance. Microsoft believes these non-GAAP measures assist investors by providing additional insight into its operational performance and help clarify trends affecting its business. For comparability of reporting, management considers non-GAAP measures in conjunction with GAAP financial results in evaluating business performance. The non-GAAP financial measures presented in this release should not be considered as a substitute for, or superior to, the measures of financial performance prepared in accordance with GAAP.\n\nConstant Currency\n\nMicrosoft presents constant currency information to provide a framework for assessing how our underlying businesses performed excluding the effect of foreign currency rate fluctuations. To present this information, current and comparative prior period results for enti…",
+     "filed_at": "2024-07-30T20:03:22Z",
+     "form": "8-K",
+     "symbol": "MSFT",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "CFO: we now expect revenue above the high end of our prior range; momentum is strong.",
-     "filed_at": "2026-10-07T12:05:00Z",
-     "form": "transcript",
-     "symbol": "META",
+     "data_cutoff": "2024-07-18T20:16:22Z",
+     "document": "EX-99.1\n2\nex991_q224.htm\nEX-99.1\n\nExhibit 99.1\n\nJuly 18, 2024\n\nFellow shareholders,\n\nSummary:\n\n• We had a strong Q2 with 17% revenue growth and an operating margin of 27% vs. 22% last year. We now expect full year 2024 reported revenue growth of 14% to 15% (up from 13% to 15%) and an operating margin 1 of 26% (vs. 25% previously).\n\n• We’re working to improve every aspect of Netflix so we can better serve existing and future members.\n\n◦ In Q2 we had a wide variety of hit series like Bridgerton S3, Baby Reindeer , Queen of Tears and The Great Indian Kapil Show , and popular films like Under Paris , Atlas and Hit Man and The Roast of Tom Brady , which attracted our largest live audience yet.\n\n◦ We began testing a new, simpler and more intuitive TV homepage in June, which we believe will significantly improve the discovery experience on Netflix.\n\n• We’re making steady progress scaling our ads business. Ads tier membership grew 34% quarter on quarter, and we’re building an in-house ad tech platform that we’ll test in Canada in 2024 and launch more broadly in 2025.\n\n• We continue to invest in and expand our entertainment offering — as well as build our reach, recommendations and fandom — so that we can extend our lead with consumers, and sustain healthy revenue and profit growth as a business.\n\nOur summary results, and forecast for Q3, are below.\n\n(in millions except per share data) Q2'23 Q3'23 Q4'23 Q1'24 Q2'24 Q3'24 Forecast\n\nRevenue $ 8,187 $ 8,542 $ 8,833 $ 9,370 $ 9,559 $ 9,727\n\nY/Y % Growth 2.7 % 7.8 % 12.5 % 14.8 % 16.8 % 13.9 %\n\nOperating Income $ 1,827 $ 1,916 $ 1,496 $ 2,633 $ 2,603 $ 2,730\n\nOperating Margin 22.3 % 22.4 % 16.9 % 28.1 % 27.2 % 28.1 %\n\nNet Income $ 1,488 $ 1,677 $ 938 $ 2,332 $ 2,147 $ 2,237\n\nDiluted EPS $ 3.29 $ 3.73 $ 2.11 $ 5.28 $ 4.88 $ 5.10\n\nGlobal Streaming Paid Memberships 238.39 247.15 260.28 269.60 277.65\n\nY/Y % Growth 8.0 % 10.8 % 12.8 % 16.0 % 16.5 %\n\nGlobal Streaming Paid Net Additions 5.89 8.76 13.12 9.33 8.05\n\nNet cash provided by operating activities $ 1,440 $ 1,992 $ 1,663 $ 2,213 $ 1,291\n\nFree Cash Flow $ 1,339 $ 1,888 $ 1,581 $ 2,137 $ 1,213\n\nShares (FD) 451.6 450.0 444.3 441.7 439.7\n\n__________________________________\n\n1 Based on F/X rates from 1/1/24.\n\n1\n\nQ2 Results\n\nRevenue grew 17% in Q2 (or 22% on a foreign exchange (F/X) neutral basis) 2 , driven primarily by a 16% year over year increase in average paid memberships. ARM 3 was up 1% year over year or 5% on a F/X neutral basis. Similar to recent quarters, the primary difference between F/X neutral and reported growth was large peso price increases in Argentina due to local inflation and the devaluation of the Argentine peso relative to the US dollar. Global revenue was 1% higher than our beginning of quarter guidance due primarily to stronger-than-forecasted paid net additions of 8.0M vs. 5.9M in Q2’23.\n\nOperating income for Q2 amounted to $2.6B, an increase of 42% vs. Q2’23. Operating margin of 27.2% improved five percentage points vs. 22.3% in the year ago quarter. Both were slightly above our guidance forecast due to higher than expected revenue.\n\nQ2’24 EPS was $4.88 vs. $3.29 (+48% year over year). Net income included a $43 million non-cash unrealized gain from F/X remeasurement on",
+     "filed_at": "2024-07-18T20:01:22Z",
+     "form": "8-K",
+     "symbol": "NFLX",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "CEO: given the customer loss we are withdrawing guidance.",
-     "filed_at": "2026-10-07T12:05:00Z",
-     "form": "transcript",
-     "symbol": "BASK",
+     "data_cutoff": "2024-07-31T20:16:12Z",
+     "document": "EX-99.1\n2\nqcom062324erex991.htm\nEX-99.1\n\nExhibit 99.1\n\nFOR IMMEDIATE RELEASE\n\nQualcomm Contact:\n\nMauricio Lopez-Hodoyan\n\nVice President, Investor Relations\n\nPhone: 1-858-658-4813 | e-mail: [e-mail withheld]\n\nQualcomm Announces Third Quarter Fiscal 2024 Results\n\nRevenues: $9.4 billion\n\nGAAP EPS: $1.88, Non-GAAP EPS: $2.33\n\n—Greater Than 20% Year-Over-Year Growth in EBT—\n\n—QCT Automotive: 87% Year-Over-Year Growth in Revenues—\n\nSAN DIEGO - July 31, 2024 - Qualcomm Incorporated (NASDAQ: QCOM) today announced results for its fiscal third quarter ended June 23, 2024.\n\n“Our third quarter results reflect strong execution of our growth and diversification strategy, with QCT quarterly revenues and EBT margins at the high end of guidance,” said Cristiano Amon, President and CEO of Qualcomm Incorporated. “We are excited about the launch of our Snapdragon X Series solutions for PCs that deliver leading performance, unmatched power efficiency and personalized AI experiences. This launch represents a significant milestone in our transformation from a communications company to a leading intelligent computing company.”\n\nThird Quarter Results 1\n\nGAAP Non-GAAP\n\n(in millions, except per share data and percentages) Q3 Fiscal 2024 Q3 Fiscal 2023 Change Q3 Fiscal 2024 Q3 Fiscal 2023 Change\n\nRevenues $9,393 $8,451 +11% $9,391 $8,442 +11%\n\nEarnings before taxes (EBT) $2,279 $1,757 +30% $3,034 $2,430 +25%\n\nNet income $2,129 $1,803 +18% $2,648 $2,105 +26%\n\nDiluted earnings per share (EPS) $1.88 $1.60 +18% $2.33 $1.87 +25%\n\n(1) Discussion regarding our use of Non-GAAP financial measures and reconciliations between GAAP and Non-GAAP results are included at the end of this news release in the sections labeled “Note Regarding Use of Non-GAAP Financial Measures” and “Reconciliations of GAAP Results to Non-GAAP Results.”\n\nSegment Results\n\nQCT QTL\n\n(in millions, except percentages) Q3 Fiscal 2024 Q3 Fiscal 2023 Change Q3 Fiscal 2024 Q3 Fiscal 2023 Change\n\nRevenues $8,069 $7,174 +12% $1,273 $1,230 +3%\n\nEBT $2,181 $1,744 +25% $894 $811 +10%\n\nEBT as % of revenues 27% 24% +3 points 70% 66% +4 points\n\nQualcomm Announces Third Quarter Fiscal 2024 Results\n\nPage 2 of 8\n\nQCT Revenue Streams 1\n\n(in millions, except percentages)\nQ3 Fiscal 2024\n\nQ3 Fiscal 2023\nChange\n\nHandsets $5,899 $5,255 +12%\n\nAutomotive 811 434 +87%\n\nIoT 1,359 1,485 (8%)\n\nTotal QCT revenues $8,069 $7,174 +12%\n\n(1) We disaggregate QCT revenues based on the industries and applications in which our products are sold.\n\nReturn of Capital to Stockholders\n\nDuring the third quarter of fiscal 2024, we returned $2.3 billion to stockholders, including $949 million, or $0.85 per share, of cash dividends paid and $1.3 billion through repurchases of 7 million shares of common stock.\n\nBusiness Outlook\n\nThe following statements are forward looking, and actual results may differ materially. The “Note Regarding Forward-Looking Statements” in this news release provides a description of certain risks that we face, and our most recent quarterly report on file with the Securities and Exchange Commission (SEC) provides a more complete description of our risks.\n\nThe following table summarizes GAAP and Non-GAAP guidance based on the current outlook.\n\nCurrent Guidance\n\nQ4 FY24 Estimates 1\n\nRevenues $9.5B - $10.3B\n\nSupplemental Revenue Information\n\nQCT revenues $8.1B - $8.7B\n\nQTL revenues $1.35B - $1.55B\n\nGAAP diluted EPS $2.38 - $2.58\n\nLess diluted EPS attributable to QSI $—\n\nLess diluted EPS attributable to share-based compensation ($0.44)\n\nLess diluted EPS attributable to other items 2\n$0.37\n\nNon-GAAP diluted EPS $2.45 - $2.65\n\n(1) Our outlook reflects a 14-week fiscal fourth quarter, which occurs every five to six years. Our outlook does not include provisions for",
+     "filed_at": "2024-07-31T20:01:12Z",
+     "form": "8-K",
+     "symbol": "QCOM",
      "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "CFO: we maintain our delivery target, though conditions are difficult.",
-     "filed_at": "2026-10-07T12:05:00Z",
-     "form": "transcript",
-     "symbol": "TSLA",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "x",
-     "filed_at": "2026-10-07T12:05:00Z",
-     "form": "transcript",
-     "symbol": "PNKX",
-     "venue": "OTC"
     }
    ],
    "expected": [
-    "positive_read",
-    "negative_read",
-    "neutral_read",
-    "neutral_read",
-    "abstain",
-    "positive_read",
-    "negative_read",
-    "neutral_read",
-    "abstain"
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "sets": [
+    {
+     "set_id": "L8.D:5cc5e4bf5585",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-08-01T20:21:02Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872424000128/amzn-20240630xex991.htm",
+       "published_at": "2024-08-01T20:06:02Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted"
+    },
+    {
+     "set_id": "L8.D:493d6b76cd7d",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-09-05T20:36:56Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016824000095/avgo-08042024x8kxex99.htm",
+       "published_at": "2024-09-05T20:21:56Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted"
+    },
+    {
+     "set_id": "L8.D:cbc9f6852737",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-08-01T20:15:57Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1099590/000109959024000023/meli-20240801xex991.htm",
+       "published_at": "2024-08-01T20:00:57Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted"
+    },
+    {
+     "set_id": "L8.D:cfffbe767cc2",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-07-30T20:18:22Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/789019/000095017024087835/msft-ex99_1.htm",
+       "published_at": "2024-07-30T20:03:22Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted"
+    },
+    {
+     "set_id": "L8.D:f5b6d509893a",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-07-18T20:16:22Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528024000199/ex991_q224.htm",
+       "published_at": "2024-07-18T20:01:22Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted"
+    },
+    {
+     "set_id": "L8.D:30a9ebc2ac47",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-07-31T20:16:12Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/804328/000080432824000055/qcom062324erex991.htm",
+       "published_at": "2024-07-31T20:01:12Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted"
+    }
    ],
    "visual": {
     "fed": [
@@ -1142,88 +1408,153 @@
    },
    "inputs": [
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "Table I: Common Stock, Transaction Code P, 50,000 shares at $21.10, director.",
-     "filed_at": "2026-10-07T12:05:00Z",
-     "form": "4",
-     "symbol": "INTC",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "Code S, 120,000 shares sold pursuant to a Rule 10b5-1 trading plan adopted March 2026.",
-     "filed_at": "2026-10-07T12:05:00Z",
-     "form": "4",
-     "symbol": "NVDA",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "Code A, 90,000 restricted stock units granted.",
-     "filed_at": "2026-10-07T12:05:00Z",
+     "data_cutoff": "2024-08-19T22:45:16Z",
+     "document": "1. Name and Address of Reporting Person *\n\nKONDO CHRIS\n\n(Last)\n(First)\n(Middle)\n\nONE APPLE PARK WAY\n\n(Street)\n\nCUPERTINO\nCA\n95014\n\n(City)\n(State)\n(Zip)\n\n2. Issuer Name and Ticker or Trading Symbol\n\nApple Inc.\n[ AAPL ]\n\n5. Relationship of Reporting Person(s) to Issuer\n\n(Check all applicable)\n\nDirector\n\n10% Owner\n\nX\nOfficer (give title below)\n\nOther (specify below)\n\nPrincipal Accounting Officer\n\n3. Date of Earliest Transaction\n(Month/Day/Year)\n08/15/2024\n\n4. If Amendment, Date of Original Filed\n(Month/Day/Year)\n\n6. Individual or Joint/Group Filing (Check Applicable Line)\n\nX\nForm filed by One Reporting Person\n\nForm filed by More than One Reporting Person\n\nTable I - Non-Derivative Securities Acquired, Disposed of, or Beneficially Owned\n\n1. Title of Security (Instr.\n3)\n\n2. Transaction Date\n(Month/Day/Year)\n2A. Deemed Execution Date, if any\n(Month/Day/Year)\n3. Transaction Code (Instr.\n8)\n\n4. Securities Acquired (A) or Disposed Of (D) (Instr.\n3, 4 and 5)\n\n5.\nAmount of Securities Beneficially Owned Following Reported Transaction(s) (Instr.\n3 and 4)\n\n6. Ownership Form: Direct (D) or Indirect (I) (Instr.\n4)\n\n7. Nature of Indirect Beneficial Ownership (Instr.\n4)\n\nCode\nV\nAmount\n(A) or (D)\nPrice\n\nCommon Stock\n08/15/2024\n\nS\n\n8,706\nD\n\n$ 225\n\n15,419\nD\n\nTable II - Derivative Securities Acquired, Disposed of, or Beneficially Owned\n(e.g., puts, calls, warrants, options, convertible securities)\n\n1. Title of Derivative Security (Instr.\n3)\n\n2. Conversion or Exercise Price of Derivative Security\n\n3. Transaction Date\n(Month/Day/Year)\n3A. Deemed Execution Date, if any\n(Month/Day/Year)\n4. Transaction Code (Instr.\n8)\n\n5.\nNumber of Derivative Securities Acquired (A) or Disposed of (D) (Instr.\n3, 4 and 5)\n\n6. Date Exercisable and Expiration Date\n(Month/Day/Year)\n7. Title and Amount of Securities Underlying Derivative Security (Instr.\n3 and 4)\n\n8. Price of Derivative Security (Instr.\n5)\n\n9.\nNumber of derivative Securities Beneficially Owned Following Reported Transaction(s) (Instr.\n4)\n\n10. Ownership Form: Direct (D) or Indirect (I) (Instr.\n4)\n\n11. Nature of Indirect Beneficial Ownership (Instr.\n4)\n\nCode\nV\n(A)\n(D)\nDate Exercisable\nExpiration Date\nTitle\nAmount or Number of Shares\n\nExplanation of Responses:\n\nRemarks:\n\n/s/ Sam Whittington, Attorney-in-Fact for Chris Kondo\n08/19/2024\n\n** Signature of Reporting Person\nDate\n\nReminder: Report on a separate line for each class of securities beneficially owned directly or indirectly.\n\n* If the form is filed by more than one reporting person,\nsee\n\nInstruction\n4\n\n(b)(v).\n\n** Intentional misstatements or omissions of facts constitute Federal Criminal Violations\nSee\n\n18 U.S.C. 1001 and 15 U.S.C. 78ff(a).\n\nNote: File three copies of this Form, one of which must be manually signed. If space is insufficient,\nsee\n\nInstruction 6 for procedure.\n\nPersons who respond to the collection of information contained in this form are not required to respond unless the form displays a currently valid OMB Number.",
+     "filed_at": "2024-08-19T22:30:16Z",
      "form": "4",
      "symbol": "AAPL",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "Code S, CFO sold 200,000 shares; no trading plan footnote.",
-     "filed_at": "2026-10-07T12:05:00Z",
+     "data_cutoff": "2024-09-26T21:37:24Z",
+     "document": "1. Name and Address of Reporting Person *\n\nSTEVENS MARK A\n\n(Last)\n(First)\n(Middle)\n\nC/O NVIDIA CORPORATION\n\n2788 SAN TOMAS EXPRESSWAY\n\n(Street)\n\nSANTA CLARA\nCA\n95051\n\n(City)\n(State)\n(Zip)\n\n2. Issuer Name and Ticker or Trading Symbol\n\nNVIDIA CORP\n[ NVDA ]\n\n5. Relationship of Reporting Person(s) to Issuer\n\n(Check all applicable)\n\nX\nDirector\n\n10% Owner\n\nOfficer (give title below)\n\nOther (specify below)\n\n3. Date of Earliest Transaction\n(Month/Day/Year)\n09/24/2024\n\n4. If Amendment, Date of Original Filed\n(Month/Day/Year)\n\n6. Individual or Joint/Group Filing (Check Applicable Line)\n\nX\nForm filed by One Reporting Person\n\nForm filed by More than One Reporting Person\n\nTable I - Non-Derivative Securities Acquired, Disposed of, or Beneficially Owned\n\n1. Title of Security (Instr.\n3)\n\n2. Transaction Date\n(Month/Day/Year)\n2A. Deemed Execution Date, if any\n(Month/Day/Year)\n3. Transaction Code (Instr.\n8)\n\n4. Securities Acquired (A) or Disposed Of (D) (Instr.\n3, 4 and 5)\n\n5.\nAmount of Securities Beneficially Owned Following Reported Transaction(s) (Instr.\n3 and 4)\n\n6. Ownership Form: Direct (D) or Indirect (I) (Instr.\n4)\n\n7. Nature of Indirect Beneficial Ownership (Instr.\n4)\n\nCode\nV\nAmount\n(A) or (D)\nPrice\n\nCommon Stock\n09/24/2024\n\nS\n\n165,100\nD\n\n$ 121.2685 (1)\n\n8,420,117\nI\n\nBy Trust (2)\n\nCommon Stock\n\n17,251,950\nI\n\nBy the Envy Trust (3)\n\nCommon Stock\n\n12,920,618\nD\n\nTable II - Derivative Securities Acquired, Disposed of, or Beneficially Owned\n(e.g., puts, calls, warrants, options, convertible securities)\n\n1. Title of Derivative Security (Instr.\n3)\n\n2. Conversion or Exercise Price of Derivative Security\n\n3. Transaction Date\n(Month/Day/Year)\n3A. Deemed Execution Date, if any\n(Month/Day/Year)\n4. Transaction Code (Instr.\n8)\n\n5.\nNumber of Derivative Securities Acquired (A) or Disposed of (D) (Instr.\n3, 4 and 5)\n\n6. Date Exercisable and Expiration Date\n(Month/Day/Year)\n7. Title and Amount of Securities Underlying Derivative Security (Instr.\n3 and 4)\n\n8. Price of Derivative Security (Instr.\n5)\n\n9.\nNumber of derivative Securities Beneficially Owned Following Reported Transaction(s) (Instr.\n4)\n\n10. Ownership Form: Direct (D) or Indirect (I) (Instr.\n4)\n\n11. Nature of Indirect Beneficial Ownership (Instr.\n4)\n\nCode\nV\n(A)\n(D)\nDate Exercisable\nExpiration Date\nTitle\nAmount or Number of Shares\n\nExplanation of Responses:\n\n1. Represents weighted average sales price. The shares were sold at prices ranging from $121.20 to $121.4157. The Reporting Person will provide upon request, to the Securities and Exchange Commission, the Issuer or security holder of the Issuer, full information regarding the number of shares sold at each separate price.\n\n2. Held by The 3rd Millennium Trust, of which the Reporting Person and his wife are co-trustees.\n\n3. Held by the Envy Trust u/a/d December 7, 2021, of which the Reporting Person is trustee.\n\nRemarks:\n\n/s/ Rebecca Peters, Attorney-in-Fact for Mark A. Stevens\n09/26/2024\n\n** Signature of Reporting Person\nDate\n\nReminder: Report on a separate line for each class of securities beneficially owned directly or indirectly.\n\n* If the form is filed by more than one reporting person,\nsee\n\nInstruction\n4\n\n(b)(v).\n\n** Intentional misstatements or omissions of facts constitute Federal Criminal Violations\nSee\n\n18 U.S.C. 1001 and 15 U.S.C. 78ff(a).\n\nNote: File three copies of this Form, one of which must be manually signed. If space is insufficient,\nsee\n\nInstruction 6 for procedure.\n\nPersons who respond to the collection of information contained in this form are not required to respond unless the form displays a currently valid OMB Number.",
+     "filed_at": "2024-09-26T21:22:24Z",
      "form": "4",
-     "symbol": "SMCI",
+     "symbol": "NVDA",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "Code M, exercise of 10,000 options; shares held.",
-     "filed_at": "2026-10-07T12:05:00Z",
+     "data_cutoff": "2024-09-18T22:25:52Z",
+     "document": "1. Name and Address of Reporting Person *\n\nNumoto Takeshi\n\n(Last)\n(First)\n(Middle)\n\nC/O MICROSOFT CORPORATION\n\nONE MICROSOFT WAY\n\n(Street)\n\nREDMOND\nWA\n98052-6399\n\n(City)\n(State)\n(Zip)\n\n2. Issuer Name and Ticker or Trading Symbol\n\nMICROSOFT CORP\n[ MSFT ]\n\n5. Relationship of Reporting Person(s) to Issuer\n\n(Check all applicable)\n\nDirector\n\n10% Owner\n\nX\nOfficer (give title below)\n\nOther (specify below)\n\nEVP, Chief Marketing Officer\n\n3. Date of Earliest Transaction\n(Month/Day/Year)\n09/16/2024\n\n4. If Amendment, Date of Original Filed\n(Month/Day/Year)\n\n6. Individual or Joint/Group Filing (Check Applicable Line)\n\nX\nForm filed by One Reporting Person\n\nForm filed by More than One Reporting Person\n\nTable I - Non-Derivative Securities Acquired, Disposed of, or Beneficially Owned\n\n1. Title of Security (Instr.\n3)\n\n2. Transaction Date\n(Month/Day/Year)\n2A. Deemed Execution Date, if any\n(Month/Day/Year)\n3. Transaction Code (Instr.\n8)\n\n4. Securities Acquired (A) or Disposed Of (D) (Instr.\n3, 4 and 5)\n\n5.\nAmount of Securities Beneficially Owned Following Reported Transaction(s) (Instr.\n3 and 4)\n\n6. Ownership Form: Direct (D) or Indirect (I) (Instr.\n4)\n\n7. Nature of Indirect Beneficial Ownership (Instr.\n4)\n\nCode\nV\nAmount\n(A) or (D)\nPrice\n\nCommon Stock\n09/16/2024\n\nA\n\n8,511 (1)\n\nA\n\n$ 0\n\n58,510.5945\nD\n\nTable II - Derivative Securities Acquired, Disposed of, or Beneficially Owned\n(e.g., puts, calls, warrants, options, convertible securities)\n\n1. Title of Derivative Security (Instr.\n3)\n\n2. Conversion or Exercise Price of Derivative Security\n\n3. Transaction Date\n(Month/Day/Year)\n3A. Deemed Execution Date, if any\n(Month/Day/Year)\n4. Transaction Code (Instr.\n8)\n\n5.\nNumber of Derivative Securities Acquired (A) or Disposed of (D) (Instr.\n3, 4 and 5)\n\n6. Date Exercisable and Expiration Date\n(Month/Day/Year)\n7. Title and Amount of Securities Underlying Derivative Security (Instr.\n3 and 4)\n\n8. Price of Derivative Security (Instr.\n5)\n\n9.\nNumber of derivative Securities Beneficially Owned Following Reported Transaction(s) (Instr.\n4)\n\n10. Ownership Form: Direct (D) or Indirect (I) (Instr.\n4)\n\n11. Nature of Indirect Beneficial Ownership (Instr.\n4)\n\nCode\nV\n(A)\n(D)\nDate Exercisable\nExpiration Date\nTitle\nAmount or Number of Shares\n\nExplanation of Responses:\n\n1. Represents Stock Award under the Executive Incentive Plan that will vest over four years with 25% vesting on August 31, 2025, and then 12.5% vesting each six months thereafter, subject to continued employment.\n\nBenjamin O. Orndorff, Attorney-in-Fact for Takeshi Numoto\n09/18/2024\n\n** Signature of Reporting Person\nDate\n\nReminder: Report on a separate line for each class of securities beneficially owned directly or indirectly.\n\n* If the form is filed by more than one reporting person,\nsee\n\nInstruction\n4\n\n(b)(v).\n\n** Intentional misstatements or omissions of facts constitute Federal Criminal Violations\nSee\n\n18 U.S.C. 1001 and 15 U.S.C. 78ff(a).\n\nNote: File three copies of this Form, one of which must be manually signed. If space is insufficient,\nsee\n\nInstruction 6 for procedure.\n\nPersons who respond to the collection of information contained in this form are not required to respond unless the form displays a currently valid OMB Number.",
+     "filed_at": "2024-09-18T22:10:52Z",
      "form": "4",
      "symbol": "MSFT",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "CEO purchased 100,000 shares, code P, open market.",
-     "filed_at": "2026-10-07T12:05:00Z",
+     "data_cutoff": "2024-09-26T00:03:42Z",
+     "document": "1. Name and Address of Reporting Person *\n\nTaneja Vaibhav\n\n(Last)\n(First)\n(Middle)\n\nC/O TESLA, INC.\n\n1 TESLA ROAD\n\n(Street)\n\nAUSTIN\nTX\n78725\n\n(City)\n(State)\n(Zip)\n\n2. Issuer Name and Ticker or Trading Symbol\n\nTesla, Inc.\n[ TSLA ]\n\n5. Relationship of Reporting Person(s) to Issuer\n\n(Check all applicable)\n\nDirector\n\n10% Owner\n\nX\nOfficer (give title below)\n\nOther (specify below)\n\nChief Financial Officer\n\n3. Date of Earliest Transaction\n(Month/Day/Year)\n09/23/2024\n\n4. If Amendment, Date of Original Filed\n(Month/Day/Year)\n\n6. Individual or Joint/Group Filing (Check Applicable Line)\n\nX\nForm filed by One Reporting Person\n\nForm filed by More than One Reporting Person\n\nTable I - Non-Derivative Securities Acquired, Disposed of, or Beneficially Owned\n\n1. Title of Security (Instr.\n3)\n\n2. Transaction Date\n(Month/Day/Year)\n2A. Deemed Execution Date, if any\n(Month/Day/Year)\n3. Transaction Code (Instr.\n8)\n\n4. Securities Acquired (A) or Disposed Of (D) (Instr.\n3, 4 and 5)\n\n5.\nAmount of Securities Beneficially Owned Following Reported Transaction(s) (Instr.\n3 and 4)\n\n6. Ownership Form: Direct (D) or Indirect (I) (Instr.\n4)\n\n7. Nature of Indirect Beneficial Ownership (Instr.\n4)\n\nCode\nV\nAmount\n(A) or (D)\nPrice\n\nCommon Stock\n09/23/2024\n\nM (1)\n\n8,000\nA\n\n$ 18.22\n\n113,032.25 (2)\n\nD\n\nCommon Stock\n09/23/2024\n\nS (1)\n\n8,000 (3)\n\nD\n\n$ 250\n\n105,032.25\nD\n\nTable II - Derivative Securities Acquired, Disposed of, or Beneficially Owned\n(e.g., puts, calls, warrants, options, convertible securities)\n\n1. Title of Derivative Security (Instr.\n3)\n\n2. Conversion or Exercise Price of Derivative Security\n\n3. Transaction Date\n(Month/Day/Year)\n3A. Deemed Execution Date, if any\n(Month/Day/Year)\n4. Transaction Code (Instr.\n8)\n\n5.\nNumber of Derivative Securities Acquired (A) or Disposed of (D) (Instr.\n3, 4 and 5)\n\n6. Date Exercisable and Expiration Date\n(Month/Day/Year)\n7. Title and Amount of Securities Underlying Derivative Security (Instr.\n3 and 4)\n\n8. Price of Derivative Security (Instr.\n5)\n\n9.\nNumber of derivative Securities Beneficially Owned Following Reported Transaction(s) (Instr.\n4)\n\n10. Ownership Form: Direct (D) or Indirect (I) (Instr.\n4)\n\n11. Nature of Indirect Beneficial Ownership (Instr.\n4)\n\nCode\nV\n(A)\n(D)\nDate Exercisable\nExpiration Date\nTitle\nAmount or Number of Shares\n\nNon-Qualified Stock Option (right to buy)\n\n$ 18.22\n\n09/23/2024\n\nM (1)\n\n8,000\n\n(4)\n\n04/19/2029\nCommon Stock\n8,000\n\n$ 0.0\n\n788,920\nD\n\nExplanation of Responses:\n\n1. The transactions reported on this Form 4 were effected pursuant to a Rule 10b5-1 trading plan adopted by the reporting person on May 1 2024.\n\n2. The amount of securities beneficially owned includes 102 shares acquired on February 29, 2024, under the Tesla, Inc. Employee Stock Purchase Plan.\n\n3. Out of the total of 8,000 shares sold, approximately 3,162 shares were sold to cover the exercise price of, and to satisfy the reporting person's tax withholding obligations related to the exercise of stock options to purchase 8,000 shares as reported herein.\n\n4. 1/8th of the shares subject to the option became vested and exercisable on September 13, 2019, and an additional 1/48th of the shares subject to the option vested each month thereafter, so that all such shares subject to this option became fully vested on March 13, 2023.\n\nBy: Aaron Beckman, Power of Attorney For: Vaibhav Taneja\n09/25/2024\n\n** Signature of Reporting Person\nDate\n\nReminder: Report on a separate line for each class of securities beneficially owned directly or indirectly.\n\n* If the form is filed by more than one reporting person,\nsee\n\nInstruction\n4\n\n(b)(v).\n\n** Intentional misstatements or omissions of facts constitute Federal Criminal Violations\nSee\n\n18 U.S.C. 1001 and 15 U.S.C. 78ff(a).\n\nNote: File three copies of this Form, one of which must be manually signed. If space is insufficient,\nsee\n\nInstruction 6 for procedure.\n\nPersons who respond to the collection of information contained in this form are not required to respond unless the form displays a currently valid OMB N…",
+     "filed_at": "2024-09-25T23:48:42Z",
      "form": "4",
-     "symbol": "PFE",
-     "venue": "NYSE"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "Code G, bona fide gift of 5,000 shares to a charity.",
-     "filed_at": "2026-10-07T12:05:00Z",
-     "form": "4",
-     "symbol": "KO",
-     "venue": "NYSE"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "Sales under 10b5-1 plan, code S, footnote 1.",
-     "filed_at": "2026-10-07T12:05:00Z",
-     "form": "4",
-     "symbol": "META",
+     "symbol": "TSLA",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "x",
-     "filed_at": "2026-10-07T15:30:00Z",
+     "data_cutoff": "2024-09-26T20:55:10Z",
+     "document": "1. Name and Address of Reporting Person *\n\nZapolsky David\n\n(Last)\n(First)\n(Middle)\n\nP.O. BOX 81226\n\n(Street)\n\nSEATTLE\nWA\n98108-1226\n\n(City)\n(State)\n(Zip)\n\n2. Issuer Name and Ticker or Trading Symbol\n\nAMAZON COM INC\n[ AMZN ]\n\n5. Relationship of Reporting Person(s) to Issuer\n\n(Check all applicable)\n\nDirector\n\n10% Owner\n\nX\nOfficer (give title below)\n\nOther (specify below)\n\nSenior Vice President\n\n3. Date of Earliest Transaction\n(Month/Day/Year)\n09/24/2024\n\n4. If Amendment, Date of Original Filed\n(Month/Day/Year)\n\n6. Individual or Joint/Group Filing (Check Applicable Line)\n\nX\nForm filed by One Reporting Person\n\nForm filed by More than One Reporting Person\n\nTable I - Non-Derivative Securities Acquired, Disposed of, or Beneficially Owned\n\n1. Title of Security (Instr.\n3)\n\n2. Transaction Date\n(Month/Day/Year)\n2A. Deemed Execution Date, if any\n(Month/Day/Year)\n3. Transaction Code (Instr.\n8)\n\n4. Securities Acquired (A) or Disposed Of (D) (Instr.\n3, 4 and 5)\n\n5.\nAmount of Securities Beneficially Owned Following Reported Transaction(s) (Instr.\n3 and 4)\n\n6. Ownership Form: Direct (D) or Indirect (I) (Instr.\n4)\n\n7. Nature of Indirect Beneficial Ownership (Instr.\n4)\n\nCode\nV\nAmount\n(A) or (D)\nPrice\n\nCommon Stock, par value $.01 per share\n09/24/2024\n\nS (1)\n\n2,190\nD\n\n$ 195\n\n62,420\nD\n\nTable II - Derivative Securities Acquired, Disposed of, or Beneficially Owned\n(e.g., puts, calls, warrants, options, convertible securities)\n\n1. Title of Derivative Security (Instr.\n3)\n\n2. Conversion or Exercise Price of Derivative Security\n\n3. Transaction Date\n(Month/Day/Year)\n3A. Deemed Execution Date, if any\n(Month/Day/Year)\n4. Transaction Code (Instr.\n8)\n\n5.\nNumber of Derivative Securities Acquired (A) or Disposed of (D) (Instr.\n3, 4 and 5)\n\n6. Date Exercisable and Expiration Date\n(Month/Day/Year)\n7. Title and Amount of Securities Underlying Derivative Security (Instr.\n3 and 4)\n\n8. Price of Derivative Security (Instr.\n5)\n\n9.\nNumber of derivative Securities Beneficially Owned Following Reported Transaction(s) (Instr.\n4)\n\n10. Ownership Form: Direct (D) or Indirect (I) (Instr.\n4)\n\n11. Nature of Indirect Beneficial Ownership (Instr.\n4)\n\nCode\nV\n(A)\n(D)\nDate Exercisable\nExpiration Date\nTitle\nAmount or Number of Shares\n\nExplanation of Responses:\n\n1. This transaction was effected pursuant to a Rule 10b5-1 trading plan adopted by the reporting person on 11/13/2023.\n\nRemarks:\n\n/s/ by Mark F. Hoffman as attorney-in-fact for David Zapolsky, Senior Vice President, Global Public Policy & General Counsel\n09/26/2024\n\n** Signature of Reporting Person\nDate\n\nReminder: Report on a separate line for each class of securities beneficially owned directly or indirectly.\n\n* If the form is filed by more than one reporting person,\nsee\n\nInstruction\n4\n\n(b)(v).\n\n** Intentional misstatements or omissions of facts constitute Federal Criminal Violations\nSee\n\n18 U.S.C. 1001 and 15 U.S.C. 78ff(a).\n\nNote: File three copies of this Form, one of which must be manually signed. If space is insufficient,\nsee\n\nInstruction 6 for procedure.\n\nPersons who respond to the collection of information contained in this form are not required to respond unless the form displays a currently valid OMB Number.",
+     "filed_at": "2024-09-26T20:40:10Z",
      "form": "4",
-     "symbol": "INTC",
+     "symbol": "AMZN",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2024-09-26T22:24:16Z",
+     "document": "1. Name and Address of Reporting Person *\n\nNewstead Jennifer\n\n(Last)\n(First)\n(Middle)\n\nC/O META PLATFORMS, INC\n\n1 META WAY\n\n(Street)\n\nMENLO PARK\nCA\n94025\n\n(City)\n(State)\n(Zip)\n\n2. Issuer Name and Ticker or Trading Symbol\n\nMeta Platforms, Inc.\n[ META ]\n\n5. Relationship of Reporting Person(s) to Issuer\n\n(Check all applicable)\n\nDirector\n\n10% Owner\n\nX\nOfficer (give title below)\n\nOther (specify below)\n\nChief Legal Officer\n\n3. Date of Earliest Transaction\n(Month/Day/Year)\n09/24/2024\n\n4. If Amendment, Date of Original Filed\n(Month/Day/Year)\n\n6. Individual or Joint/Group Filing (Check Applicable Line)\n\nX\nForm filed by One Reporting Person\n\nForm filed by More than One Reporting Person\n\nTable I - Non-Derivative Securities Acquired, Disposed of, or Beneficially Owned\n\n1. Title of Security (Instr.\n3)\n\n2. Transaction Date\n(Month/Day/Year)\n2A. Deemed Execution Date, if any\n(Month/Day/Year)\n3. Transaction Code (Instr.\n8)\n\n4. Securities Acquired (A) or Disposed Of (D) (Instr.\n3, 4 and 5)\n\n5.\nAmount of Securities Beneficially Owned Following Reported Transaction(s) (Instr.\n3 and 4)\n\n6. Ownership Form: Direct (D) or Indirect (I) (Instr.\n4)\n\n7. Nature of Indirect Beneficial Ownership (Instr.\n4)\n\nCode\nV\nAmount\n(A) or (D)\nPrice\n\nClass A Common Stock\n09/24/2024\n\nS (1)\n\n905\nD\n\n$ 567\n\n36,007\nD\n\nTable II - Derivative Securities Acquired, Disposed of, or Beneficially Owned\n(e.g., puts, calls, warrants, options, convertible securities)\n\n1. Title of Derivative Security (Instr.\n3)\n\n2. Conversion or Exercise Price of Derivative Security\n\n3. Transaction Date\n(Month/Day/Year)\n3A. Deemed Execution Date, if any\n(Month/Day/Year)\n4. Transaction Code (Instr.\n8)\n\n5.\nNumber of Derivative Securities Acquired (A) or Disposed of (D) (Instr.\n3, 4 and 5)\n\n6. Date Exercisable and Expiration Date\n(Month/Day/Year)\n7. Title and Amount of Securities Underlying Derivative Security (Instr.\n3 and 4)\n\n8. Price of Derivative Security (Instr.\n5)\n\n9.\nNumber of derivative Securities Beneficially Owned Following Reported Transaction(s) (Instr.\n4)\n\n10. Ownership Form: Direct (D) or Indirect (I) (Instr.\n4)\n\n11. Nature of Indirect Beneficial Ownership (Instr.\n4)\n\nCode\nV\n(A)\n(D)\nDate Exercisable\nExpiration Date\nTitle\nAmount or Number of Shares\n\nExplanation of Responses:\n\n1. The sale reported was effected pursuant to a Rule 10b5-1 trading plan adopted by the reporting person on November 30, 2023.\n\n/s/ Erin Guldiken, attorney-in-fact for Jennifer Newstead\n09/26/2024\n\n** Signature of Reporting Person\nDate\n\nReminder: Report on a separate line for each class of securities beneficially owned directly or indirectly.\n\n* If the form is filed by more than one reporting person,\nsee\n\nInstruction\n4\n\n(b)(v).\n\n** Intentional misstatements or omissions of facts constitute Federal Criminal Violations\nSee\n\n18 U.S.C. 1001 and 15 U.S.C. 78ff(a).\n\nNote: File three copies of this Form, one of which must be manually signed. If space is insufficient,\nsee\n\nInstruction 6 for procedure.\n\nPersons who respond to the collection of information contained in this form are not required to respond unless the form displays a currently valid OMB Number.",
+     "filed_at": "2024-09-26T22:09:16Z",
+     "form": "4",
+     "symbol": "META",
      "venue": "NASDAQ"
     }
    ],
    "expected": [
-    "insider_buy_signal",
-    "ignore",
-    "ignore",
-    "insider_sell_note",
-    "ignore",
-    "insider_buy_signal",
-    "abstain",
-    "ignore",
-    "abstain"
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "sets": [
+    {
+     "set_id": "L8.E:136e805c67a4",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-08-19T22:45:16Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000088/xslF345X05/wk-form4_1724106610.xml",
+       "published_at": "2024-08-19T22:30:16Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted"
+    },
+    {
+     "set_id": "L8.E:3ce22ef31ea4",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-09-26T21:37:24Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581024000292/xslF345X05/wk-form4_1727385738.xml",
+       "published_at": "2024-09-26T21:22:24Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted"
+    },
+    {
+     "set_id": "L8.E:4e3f44b8ea34",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-09-18T22:25:52Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/789019/000106299324016766/xslF345X05/form4.xml",
+       "published_at": "2024-09-18T22:10:52Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted"
+    },
+    {
+     "set_id": "L8.E:c897aeda9597",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-09-26T00:03:42Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1318605/000177134024000004/xslF345X05/edgardoc.xml",
+       "published_at": "2024-09-25T23:48:42Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted"
+    },
+    {
+     "set_id": "L8.E:d49e2e7eb133",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-09-26T20:55:10Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872424000154/xslF345X05/wk-form4_1727383204.xml",
+       "published_at": "2024-09-26T20:40:10Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted"
+    },
+    {
+     "set_id": "L8.E:94d033462863",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-09-26T22:24:16Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1326801/000095010324014008/xslF345X05/dp218332_4-newstead.xml",
+       "published_at": "2024-09-26T22:09:16Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted"
+    }
    ],
    "visual": {
     "fed": [
@@ -1412,88 +1743,153 @@
    },
    "inputs": [
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "Item 4: The Reporting Person intends to nominate four directors and seek a sale of the beverage unit.",
-     "filed_at": "2026-10-07T12:05:00Z",
+     "data_cutoff": "2024-09-04T21:44:25Z",
+     "document": "Item\n4. Purpose of Transaction.\n\nThe\npurpose of transaction is to invest the Ordinary Shares on behalf of institutional investors. Therefore, the reporting person\nmay consider making strategic investment decisions described in Items 4(a) of Schedule 13D:\n\n(a)\nThe acquisition by any person of additional securities of the issuer, or the disposition of securities of the issuer;",
+     "filed_at": "2024-09-04T21:29:25Z",
      "form": "SC 13D",
-     "symbol": "PEP",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "Item 4: Acquired for investment purposes; no plans or proposals.",
-     "filed_at": "2026-10-07T12:05:00Z",
-     "form": "SC 13D",
-     "symbol": "KO",
+     "symbol": "AUNA",
      "venue": "NYSE"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "Item 4: The Reporting Person intends to engage with management about capital allocation.",
-     "filed_at": "2026-10-07T12:05:00Z",
-     "form": "SC 13D",
-     "symbol": "DIS",
+     "data_cutoff": "2024-04-11T10:26:23Z",
+     "document": "Item 4. Purpose of Transaction” of the Schedule 13D is being supplemented by this Amendment\nNo. 1 as set forth below:\n\nAs\npreviously disclosed in the Schedule 13D, on February 14, 2024, Dominion commenced insolvency proceedings under section 10 of\nthe Israeli Insolvency and Financial Rehabilitation Law 5778-2018, by providing notice to the Company of Dominion’s intent\nto file a motion to initiate such proceedings.\n\nOn\nApril 10, 2024, in furtherance thereof and following the Issuer’s failure to respond to the aforementioned notice or remit\nthe required payments, Dominion filed a motion to commence insolvency proceedings with the Tel Aviv District Court as a result of\nthe Issuer’s failure to repay its debts to certain Reporting Persons and others creditors in the ordinary course and in\naccordance with certain contractual obligations, as further disclosed in Item 4 of the Schedule 13D. Dominion is seeking all of\nits rights afforded under the Israeli Insolvency and Financial Rehabilitation Law.",
+     "filed_at": "2024-04-11T10:11:23Z",
+     "form": "SC 13D/A",
+     "symbol": "HUBC",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2024-05-14T21:27:32Z",
+     "document": "Item 4. Purpose of Transaction.\n\nItem 4 is hereby amended to add the following:\n\nAll of the Class B Shares reported on this Statement were acquired for investment purposes. The Reporting Persons intend to review their\nholdings in the Issuer on a continuing basis and as part of this ongoing review evaluate various alternatives that are or may become available with respect to the Issuer and its securities. Except as otherwise set forth in this Statement, neither\nthe Reporting Persons nor, to the best of their knowledge, any of the other persons identified in response to Item 2 hereof, has any plans or proposals that relate to or would result in the occurrence of any of the transactions described in\nsubparagraphs (b) through (j) of Item 4 of Schedule 13D.\n\n(a) The Reporting Persons may from time to time and at any time (in accordance\nwith any trading policy of the Issuer or its subsidiaries and affiliates that may then be applicable to the Reporting Persons) in their sole discretion acquire, or cause to be acquired, additional equity or debt securities or other instruments of\nthe Issuer, its subsidiaries or affiliates, or dispose, or cause to be disposed, such equity or debt securities or instruments, in any amount that the Reporting Persons may determine in their sole discretion, through public or private transactions\nor otherwise. In addition to the foregoing, certain of the Reporting Persons are pursuing various alternatives with respect to the Issuer’s securities in order to create liquidity opportunities for limited partners of certain of such Reporting\nPersons. Among the alternatives being pursued, such Reporting Persons are considering forming a continuation vehicle or other special purpose vehicle that would continue to be controlled by certain of the Reporting Persons that would enable existing\nlimited partners to achieve liquidity or continue their indirect investment in the Issuer, making an in-kind distribution to certain limited partners of certain of such Reporting Persons, or effecting a public or private transaction. The timing, and\nwhether and how these alternatives can be effected, will depend on transaction and market terms and conditions, as well as legal, regulatory and other factors.\n\nThe Reporting Persons reserve the right to and may, from time to time and at any time, in their sole discretion, formulate and implement other\npurposes, plans or proposals regarding the Issuer or any of its subsidiaries or affiliates or any of their equity or debt securities or instruments that relate to or would result in the occurrence of any of the transactions described in\nsubparagraphs (a) through (j) of Item 4 of Schedule 13D as the Reporting Persons may deem advisable in their sole discretion. The information set forth in this Item 4 is subject to change from time to time and at any time, and there can be no\nassurances that any of the Reporting Persons will or will not take, or cause to be taken, any of the actions described above or any similar actions.\n\nTable of Contents\n\nPage\n17\nof 18 Pages\n\nSIGNATURES\n\nAfter reasonable inquiry and to the best of my knowledge and belief, the undersigned certifies that the information set forth in this\nStatement is true, complete and correct.\n\nDate: May 14, 2024\n\nMHR ADVISORS LLC\n\nBy:\n\n/s/ Janet Yeung\n\nName:\n\nJanet Yeung\n\nTitle:\n\nAuthorized Signatory\n\nMHR INSTITUTIONAL ADVISORS LLC\n\nBy:\n\n/s/ Janet Yeung\n\nName:\n\nJanet Yeung\n\nTitle:\n\nAuthorized Signatory\n\nMHR INSTITUTIONAL PARTNERS IIA LP\n\nBy:\n\nMHR Institutional Advisors II LLC,\n\nits General\nPartner\n\nBy:\n\n/s/ Janet Yeung\n\nName:\n\nJanet Yeung\n\nTitle:\n\nAuthorized Signatory\n\nMHR INSTITUTIONAL ADVISORS II LLC\n\nBy:\n\n/s/ Janet Yeung\n\nName:\n\nJanet Yeung\n\nTitle:\n\nAuthorized Signatory\n\nMHR INSTITUTIONAL PARTNERS III LP\n\nBy:\n\nMHR Institutional Advisors III LLC,\n\nits General\nPartner\n\nBy:\n\n/s/ Janet Yeung\n\nName:\n\nJanet Yeung\n\nTitle:\n\nAuthorized Signatory\n\nMHR INSTITUTIONAL ADVISORS III LLC\n\nBy:\n\n/s/ Janet Yeung\n\nName:\n\nJanet Yeung\n\nTitle:\n\nAuthorize…",
+     "filed_at": "2024-05-14T21:12:32Z",
+     "form": "SC 13D/A",
+     "symbol": "TSAT",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2024-09-19T21:14:21Z",
+     "document": "Item\n4. Purpose of Transaction.” of the Schedule 13D is being amended and restated by this Amendment as follows:\n\nThe\nReporting Persons acquired the Common Stock in connection with the Merger contemplated by the Merger Agreement for investment purposes.\nThe information contained in Item 3 of this Schedule 13D is incorporated herein by reference.\n\nIn\nSeptember 2023, in connection with the Merger, Corvus and Algo entered into a participation and inducement agreement (the “Inducement\nAgreement”) with a third party investor in the Issuer, whereby Corvus and Algo agreed to provide certain payments to such investor\nin the event Corvus and Algo sold or pledged in a debt transaction any of the shares it was receiving in the Merger. In certain circumstances,\nsuch investor may have a right to cause Corvus to transfer certain of its shares to such investor.\n\nOn\nMarch 26, 2024, Algo pledged (such pledge, the “Algo Pledge”) 14,378,695 shares of Common Stock directly owned by it, which\nconstituted all of the shares of Common Stock held in its margin account at RBC Capital Markets, LLC (“RBC”), to RBC as collateral\nfor a loan, pursuant to that certain Control and Restricted Loan Agreement, dated March 26, 2024, by and between Algo and RBC (the “Loan\nAgreement”). The loan proceeds were used to pay a portion of certain amounts owed by Corvus and Algo to the third party investor\npursuant to the Inducement Agreement.\n\nOn\nJune 14, 2024, Corvus transferred 1,100,000 shares of Common Stock directly owned by it to Algo for no consideration, pursuant to that\ncertain Securities Transfer Request dated June 13, 2024 (the “Transfer Request” and such transfer, the “Corvus Transfer”).\n\nOn\nJune 24, 2024, Corvus entered into a Guaranty of Account with RBC (the “Guaranty of Account”) to guarantee Algo’s remaining\nobligations under the Loan Agreement and in connection therewith pledged 30,048,454 shares of Common Stock directly owned by it, which\nconstituted all of the shares of Common Stock held in Corvus’s margin account at RBC, to RBC (such pledge, the “Corvus Pledge”).\n\nCUSIP NO. 20678X106 SCHEDULE 13D/A PAGE 6 OF 9 PAGES\n\nFrom\nJuly 3, 2024 to July 17, 2024, RBC sold a total of 15,301,068 shares of Common Stock from Algo’s account at RBC pursuant to the\nterms and conditions of the Loan Agreement, as detailed on Schedule A attached hereto.\n\nThe\nforegoing descriptions of the Loan Agreement, the Transfer Request and the Guaranty of Account do not purport to be complete and is qualified\nin its entirety by reference to the full text of the Loan Agreement, the Transfer Request and the Guaranty of Account, which are filed\nas Exhibits 8, 9 and 10, respectively, to this Amendment and incorporated herein by reference.\n\nDr.\nRegan serves as a director on the Issuer’s board of directors. Accordingly, Dr. Regan may have influence over the corporate activities\nof the Issuer, including activities that may relate to items described in clauses (a) through (j) of Item 4 of Schedule 13D. Except as\notherwise described herein, the Reporting Persons currently have no plan(s) or proposal(s) that relate to, or would result in, any of\nthe events or transactions described in Item 4(a) through (j) of Schedule 13D, although each Reporting Person reserves the right, at\nany time and from time to time, to review or reconsider its position and/or change its purpose and/or formulate plans or proposals with\nrespect thereto. The Reporting Persons intend to review from time to time their investment in the Issuer and the Issuer’s business\naffairs, financial position, performance and other investment considerations. The Reporting Persons may from time to time engage in discussions\nwith the Issuer, its directors and officers, other stockholders of the Issuer and other persons on matters that relate to the management,\noperations, business, assets, capitalization, financial condition, strategic plans, governance and the future of the Issuer and/or its\nsubsidiaries. Based upon such review and disc…",
+     "filed_at": "2024-09-19T20:59:21Z",
+     "form": "SC 13D/A",
+     "symbol": "CDT",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2024-05-14T21:07:00Z",
+     "document": "Item 4.\n\nPurpose of Transaction.\n\nItem 4 is hereby amended to add the following:\n\nAll of the Class A Voting Shares reported on this Statement were acquired for investment purposes. The Reporting Persons intend to review their\nholdings in the Issuer on a continuing basis and as part of this ongoing review evaluate various alternatives that are or may become available with respect to the Issuer and its securities. Except as otherwise set forth in this Statement, neither\nthe Reporting Persons nor, to the best of their knowledge, any of the other persons identified in response to Item 2 hereof, has any plans or proposals that relate to or would result in the occurrence of any of the transactions described in\nsubparagraphs (b) through (j) of Item 4 of Schedule 13D.\n\n(a) The Reporting Persons may from time to time and at any time (in\naccordance with any trading policy of the Issuer or its subsidiaries and affiliates that may then be applicable to the Reporting Persons) in their sole discretion acquire, or cause to be acquired, additional equity or debt securities or other\ninstruments of the Issuer, its subsidiaries or affiliates, or dispose, or cause to be disposed, such equity or debt securities or instruments, in any amount that the Reporting Persons may determine in their sole discretion, through public or private\ntransactions or otherwise. In addition to the foregoing, certain of the Reporting Persons are pursuing various alternatives with respect to the Issuer’s securities in order to create liquidity opportunities for limited partners of certain of\nsuch Reporting Persons. Among the alternatives being pursued, such Reporting Persons are considering forming a continuation vehicle or other special purpose vehicle that would continue to be controlled by certain of the Reporting Persons that would\nenable existing limited partners to achieve liquidity or continue their indirect investment in the Issuer, making an in-kind distribution to certain limited partners of certain of such Reporting Persons, or effecting a public or private transaction.\nThe timing, and whether and how these alternatives can be effected, will depend on transaction and market terms and conditions, as well as legal, regulatory and other factors.\n\nThe Reporting Persons reserve the right to and may, from time to time and at any time, in their sole discretion, formulate and implement other\npurposes, plans or proposals regarding the Issuer or any of its subsidiaries or affiliates or any of their equity or debt securities or instruments that relate to or would result in the occurrence of any of the transactions described in\nsubparagraphs (a) through (j) of Item 4 of Schedule 13D as the Reporting Persons may deem advisable in their sole discretion. The information set forth in this Item 4 is subject to change from time to time and at any time, and there can be no\nassurances that any of the Reporting Persons will or will not take, or cause to be taken, any of the actions described above or any similar actions.\n\nItem 6 to this Statement is hereby incorporated by reference.\n\nItem 6.\n\nContracts, Arrangements, Understandings or Relationships with Respect to Securities of the Issuer.\n\nItem 6 is hereby amended to add the following:\n\nLG Studios Investor Rights Agreement\n\nReference is made to that certain business combination agreement, dated as of December 22, 2023 (as amended, the “ Business Combination\nAgreement ”) as further described by the Issuer on Schedule 14A, dated December 22, 2023.\n\nIn connection with the closing of the\ntransactions contemplated by the Business Combination Agreement, on May 13, 2024, Lionsgate Studios Corp., a corporation organized under the laws of British Columbia, Canada (the “ LG Studios ”), Fund Management and certain of its\naffiliates, Liberty, Liberty Global, Discovery and Discovery Lightning entered into an investor rights agreement (the “ LG Studios Investor Rights Agreement ”) that duplicates the provisions of the Investor Rights Agreeme…",
+     "filed_at": "2024-05-14T20:52:00Z",
+     "form": "SC 13D/A",
+     "symbol": "STRZ",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2024-05-14T21:29:53Z",
+     "document": "Item 4. Purpose of Transaction.\n\nItem 4 is hereby amended to add the following:\n\nAll of the Common\nStock reported on this Statement were acquired for investment purposes. The Reporting Persons intend to review their holdings in the Issuer on a continuing basis and as part of this ongoing review evaluate various alternatives that are or may become\navailable with respect to the Issuer and its securities. Except as otherwise set forth in this Statement, neither the Reporting Persons nor, to the best of their knowledge, any of the other persons identified in response to Item 2 hereof, has any\nplans or proposals that relate to or would result in the occurrence of any of the transactions described in subparagraphs (b) through (j) of Item 4 of Schedule 13D.\n\n(a) The Reporting Persons may from time to time and at any time (in accordance with any trading policy of the Issuer or its subsidiaries and affiliates that\nmay then be applicable to the Reporting Persons) in their sole discretion acquire, or cause to be acquired, additional equity or debt securities or other instruments of the Issuer, its subsidiaries or affiliates, or dispose, or cause to be disposed,\nsuch equity or debt securities or instruments, in any amount that the Reporting Persons may determine in their sole discretion, through public or private transactions or otherwise. In addition to the foregoing, certain of the Reporting Persons are\npursuing various alternatives with respect to the Issuer’s securities in order to create liquidity opportunities for limited partners of certain of such Reporting Persons. Among the alternatives being pursued, such Reporting Persons are\nconsidering forming a continuation vehicle or other special purpose vehicle that would continue to be controlled by certain of the Reporting Persons that would enable existing limited partners to continue their indirect investment in the Issuer,\nmaking an in-kind distribution to certain limited partners of certain of such Reporting Persons, or effecting a public or private transaction. The timing, and whether and how these alternatives can be effected, will depend on transaction and market\nterms and conditions, as well as legal, regulatory and other factors.\n\nThe Reporting Persons reserve the right to and may, from time to time and at any\ntime, in their sole discretion, formulate and implement other purposes, plans or proposals regarding the Issuer or any of its subsidiaries or affiliates or any of their equity or debt securities or instruments that relate to or would result in the\noccurrence of any of the transactions described in subparagraphs (a) through (j) of Item 4 of Schedule 13D as the Reporting Persons may deem advisable in their sole discretion. The information set forth in this Item 4 is subject to change from time\nto time and at any time, and there can be no assurances that any of the Reporting Persons will or will not take, or cause to be taken, any of the actions described above or any similar actions.",
+     "filed_at": "2024-05-14T21:14:53Z",
+     "form": "SC 13D/A",
+     "symbol": "TWI",
      "venue": "NYSE"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "Item 4: The Reporting Person believes the company should explore a sale and may solicit proxies.",
-     "filed_at": "2026-10-07T12:05:00Z",
-     "form": "SC 13D",
-     "symbol": "SAGE",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "Item 4: Discussions with the board regarding operations may occur.",
-     "filed_at": "2026-10-07T12:05:00Z",
-     "form": "SC 13D",
-     "symbol": "INTC",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "Item 4: Will seek two board seats at the annual meeting.",
-     "filed_at": "2026-10-07T12:05:00Z",
-     "form": "SC 13D",
-     "symbol": "SNOW",
-     "venue": "NYSE"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "Item 4: Shares held in the ordinary course; no intent to change control.",
-     "filed_at": "2026-10-07T12:05:00Z",
-     "form": "SC 13D",
-     "symbol": "AAPL",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "",
-     "filed_at": "2026-10-07T12:05:00Z",
-     "form": "SC 13D",
-     "symbol": "PEP",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "x",
-     "filed_at": "2026-10-07T12:05:00Z",
-     "form": "SC 13D",
-     "symbol": "PNKX",
-     "venue": "OTC"
     }
    ],
    "expected": [
-    "activist_catalyst",
-    "ignore",
-    "watch",
-    "activist_catalyst",
-    "watch",
-    "activist_catalyst",
-    "ignore",
-    "abstain",
-    "abstain"
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "sets": [
+    {
+     "set_id": "L8.F:3b12201fa91d",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-09-04T21:44:25Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1799207/000139834424017274/fp0090091-1_sc13d.htm",
+       "published_at": "2024-09-04T21:29:25Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted"
+    },
+    {
+     "set_id": "L8.F:40159a4c1aea",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-04-11T10:26:23Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1905660/000175392624000696/g084173_sc13da.htm",
+       "published_at": "2024-04-11T10:11:23Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted"
+    },
+    {
+     "set_id": "L8.F:fa57adcba5c6",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-05-14T21:27:32Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1845840/000119312524138374/d810571dsc13da.htm",
+       "published_at": "2024-05-14T21:12:32Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted"
+    },
+    {
+     "set_id": "L8.F:d36991980b16",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-09-19T21:14:21Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1896212/000149315224037144/formsc13da.htm",
+       "published_at": "2024-09-19T20:59:21Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted"
+    },
+    {
+     "set_id": "L8.F:ccb362041cec",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-05-14T21:07:00Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/929351/000119312524138334/d823082dsc13da.htm",
+       "published_at": "2024-05-14T20:52:00Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted"
+    },
+    {
+     "set_id": "L8.F:dee0e482e63b",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-05-14T21:29:53Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/899751/000119312524138379/d823077dsc13da.htm",
+       "published_at": "2024-05-14T21:14:53Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted"
+    }
    ],
    "visual": {
     "fed": [
@@ -1685,106 +2081,165 @@
    },
    "inputs": [
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "S-3 with an at-the-market sales agreement for up to $150M attached.",
-     "filed_at": "2026-10-07T12:05:00Z",
-     "form": "S-3",
-     "market_cap_musd": 120,
-     "shelf_musd": 150,
-     "symbol": "CRVX",
+     "data_cutoff": "2024-04-12T21:15:47Z",
+     "document": "month period that ends on and includes the date hereof. Pursuant to General Instruction I.B.6 of Form S-3, in no event\nwill we sell securities in public primary offerings on Form S-3 with a value exceeding one-third of our public\nfloat (as defined by General Instruction I.B.6) in any 12 calendar month period so long as our public float remains below $75 million.\n\nWe are filing this prospectus\nsupplement to amend the Prospectus Supplement No. 1 to increase the maximum amount of shares we are eligible to sell under our Registration\nStatement pursuant to General Instruction I.B.6 of Form S-3. Accordingly, in accordance with the terms of the Sales Agreement, we\nmay offer and sell common stock having an aggregate offering price of up to $2,153,000.00 from time to time through or to the Agent. However,\nin the event that our public float increases or decreases, we may sell securities in public primary offerings on Form S-3 with a\nvalue up to one-third of our public float, as calculated pursuant to General Instruction I.B.6 and subject to the terms\nof the Sales Agreement. In the event that our public float increases above $75.0 million, we will no longer be subject to the limits\nin General Instruction I.B.6 of Form S-3.\n\nInvesting\nin our common stock involves risks. You should carefully consider the risks described under “Risk Factors” in\nthe Prospectus and Prospectus Supplement No. 1, as well as those described in our other reports and documents we filed with the Securities\nand Exchange Commission (the “SEC”) that we incorporate herein by reference, before making a decision to invest in our securities.\n\nNeither the SEC, any state\nsecurities commission, nor any other regulatory body has approved or disapproved of these securities or determined if this prospectus\nsupplement is accurate or complete. Any representation to the contrary is a criminal offense.\n\nH.C. Wainwright &\nCo.\n\nThe date of this prospectus supplement is April 12,\n2024",
+     "filed_at": "2024-04-12T21:00:47Z",
+     "form": "424B5",
+     "market_cap_musd": 9.719,
+     "shelf_musd": 2.153,
+     "symbol": "DBGI",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "Universal shelf for general corporate purposes.",
-     "filed_at": "2026-10-07T12:05:00Z",
-     "form": "S-3",
-     "market_cap_musd": 3400000,
-     "shelf_musd": 5000,
-     "symbol": "AAPL",
+     "data_cutoff": "2024-06-17T12:26:06Z",
+     "document": "The Prior Prospectus registered the issuance of up to $2,200,000 of shares of our common stock under the Sales Agreement. Through the date hereof, we have sold shares of our common stock through Ladenburg under the Sales Agreement pursuant to the Prior Prospectus for an aggregate purchase price of $1,663,750, which leaves us with $536,250 of our common stock that remains available under the Prior Prospectus. We are filing this prospectus supplement to amend the Prior Prospectus to update the amount of shares we are eligible to sell under General Instruction I.B.6 of Form S-3, which limits the amounts that we may sell under the registration statement of which this prospectus supplement and the Prior Prospectus are a part. Pursuant to General Instruction I.B.6 of Form S-3, in no event will we sell shares pursuant to this prospectus supplement with a value of more than one-third of the aggregate market value of our common stock held by non-affiliates in any 12-month period, so long as the aggregate market value of our common stock held by non-affiliates is less than $75,000,000. As a result of these limitations and the current public float of our common stock, and in accordance with the terms of the Sales Agreement, we may offer and sell shares of our common stock having an aggregate offering price of up to $837,970 from time to time through Ladenburg. Pursuant to this Prospectus Supplement, we are registering the offer and sale of up to $536,250 of shares of our common stock, which is the full amount remaining under the Prior Prospectus.\n\nOur common stock is listed on The Nasdaq Stock Market LLC under the symbol “SLRX.” As of June 14, 2024, the aggregate market value of our outstanding common stock held by non-affiliates, or the public float, was $2,513,912 which was calculated based on 586,267 (on a post-reverse stock split basis) shares of our outstanding common stock held by non-affiliates at a price of $4.288 (on a post reverse stock split basis) per share, the closing price of our common stock on May 1, 2024, a date that is within 60 days of filing this prospectus supplement. As of the date hereof, we have not offered or sold any securities pursuant to General Instruction I.B.6 of Form S-3 during the prior 12 calendar month period that ends on and includes the date hereof.\n\nInvesting in our common stock involves a high degree of risk. See “Risk Factors” contained in the documents we incorporate by reference in this prospectus supplement to read about factors you should consider before investing in our securities.\n\nNeither the Securities and Exchange Commission nor any state securities commission has approved or disapproved of these securities or determined if this prospectus supplement and the accompanying prospectus is truthful or complete. Any representation to the contrary is a criminal offense.\n\nLadenburg Thalmann\n\nThe date of this prospectus supplement is June 17, 2024.",
+     "filed_at": "2024-06-17T12:11:06Z",
+     "form": "424B5",
+     "market_cap_musd": 4.921,
+     "shelf_musd": 0.838,
+     "symbol": "DCOY",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "Shelf; no current plans to sell.",
-     "filed_at": "2026-10-07T12:05:00Z",
-     "form": "S-3",
-     "market_cap_musd": 200,
-     "shelf_musd": 100,
-     "symbol": "BLNK",
+     "data_cutoff": "2024-04-02T20:47:07Z",
+     "document": "the Prospectus Supplement, the “Prospectus”), filed as part of our registration statement on Form S-3 (File No. 333-261283)\n(the “Registration Statement”). This Supplement should be read in conjunction with the Prospectus, and is qualified by reference\nthereto, except to the extent that the information herein amends or supersedes the information contained in the Prospectus. This Supplement\nis not complete without, and may only be delivered or utilized in connection with the Prospectus and any future amendments or supplements\nthereto.\n\nUnder the Prospectus, Jaguar\nHealth, Inc. (“we”, “us” or the “Company”) registered shares of our voting common stock, par\nvalue $0.0001 per share (the “Common Stock”), having an aggregate offering price of up to $75,000,000, for offer and sale\nfrom time to time through Ladenburg Thalmann & Co. Inc. (“Ladenburg”), acting as the Company’s sales agent,\npursuant to an At The Market Offering Agreement, dated December 10, 2021, between us and Ladenburg, as amended on February 2,\n2022 (the “ATM Agreement”). Sales of our Common Stock under the Prospectus, as supplemented by this Supplement, may be made\nin sales deemed to be an “at-the-market offering” as defined in Rule 415(a)(4) promulgated under the Securities\nAct of 1933, as amended (“Securities Act”). From December 10, 2021 through the date of this Supplement, we have sold\nunder the Prospectus an aggregate of 188,854,233 shares of our Common Stock, pursuant to the ATM Agreement, for gross proceeds of $69,783,318.\nAs a result, we have shares of Common Stock having an aggregate offering price of $5,216,682 available for sale under the Prospectus.\n\nOur Common Stock is listed\non the Nasdaq Capital Market (“Nasdaq”) under the symbol “JAGX.” On April 1, 2024, we became subject to General\nInstruction I.B.6 of Form S-3, which limits the amounts that we may sell under the Registration Statement of which this Supplement\nand the Prospectus are a part. The aggregate market value of our common stock held by non-affiliates as of March 31, 2024 pursuant\nto General Instruction I.B.6 of Form S-3 is approximately $39.5 million, which was calculated based on 276,198,384 outstanding shares\nof our common stock held by non-affiliates at a price of $0.143 per share, which was the closing price of our common stock on March 4,\n2024. As of the date hereof, we have not sold any securities pursuant to General Instruction I.B.6 of Form S-3 during the prior 12-month\ncalendar period that ends on and includes the date hereof. As a result of the limitations of General Instruction I.B.6 of Form S-3\nand the sales to date under the Prospectus, and in accordance with the terms of the ATM Agreement, we are reducing the aggregate sales\nprice of the shares of common stock that we may sell pursuant to this Prospectus to $5,216,682 from time to time through Ladenburg.\n\nInvesting in our Common\nStock involves a high degree of risk. Before deciding whether to invest in our securities, you should consider carefully the risks that\nwe have described under the caption “Risk Factors” beginning on page S-6 of the Prospectus Supplement, in our most recent\nAnnual Report on Form 10-K, and our most recent Quarterly Reports on Form 10-Q, and any amendments thereto, which are incorporated\nby reference into the Prospectus, and in the other documents that are filed after the date hereof and incorporated by reference into this\nSupplement and the Prospectus.\n\nNeither the Securities\nand Exchange Commission nor any state securities commission has approved or disapproved of these securities or determined if this Supplement,\nthe Prospectus Supplement and accompanying Prospectus are truthful or complete. Any representation to the contrary is a criminal offense.\n\nLADENBURG THALMANN\n\nThe date of this prospectus supplement is April 2,\n2024",
+     "filed_at": "2024-04-02T20:32:07Z",
+     "form": "424B5",
+     "market_cap_musd": 9.9,
+     "shelf_musd": 75,
+     "symbol": "JAGX",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "Prospectus supplement: offering being priced today.",
-     "filed_at": "2026-10-07T12:05:00Z",
-     "form": "S-3",
-     "market_cap_musd": 14000,
-     "shelf_musd": 1500,
-     "symbol": "RIVN",
+     "data_cutoff": "2024-01-31T21:22:11Z",
+     "document": "We previously entered into a Sales Agreement dated February 6, 2023 (the “ Sales Agreement ”) with Needham & Company, LLC (the “ Sales Agent ”), relating to sales of shares of our common stock, $0.00001 par value per share (“ common stock ”), offered by the prospectus supplement and accompanying prospectus. We are filing this amendment to amend the prospectus supplement to increase the aggregate dollar amount of shares of common stock that we may sell pursuant to the Sales Agreement in order to satisfy the covenant in our senior secured notes due 2026, as amended (the “ Secured Notes ”) that we establish an at-the-market offering program with aggregate available capacity to generate gross proceeds to us of at least $75,000,000 as of January 31, 2024. The prospectus supplement originally permitted us to offer and sell shares of common stock having an aggregate offering price of up to $40,000,000, and as of the date of this amendment, we have sold shares of common stock pursuant to the Sales Agreement for gross proceeds of $24,636,166.03. This amendment increases the aggregate dollar amount of shares of common stock available to be sold from time to time through the Sales Agent to $75,000,000, from and including the date hereof. We do not expect to sell any additional shares of common stock pursuant to the Sales Agreement until after February 12, 2024, the last day of the 45-day lock up period that we agreed to in connection with our recent $18,000,000 registered direct offering of common stock and warrants to purchase common stock.\n\nOur common stock is quoted on the New York Stock Exchange (the “ NYSE ”) under the symbol “VLD.” On January 29, 2024, the last reported sales price of our common stock on the NYSE was $0.31 per share. The trading price of our common stock has fluctuated, and is likely to continue to fluctuate due to a variety of factors.\n\nWe are an “emerging growth company” and a “smaller reporting company” as defined under the federal securities laws and are subject to reduced public company reporting requirements.\n\nSales of our common stock, if any, under the prospectus supplement, as amended by this amendment, and the accompanying prospectus may be made by any method permitted that is deemed to be an “at the market offering” as defined in Rule 415(a)(4) promulgated under the Securities Act of 1933, as amended (the “ Securities Act ”). The Sales Agent is not required to sell any specific number or dollar amount of shares of common stock, but will act as a sales agent using commercially reasonable efforts consistent with its normal trading and sales practices, on mutually agreed terms between the Sales Agent and us. There is no arrangement for funds to be received in any escrow, trust or similar arrangement.\n\nThe compensation to the Sales Agent for sales of common stock sold pursuant to the Sales Agreement will be an amount equal to 3% of the gross proceeds of any shares of common stock sold under the Sales Agreement. In connection with the sale of the common stock on our behalf, the Sales Agent will be deemed to be an “underwriter” within the meaning of the Securities Act and the compensation of the Sales Agent will be deemed to be underwriting commissions or discounts. We have also agreed in the Sales Agreement to provide indemnification and contribution to the Sales Agent with respect to certain liabilities, including liabilities under the Securities Act or the Securities Exchange Act of 1934, as amended (the “ Exchange Act ”). See “ Plan of Distribution ” beginning on page S- 13 of this amendment regarding the compensation to be paid to the Sales Agent.\n\nInvesting in our common stock involves a high degree of risk. See “ Risk Factors ” on page S- 3 of this amendment, page S-7 of the prospectus supplement, page 4 of the prospectus and the documents incorporated by reference herein and therein.\n\nNeither the Securities and Exchange Commission nor any state securities commission has approved or disapproved of thes…",
+     "filed_at": "2024-01-31T21:07:11Z",
+     "form": "424B5",
+     "market_cap_musd": 116.2,
+     "shelf_musd": 40,
+     "symbol": "VELO",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "Underwritten offering being priced; proceeds for working capital.",
-     "filed_at": "2026-10-07T12:05:00Z",
-     "form": "S-3",
-     "market_cap_musd": 40,
-     "shelf_musd": 30,
-     "symbol": "BIYA",
+     "data_cutoff": "2024-03-06T21:53:53Z",
+     "document": "supplement to (i) increase the aggregate dollar amount of shares of common stock that we may sell pursuant to the Sales Agreement and (ii) include Stifel, Nicolaus & Company, Incorporated and Virtu Americas LLC as additional\nagents under the Sales Agreement. Each reference to the term “Agent” or “Agents” in the prospectus supplement is hereby amended to include Stifel, Nicolaus & Company, Incorporated and Virtu Americas LLC. Each reference\nto the term “Sales Agreement” in the prospectus supplement is hereby amended to refer to the Original Sales Agreement, as amended by the Sales Agreement Amendment.\n\nThe prospectus supplement originally authorized us to offer and sell common stock having an aggregate offering price of up to $250,000,000. As\nof the date of this amendment, we have sold shares of our common stock pursuant to the Sales Agreement for gross proceeds of $153,439,339. This amendment is increasing the dollar amount of shares of common stock available to be sold from time to\ntime under this amendment to $296,560,661, which consists of $96,560,661 remaining as originally authorized under the prospectus supplement and the additional $200,000,000, from and including the date hereof. Until such time as the total number of\nour authorized shares are increased or our total number of shares outstanding decrease, we will not issue and sell more than aggregate of 172,011,603 shares.\n\nOur common stock and public warrants are listed on The Nasdaq Global Select Market (“Nasdaq”) under the symbols “CIFR” and\n“CIFRW,” respectively. On March 4, 2024, the last reported sales price of our common stock was $2.87 per share and the last reported sales price of our public warrants was $0.87 per warrant.\n\nSales of our common stock, if any, under the prospectus supplement, as amended by this amendment, will be made by any method permitted that is\ndeemed an “at the market offering” as defined in Rule 415(a)(4) under the Securities Act of 1933, as amended, or the Securities Act. None of the Agents are required to sell any specific number or dollar amount of securities, but each will\nact as our sales agent using commercially reasonable efforts consistent with its respective normal trading and sales practices. There is no arrangement for funds to be received in any escrow, trust or similar arrangement.\n\nThe designated Agent will be entitled to compensation at a commission rate equal to up to 3.0 % of the aggregate gross proceeds of the\nshares of our common stock sold through it pursuant to the Sales Agreement. See “ Plan of Distribution ” beginning on page A-6 for additional information regarding the compensation to be\npaid to the Agents. In connection with the sale of the common stock on our behalf, each Agent will be deemed to be an “underwriter” within the meaning of the Securities Act and the compensation of each Agent will be deemed to be\nunderwriting commissions or discounts. We have also agreed to provide indemnification and contribution to each Agent with respect to certain liabilities, including liabilities under the Securities Act.\n\nWe are an “emerging growth company” as that term is used in the Jumpstart Our Business Startups Act of 2012 and a smaller reporting\ncompany as defined under Rule 405 of the Securities Act. As such, we have elected to rely on certain reduced disclosure requirements. See page S-6 of the prospectus supplement for additional information.\n\nINVESTING IN OUR SECURITIES INVOLVES RISKS. SEE THE “ RISK FACTORS ” ON PAGE A-3 OF THIS AMENDMENT, ON PAGE S-8 OF THE PROSPECTUS SUPPLEMENT AND IN THE DOCUMENTS INCORPORATED BY REFERENCE IN THIS AMENDMENT, THE PROSPECTUS SUPPLEMENT AND THE\nACCOMPANYING PROSPECTUS CONCERNING FACTORS YOU SHOULD CONSIDER BEFORE INVESTING IN OUR COMMON STOCK.\n\nNeither the Securities and\nExchange Commission nor any state securities commission has approved or disapproved of these securities or passed upon the adequacy or accuracy of this amendment, the prospectus supplement or the accompanying pros…",
+     "filed_at": "2024-03-06T21:38:53Z",
+     "form": "424B5",
+     "market_cap_musd": 123.8,
+     "shelf_musd": 250,
+     "symbol": "CIFR",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "Automatic shelf, general purposes.",
-     "filed_at": "2026-10-07T12:05:00Z",
-     "form": "S-3",
-     "market_cap_musd": 3100000,
-     "shelf_musd": 10000,
-     "symbol": "MSFT",
+     "data_cutoff": "2024-08-30T18:35:34Z",
+     "document": "424B5\n\nFiled Pursuant to Rule 424(b)(5)\n\nFile Numbers 333-277855-01 and 333-277855\n\nPROSPECTUS SUPPLEMENT\n\n(To Prospectus dated March 27,\n2024)\n\nAIR T FUNDING\n\n$8,000,000\n\n320,000 Shares\nof 8% Alpha Income Trust Preferred Securities\n\n(Liquidation\namount $25.00 per Capital Security)\n\nguaranteed by\n\nAir T, Inc.\n\nThis\nprospectus supplement and the accompanying prospectus relate to the offer and sale from time to time of up to 320,000 Shares of our Alpha\nIncome Preferred Securities, $25.00 liquidation value per share, (which we refer to in this prospectus supplement as “Capital Securities”),\nhaving an aggregate offering price of up to $8,000,000. Sales of the Capital Securities will be made through Ascendiant Capital Markets,\nLLC (the “sales agent”) as sales agent pursuant to the terms of the at the market offering agreement between us and the sales\nagent. Sales of our Capital Securities, if any, may be made in transactions that are deemed to be “at-the-market offerings”\nas defined in Rule 415 under the Securities Act of 1933, as amended (the “Securities Act”), including sales made directly\non the NASDAQ Capital Market (“NASDAQ”) or sales made to or through a market maker other than on an exchange, at market\nprices prevailing at the time of sale or in negotiated transactions. In the event that any sales are made pursuant to the at the market\noffering agreement which are not made directly on NASDAQ or on any other existing trading market for our Capital Securities at market\nprices at the time of sale, including, without limitation, any sales to the sales agent acting as principal or sales in negotiated transactions,\nwe will file a prospectus supplement describing the terms of such transaction, the amount of shares sold, the price thereof, the applicable\ncompensation, and such other information as may be required pursuant to Rule 424 and Rule 430B of the Securities Act, as applicable,\nwithin the time required by Rule 424 of the Securities Act. 17,058 Capital Securities have been sold during the previous twelve\n(12) months.\n\nThe Capital Securities may\nbe redeemed, in whole or in part, at any time on or after June 7, 2024 at a redemption price equal to the total liquidation amount\nplus accumulated and unpaid distributions to the date of redemption. In addition, the Capital Securities may be redeemed in whole if a\ntax event (as defined herein) or investment company event (as defined herein) occur and are continuing.\n\nThe Capital Securities are\nlisted on NASDAQ under the symbol “AIRTP.” The last reported sales price of our Capital Securities on NASDAQ on August 19,\n2024 was $18.20 per share.\n\nThe sales agent will receive\na commission of 3.0% of the gross sales price per share for any shares sold through it as our sales agent under the at the market offering\nagreement. We have also agreed to reimburse certain expenses of the sales agent in connection with the at the market offering agreement\nas further described in the Plan of Distribution section. Subject to the terms and conditions of the at the market offering agreement,\nthe sales agent will use its commercially reasonable efforts to sell on our behalf any Capital Securities to be offered by us under the\nat the market offering agreement. The offering of Capital Securities pursuant to the at the market offering agreement will terminate upon\nthe earlier of (1) the sale of $8,000,000 of Capital Securities subject to the at the market offering agreement, (2) March 27,\n2027, and (3) the termination of the at the market offering agreement, pursuant to its terms, by either the sales agent or us.\n\nInvesting in the Capital Securities\ninvolves a high degree of risk. Before buying any Capital Securities, you should carefully consider the risks that we have described in\n“Supplemental Risk Factors” beginning on page S-4 of this prospectus supplement, as well as those described in our filings\nunder the Securities Exchange Act of 1934, as amended (the “Exchange Act”).\n\nThe Capital Securities\nare no…",
+     "filed_at": "2024-08-30T18:20:34Z",
+     "form": "424B5",
+     "market_cap_musd": 21.379,
+     "shelf_musd": 8,
+     "symbol": "AIRT",
      "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "ATM program up to $50M with H.C. Wainwright attached.",
-     "filed_at": "2026-10-07T12:05:00Z",
-     "form": "S-3",
-     "market_cap_musd": 60,
-     "shelf_musd": 50,
-     "symbol": "MULN",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "",
-     "filed_at": "2026-10-07T12:05:00Z",
-     "form": "S-3",
-     "market_cap_musd": 120,
-     "shelf_musd": 150,
-     "symbol": "CRVX",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "document": "x",
-     "filed_at": "2026-10-07T12:05:00Z",
-     "form": "S-3",
-     "market_cap_musd": 5,
-     "shelf_musd": 10,
-     "symbol": "PNKX",
-     "venue": "OTC"
     }
    ],
    "expected": [
-    "high_dilution_risk",
-    "low_dilution_risk",
-    "moderate_dilution_risk",
-    "moderate_dilution_risk",
-    "high_dilution_risk",
-    "low_dilution_risk",
-    "high_dilution_risk",
-    "abstain",
-    "abstain"
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "sets": [
+    {
+     "set_id": "L8.G:3020eefd7fd4",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-04-12T21:15:47Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1668010/000110465924046831/tm2411612d1_424b5.htm",
+       "published_at": "2024-04-12T21:00:47Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted"
+    },
+    {
+     "set_id": "L8.G:4a79bbba1fb1",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-06-17T12:26:06Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1615219/000161521924000052/slrx-atmprospectus424b5jun.htm",
+       "published_at": "2024-06-17T12:11:06Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted"
+    },
+    {
+     "set_id": "L8.G:dad2ce04d9da",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-04-02T20:47:07Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1585608/000110465924042552/tm2410327d1_424b5.htm",
+       "published_at": "2024-04-02T20:32:07Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted"
+    },
+    {
+     "set_id": "L8.G:5f326d5c80a4",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-01-31T21:22:11Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1825079/000162828024002722/velo3d-424b5x13124.htm",
+       "published_at": "2024-01-31T21:07:11Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted"
+    },
+    {
+     "set_id": "L8.G:5f0c39e14888",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-03-06T21:53:53Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1819989/000119312524060784/d757969d424b5.htm",
+       "published_at": "2024-03-06T21:38:53Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted"
+    },
+    {
+     "set_id": "L8.G:606cd166b486",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-08-30T18:35:34Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/353184/000110465924095516/tm2423095d1_424b5.htm",
+       "published_at": "2024-08-30T18:20:34Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted"
+    }
    ],
    "visual": {
     "fed": [

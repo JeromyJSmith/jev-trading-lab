@@ -92,100 +92,11 @@
      }
     }
    },
-   "inputs": [
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "halt_code": "T1",
-     "has_position": false,
-     "headline": "Nasdaq halts Acme Biotech, news pending",
-     "published_at": "2026-10-07T12:05:00Z",
-     "symbol": "ACME",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "halt_code": "LUDP",
-     "has_position": false,
-     "headline": "GMEX LULD pause after 12% move",
-     "published_at": "2026-10-07T12:05:00Z",
-     "symbol": "GMEX",
-     "venue": "NYSE"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "halt_code": "H10",
-     "has_position": true,
-     "headline": "SEC suspends trading in QBTZ for 10 days",
-     "published_at": "2026-10-07T12:05:00Z",
-     "symbol": "QBTZ",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "halt_code": "T1",
-     "has_position": false,
-     "headline": "HALO halted, merger news to follow",
-     "published_at": "2026-10-07T12:05:00Z",
-     "symbol": "HALO",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "halt_code": "?",
-     "has_position": false,
-     "headline": "Trading in ZZZ is not available",
-     "published_at": "2026-10-07T12:05:00Z",
-     "symbol": "ZZZ",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "halt_code": "H10",
-     "has_position": true,
-     "headline": "SEC suspends trading in FRDX over false press releases; exchange delisting to follow",
-     "published_at": "2026-10-07T12:05:00Z",
-     "symbol": "FRDX",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "halt_code": "T1",
-     "has_position": false,
-     "headline": "Vertex halted ahead of FDA advisory news",
-     "published_at": "2026-10-07T12:05:00Z",
-     "symbol": "VRTX",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "halt_code": "9Z9",
-     "has_position": false,
-     "headline": "halt? code 9Z9 maybe",
-     "published_at": "2026-10-07T12:05:00Z",
-     "symbol": "ACME",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "halt_code": "T1",
-     "has_position": false,
-     "headline": "halted",
-     "published_at": "2026-10-07T12:05:00Z",
-     "symbol": "PNKX",
-     "venue": "OTC"
-    }
-   ],
-   "expected": [
-    "skip_entries",
-    "skip_entries",
-    "confirm",
-    "skip_entries",
-    "ask_human",
-    "flatten_paper_position",
-    "skip_entries",
-    "ask_human",
-    "abstain"
-   ],
+   "inputs": [],
+   "expected": [],
+   "sets": [],
+   "data_status": "needs_your_data",
+   "data_reason": "needs your data: halt reason text paired with the user's own position; no public real source",
    "visual": {
     "fed": [
      "symbol",
@@ -197,7 +108,7 @@
      "halt_code",
      "has_position"
     ],
-    "excerpt": "headline",
+    "excerpt": null,
     "state_fields": [
      "symbol",
      "headline",
@@ -379,73 +290,11 @@
      }
     }
    },
-   "inputs": [
-    {
-     "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "message": "what are my open orders?",
-     "open_orders": 3
-    },
-    {
-     "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "message": "Cancel ALL my open orders right now, every one of them.",
-     "open_orders": 3
-    },
-    {
-     "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "message": "cancel the AAPL limit buy at 228",
-     "open_orders": 3
-    },
-    {
-     "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "message": "get me flat I guess?",
-     "open_orders": 3
-    },
-    {
-     "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "message": "Close every position in the paper account immediately, flatten the whole book.",
-     "open_orders": 3
-    },
-    {
-     "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "message": "the thing with the orders from before",
-     "open_orders": 3
-    },
-    {
-     "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "message": "show my positions and P&L",
-     "open_orders": 3
-    },
-    {
-     "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "message": "maybe cancel the rest of them",
-     "open_orders": 3
-    },
-    {
-     "account": "live",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "message": "cancel all",
-     "open_orders": 3
-    }
-   ],
-   "expected": [
-    "show_status",
-    "cancel_all_paper_orders",
-    "cancel_one_paper_order",
-    "confirm",
-    "flatten_paper_book",
-    "ask_human",
-    "show_status",
-    "confirm",
-    "abstain"
-   ],
+   "inputs": [],
+   "expected": [],
+   "sets": [],
+   "data_status": "needs_your_data",
+   "data_reason": "needs your data: the trader's own order-management requests; no public real source",
    "visual": {
     "fed": [
      "account",
@@ -453,7 +302,7 @@
      "message",
      "open_orders"
     ],
-    "excerpt": "message",
+    "excerpt": null,
     "state_fields": [
      "message",
      "open_orders"
@@ -657,91 +506,11 @@
      }
     }
    },
-   "inputs": [
-    {
-     "claim": "Services revenue hit a record",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "quote": "services revenue reached an all-time high",
-     "source_text": "Apple said services revenue reached an all-time high of $28B.",
-     "symbol": "AAPL",
-     "venue": "NASDAQ"
-    },
-    {
-     "claim": "Margins expanded every quarter",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "quote": "gross margin rose",
-     "source_text": "Gross margin rose this quarter after two quarters of decline.",
-     "symbol": "AAPL",
-     "venue": "NASDAQ"
-    },
-    {
-     "claim": "China sales are growing",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "quote": "China revenue fell 11%",
-     "source_text": "Greater China revenue fell 11% year over year.",
-     "symbol": "AAPL",
-     "venue": "NASDAQ"
-    },
-    {
-     "claim": "Buyback will double",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "quote": "new store opened",
-     "source_text": "Apple opened a new store in Mumbai.",
-     "symbol": "AAPL",
-     "venue": "NASDAQ"
-    },
-    {
-     "claim": "Data center revenue more than doubled",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "quote": "data center revenue rose 112%",
-     "source_text": "Data center revenue rose 112% to $30.8B.",
-     "symbol": "NVDA",
-     "venue": "NASDAQ"
-    },
-    {
-     "claim": "Guidance was raised",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "quote": "outlook is unchanged",
-     "source_text": "The company said its outlook is unchanged; analysts had hoped for a raise.",
-     "symbol": "AAPL",
-     "venue": "NASDAQ"
-    },
-    {
-     "claim": "CEO is staying",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "quote": "weather delayed shipments",
-     "source_text": "Weather delayed shipments in the Northeast.",
-     "symbol": "AAPL",
-     "venue": "NASDAQ"
-    },
-    {
-     "claim": "Azure grew over 30%",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "quote": "Azure grew 33%",
-     "source_text": "Azure and other cloud services revenue grew 33%.",
-     "symbol": "MSFT",
-     "venue": "NASDAQ"
-    },
-    {
-     "claim": "x",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "quote": "y",
-     "source_text": "z",
-     "symbol": "AAPL",
-     "venue": "OTC"
-    }
-   ],
-   "expected": [
-    "attach_evidence",
-    "ask_human",
-    "mark_thesis_broken",
-    "drop_citation",
-    "attach_evidence",
-    "confirm",
-    "drop_citation",
-    "attach_evidence",
-    "abstain"
-   ],
+   "inputs": [],
+   "expected": [],
+   "sets": [],
+   "data_status": "needs_your_data",
+   "data_reason": "needs your data: the user's own thesis claims to check against sources; no public real source",
    "visual": {
     "fed": [
      "symbol",
@@ -751,7 +520,7 @@
      "quote",
      "source_text"
     ],
-    "excerpt": "source_text",
+    "excerpt": null,
     "state_fields": [
      "claim",
      "quote",
@@ -936,73 +705,11 @@
      }
     }
    },
-   "inputs": [
-    {
-     "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "intended": "BUY 100 AAPL LMT 228.50",
-     "report": "Filled: bought 100 AAPL @ 228.41"
-    },
-    {
-     "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "intended": "BUY 500 AMD LMT 150.00",
-     "report": "Partial: bought 200 AMD @ 149.95; 300 working"
-    },
-    {
-     "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "intended": "SELL 50 TSLA LMT 270",
-     "report": "Filled: 50 TSLA @ 270.10 (side: B)"
-    },
-    {
-     "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "intended": "BUY 100 META LMT 500",
-     "report": "Filled: bought 100 MET @ 49.80 (MetLife)"
-    },
-    {
-     "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "intended": "BUY 10 COST LMT 880",
-     "report": "status ??? ref 0x3f"
-    },
-    {
-     "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "intended": "SELL SHORT 40 SNAP LMT 11.20",
-     "report": "Filled: sold short 40 SNAP @ 11.22"
-    },
-    {
-     "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "intended": "BUY 100 NVDA LMT 130",
-     "report": "Filled: bought 1,000 NVDA @ 138.90"
-    },
-    {
-     "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "intended": "SELL 300 MSFT LMT 430",
-     "report": "Partial fill 120 of 300 MSFT @ 430.05"
-    },
-    {
-     "account": "live",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "intended": "BUY 1 AAPL",
-     "report": "Filled"
-    }
-   ],
-   "expected": [
-    "book_fill",
-    "book_partial",
-    "confirm",
-    "reverse_paper_fill",
-    "ask_human",
-    "book_fill",
-    "reverse_paper_fill",
-    "book_partial",
-    "abstain"
-   ],
+   "inputs": [],
+   "expected": [],
+   "sets": [],
+   "data_status": "needs_your_data",
+   "data_reason": "needs your data: the user's intended tickets and simulator fill reports; no public real source",
    "visual": {
     "fed": [
      "account",
@@ -1010,7 +717,7 @@
      "intended",
      "report"
     ],
-    "excerpt": "report",
+    "excerpt": null,
     "state_fields": [
      "intended",
      "report"
@@ -1199,88 +906,217 @@
    },
    "inputs": [
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headline": "Apple will report fiscal Q4 results on Thursday, October 30, after the close",
-     "published_at": "2026-10-07T12:05:00Z",
-     "source": "newswire (synthetic)",
-     "symbol": "AAPL",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headline": "Tesla expected to report around Oct 22, per estimates",
-     "published_at": "2026-10-07T12:05:00Z",
-     "source": "newswire (synthetic)",
-     "symbol": "TSLA",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headline": "Coca-Cola launches holiday cans",
-     "published_at": "2026-10-07T12:05:00Z",
-     "source": "newswire (synthetic)",
-     "symbol": "KO",
+     "body": "PRESS RELEASE FOR IMMEDIATE RELEASE CONTACT: Alison Griffin July 22, 2024 (804) 217-5897 DYNEX CAPITAL PROMOTES SMRITI LAXMAN POPENOE TO CO-CEO AND ANNOUNCES OTHER EXECUTIVE PROMOTIONS • Smriti Laxman Popenoe promoted to Co-CEO, remains President and Chief Investment Officer • Rob Colligan promoted  [...] He brings broad and deep experience and expertise that will help us enhance our operating platform to capture new opportunities and drive long-term value creation.” Harman Sahni Joins as Chief Technology Officer Dynex also announced the hiring of Harman Sahni as Chief Technology Officer, effective immediately. Mr. Sahni will be responsible for leading the Company’s technology strategy, infrastructure, and innovation, and will report to Rob Colligan, CFO and COO. For the past 10 years, Mr. Sahni held senior technology roles at Rithm Capital and Annaly Capital, where he focused on application development, risk and data analytics, and cloud-based solutions. Earlier in his career, he held technology roles at Bank of America, Citigroup, and Barclays. \"We are thrilled to welcome Harman to our team. He is a visionary and a builder with a track record of delivering innovative technology solutions that enhance efficiency and scalability and improve user experience. He will play a key role in advancing our digital transformation and innovation agenda, and in positioning Dynex as a leader in the mortgage REIT space,\" said Smriti Popenoe, Co-CEO,President and CIO. Other Executive Promotions In addition to the Co-CEO, COO, and CTO announcements, Dynex announced the following executive promotions: • Robert Nilson, who has served as the Company's Vice President of Risk and Compliance since 2018, has been promoted to Chief Risk Officer. He will oversee the company's enterprise risk management, and will report to Smriti Popenoe, Co-CEO, President and CIO. • Jeff Childress, who has served as the Company's Vice President and Controller since 2005, has been promoted to Chief Accoun",
+     "data_cutoff": "2024-07-22T12:10:33Z",
+     "headline": "PRESS RELEASE FOR IMMEDIATE RELEASE CONTACT: Alison Griffin July 22, 2024 (804) 217-5897 DYNEX CAPITAL PROMOTES SMRITI LAXMAN POPENOE TO CO-CEO AND ANNOUNCES OTHER EXECUTIVE PROMOTIONS • Smriti Laxman Popenoe promoted to Co-CEO, remains ...",
+     "published_at": "2024-07-22T11:55:33Z",
+     "source": "SEC EDGAR 8-K Items 5.02, 8.01, 9.01",
+     "symbol": "DX",
      "venue": "NYSE"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headline": "NVIDIA sets Q3 earnings call for November 19 at 2 p.m. PT",
-     "published_at": "2026-10-07T12:05:00Z",
-     "source": "newswire (synthetic)",
-     "symbol": "NVDA",
+     "body": "PRESS RELEASE Contact: Mark A. Herpich Chief Financial Officer (785) 565-2000 FOR IMMEDIATE RELEASE April 25, 2024 Landmark Bancorp, Inc . Announces Conference Call to Discuss First Quarter 2024 Earnings (Manhattan, KS, April 25, 2024) Landmark Bancorp, Inc. (Nasdaq: LARK) announced that it will release earnings for the first quarter of 2024 after the market closes on Wednesday, May 1, 2024. The Company will host a conference call to discuss these results on Thursday, May 2, 2024 at 10:00 am (CT). Investors may listen to the Company’s earnings call via telephone by dialing (833) 470-1428 and using access code 688391. Investors are encouraged to call the dial-in number at least 5 minutes prior to the scheduled start of the call. A replay of the earnings call will be available through June 1, 2024, by dialing (866) 813-9403 and using access code 260752. About Landmark Landmark Bancorp, Inc., the holding company for Landmark National Bank, is listed on the NASDAQ Global Market under the symbol “LARK.” Headquartered in Manhattan, Kansas, Landmark National Bank is a community banking organization dedicated to providing quality financial and banking services. Landmark National Bank has 30 locations in 24 communities across Kansas: Manhattan (2), Auburn, Dodge City (2), Fort Scott (2), Garden City, Great Bend (2), Hoisington, Iola, Junction City, Kincaid, LaCrosse, Lawrence (2), Lenexa, Louisburg, Mound City, Osage City, Osawatomie, Overland Park, Paola, Pittsburg, Prairie Village, Topeka (2), Wamego and Wellsville, Kansas. Visit www.banklandmark.com for more information.",
+     "data_cutoff": "2024-04-25T18:26:27Z",
+     "headline": "PRESS RELEASE Contact: Mark A. Herpich Chief Financial Officer (785) 565-2000 FOR IMMEDIATE RELEASE April 25, 2024 Landmark Bancorp, Inc . Announces Conference Call to Discuss First Quarter 2024 Earnings (Manhattan, KS, April 25, 2024) ...",
+     "published_at": "2024-04-25T18:11:27Z",
+     "source": "SEC EDGAR 8-K Items 7.01, 9.01",
+     "symbol": "LARK",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headline": "AMD earnings date not yet confirmed; typically late October",
-     "published_at": "2026-10-07T12:05:00Z",
-     "source": "newswire (synthetic)",
-     "symbol": "AMD",
+     "body": "PRESS RELEASE, DATED FEBRUARY 27, 2025 Exhibit 99.1 Jasper Therapeutics Reports Fourth Quarter and Full-Year 2024 Financial Results and Provides Corporate Update REDWOOD CITY, Calif., February 27, 2025 (GLOBE NEWSWIRE) – Jasper Therapeutics, Inc. (Nasdaq: JSPR) (Jasper), a clinical stage biotechnolo [...] o Preliminary data support advancing briquilimab into a registrational program in CSU, beginning with a Phase 2b operationally adaptive study expected to commence in the second half of 2025. ● Obtained regulatory clearance to commence enrollment in the BEACON study cohorts evaluating 240mg Q8W and a 240mg loading dose followed by 180mg Q8W. o Jasper expects to report data around mid-year 2025 from 4 cohorts: the 240mg single dose cohort (4 additional patients), 240mg Q8W cohort (8 patients), 240mg followed by 180mg Q8W cohort (8 patients), and the 360mg single dose cohort (8 patients). ● Reported positive preliminary data from the ongoing SPOTLIGHT Phase 1b/2a study of subcutaneous briquilimab in adult participants with cold urticaria (ColdU) or symptomatic dermographism (SD), the two most prevalent sub types of CIndU. o 14 of 15 participants (93%) enrolled in both dose cohorts included in the data-cut (n=15) achieved a clinical response within the 6-week preliminary analysis period following administration. o In the 120mg dose cohort, 10 of 12 participants (83%) experienced a complete response (CR), and 1 participant experienced a partial response (PR). o Briquilimab has been well tolerated in the study, with no serious adverse events (SAEs) and no grade 3 or higher AEs reported. ● Commenced enrollment in the 180mg cohort of the SPOTLIGHT study. Jasper expects to report additional data from the study, including the 180mg cohort (n=12), in the first half of 2025. ● Commenced an open-label extension (OLE) study in chronic urticarias that will roll over patients from the BEACON and SPOTLIGHT studies upon completion of their initial follow up period. Patients enrol",
+     "data_cutoff": "2025-02-27T13:20:10Z",
+     "headline": "PRESS RELEASE, DATED FEBRUARY 27, 2025 Exhibit 99.1 Jasper Therapeutics Reports Fourth Quarter and Full-Year 2024 Financial Results and Provides Corporate Update REDWOOD CITY, Calif., February 27, 2025 (GLOBE NEWSWIRE) – Jasper ...",
+     "published_at": "2025-02-27T13:05:10Z",
+     "source": "SEC EDGAR 8-K Items 2.02, 9.01",
+     "symbol": "JSPR",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headline": "Meta to announce third quarter results on October 29",
-     "published_at": "2026-10-07T12:05:00Z",
-     "source": "newswire (synthetic)",
-     "symbol": "META",
+     "body": "News from AEP MEDIA CONTACT: ANALYSTS CONTACT: Tammy Ridout Darcy Reese Managing Director, External Communications Vice President, Investor Relations 614/716-2347 614/716-2614 FOR IMMEDIATE RELEASE AEP Realigns Leadership Structure to Strengthen Customer Focus and Drive Execution • Operating company presidents and chief nuclear officer will report directly to AEP President and CEO Bill Fehrman • Peggy Simmons appointed executive vice president of Regulatory and Chief Administrative Officer to lead safety, regulatory, procurement and sustainability functions in addition to customer operations and economic development efforts COLUMBUS, Ohio, Aug. 28, 2024 – American Electric Power (Nasdaq: AEP) today announced organizational changes to advance the company’s focus on improving service for customers and to support better execution and engagement at the local level. The changes are effective Sept. 1. AEP’s seven operating company leaders will report directly to President and Chief Executive Officer Bill Fehrman. In addition, senior vice president and Chief Nuclear Officer Shane Lies has been promoted to executive vice president and will report to Fehrman to further support AEP’s current nuclear operations. Peggy Simmons, who currently serves as executive vice president of Utilities, has been appointed to a new role as executive vice president of Regulatory and Chief Administrative Officer. Simmons will leverage her long track record of utility leadership to focus on supporting AEP’s operating companies in the key areas of safety, regulatory, procurement, supply chain, fleet and sustainability, while continuing to lead the company’s customer operations and economic development functions. “Our local operating company leaders understand the needs of our customers and regulators and serve as valued partners in our communities,” Fehrman said. “We benefit from a 1 deep bench of talent across the organization, and I look forward to working more closely with these leaders as we ",
+     "data_cutoff": "2024-08-28T17:17:43Z",
+     "headline": "News from AEP MEDIA CONTACT: ANALYSTS CONTACT: Tammy Ridout Darcy Reese Managing Director, External Communications Vice President, Investor Relations 614/716-2347 614/716-2614 FOR IMMEDIATE RELEASE AEP Realigns Leadership Structure to ...",
+     "published_at": "2024-08-28T17:02:43Z",
+     "source": "SEC EDGAR 8-K Items 5.02, 7.01, 9.01",
+     "symbol": "AEP",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headline": "Snap earnings likely next week, traders say",
-     "published_at": "2026-10-07T12:05:00Z",
-     "source": "newswire (synthetic)",
-     "symbol": "SNAP",
+     "body": "PRESS RELEASE ESG NEWS RELEASE Terex to Acquire Environmental Solutions Group (ESG) from Dover Corporation, Establishing Leading Presence in Waste and Recycling Market 7/22/2024 Purchase price of $2.0 billion; $1.725 billion net of expected tax bene�ts Reduces cyclicality, delivers �nancial accretion and lowers capital intensity Unlocks ~$25 million of cost and revenue synergies by 2026 Enhances presence in attractive waste & recycling segment; expands North American addressable market Terex to host investor conference call to discuss transaction on July 22, 2024 at 8:30 a.m. Eastern NORWALK, Conn., July 22, 2024 /PRNewswire/ -- Terex Corporation (NYSE: TEX) (the \"Company\") today announced it has signed a de�nitive agreement to acquire Environmental Solutions Group (\"ESG\") from Dover Corporation (NYSE: DOV), in a $2.0 billion all-cash transaction. When adjusted for the present value of expected tax bene�ts of approximately $275 million, the purchase price is $1.725 billion. This represents approximately 8.4x 2024E earnings before interest, taxes depreciation and amortization (EBITDA) including expected run-rate synergies. ESG is a leader in the design and manufacturing of refuse collection vehicles, waste compaction equipment, and associated parts and digital solutions. ESG is comprised of several industry-leading product brands — Heil, Marathon, Curotto-Can, and Bayne Thinline, as 1 well as digital solutions o�erings 3 Eye and Soft-Pak — that are respected throughout the solid waste industry for their quality, durability, reliability, unmatched service, and leading customer return on investment. ESG's broad array of turnkey products and services across equipment, digital and aftermarket o�erings are complementary to Terex's businesses, and will allow Terex to expand its customer base, provide customers with a broader suite of environmental equipment solutions, and realize economies of scale. ESG has demonstrated a track record of consistent, resilient growth, deliv",
+     "data_cutoff": "2024-07-24T20:58:31Z",
+     "headline": "PRESS RELEASE ESG NEWS RELEASE Terex to Acquire Environmental Solutions Group (ESG) from Dover Corporation, Establishing Leading Presence in Waste and Recycling Market 7/22/2024 Purchase price of $2.0 billion; $1.725 billion net of ...",
+     "published_at": "2024-07-24T20:43:31Z",
+     "source": "SEC EDGAR 8-K Items 1.01, 7.01, 9.01",
+     "symbol": "TEX",
      "venue": "NYSE"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headline": "Costco opens new warehouse in Texas",
-     "published_at": "2026-10-07T12:05:00Z",
-     "source": "newswire (synthetic)",
-     "symbol": "COST",
+     "body": "Rigel Pharmaceuticals Provides Business Update · Preliminary fourth quarter 2023 total revenue of approximately $35.7 million which includes record TAVALISSE ® net product sales of $25.7 million and REZLIDHIA ® net product sales of $3.9 million · Strategic alliance with MD Anderson to advance REZLID [...] As we head into the future, we are focused on commercial execution, the advancement of our hematology-oncology pipeline, and our plan to reach financial breakeven.” Commercial and Preliminary Financial Update In the fourth quarter of 2023, a total of 2,671 bottles of TAVALISSE were sold in the U.S., of which, 2,463 bottles were shipped directly to patients and clinics, representing the highest daily bottles shipped to patients and clinics in a quarter since launch. While Rigel is still determining final results for the fourth quarter of 2023, it expects to report net product sales of TAVALISSE of $25.7 million for the fourth quarter compared to $21.9 million for the same period of 2022. In the fourth quarter of 2023, a total of 308 bottles of REZLIDHIA were sold in the U.S., of which, 278 bottles were shipped directly to patients and clinics. While Rigel is still determining final results for the fourth quarter of 2023, it expects to report net product sales of REZLIDHIA of $3.9 million for the fourth quarter compared to $0.9 million for the same period of 2022. Overall, Rigel expects to report net product sales of $104.3 million in 2023, representing 36% growth over 2022. Contract revenues for the fourth quarter of 2023 are expected to be approximately $6.1 million, consisting of $6.0 million in contract revenue from collaborations and $0.1 million in government contract revenue. Contract revenue from collaborations is expected to include $3.7 million of revenue from Grifols S.A., related to delivery of drug supplies and earned royalties, as well as $2.2 million of revenue from Kissei Pharmaceutical Co., Ltd. and $0.1 million of revenue from Medison Pharma Trad",
+     "data_cutoff": "2024-01-08T13:45:13Z",
+     "headline": "Rigel Pharmaceuticals Provides Business Update · Preliminary fourth quarter 2023 total revenue of approximately $35.7 million which includes record TAVALISSE ® net product sales of $25.7 million and REZLIDHIA ® net product sales of $3.9 ...",
+     "published_at": "2024-01-08T13:30:13Z",
+     "source": "SEC EDGAR 8-K Items 2.02, 8.01, 9.01",
+     "symbol": "RIGL",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headline": "Apple date",
-     "published_at": "2026-10-07T15:30:00Z",
-     "source": "newswire (synthetic)",
-     "symbol": "AAPL",
-     "venue": "NASDAQ"
+     "body": "EXECUTIVE TEAM CHANGES The following are memos from Chairman and Chief Executive Officer Stephen J. Squeri that were shared January 2025, with all American Express colleagues ORGANIZATION ANNOUNCEMENT: ANRÉ WILLIAMS I’m writing to let you know that, after an outstanding career with American Express  [...] • Anna Marrs, currently Group President, GCS will lead our merchant and network businesses as Group President, GMNS. In her new role, Anna will retain responsibility for Credit and Fraud Risk (CFR) and will also add responsibility for the Global Strategic Partnerships Group as well as our China Joint Venture , which will report into GNS when Mohammed’s successor is named. • Denise Pickett, currently President, Global Services Group (GSG) , will be taking on the newly created role of President, Enterprise Shared Services (ESS). In this new role, she will continue overseeing the Global Real Estate and Workplace Enablement Group and Global Supply Management, and she will have additional responsibility for Global Security, Business Continuity Management, and Aviation . Denise will report to me and assume responsibility for her new functions, effective immediately. In addition, she will continue leading our Global Servicing team until Mohammed’s backfill is named. Doug Buckminster will continue to serve as Vice Chairman, where he will remain a senior strategic advisor to me and the executive leadership team, as well as continuing to lead our Global Advertising and Brand Management and Corporate Development teams. Additionally, the China Joint Venture team, led by Tim Creber, will continue to report to Doug until the new head of GNS is named. Doug’s strategic vision and vast knowledge of our business, along with his successful track record in developing talent, have been major contributors to the company’s growth over his 40-year Amex career. As Vice Chairman, Doug plays a critically important role in driving the overall strategic direction of the company. His leaders",
+     "data_cutoff": "2025-01-30T15:30:21Z",
+     "headline": "EXECUTIVE TEAM CHANGES The following are memos from Chairman and Chief Executive Officer Stephen J. Squeri that were shared January 2025, with all American Express colleagues ORGANIZATION ANNOUNCEMENT: ANRÉ WILLIAMS I’m writing to let you ...",
+     "published_at": "2025-01-30T15:15:21Z",
+     "source": "SEC EDGAR 8-K Items 5.02, 9.01",
+     "symbol": "AXP",
+     "venue": "NYSE"
+    },
+    {
+     "body": "BARINGS BDC, INC. REPORTS PRELIMINARY FOURTH QUARTER 2023 RESULTS CHARLOTTE, N.C., January 25, 2024 - Barings BDC, Inc. (NYSE: BBDC) (“Barings BDC” or the “Company”) today reported preliminary financial and operating results for the fourth quarter of 2023. Preliminary Financial and Operating Results [...] The program does not require the Company to repurchase any specific number of shares, and the Company cannot assure stockholders that any shares will be repurchased under the program. The program may be suspended, extended, modified or discontinued at any time. As of January 25, 2024, the Company had repurchased a total of 1,849,096 shares of common stock in the open market under the authorized program at an average price of $7.99 per share, including brokerage commissions. Conference Call to Discuss Fourth Quarter and Full Year 2023 Results As previously announced, Barings BDC will report its financial results for the fourth quarter and full year ended December 31, 2023 on Thursday, February 22, 2024, after the market closes. Barings BDC has scheduled a conference call to discuss fourth quarter and full year 2023 financial and operating results for Friday, February 23, 2024, at 9:00 a.m. ET. To listen to the call, please dial 877-407-8831 or 201-493-6736 approximately 10 minutes prior to the start of the call. A taped replay will be made available approximately two hours after the conclusion of the call and will remain available until March 1, 2024. To access the replay, please dial 877-660-6853 or 201-612-7415 and enter conference ID 13743633 This conference call will also be available via a live webcast on the investor relations section of Barings BDC’s website at https://ir.barings.com/ir-calendar. Access the website 15 minutes prior to the start of the call to download and install any necessary audio software. An archived webcast replay will be available on the Company's website until March 1, 2024. Forward-Looking Statements Statements included herein or o",
+     "data_cutoff": "2024-01-25T21:30:33Z",
+     "headline": "BARINGS BDC, INC. REPORTS PRELIMINARY FOURTH QUARTER 2023 RESULTS CHARLOTTE, N.C., January 25, 2024 - Barings BDC, Inc.",
+     "published_at": "2024-01-25T21:15:33Z",
+     "source": "SEC EDGAR 8-K Items 2.02, 9.01",
+     "symbol": "BBDC",
+     "venue": "NYSE"
     }
    ],
    "expected": [
-    "arm_blackout",
-    "confirm",
-    "ask_human",
-    "arm_blackout",
-    "confirm",
-    "arm_blackout",
-    "confirm",
-    "ask_human",
-    "abstain"
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "sets": [
+    {
+     "set_id": "L4.E:d2c7b52c1300",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-07-22T12:10:33Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/826675/000082667524000089/exhibit991pressreleasejuly.htm",
+       "published_at": "2024-07-22T11:55:33Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real 8-K text found by EDGAR full-text search \"will report\""
+    },
+    {
+     "set_id": "L4.E:d0cb256bf77e",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-04-25T18:26:27Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1141688/000149315224015901/ex99-1.htm",
+       "published_at": "2024-04-25T18:11:27Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real 8-K text found by EDGAR full-text search \"conference call to discuss\""
+    },
+    {
+     "set_id": "L4.E:85b810e78ead",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2025-02-27T13:20:10Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1788028/000121390025017656/ea023234901ex99-1_jasper.htm",
+       "published_at": "2025-02-27T13:05:10Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real 8-K text found by EDGAR full-text search \"expects to report\""
+    },
+    {
+     "set_id": "L4.E:b18903b9ee52",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-08-28T17:17:43Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/4904/000000490424000086/ex991-officerannouncement8.htm",
+       "published_at": "2024-08-28T17:02:43Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real 8-K text found by EDGAR full-text search \"will report\""
+    },
+    {
+     "set_id": "L4.E:f4f4fb320f27",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-07-24T20:58:31Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/97216/000009721624000127/exh99_107222024pressrele.htm",
+       "published_at": "2024-07-24T20:43:31Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real 8-K text found by EDGAR full-text search \"conference call to discuss\""
+    },
+    {
+     "set_id": "L4.E:90961447f396",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-01-08T13:45:13Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1034842/000110465924002085/tm242328d1_ex99-1.htm",
+       "published_at": "2024-01-08T13:30:13Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real 8-K text found by EDGAR full-text search \"expects to report\""
+    },
+    {
+     "set_id": "L4.E:aca66a84e521",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2025-01-30T15:30:21Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/4962/000000496225000010/exhibit991jan302025executi.htm",
+       "published_at": "2025-01-30T15:15:21Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real 8-K text found by EDGAR full-text search \"will report\""
+    },
+    {
+     "set_id": "L4.E:194856323f8c",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-01-25T21:30:33Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1379785/000137978524000003/exhibit99120240125prelimea.htm",
+       "published_at": "2024-01-25T21:15:33Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real 8-K text found by EDGAR full-text search \"conference call to discuss\""
+    }
    ],
    "visual": {
     "fed": [
@@ -1469,100 +1305,11 @@
      }
     }
    },
-   "inputs": [
-    {
-     "account": "paper",
-     "current_stop": 121,
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "message": "move my NVDA stop up to 128 to lock in gains",
-     "requested_stop": 128,
-     "symbol": "NVDA",
-     "venue": "NASDAQ"
-    },
-    {
-     "account": "paper",
-     "current_stop": 121,
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "message": "give it room, drop the stop to 118",
-     "requested_stop": 118,
-     "symbol": "NVDA",
-     "venue": "NASDAQ"
-    },
-    {
-     "account": "paper",
-     "current_stop": 121,
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "message": "just remove the stop, I believe in it",
-     "requested_stop": 0,
-     "symbol": "NVDA",
-     "venue": "NASDAQ"
-    },
-    {
-     "account": "paper",
-     "current_stop": 121,
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "message": "leave the stop where it is",
-     "requested_stop": 121,
-     "symbol": "NVDA",
-     "venue": "NASDAQ"
-    },
-    {
-     "account": "paper",
-     "current_stop": 121,
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "message": "raise stop to breakeven at 130",
-     "requested_stop": 130,
-     "symbol": "NVDA",
-     "venue": "NASDAQ"
-    },
-    {
-     "account": "paper",
-     "current_stop": 121,
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "message": "maybe a bit lower on the stop?",
-     "requested_stop": 119,
-     "symbol": "NVDA",
-     "venue": "NASDAQ"
-    },
-    {
-     "account": "paper",
-     "current_stop": 121,
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "message": "stop stuff",
-     "requested_stop": 121,
-     "symbol": "NVDA",
-     "venue": "NASDAQ"
-    },
-    {
-     "account": "paper",
-     "current_stop": 121,
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "message": "move stop to 100",
-     "requested_stop": 100,
-     "symbol": "NVDA",
-     "venue": "NASDAQ"
-    },
-    {
-     "account": "live",
-     "current_stop": 121,
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "message": "tighten",
-     "requested_stop": 125,
-     "symbol": "NVDA",
-     "venue": "NASDAQ"
-    }
-   ],
-   "expected": [
-    "tighten_paper_stop",
-    "confirm",
-    "ask_human",
-    "no_change",
-    "tighten_paper_stop",
-    "confirm",
-    "ask_human",
-    "abstain",
-    "abstain"
-   ],
+   "inputs": [],
+   "expected": [],
+   "sets": [],
+   "data_status": "needs_your_data",
+   "data_reason": "needs your data: the trader's own stop-change requests; no public real source",
    "visual": {
     "fed": [
      "symbol",
@@ -1573,7 +1320,7 @@
      "current_stop",
      "requested_stop"
     ],
-    "excerpt": "message",
+    "excerpt": null,
     "state_fields": [
      "symbol",
      "message",
@@ -1690,6 +1437,427 @@
     "arrows": {
      "input": "state built from symbol, message, current_stop, requested_stop (data ≤ data_cutoff)",
      "guards": "guards in code first: paper_only, venue, widen_cap",
+     "output": "gate → decide in code",
+     "output_detail": "review floor 0.50 · destructive bar 0.90"
+    }
+   }
+  },
+  {
+   "key": "G",
+   "id": "l4_g_adverse_8k_exit",
+   "catalog_id": "L4.G",
+   "name": "Adverse 8-K on a held name: exit, confirm or human",
+   "blurb": "One Choice on a real adverse-event 8-K (termination, impairment, non-reliance, officer exit). A confident 'thesis broken' needs the 0.9 bar before an exit review is queued; anything less confirms or goes to a person.",
+   "spec": "decisions/projects/jev-levels-trading/L4/G_adverse_8k_exit.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "impact": {
+     "type": "choice",
+     "instructions": "If we held `symbol`, what does this filing (`headline`, `body`) do to a long thesis?",
+     "criteria": {
+      "thesis_broken": "The event removes a core reason to own the stock (lost key contract, restatement, large impairment of the core business)",
+      "dented": "Negative but manageable; the thesis still stands",
+      "neutral": "Routine or not thesis-relevant",
+      "other": "Cannot tell"
+     }
+    }
+   },
+   "review_floor": 0.5,
+   "thresholds": {
+    "review_floor": 0.5,
+    "destructive_bar": 0.9
+   },
+   "outputs": [
+    {
+     "outcome": "ask_human",
+     "meaning": "would ask human (paper)"
+    },
+    {
+     "outcome": "confirm",
+     "meaning": "would ask for one-click confirmation"
+    },
+    {
+     "outcome": "exit_review",
+     "meaning": "would exit review (paper)"
+    },
+    {
+     "outcome": "tighten_watch",
+     "meaning": "would tighten watch (paper)"
+    },
+    {
+     "outcome": "no_change",
+     "meaning": "would no change (paper)"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "cheap",
+   "jev_calls": "1 call",
+   "runs_in": "schema_call",
+   "stage_hint": "signal_filter",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "published_at",
+     "headline"
+    ],
+    "properties": {
+     "symbol": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string",
+      "description": "NYSE or NASDAQ; anything else is rejected in code"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "published_at": {
+      "type": "string"
+     },
+     "headline": {
+      "type": "string"
+     },
+     "body": {
+      "type": "string"
+     },
+     "source": {
+      "type": "string"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "body": "Item 1.01 Entry into a Material Definitive Agreement. On June 20, 2025, NPK International Inc., a Delaware corporation (the “Company”), as borrower, and certain of its subsidiaries, as guarantors, entered into a credit agreement (the “Credit Agreement”) with Bank of America, N.A., as administrative agent, swingline lender and a letter of credit issuer, and a group of lenders, including Bank of America, N.A. The Credit Agreement provides for a senior secured revolving credit facility with aggregate commitments of $150 million (the “Facility”) and contains within the Facility (a) a letter of credit sublimit of up to $10 million and (b) a swingline sublimit of up to $15 million. Proceeds of loans under the Facility may be used for working capital and other general corporate purposes. Subject to certain conditions, the Company may request that the lenders’ aggregate commitments under the Facility be increased by up to an additional $100 million (but the lenders are not required to agree to increase their respective commitments). The Facility and the loans made under the Facility are secured by a first priority lien on substantially all of the personal property of the Company and the guarantors (subject to customary exceptions and exclusions). The Facility will mature on June 20, 2030. The Facility replaced the Existing Credit Agreement (as defined below). See Item 1.02. “Termination of a Material Definitive Agreement” below. All extensions of credit are subject to the satisfaction by the Company of certain conditions precedent described in the Credit Agreement, including (i) the accuracy of representations and warranties made by the Company and the guarantors and (ii) the absence of any default or event of default under the Facility. Amounts borrowed under the Facility bear interest, at the Company’s option, at either the Term SOFR rate (for 1, 3, or 6 months) plus a per annum applicable margin, or an alternate base rate plus a per annum applicable margin. The applicabl",
+     "data_cutoff": "2025-06-23T20:24:27Z",
+     "headline": "Item 1.01 Entry into a Material Definitive Agreement. On June 20, 2025, NPK International Inc., a Delaware corporation (the “Company”), as borrower, and certain of its subsidiaries, as guarantors, entered into a credit agreement (the ...",
+     "published_at": "2025-06-23T20:09:27Z",
+     "source": "SEC EDGAR 8-K Items 1.01, 1.02, 2.03, 9.01",
+     "symbol": "NPKI",
+     "venue": "NYSE"
+    },
+    {
+     "body": "Item 8.01 “Other Events” of the Original Form 8-K. Costs related to such plan are described below under Item 2.06 “Material Impairments.” 2.06 Material Impairments In connection with the exit plan described under Item 8.01 “Other Events” of the Original Form 8-K, in the second quarter of 2024, the Company recorded a net non-cash after-tax charge of $229.6 million. This included the write-off of the remaining $253.6 million balance of goodwill and intangibles partially offset by a $24.0 million net tax impact from the removal of deferred tax liabilities and state operating losses in the Company’s Senior Health segment. All of these items have been excluded from adjusted operating results. The impairment charge will not result in any future cash expenditures. In the third quarter of 2024, the Company recognized additional restructuring charges in the amount of approximately $2.0 million. The information regarding the exit plan, and its costs and charges, described above under Item 2.05 “Costs Associated with Exit or Disposal Activities” and in the Original Form 8-K under Item 8.01 “Other Events” are incorporated into this Item 2.06 by reference. ",
+     "data_cutoff": "2024-11-07T19:15:46Z",
+     "headline": "Item 8.01 “Other Events” of the Original Form 8-K. Costs related to such plan are described below under Item 2.06 “Material Impairments.” 2.06 Material Impairments In connection with the exit plan described under Item 8.01 “Other Events” ...",
+     "published_at": "2024-11-07T19:00:46Z",
+     "source": "SEC EDGAR 8-K/A Items 2.05, 2.06",
+     "symbol": "PRI",
+     "venue": "NYSE"
+    },
+    {
+     "body": "Item 4.02 Non-Reliance on Previously Issued Financial Statements or a Related Audit Report or Completed Interim Review. 3 ",
+     "data_cutoff": "2024-12-23T13:15:28Z",
+     "headline": "Item 4.02 Non-Reliance on Previously Issued Financial Statements or a Related Audit Report or Completed Interim Review. 3 ",
+     "published_at": "2024-12-23T13:00:28Z",
+     "source": "SEC EDGAR 8-K Items 4.02",
+     "symbol": "OCC",
+     "venue": "NASDAQ"
+    },
+    {
+     "body": "ITEM 2.05. COSTS ASSOCIATED WITH EXIT OR DISPOSAL ACTIVITIES. On April 16, 2024 Pacific Biosciences of California, Inc., a Delaware corporation (the “Company”) filed a Current Report on Form 8-K regarding a plan to reduce its annualized run-rate operating expenses to better align its organizational structure and resources with its strategic initiatives (the “Expense Reduction Plan”). At that time the Company was unable to make a determination of the estimated amount or range of amounts to be incurred in connection with the Expense Reduction Plan. At this time, the Company expects to incur charges related to the Expense Reduction Plan to be approximately $27 million in fiscal 2024, consisting primarily of the following: • approximately $10 million of compensation and benefits afforded to terminated employees; • approximately $12 million associated with the closure of the San Diego office and related costs, including lease related costs; and • approximately $4 million of charges for excess inventory due to a decrease in internal demand relating to the expense reduction initiatives. Of the charges expected to be incurred outlined above, the Company currently expects cash expenses of approximately $21 million related to the Expense Reduction Plan, consisting primarily of the following: • approximately $10 million of compensation and benefits afforded to terminated employees; and • approximately $11 million associated with the closure of the San Diego office and related costs, including lease related costs. The Company expects to recognize substantially all of these charges in the second and third quarter of fiscal 2024. While the Company has estimated the above charges based on information currently available, the estimates are subject to change based on various factors, including actual costs incurred in closing the San Diego office and related activities. In addition, the Company may incur additional costs and charges in connection with the Expense Reduction Plan. Thi",
+     "data_cutoff": "2024-08-07T20:24:35Z",
+     "headline": "ITEM 2.05. COSTS ASSOCIATED WITH EXIT OR DISPOSAL ACTIVITIES. On April 16, 2024 Pacific Biosciences of California, Inc., a Delaware corporation (the “Company”) filed a Current Report on Form 8-K regarding a plan to reduce its annualized ...",
+     "published_at": "2024-08-07T20:09:35Z",
+     "source": "SEC EDGAR 8-K/A Items 2.05",
+     "symbol": "PACB",
+     "venue": "NASDAQ"
+    },
+    {
+     "body": "Item 1.02 Termination of a Material Definitive Agreement. On April 30, 2024, Precipio Inc. (“Precipio”) terminated the Factoring Agreement with Culain Capital Funding, LLC, dated March 23, 2023 (the “Factoring Agreement”). Precipio did not incur any early termination penalties in connection with the termination of the Factoring Agreement. ",
+     "data_cutoff": "2024-05-01T21:27:48Z",
+     "headline": "Item 1.02 Termination of a Material Definitive Agreement. On April 30, 2024, Precipio Inc.",
+     "published_at": "2024-05-01T21:12:48Z",
+     "source": "SEC EDGAR 8-K Items 1.02",
+     "symbol": "PRPO",
+     "venue": "NASDAQ"
+    },
+    {
+     "body": "Item 2.05 Costs Associated with Exit or Disposal Activities. The information set forth in Item 8.01 of this Current Report on Form 8-K is incorporated herein by reference. Item 2.06. Material Impairments. The information set forth in Item 8.01 of this Current Report on Form 8-K is incorporated herein by reference. Item 8.01. Other Events. Attached as Exhibit 99.1 is a copy of a press release of Tronox Holdings plc (the “Company”), dated March 17, 2025, announcing the Company’s intent to idle its TiO 2 pigment plant in Botlek, the Netherlands, as well as updating free cash flow guidance for 2025. ",
+     "data_cutoff": "2025-03-17T21:15:33Z",
+     "headline": "Item 2.05 Costs Associated with Exit or Disposal Activities. The information set forth in Item 8.01 of this Current Report on Form 8-K is incorporated herein by reference.",
+     "published_at": "2025-03-17T21:00:33Z",
+     "source": "SEC EDGAR 8-K Items 2.05, 2.06, 8.01, 9.01",
+     "symbol": "TROX",
+     "venue": "NYSE"
+    },
+    {
+     "body": "Item 4.02 Non-Reliance on Previously Issued Financial Statements or a Related Audit Report or Completed Interim Review. Non-Reliance on Previously Issued Financial Statements The audit committee and the board of directors of the Company, in consultation with the Company’s management, concluded on February 20, 2024, that the Company should restate certain of its consolidated financial statements, which should no longer be relied upon. The affected financial statements are those included in the Company’s Forms 10-Q for each of the interim periods ended June 30, 2019, through June 30, 2023, and Forms 10-K for each of the years ended December 31, 2019, through December 31, 2022. The restatement relates primarily to the accounting and classification of the Company’s litigation financing as a derivative liability instead of as a loan payable. During the preparation of its consolidated financial statements for the three- and nine-month periods ended September 30, 2023, a question arose regarding the historical accounting treatment of the Litigation Financing (as defined below), as a result of which the Company reevaluated its accounting treatment of the Litigation Financing and determined that it should be accounted for and classified as a derivative liability on the balance sheet, measured at fair value at each reporting date, with the corresponding change in market value being accounted for in the statement of operations. At the inception of the Litigation Financing in 2019, the Company, with the assistance of external accounting advisors, concluded that it should account for the Litigation Financing as a loan payable, and the related accrued interest as a short-term liability, in its consolidated financial statements beginning in the second quarter of 2019. The Litigation Financing was provided to the Company and its subsidiary, Exploraciones Oceánicas S. de R.L. de C.V. (together, the “Claimholder”) pursuant to an International Claims Enforcement Agreement dated as of ",
+     "data_cutoff": "2024-02-26T21:55:03Z",
+     "headline": "Item 4.02 Non-Reliance on Previously Issued Financial Statements or a Related Audit Report or Completed Interim Review. Non-Reliance on Previously Issued Financial Statements The audit committee and the board of directors of the Company, ...",
+     "published_at": "2024-02-26T21:40:03Z",
+     "source": "SEC EDGAR 8-K Items 4.02",
+     "symbol": "OMEX",
+     "venue": "NASDAQ"
+    },
+    {
+     "body": "Item 2.02 Results of Operations and Financial Condition. The information contained in Item 2.05 under “Costs Associated with Exit or Disposal Activities” regarding the estimated impact on SolarEdge, Inc.’s (the “Company”) completed fourth quarter and year-end 2023 results of operations is incorporated herein by reference. The Company is not otherwise reporting on its 2023 year-end financial results. These financial results are expected to be released by the end of February 2024. In accordance with General Instruction B.2 of Form 8-K, this information shall not be deemed “filed” for the purposes of Section 18 of the Securities Exchange Act of 1934 (the “Exchange Act”) or otherwise subject to the liabilities of that section, nor shall such information, including the exhibits hereto be deemed incorporated by reference in any filing under the Securities Act of 1933, as amended, or the Exchange Act, except as shall be expressly set forth by specific reference in such filing. Item 2.05 Costs Associated with Exit or Disposal Activities On January 21, 2024, the Company announced adoption of a restructuring plan in response to challenging industry conditions (the “Restructuring Plan”). Under the Restructuring Plan, the Company expects to reduce its headcount by approximately 16% over the first half of 2024 through an involuntary workforce reduction plan. A copy of the press release announcing the Restructuring Plan is attached hereto as Exhibit 99.1. The Company anticipates taking these actions pursuant to the Restructuring Plan to adjust its manufacturing capacity and increase distribution efficiency. The adoption of the Restructuring Plan follows the Company’s previous measures which the Company has already taken to align with current market conditions, including termination of manufacturing in Mexico, reduction of manufacturing capacity in China, and discontinuation of the Company’s light commercial vehicle e-mobility activity. In connection with the Restructuring Plan, t",
+     "data_cutoff": "2024-01-22T12:27:22Z",
+     "headline": "Item 2.02 Results of Operations and Financial Condition. The information contained in Item 2.05 under “Costs Associated with Exit or Disposal Activities” regarding the estimated impact on SolarEdge, Inc.’s (the “Company”) completed fourth ...",
+     "published_at": "2024-01-22T12:12:22Z",
+     "source": "SEC EDGAR 8-K Items 2.02, 2.05, 9.01",
+     "symbol": "SEDG",
+     "venue": "NASDAQ"
+    }
+   ],
+   "expected": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "sets": [
+    {
+     "set_id": "L4.G:8717c14edd5b",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2025-06-23T20:24:27Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/71829/000007182925000105/nr-20250620.htm",
+       "published_at": "2025-06-23T20:09:27Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real 8-K text found by EDGAR full-text search \"Termination of a Material Definitive Agreement\""
+    },
+    {
+     "set_id": "L4.G:63ff6e4c4b5d",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-11-07T19:15:46Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1475922/000095017024123117/pri-20240716.htm",
+       "published_at": "2024-11-07T19:00:46Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real 8-K/A text found by EDGAR full-text search \"Material Impairments\""
+    },
+    {
+     "set_id": "L4.G:b4d43d4b4163",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-12-23T13:15:28Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1000230/000143774924038225/occ20241219_8k.htm",
+       "published_at": "2024-12-23T13:00:28Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real 8-K text found by EDGAR full-text search \"Non-Reliance on Previously Issued Financial Statements\""
+    },
+    {
+     "set_id": "L4.G:89538eb5da9e",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-08-07T20:24:35Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1299130/000129913024000165/pacb-20240416.htm",
+       "published_at": "2024-08-07T20:09:35Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real 8-K/A text found by EDGAR full-text search \"Costs Associated with Exit or Disposal Activities\""
+    },
+    {
+     "set_id": "L4.G:32b36b0ce8c0",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-05-01T21:27:48Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1043961/000110465924055829/tm2413231d1_8k.htm",
+       "published_at": "2024-05-01T21:12:48Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real 8-K text found by EDGAR full-text search \"Termination of a Material Definitive Agreement\""
+    },
+    {
+     "set_id": "L4.G:9b210caaf332",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2025-03-17T21:15:33Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1530804/000114036125009082/ef20045629_8k.htm",
+       "published_at": "2025-03-17T21:00:33Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real 8-K text found by EDGAR full-text search \"Material Impairments\""
+    },
+    {
+     "set_id": "L4.G:7bc51075a269",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-02-26T21:55:03Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/798528/000119312524046261/d769436d8k.htm",
+       "published_at": "2024-02-26T21:40:03Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real 8-K text found by EDGAR full-text search \"Non-Reliance on Previously Issued Financial Statements\""
+    },
+    {
+     "set_id": "L4.G:9c3748b5d3b4",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-01-22T12:27:22Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1419612/000117891324000210/zk2430805.htm",
+       "published_at": "2024-01-22T12:12:22Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real 8-K text found by EDGAR full-text search \"Costs Associated with Exit or Disposal Activities\""
+    }
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "published_at",
+     "headline",
+     "body",
+     "source"
+    ],
+    "excerpt": "headline",
+    "state_fields": [
+     "symbol",
+     "headline",
+     "body"
+    ],
+    "questions": [
+     {
+      "id": "impact",
+      "type": "choice",
+      "short": "impact",
+      "text": "If we held `symbol`, what does this filing (`headline`, `body`) do to a long thesis?",
+      "options": [
+       "thesis_broken",
+       "dented",
+       "neutral",
+       "other"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "ask_human",
+      "meaning": "would ask human (paper)",
+      "when": [
+       "impact conf < 0.50",
+       "impact = other",
+       "otherwise: unmapped label"
+      ],
+      "more": 0,
+      "stages": [
+       "gate",
+       "decide",
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "confirm",
+      "meaning": "would ask for one-click confirmation",
+      "when": [
+       "impact ∈ thesis_broken and impact conf < 0.90"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "exit_review",
+      "meaning": "would exit review (paper)",
+      "when": [
+       "impact = thesis_broken"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "tighten_watch",
+      "meaning": "would tighten watch (paper)",
+      "when": [
+       "impact = dented"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "no_change",
+      "meaning": "would no change (paper)",
+      "when": [
+       "impact = neutral"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope",
+       "published_at is after the data cutoff (no future data in replay)"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, headline, body (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue, future_data",
      "output": "gate → decide in code",
      "output_detail": "review floor 0.50 · destructive bar 0.90"
     }

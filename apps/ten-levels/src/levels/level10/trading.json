@@ -105,116 +105,247 @@
    "inputs": [
     {
      "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
+     "data_cutoff": "2023-02-03T14:45:00Z",
      "headlines": [
-      "Microsoft raises capex 30%",
-      "NVIDIA supply deal with Microsoft"
+      "Apple Inc. 10-Q (2023-02-03)",
+      "Apple Inc. 8-K: Items 2.02 Results of Operations and Financial Condition (2023-02-02)"
      ],
-     "order": "BUY 50 NVDA LMT 130 STP 121",
-     "symbol": "NVDA",
-     "thesis": "Hyperscaler capex up",
+     "order": "BUY 274 AAPL LMT 151.32 STP 147.67",
+     "symbol": "AAPL",
+     "thesis": "Breakout continuation: 5m close 151.32 at 2023-02-03 09:45 ET broke the 20-session high 151.18 on 2.13x relative volume; ATR14 3.65; gap -1.92%.",
      "venue": "NASDAQ"
     },
     {
      "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
+     "data_cutoff": "2023-01-20T16:05:00Z",
      "headlines": [
-      "Main MI400 customer switches to NVIDIA"
+      "ADOBE INC. 8-K: Items 1.01 Entry into a Material Definitive Agreement, 2.03 Creation of a Direct Financial Obligation (2023-01-19)",
+      "ADOBE INC. 10-K (2023-01-17)"
      ],
-     "order": "BUY 100 AMD LMT 150 STP 142",
+     "order": "BUY 96 ADBE LMT 351.15 STP 340.84",
+     "symbol": "ADBE",
+     "thesis": "Breakout continuation: 5m close 351.15 at 2023-01-20 11:05 ET broke the 20-session high 350.79 on 1.55x relative volume; ATR14 10.31; gap +0.22%.",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2023-01-23T14:40:00Z",
+     "headlines": [
+      "ADVANCED MICRO DEVICES INC 8-K: Items 5.02 Departure/Election of Directors or Officers, 7.01 Regulation FD Disclosure (2023-01-11)"
+     ],
+     "order": "BUY 354 AMD LMT 73.02 STP 70.20",
      "symbol": "AMD",
-     "thesis": "MI400 wins",
+     "thesis": "Breakout continuation: 5m close 73.02 at 2023-01-23 09:40 ET broke the 20-session high 72.78 on 1.94x relative volume; ATR14 2.82; gap +3.09%.",
      "venue": "NASDAQ"
     },
     {
      "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
+     "data_cutoff": "2023-06-16T13:35:00Z",
      "headlines": [
-      "Coca-Cola launches holiday cans"
+      "AMGEN INC 8-K: Items 8.01 Other Events (2023-06-05)",
+      "AMGEN INC 8-K: Items 5.07 Submission of Matters to a Vote of Security Holders (2023-05-22)",
+      "AMGEN INC 8-K: Items 8.01 Other Events (2023-05-18)"
      ],
-     "order": "BUY 100 KO LMT 62 STP 60",
-     "symbol": "KO",
-     "thesis": "Pricing power",
-     "venue": "NYSE"
-    },
-    {
-     "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headlines": [
-      "DOJ probe expands",
-      "Auditor resigned"
-     ],
-     "order": "BUY 2000 SMCI LMT 30 NO STOP",
-     "symbol": "SMCI",
-     "thesis": "Oversold bounce",
+     "order": "BUY 219 AMGN LMT 230.44 STP 225.88",
+     "symbol": "AMGN",
+     "thesis": "Breakout continuation: 5m close 230.44 at 2023-06-16 09:35 ET broke the 20-session high 228.85 on 12.60x relative volume; ATR14 4.56; gap +0.68%.",
      "venue": "NASDAQ"
     },
     {
      "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
+     "data_cutoff": "2023-02-02T14:35:00Z",
      "headlines": [
-      "Azure +33%"
+      "AMAZON COM INC 8-K: Items 5.03 Amendments to Articles of Incorporation or Bylaws (2023-01-06)",
+      "AMAZON COM INC 8-K: Items 1.01 Entry into a Material Definitive Agreement, 2.03 Creation of a Direct Financial Obligation (2023-01-03)"
      ],
-     "order": "BUY 10 MSFT LMT 420 STP 405",
-     "symbol": "MSFT",
-     "thesis": "Azure acceleration",
+     "order": "BUY 283 AMZN LMT 111.22 STP 107.68",
+     "symbol": "AMZN",
+     "thesis": "Breakout continuation: 5m close 111.22 at 2023-02-02 09:35 ET broke the 20-session high 106.24 on 2.36x relative volume; ATR14 3.53; gap +4.83%.",
      "venue": "NASDAQ"
     },
     {
      "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
+     "data_cutoff": "2023-03-03T14:35:00Z",
      "headlines": [
-      "Netflix subscribers beat by 2M"
+      "Broadcom Inc. 8-K: Items 2.02 Results of Operations and Financial Condition, 8.01 Other Events (2023-03-02)"
      ],
-     "order": "SHORT 20 NFLX LMT 700 STP 740",
-     "symbol": "NFLX",
-     "thesis": "Subscriber slowdown",
+     "order": "BUY 87 AVGO LMT 622.31 STP 610.93",
+     "symbol": "AVGO",
+     "thesis": "Breakout continuation: 5m close 622.31 at 2023-03-03 09:35 ET broke the 20-session high 617.01 on 6.66x relative volume; ATR14 11.38; gap +3.03%.",
      "venue": "NASDAQ"
-    },
-    {
-     "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headlines": [
-      "FDA approves Vertex drug"
-     ],
-     "order": "BUY 20 VRTX LMT 450 STP 430",
-     "symbol": "VRTX",
-     "thesis": "Approval likely",
-     "venue": "NASDAQ"
-    },
-    {
-     "account": "live",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headlines": [
-      "y"
-     ],
-     "order": "BUY",
-     "symbol": "NVDA",
-     "thesis": "x",
-     "venue": "NASDAQ"
-    },
-    {
-     "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headlines": [
-      "y"
-     ],
-     "order": "BUY",
-     "symbol": "PNKX",
-     "thesis": "x",
-     "venue": "OTC"
     }
    ],
    "expected": [
-    "proceed",
-    "block",
-    "revise",
-    "revise",
-    "proceed",
-    "block",
-    "proceed",
-    "abstain",
-    "abstain"
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "sets": [
+    {
+     "set_id": "L10.A:339e84460c15",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2023-02-03T14:45:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AAPL",
+       "published_at": "2023-02-03T14:45:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      },
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000006/aapl-20221231.htm",
+       "published_at": "2023-02-02T23:01:30Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      },
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000005/aapl-20230202.htm",
+       "published_at": "2023-02-02T21:30:33Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "order/thesis code-templated from a real breakout; headlines are real EDGAR item titles"
+    },
+    {
+     "set_id": "L10.A:a9f48fbd482a",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2023-01-20T16:05:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=ADBE",
+       "published_at": "2023-01-20T16:05:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      },
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/796343/000119312523010953/d400939d8k.htm",
+       "published_at": "2023-01-19T21:06:00Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      },
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634323000007/adbe-20221202.htm",
+       "published_at": "2023-01-17T21:34:00Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "order/thesis code-templated from a real breakout; headlines are real EDGAR item titles"
+    },
+    {
+     "set_id": "L10.A:3686d9b416f0",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2023-01-23T14:40:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AMD",
+       "published_at": "2023-01-23T14:40:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      },
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248823000003/amd-20230108.htm",
+       "published_at": "2023-01-11T21:10:00Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "order/thesis code-templated from a real breakout; headlines are real EDGAR item titles"
+    },
+    {
+     "set_id": "L10.A:28c7b5cec1ae",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2023-06-16T13:35:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AMGN",
+       "published_at": "2023-06-16T13:35:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      },
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/318154/000119312523160316/d504329d8k.htm",
+       "published_at": "2023-06-05T12:00:34Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      },
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/318154/000119312523150659/d483298d8k.htm",
+       "published_at": "2023-05-22T21:23:05Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      },
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/318154/000119312523147662/d499865d8k.htm",
+       "published_at": "2023-05-18T12:29:02Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "order/thesis code-templated from a real breakout; headlines are real EDGAR item titles"
+    },
+    {
+     "set_id": "L10.A:0943d4566cdb",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2023-02-02T14:35:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AMZN",
+       "published_at": "2023-02-02T14:35:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      },
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1018724/000119312523003621/d441973d8k.htm",
+       "published_at": "2023-01-06T21:42:03Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      },
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1018724/000119312523000849/d429499d8k.htm",
+       "published_at": "2023-01-03T22:06:08Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "order/thesis code-templated from a real breakout; headlines are real EDGAR item titles"
+    },
+    {
+     "set_id": "L10.A:553f5ddc7c1c",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2023-03-03T14:35:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AVGO",
+       "published_at": "2023-03-03T14:35:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      },
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016823000004/avgo-20230302.htm",
+       "published_at": "2023-03-02T21:16:43Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "order/thesis code-templated from a real breakout; headlines are real EDGAR item titles"
+    }
    ],
    "visual": {
     "fed": [
@@ -226,7 +357,7 @@
      "thesis",
      "headlines"
     ],
-    "excerpt": "order",
+    "excerpt": "thesis",
     "state_fields": [
      "symbol",
      "order",
@@ -423,78 +554,188 @@
    "inputs": [
     {
      "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "plan": "Buy 130, stop 121, 50 sh",
+     "data_cutoff": "2023-02-17T21:00:00Z",
+     "plan": "Buy AAPL 151.32, stop 147.67 (1 ATR), target 158.61 (2 ATR), max 10 sessions",
      "venue": "NASDAQ",
-     "what_happened": "Bought 130, stopped at 121 for -1R"
+     "what_happened": "Entered 151.32 on 2023-02-03; time exit at 152.54 on 2023-02-17 (+0.33R); max high 156.33, min low 149.22 over 10 sessions. Exits followed the code rule exactly (replay)."
     },
     {
      "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "plan": "Buy 130 stop 121",
+     "data_cutoff": "2023-02-03T21:00:00Z",
+     "plan": "Buy ADBE 351.15, stop 340.84 (1 ATR), target 371.77 (2 ATR), max 10 sessions",
      "venue": "NASDAQ",
-     "what_happened": "Bought 130, moved stop to 110 when it dipped, lost 2R"
+     "what_happened": "Entered 351.15 on 2023-01-20; target hit at 371.77 on 2023-01-27 (+2.00R); max high 402.49, min low 350.57 over 10 sessions. Exits followed the code rule exactly (replay)."
     },
     {
      "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "plan": "50 shares",
+     "data_cutoff": "2023-02-06T21:00:00Z",
+     "plan": "Buy AMD 73.02, stop 70.20 (1 ATR), target 78.66 (2 ATR), max 10 sessions",
      "venue": "NASDAQ",
-     "what_happened": "Bought 300 shares because I felt sure"
+     "what_happened": "Entered 73.02 on 2023-01-23; target hit at 78.66 on 2023-02-01 (+2.00R); max high 88.94, min low 72.03 over 10 sessions. Exits followed the code rule exactly (replay)."
     },
     {
      "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "plan": "Buy on pullback to 128",
+     "data_cutoff": "2023-07-03T20:00:00Z",
+     "plan": "Buy AMGN 230.44, stop 225.88 (1 ATR), target 239.56 (2 ATR), max 10 sessions",
      "venue": "NASDAQ",
-     "what_happened": "Bought at 136 after it ran"
+     "what_happened": "Entered 230.44 on 2023-06-16; stopped out at 225.88 on 2023-06-21 (-1.00R); max high 230.84, min low 218.65 over 10 sessions. Exits followed the code rule exactly (replay)."
     },
     {
      "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "plan": "Target 150",
+     "data_cutoff": "2023-02-16T21:00:00Z",
+     "plan": "Buy AMZN 111.22, stop 107.68 (1 ATR), target 118.28 (2 ATR), max 10 sessions",
      "venue": "NASDAQ",
-     "what_happened": "Sold at 132 on the first red candle"
+     "what_happened": "Entered 111.22 on 2023-02-02; stopped out at 107.68 on 2023-02-03 (-1.00R); max high 108.78, min low 96.23 over 10 sessions. Exits followed the code rule exactly (replay)."
     },
     {
      "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "plan": "Buy 420 stop 405 target 450",
+     "data_cutoff": "2023-03-17T20:00:00Z",
+     "plan": "Buy AVGO 622.31, stop 610.93 (1 ATR), target 645.07 (2 ATR), max 10 sessions",
      "venue": "NASDAQ",
-     "what_happened": "Bought 420, sold at 450 as planned"
-    },
-    {
-     "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "plan": "Stop 12",
-     "venue": "NASDAQ",
-     "what_happened": "Cancelled the stop, held through the gap"
-    },
-    {
-     "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "plan": "Limit 228",
-     "venue": "NASDAQ",
-     "what_happened": "Market bought at 236 at the open"
-    },
-    {
-     "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "plan": "x",
-     "venue": "OTC",
-     "what_happened": "y"
+     "what_happened": "Entered 622.31 on 2023-03-03; stopped out at 610.93 on 2023-03-13 (-1.00R); max high 644.05, min low 606.88 over 10 sessions. Exits followed the code rule exactly (replay)."
     }
    ],
    "expected": [
-    "tag_clean",
-    "moved_stop",
-    "oversized",
-    "chased",
-    "early_exit",
-    "tag_clean",
-    "moved_stop",
-    "chased",
-    "abstain"
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "sets": [
+    {
+     "set_id": "L10.B:359b67a0fdaa",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2023-02-17T21:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AAPL",
+       "published_at": "2023-02-03T14:45:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      },
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AAPL",
+       "published_at": "2023-02-17T21:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "paper replay of a code rule on real bars; plan and outcome are templates"
+    },
+    {
+     "set_id": "L10.B:a04e681d5e17",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2023-02-03T21:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=ADBE",
+       "published_at": "2023-01-20T16:05:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      },
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=ADBE",
+       "published_at": "2023-02-03T21:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "paper replay of a code rule on real bars; plan and outcome are templates"
+    },
+    {
+     "set_id": "L10.B:5f2ba34f7d9e",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2023-02-06T21:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AMD",
+       "published_at": "2023-01-23T14:40:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      },
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AMD",
+       "published_at": "2023-02-06T21:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "paper replay of a code rule on real bars; plan and outcome are templates"
+    },
+    {
+     "set_id": "L10.B:a2c10b7c05ba",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2023-07-03T20:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AMGN",
+       "published_at": "2023-06-16T13:35:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      },
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AMGN",
+       "published_at": "2023-07-03T20:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "paper replay of a code rule on real bars; plan and outcome are templates"
+    },
+    {
+     "set_id": "L10.B:b9e9dc8fec69",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2023-02-16T21:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AMZN",
+       "published_at": "2023-02-02T14:35:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      },
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AMZN",
+       "published_at": "2023-02-16T21:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "paper replay of a code rule on real bars; plan and outcome are templates"
+    },
+    {
+     "set_id": "L10.B:2c89139054e7",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2023-03-17T20:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AVGO",
+       "published_at": "2023-03-03T14:35:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      },
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AVGO",
+       "published_at": "2023-03-17T20:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "paper replay of a code rule on real bars; plan and outcome are templates"
+    }
    ],
    "visual": {
     "fed": [
@@ -700,73 +941,11 @@
      }
     }
    },
-   "inputs": [
-    {
-     "command": "uv run pytest tests/test_ema.py",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "output": "NameError: name 'ema_fast' is not defined. Did you mean 'fast_ema'?",
-     "venue": "NASDAQ"
-    },
-    {
-     "command": "uv run backtest",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "output": "AssertionError: signal at 2025-03-04 uses close of 2025-03-05",
-     "venue": "NASDAQ"
-    },
-    {
-     "command": "uv run backtest",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "output": "FileNotFoundError: data/bars/2026-10-06.parquet",
-     "venue": "NASDAQ"
-    },
-    {
-     "command": "uv run backtest",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "output": "ConnectionResetError while fetching bars; retry 3/3 failed",
-     "venue": "NASDAQ"
-    },
-    {
-     "command": "uv run backtest",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "output": "ValueError: lookback must be > 0, got 0 (config.yaml)",
-     "venue": "NASDAQ"
-    },
-    {
-     "command": "uv run backtest",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "output": "Sharpe 9.1 with 0 losing trades over 5 years; fills at the high of every bar",
-     "venue": "NASDAQ"
-    },
-    {
-     "command": "uv run pytest",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "output": "assert 19 == 20: rolling window off by one in features.py line 42",
-     "venue": "NASDAQ"
-    },
-    {
-     "command": "uv run backtest",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "output": "Feature 'next_day_return' present in training frame",
-     "venue": "NASDAQ"
-    },
-    {
-     "command": "x",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "output": "y",
-     "venue": "OTC"
-    }
-   ],
-   "expected": [
-    "agent_fix",
-    "human_review",
-    "rerun_after_data",
-    "rerun_after_data",
-    "agent_fix",
-    "human_review",
-    "agent_fix",
-    "human_review",
-    "abstain"
-   ],
+   "inputs": [],
+   "expected": [],
+   "sets": [],
+   "data_status": "needs_your_data",
+   "data_reason": "needs your data: real failed backtest command output from your own runs",
    "visual": {
     "fed": [
      "venue",
@@ -774,7 +953,7 @@
      "command",
      "output"
     ],
-    "excerpt": "command",
+    "excerpt": null,
     "state_fields": [
      "command",
      "output"
@@ -939,91 +1118,11 @@
      }
     }
    },
-   "inputs": [
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "diff": "- MAX_RISK = 0.01\n+ MAX_RISK = 0.05",
-     "paths": [
-      "strategies/orb/risk/limits.py"
-     ],
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "diff": "+ # explain the opening range",
-     "paths": [
-      "strategies/orb/signal.py"
-     ],
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "diff": "- size = 0.5 * base\n+ size = 3 * base",
-     "paths": [
-      "strategies/orb/signal.py"
-     ],
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "diff": "- fast\n+ fast_ema",
-     "paths": [
-      "strategies/ema/features.py"
-     ],
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "diff": "+ retry forever",
-     "paths": [
-      "strategies/ema/orders/submit.py"
-     ],
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "diff": "- stop = entry - 2*atr\n+ stop = None",
-     "paths": [
-      "strategies/ema/signal.py"
-     ],
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "diff": "- lookback: 20\n+ lookback: 21",
-     "paths": [
-      "strategies/ema/config.yaml"
-     ],
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "diff": "+ LIVE = True",
-     "paths": [
-      "strategies/ema/run.py"
-     ],
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "diff": "b",
-     "paths": [
-      "a"
-     ],
-     "venue": "OTC"
-    }
-   ],
-   "expected": [
-    "human_review",
-    "paper_forward_test",
-    "human_review",
-    "paper_forward_test",
-    "human_review",
-    "human_review",
-    "paper_forward_test",
-    "human_review",
-    "abstain"
-   ],
+   "inputs": [],
+   "expected": [],
+   "sets": [],
+   "data_status": "needs_your_data",
+   "data_reason": "needs your data: real diffs of your own strategy files",
    "visual": {
     "fed": [
      "venue",
@@ -1031,7 +1130,7 @@
      "paths",
      "diff"
     ],
-    "excerpt": "diff",
+    "excerpt": null,
     "state_fields": [
      "paths",
      "diff"
@@ -1184,71 +1283,18 @@
      }
     }
    },
-   "inputs": [
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "request": "Set the ORB strategy's max trades per day to 3",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "request": "Should we double the paper book's risk budget this month?",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "request": "Add a VWAP filter to the EMA pullback entry: only long above VWAP",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "request": "Make the strategy better",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "request": "Turn the ORB strategy on with real money",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "request": "Remove KO and PEP from the pullback universe",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "request": "Fix the signals thing",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "request": "Write fills to a CSV report at the end of each paper session",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "request": "x",
-     "venue": "OTC"
-    }
-   ],
-   "expected": [
-    "plan_config_change",
-    "escalate",
-    "plan_code_change",
-    "ask_question",
-    "escalate",
-    "plan_config_change",
-    "ask_question",
-    "plan_code_change",
-    "abstain"
-   ],
+   "inputs": [],
+   "expected": [],
+   "sets": [],
+   "data_status": "needs_your_data",
+   "data_reason": "needs your data: real desk requests from your team",
    "visual": {
     "fed": [
      "venue",
      "data_cutoff",
      "request"
     ],
-    "excerpt": "request",
+    "excerpt": null,
     "state_fields": [
      "request"
     ],
@@ -1436,148 +1482,248 @@
    "inputs": [
     {
      "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
+     "data_cutoff": "2024-05-29T20:51:32Z",
      "documents": [
       {
-       "name": "10-Q",
-       "text": "Data center revenue rose 112%."
+       "name": "10-K 2024-02-21",
+       "text": "Revenue for fiscal year 2024 was $60.9 billion, up 126% from a year ago.\n\nData Center revenue for fiscal year 2024 was up 217%. Strong demand was driven by enterprise software and consumer internet applications, and multiple industry verticals including automotive, financial services, and healthcare. Customers across industry verticals access NVIDIA AI infrastructure both through the cloud and on-premises. Data Center compute revenue was up 244% in the fiscal year. Networking revenue was up 133% in the fiscal year.\n\nGaming revenue for fiscal year 2024 was up 15%. The increase reflects higher sell-in to partners following the normalization of channel inventory levels and growing demand.\n\nProfessional Visualization revenue for fiscal year 2024 was up 1%.\n\nAutomotive revenue for the fiscal year 2024 was up 21%. The increase primarily reflected growth in self-driving platforms.\n\nGross margin increased in fiscal year 2024, primarily driven by Data Center revenue growth and lower net inventory provisions as a percentage of revenue.\n\nOperating expenses increased for fiscal year 2024, driven by growth in employees and compensation increases. Fiscal year 2023 also included a $1.4 billion acquisition termination charge related to the proposed Arm transaction.\n\nMarket Platform Highlights\n\nData Center revenue for fiscal year 2024 was $47.5 billion, up 217% from fiscal year 2023. In Data Center, we launched AI inference platforms that combine our full-stack inference software with NVIDIA Ada, NVIDIA Hopper and NVIDIA Grace Hopper processors optimized for generative AI, LLMs and other AI workloads. We introduced NVIDIA DGX Cloud and AI Foundations to help businesses create and operate custom large language models and generative AI models. As AV algorithms move to video transformers, and more c"
+      },
+      {
+       "name": "10-Q 2024-05-29",
+       "text": "Headquartered in Santa Clara, California, NVIDIA was incorporated in California in April 1993 and reincorporated in Delaware in April 1998.\n\nRecent Developments, Future Objectives and Challenges\n\nDemand and Supply, Product Transitions, and New Products and Business Models\n\nOur overall revenue, driven by data center compute, continued to grow through the first quarter of fiscal year 2025. We continue to gather customer demand indications across several product transitions. We have demand visibility for our data center products, including the recently announced Blackwell GPU architecture. We have previously increased our supply and capacity purchases with existing suppliers with planned receipts later this year. We continue to add new vendors and have entered and may continue to enter into prepaid manufacturing and capacity agreements to supply both current and future products. The increased purchase volumes and number of suppliers and integration of new vendors into our supply chain may create more complexity and execution risk. Our purchase commitments and obligations for inventory and manufacturing capacity at the end of the first quarter of fiscal year 2025 continued to be impacted by shortening lead times for certain components. We may incur inventory provisions or impairments if our inventory or supply or capacity commitments exceed demand for our products or demand declines. While supply for H100 continued to improve, we are still constrained on H200. Our next generation data center architecture, Blackwell, is in production, and we plan on shipping customer samples in the second quarter. We expect to ramp customer shipments of Blackwell in the second half of the fiscal year. We believe the initial demand for Blackwell is well ahead of the projected supply for this fiscal year. We expect supply constraints for our Blackwell offerings will continue into next year.\n\nProduct transitions"
       }
      ],
-     "question": "Did data center revenue more than double?",
+     "question": "Does the company describe customer concentration as a material risk?",
      "symbol": "NVDA",
      "venue": "NASDAQ"
     },
     {
      "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
+     "data_cutoff": "2024-05-01T20:25:44Z",
      "documents": [
       {
-       "name": "10-K",
-       "text": "Greater China revenue fell 11%."
+       "name": "10-K 2024-01-31",
+       "text": "ITEM 1A. RISK FACTORS\n\nThe risks and uncertainties described below are not the only ones we face. If any of the following risks actually occurs, our business, financial condition or results of operations could be materially adversely affected. In addition, you should consider the interrelationship and compounding effects of two or more risks occurring simultaneously.\n\nRisk Factors Summary\n\nThe following is a summary of the principal risks that could adversely affect our business, financial condition and results of operations.\n\nEconomic and Strategic Risks\n\n• Intel Corporation’s dominance of the microprocessor market and its aggressive business practices may limit our ability to compete effectively on a level playing field.\n\n• Economic and market uncertainty may adversely impact our business and operating results.\n\n• The semiconductor industry is highly cyclical and has experienced severe downturns.\n\n• The demand for our products depends in part on the market conditions in the industries into which they are sold. There may be fluctuations in demand for our products or a market decline in any of these industries.\n\n• The loss of a significant customer may have a material adverse effect on us.\n\n• We are subject to risks associated with public health crises, such as pandemics and epidemics.\n\n• The markets in which our products are sold are highly competitive.\n\n• Our operating results are subject to quarterly and seasonal sales patterns.\n\n• If we cannot adequately protect our technology or other intellectual property through patents, copyrights, trade secrets, trademarks and other measures, we may lose a competitive advantage and incur significant expenses.\n\n• Unfavorable currency exchange rate fluctuations could adversely affect us.\n\nOperational and Technology Risks\n\n• We rely on third parties to manufacture our products, and if they are unable to do so on a timely basis in sufficient quantities and using competitive technologies, our business could be materially adversely affected.\n\n• Essential equipment, materials, substrates or manufacturing processes may not be available to us.\n\n• We may fail to achieve expected manufacturing yields for our products.\n\n• The success of our business is dependent upon our ability to introduce products on a timely basis with features and performance levels that provide value to our customers while supporting significant industry transitions.\n\n• Our revenue from our semi-custom System-on-Chip (SoC) products is dependent upon our semi-custom SoC products being incorporated into customers’ products and the success of those products.\n\n• Our products may be subject to security vulnerabilities that could have a material adverse effect on us.\n\n• IT outages, data loss, data breaches and cyberattacks could disrupt operations and compromise our intellectual property or other sensitive information, be costly to remediate or cause significant damage to our business, reputation, financial condition and results of operations.\n\n• We may encounter difficulties in operating our newly upgraded enterprise resource planning (ERP) system.\n\n• Uncertainties involving the ordering and shipment of our products could materially adversely affect us.\n\n• Our ability to design and introduce new products includes the use of third-party intellectual property.\n\n• We depend on third-party companies for the design, manufacture and supply of motherboards, software, memory and other computer platform components to support our business and products.\n\n15\n\nTable of Contents\n\n• If we lose Microsoft Corporation’s support for our products or other software vendors do not design and develop software to run on our products, our ability to sell our products could be materially adversely affected.\n\n• Our reliance on third-party distributors and add-in-board (AIB) partners subjects us to certain risks.\n\n• Our business depends on the proper functioning of our internal business processes and information systems.\n\n• Our products may not be compati…"
+      },
+      {
+       "name": "10-Q 2024-05-01",
+       "text": "ITEM 2. MANAGEMENT’S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS\n\nThe statements in this report include forward-looking statements within the meaning of the Private Securities Litigation Reform Act of 1995. These forward-looking statements are based on current expectations and beliefs and involve numerous risks and uncertainties that could cause actual results to differ materially from expectations. These forward-looking statements speak only as of the date hereof or as of the dates indicated in the statements and should not be relied upon as predictions of future events, as we cannot assure you that the events or circumstances reflected in these statements will be achieved or will occur. You can identify forward-looking statements by the use of forward-looking terminology including “believes,” “expects,” “may,” “will,” “should,” “seeks,” “intends,” “plans,” “pro forma,” “estimates,” “anticipates,” or the negative of these words and phrases, other variations of these words and phrases or comparable terminology. The forward-looking statements relate to, among other things: possible impact of future accounting rules on AMD’s condensed consolidated financial statements; demand for AMD’s products; AMD’s strategy and expected benefits; the growth, change and competitive landscape of the markets in which AMD participates; international sales will continue to be a significant portion of total sales in the foreseeable future; that AMD’s cash, cash equivalents and short-term investment balances, together with the availability under that certain revolving credit facility (the Revolving Credit Agreement) made available to AMD and certain of its subsidiaries, our commercial paper program, and our cash flows from operations will be sufficient to fund AMD’s operations including capital expenditures and purchase commitments and debt payments over the next 12 months and beyond; AMD’s ability to access capital markets; AMD’s ability to obtain sufficient external financing on favorable terms, or at all; AMD’s expectation that based on management’s current knowledge, the potential liability related to AMD’s current litigation will not have a material adverse effect on its financial positions, results of operation or cash flows; anticipated ongoing and increased costs related to enhancing and implementing information security controls; all unbilled accounts receivables are expected to be billed and collected within 12 months; revenue allocated to remaining performance obligations that are unsatisfied which will be recognized in the next 12 months; a small number of customers will continue to account for a substantial part of AMD’s revenue in the future; the expected implications from the development of the legal and regulatory environment relating to emerging technologies, such as AI; AMD’s ability to achieve its corporate responsibility initiatives; expected future AI trends and developments; and AMD expects to fund stock repurchases through cash generated from operations. For a discussion of the factors that could cause actual results to differ materially from the forward-looking statements, see “Part II, Item 1A—Risk Factors” and the “Financial Condition” section set forth in “Part I, Item 2-Management’s Discussion and Analysis of Financial Condition and Results of Operations,” or MD&A, and such other risks and uncertainties as set forth below in this report or detailed in our other Securities and Exchange Commission (SEC) reports and filings. We assume no obligation to update forward-looking statements.\n\nReferences in this Quarterly Report on Form 10-Q to “AMD,” “we,” “us,” “management,” “our” or the “Company” mean Advanced Micro Devices, Inc. and our consolidated subsidiaries.\n\nAMD, the AMD Arrow logo, EPYC, Radeon, Ryzen, Xilinx and combinations thereof are trademarks of Advanced Micro Devices, Inc. Other names are for informational purposes only and are used to identify companies and products and may be tradem…"
       }
      ],
-     "question": "Did China revenue grow?",
-     "symbol": "AAPL",
+     "question": "Did the latest quarter's revenue grow year over year?",
+     "symbol": "AMD",
      "venue": "NASDAQ"
     },
     {
      "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
+     "data_cutoff": "2024-04-25T20:21:24Z",
      "documents": [
       {
-       "name": "10-Q",
-       "text": "Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. "
+       "name": "10-K 2023-07-27",
+       "text": "Item 1A.\n\nRisk Factors\n\n23\n\nItem 1B.\n\nUnresolved Staff Comments\n\n37\n\nItem 2.\n\nProperties\n\n37\n\nItem 3.\n\nLegal Proceedings\n\n37\n\nItem 4.\n\nMine Safety Disclosures\n\n37\n\nPART II\n\nItem 5.\n\nMarket for Registrant’s Common Equity, Related Stockholder Matters, and Issuer Purchases of Equity Securities\n\n38\n\nItem 6.\n\n[Reserved]\n\n39\n\nItem 7.\n\nManagement’s Discussion and Analysis of Financial Condition and Results of Operations\n\n40\n\nItem 7A.\n\nQuantitative and Qualitative Disclosures about Market Risk\n\n57\n\nItem 8.\n\nFinancial Statements and Supplementary Data\n\n58\n\nItem 9.\n\nChanges in and Disagreements with Accountants on Accounting and Financial Disclosure\n\n99\n\nItem 9A.\n\nControls and Procedures\n\n99\n\nReport of Management on Internal Control over Financial Reporting\n\n99\n\nReport of Independent Registered Public Accounting Firm\n\n100\n\nItem 9B.\n\nOther Information\n\n101\n\nItem 9C.\n\nDisclosure Regarding Foreign Jurisdictions that Prevent Inspections\n\n101\n\nPART III\n\nItem 10.\n\nDirectors, Executive Officers, and Corporate Governance\n\n101\n\nItem 11.\n\nExecutive Compensation\n\n101\n\nItem 12.\n\nSecurity Ownership of Certain Beneficial Owners and Management and Related Stockholder Matters\n\n101\n\nItem 13.\n\nCertain Relationships and Related Transactions, and Director Independence\n\n101\n\nItem 14.\n\nPrincipal Accountant Fees and Services\n\n101\n\nPART IV\n\nItem 15.\n\nExhibit and Financial Statement Schedules\n\n102\n\nItem 16.\n\nForm 10-K Summary\n\n108\n\nSignatures\n\n109\n\n2\n\nPART I\n\nItem 1\n\nNote About Forward-Looking Statements\n\nThis report includes estimates, projections, statements relating to our business plans, objectives, and expected operating results that are “forward-looking statements” within the meaning of the Private Securities Litigation Reform Act of 1995, Section 27A of the Securities Act of 1933, and Section 21E of the Securities Exchange Act of 1934. Forward-looking statements may appear throughout this report, including the following sections: “Business” (Part I, Item 1 of this Form 10-K), “Risk Factors” (Part I, Item 1A of this Form 10-K), and “Management’s Discussion and Analysis of Financial Condition and Results of Operations” (Part II, Item 7 of this Form 10-K). These forward-looking statements generally are identified by the words “believe,” “project,” “expect,” “anticipate,” “estimate,” “intend,” “strategy,” “future,” “opportunity,” “plan,” “may,” “should,” “will,” “would,” “will be,” “will continue,” “will likely result,” and similar expressions. Forward-looking statements are based on current expectations and assumptions that are subject to risks and uncertainties that may cause actual results to differ materially. We describe risks and uncertainties that could cause actual results and events to differ materially in “Risk Factors,” “Management’s Discussion and Analysis of Financial Condition and Results of Operations,” and “Quantitative and Qualitative Disclosures about Market Risk” (Part II, Item 7A of this Form 10-K). Readers are cautioned not to place undue reliance on forward-looking statements, which speak only as of the date they are made. We undertake no obligation to update or revise publicly any forward-looking statements, whether because of new information, future events, or otherwise.\n\n3\n\nPART I\n\nItem 1\n\nPART I\n\nITEM 1. B USINESS\n\nGENERAL\n\nEmbracing Our Future\n\nMicrosoft is a technology company whose mission is to empower every person and every organization on the planet to achieve more. We strive to create local opportunity, growth, and impact in every country around the world. We are creating the platforms and tools , powered by artificial intelligence (“ AI ”), that deliver better, faster, and more effective solutions to support small and large business competitiveness, improve educational and health outcomes, grow public-sector efficiency, and empower human ingenuity. From infrastructure and data, to business applications and collaboration, we provide unique, differentiated value to customers.\n\nIn a world of increasing economic complexity, AI…"
       },
       {
-       "name": "transcript",
-       "text": "Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. "
+       "name": "10-Q 2024-04-25",
+       "text": "ITEM 2. MANAGEMENT’S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS\n\nNote About Forward-Looking Statements\n\nThis report includes estimates, projections, statements relating to our business plans, objectives, and expected operating results that are “forward-looking statements” within the meaning of the Private Securities Litigation Reform Act of 1995, Section 27A of the Securities Act of 1933, and Section 21E of the Securities Exchange Act of 1934. Forward-looking statements may appear throughout this report, including the following sections: “Management’s Discussion and Analysis of Financial Condition and Results of Operations” and “Risk Factors” (Part II, Item 1A of this Form 10-Q). These forward-looking statements generally are identified by the words “believe,” “project,” “expect,” “anticipate,” “estimate,” “intend,” “strategy,” “future,” “opportunity,” “plan,” “may,” “should,” “will,” “would,” “will be,” “will continue,” “will likely result,” and similar expressions. Forward-looking statements are based on current expectations and assumptions that are subject to risks and uncertainties that may cause actual results to differ materially. We describe risks and uncertainties that could cause actual results and events to differ materially in “Management’s Discussion and Analysis of Financial Condition and Results of Operations,” “Quantitative and Qualitative Disclosures about Market Risk” (Part I,"
       }
      ],
-     "question": "Did margins expand?",
-     "symbol": "INTC",
-     "venue": "NASDAQ"
-    },
-    {
-     "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "documents": [
-      {
-       "name": "10-Q",
-       "text": "Azure grew 33%."
-      },
-      {
-       "name": "call",
-       "text": "We see strong demand."
-      }
-     ],
-     "question": "Is Azure growing over 30%?",
+     "question": "Does the company describe customer concentration as a material risk?",
      "symbol": "MSFT",
      "venue": "NASDAQ"
     },
     {
      "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
+     "data_cutoff": "2024-04-30T22:53:29Z",
      "documents": [
       {
-       "name": "a",
-       "text": "Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. "
+       "name": "10-K 2024-02-02",
+       "text": "value of those investments being written down or written off. In addition, our sustainability initiatives may be unsuccessful for a variety of reasons, including if we are unable to realize the expected benefits of new technologies or if we do not successfully plan or execute new strategies, which could harm our business or damage our reputation.\n\nOur International Operations Expose Us to a Number of Risks\n\nOur international activities are significant to our revenues and profits, and we plan to further expand internationally. In certain international market segments, we have relatively little operating experience and may not benefit from any first-to-market advantages or otherwise succeed. It is costly to establish, develop, and maintain international operations and stores, and promote our brand internationally. Our international operations may not become profitable on a sustained basis.\n\nIn addition to risks described elsewhere in this section, our international sales and operations are subject to a number of risks, including:\n\n• local economic and political conditions;\n\n• government regulation (such as regulation of our product and service offerings and of competition); restrictive governmental actions (such as trade protection measures, including export duties and quotas and custom duties and tariffs, and restrictions around the import and export of certain products, technologies, and components); nationalization; and restrictions on foreign ownership;\n\n• restrictions on sales or distribution of certain products or services and uncertainty regarding liability for products, services, and content, including uncertainty as a result of less internet-friendly legal systems, local laws, lack of legal precedent, and varying rules, regulations, and practices regarding the physical and digital distribution of media products and enforcement of intellectual property rights;\n\n• business licensing or certification requirements, such as for import"
       },
       {
-       "name": "b",
-       "text": "Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. "
-      },
-      {
-       "name": "c",
-       "text": "Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. "
+       "name": "10-Q 2024-05-01",
+       "text": "For additional information, see Item 7 of Part II, “Management’s Discussion and Analysis of Financial Condition and Results of Operations — Overview” of our 2023 Annual Report on Form 10-K.\n\nCritical Accounting Estimates\n\nThe preparation of financial statements in conformity with GAAP requires estimates and assumptions that affect the reported amounts of assets and liabilities, revenues and expenses, and related disclosures of contingent liabilities in the consolidated financial statements and accompanying notes. Critical accounting estimates are those estimates made in accordance with GAAP that involve a significant level of estimation uncertainty and have had or are reasonably likely to have a material impact on the financial condition or results of operations of the Company. Based on this definition, we have identified the critical accounting estimates addressed below. We also have other key accounting policies, which involve the use of estimates, judgments, and assumptions that are significant to understanding our results. For additional information, see Item 8 of Part II, “Financial Statements and Supplementary Data — Note 1 — Description of Business, Accounting Policies, and Supplemental Disclosures” of our 2023 Annual Report on Form 10-K and Item 1 of Part I, “Financial Statements — Note 1 — Accounting Policies and Supplemental Disclosures,” of this Form 10-Q. Although we believe that our estimates, assumptions, and judgments are reasonable, they are based upon information presently available. Actual results may differ significantly from these estimates under different assumptions, judgments, or conditions.\n\nInventories\n\nInventories, consisting of products available for sale, are primarily accounted for using the first-in first-out method, and are valued at the lower of cost and net realizable value. This valuation requires us to make judgments, bas"
       }
      ],
-     "question": "Did margins recover?",
+     "question": "Did the latest quarter's revenue grow year over year?",
+     "symbol": "AMZN",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2024-05-01T20:21:32Z",
+     "documents": [
+      {
+       "name": "10-K 2023-11-01",
+       "text": "Impairment of Non-marketable Equity Investments. We monitor our investments for events or circumstances that could indicate impairment, including those that result from observable price adjustments. Key considerations in this assessment include the investee’s financial and liquidity position and business forecasts (including their ability to respond to any significant deterioration), industry performance, development and/or market acceptance of the investee’s products or technologies, as well as considering any appreciation in fair value that has not been recognized in the carrying values of such investments and other relevant events and factors (such as the effects of the macroeconomic environment in fiscal 2023 and 2022). In fiscal 2023 and 2022, there were no significant impairment losses or adjustments to our previous judgments and estimates recorded.\n\nInventories. We measure inventory at the lower of cost or net realizable value considering judgments and estimates related to future customer demand and other market conditions, such as the impact of certain capacity constraints experienced across the semiconductor industry through the third quarter of fiscal 2022, as well as the impact of the macroeconomic environment in fiscal 2022 and 2023, which negatively impacted consumer demand for smartphones and other devices that incorporate our products and technologies. Although we believe these estimates are reasonable, any significant changes in customer demand that are less favorable than our previous estimates may require additional inventory write-downs and would be reflected in cost of sales resulting in a negative impact to our gross margin in that period. For fiscal 2023 and 2022, the net effect from changes in this estimate and related reserves was less than 2% of cost of revenues during each period.\n\nImpairment of Goodwill, Other Indefinite-Lived Assets and Long-Lived Assets . We monitor our goodwill, other indefinite-lived assets and long-lived assets for the existence of impairment indicators and apply judgments in the valuation methods and underlying assumptions utilized in such assessments. During fiscal 2023, we recorded total impairment charges of approximately $400 million related to certain long-lived and other indefinite-lived assets. Such impairments (and the related remaining asset values) were not individually material. During fiscal 2022, there were no material impairment charges for long-lived or indefinite-lived assets. Additionally, the estima"
+      },
+      {
+       "name": "10-Q 2024-05-01",
+       "text": "Item 2. Management’s Discussion and Analysis of Financial Condition and Results of Operations.” References to “and,” “or” and “and/or” should be read to include the others, as appropriate.\n\nRISKS RELATED TO OUR OPERATING BUSINESSES\n\nWe derive a significant portion of our revenues from a small number of customers and licensees, and particularly from their sale of premium tier handset devices. If revenues derived from these customers or licensees decrease or the timing of such revenues fluctuates, our business and results of operations could be negatively affected.\n\nWe derive a significant portion of our revenues from a small number of customers and licensees, and particularly from their sale of premium tier handset devices, and we expect this trend to continue in the foreseeable future. The mobile industry is experiencing and may continue to experience concentration of device share among a few companies, particularly at the premium tier, contributing to this trend. Certain Chinese original equipment manufacturers (OEMs) have increased and may\n\n25\n\ncontinue to increase their device share in China and in certain regions outside of China, and we derive a significant portion of our revenues from a small number of these OEMs as well. See also “Notes to Condensed Consolidated Financial Statements, Note 2. Composition of Certain Financial Statement Items - Concentrations.”\n\nIn addition, a number of our largest customers have developed, are developing or may develop their own integrated circuit products, or may choose our competitors’ integrated circuit products, which they have in the past utilized, currently utilize and may in the future utilize in some or all of their devices, rather than our products, which could significantly reduce the revenues we derive from these customers. See also"
+      }
+     ],
+     "question": "Does the company describe customer concentration as a material risk?",
+     "symbol": "QCOM",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2024-04-24T00:42:48Z",
+     "documents": [
+      {
+       "name": "10-K 2024-01-29",
+       "text": "ITEM 1A. RISK FACTORS\n\nYou should carefully consider the risks described below together with the other information set forth in this report, which could materially affect our business, financial condition and future results. The risks described below are not the only risks facing our company. Risks and uncertainties not currently known to us or that we currently deem to be immaterial also may materially adversely affect our business, financial condition and operating results.\n\nRisks Related to Our Ability to Grow Our Business\n\nWe may experience delays in launching and ramping the production of our products and features, or we may be unable to control our manufacturing costs.\n\nWe have previously experienced and may in the future experience launch and production ramp delays for new products and features. For example, we encountered unanticipated supplier issues that led to delays during the initial ramp of our first Model X and experienced challenges with a supplier and with ramping full automation for certain of our initial Model 3 manufacturing processes. In addition, we may introduce in the future new or unique manufacturing processes and design features for our products. As we expand our vehicle offerings and global footprint, there is no guarantee that we will be able to successfully and timely introduce and scale such processes or features.\n\n14\n\nTable of Contents\n\nIn particular, our future business depends in large part on increasing the production of mass-market vehicles. In order to be successful, we will need to implement, maintain and ramp efficient and cost-effective manufacturing capabilities, processes and supply chains and achieve the design tolerances, high quality and output rates we have planned at our manufacturing facilities in California, Nevada, Texas, China, Germany and any future sites such as Mexico. We will also need to hire, train and compensate skilled employees to operate these facilities. Bottlenecks and other unexpected challenges such as those we experienced in the past may arise during our production ramps, and we must address them promptly while continuing to improve manufacturing processes and reducing costs. If we are not successful in achieving these goals, we could face delays in establishing and/or sustaining our product ramps or be unable to meet our related cost and profitability targets.\n\nWe have experienced, and may also experience similar future delays in launching and/or ramping production of our energy storage products and Solar Roof; new product versions or variants; new vehicles; and future features and services based on artificial intelligence. Likewise, we may encounter delays with the design, construction and regulatory or other approvals necessary to build and bring online future manufacturing facilities and products.\n\nAny delay or other complication in ramping the production of our current products or the development, manufacture, launch and production ramp of our future products, features and services, or in doing so cost-effectively and with high quality, may harm our brand, business, prospects, financial condition and operating results.\n\nOur suppliers may fail to deliver components according to schedules, prices, quality and volumes that are acceptable to us, or we may be unable to manage these components effectively.\n\nOur products contain thousands of parts purchased globally from hundreds of suppliers, including single-source direct suppliers, which exposes us to multiple potential sources of component shortages. Unexpected changes in business conditions, materials pricing, including inflation of raw material costs, labor issues, wars, trade policies, natural disasters, health epidemics such as the global COVID-19 pandemic, trade and shipping disruptions, port congestions, cyberattacks and other factors beyond our or our suppliers’ control could also affect these suppliers’ ability to deliver components to us or to remain solvent and operational. For example, a global sho…"
+      },
+      {
+       "name": "10-Q 2024-04-24",
+       "text": "ITEM 2. MANAGEMENT’S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS\n\nThe following discussion and analysis should be read in conjunction with the consolidated financial statements and the related notes included elsewhere in this Quarterly Report on Form 10-Q.\n\nOverview\n\nOur mission is to accelerate the world’s transition to sustainable energy. We design, develop, manufacture, lease and sell high-performance fully electric vehicles, solar energy generation systems and energy storage products. We also offer maintenance, installation, operation, charging, insurance, financial and other services related to our products. Additionally, we are increasingly focused on products and services based on AI, robotics and automation.\n\nIn 2024, we produced approximately 433,000 consumer vehicles and delivered approximately 387,000 consumer vehicles through the first quarter. We are focused on profitable growth, including by leveraging existing factories and production lines to introduce new and more affordable products, increasing vehicle production, utilized capacity and delivery capabilities, reducing costs, improving and developing our vehicles and battery technologies, vertically integrating and localizing our supply chain, further improving and deploying our FSD capabilities, including through our planned robotaxi product, and expanding our global infrastructure, including our service and charging infrastructure.\n\nIn 2024, we deployed 4.05 GWh of energy storage products through the first quarter. We are focused on ramping the production and increasing the market penetration of our energy storage products.\n\nDuring the three months ended March 31, 2024, we recognized total revenues of $21.30 billion, representing a decrease of $2.03 billion, compared to the prior year. During the three months ended March 31, 2024, our net income attributable to common stockholders was $1.13 billion, representing an unfavorable change of $1.38 billion, compared to the same period in the prior year. We continue to ramp production and build and optimize our manufacturing capacity, expand our operations while focusing on further cost reductions and operational efficiencies to enable increased deliveries and deployments of our products, and invest in research and development to accelerate our AI, software, and fleet-based profits for further revenue growth.\n\nWe ended the first quarter of 2024 with $26.86 billion in cash and cash equivalents and investments, representing a decrease of $2.23 billion from the end of 2023. Our cash flows provided by operating activities during the three months ended March 31, 2024 and 2023 were $242 million and $2.51 billion, respectively, representing a decrease of $2.27 billion. Capital expenditures amounted to $2.77 billion during the three months ended March 31, 2024, compared to $2.07 billion during the same period ended March 31, 2023, representing an increase of $701 million. Overall growth has allowed our business to generally fund itself, and we will continue investing in a number of capital-intensive projects and research and development in upcoming periods.\n\nManagement Opportunities, Challenges and Uncertainties and 2024 Outlook\n\nAutomotive—Production\n\nThe following is a summary of the status of production of each of our announced vehicle models in production and under development, as of the date of this Quarterly Report on Form 10-Q:\n\nProduction Location Vehicle Model(s) Production Status\n\nFremont Factory Model S / Model X Active\n\nModel 3 / Model Y Active\n\nGigafactory Shanghai Model 3 / Model Y Active\n\nGigafactory Berlin-Brandenburg Model Y Active\n\nGigafactory Texas Model Y Active\n\nCybertruck Active\n\nGigafactory Nevada Tesla Semi Pilot production\n\nVarious Next Generation Platform In development\n\nTBD Roadster In development\n\n25\n\nTable of Contents\n\nWe are focused on growing our manufacturing capacity, which includes capacity for manufacturing new vehicle models such as our Cybertruck and future…"
+      }
+     ],
+     "question": "Did the latest quarter's revenue grow year over year?",
      "symbol": "TSLA",
-     "venue": "NASDAQ"
-    },
-    {
-     "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "documents": [
-      {
-       "name": "PR",
-       "text": "Coca-Cola raised its dividend 5%."
-      }
-     ],
-     "question": "Did KO cut its dividend?",
-     "symbol": "KO",
-     "venue": "NYSE"
-    },
-    {
-     "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "documents": [
-      {
-       "name": "PR",
-       "text": "FDA approved the drug."
-      }
-     ],
-     "question": "Was the drug approved?",
-     "symbol": "VRTX",
-     "venue": "NASDAQ"
-    },
-    {
-     "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "documents": [
-      {
-       "name": "a",
-       "text": "b"
-      }
-     ],
-     "question": "x",
-     "symbol": "PNKX",
-     "venue": "OTC"
-    },
-    {
-     "account": "paper",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "documents": [
-      {
-       "name": "PR",
-       "text": "Meta opened a new data center."
-      }
-     ],
-     "question": "Did Meta announce a buyback?",
-     "symbol": "META",
      "venue": "NASDAQ"
     }
    ],
    "expected": [
-    "supported",
-    "not_supported",
-    "abstain",
-    "supported",
-    "abstain",
-    "not_supported",
-    "supported",
-    "abstain",
-    "not_supported"
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "sets": [
+    {
+     "set_id": "L10.F:5a1dbe1e3a2e",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-05-29T20:51:32Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581024000029/nvda-20240128.htm",
+       "published_at": "2024-02-21T21:36:57Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      },
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581024000124/nvda-20240428.htm",
+       "published_at": "2024-05-29T20:36:32Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "verbatim 1.8k-char keyword windows (fits the budget); question is code config"
+    },
+    {
+     "set_id": "L10.F:db1ac7668987",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-05-01T20:25:44Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248824000012/amd-20231230.htm",
+       "published_at": "2024-01-31T22:16:39Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      },
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248824000056/amd-20240330.htm",
+       "published_at": "2024-05-01T20:10:44Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "verbatim full sections up to 12k chars each (over the state budget: code abstains, the agent must split); question is code config"
+    },
+    {
+     "set_id": "L10.F:4e01e5d95cf5",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-04-25T20:21:24Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/789019/000095017023035122/msft-20230630.htm",
+       "published_at": "2023-07-27T20:01:56Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      },
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/789019/000095017024048288/msft-20240331.htm",
+       "published_at": "2024-04-25T20:06:24Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "verbatim full sections up to 12k chars each (over the state budget: code abstains, the agent must split); question is code config"
+    },
+    {
+     "set_id": "L10.F:948dce193305",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-04-30T22:53:29Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872424000008/amzn-20231231.htm",
+       "published_at": "2024-02-01T23:48:30Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      },
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872424000083/amzn-20240331.htm",
+       "published_at": "2024-04-30T22:38:29Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "verbatim 1.8k-char keyword windows (fits the budget); question is code config"
+    },
+    {
+     "set_id": "L10.F:1cce9e839eaf",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-05-01T20:21:32Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/804328/000080432823000055/qcom-20230924.htm",
+       "published_at": "2023-11-01T20:10:50Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      },
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/804328/000080432824000039/qcom-20240324.htm",
+       "published_at": "2024-05-01T20:06:32Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "verbatim 1.8k-char keyword windows (fits the budget); question is code config"
+    },
+    {
+     "set_id": "L10.F:35fa668a11c0",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-04-24T00:42:48Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828024002390/tsla-20231231.htm",
+       "published_at": "2024-01-27T02:00:20Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      },
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828024017503/tsla-20240331.htm",
+       "published_at": "2024-04-24T00:27:48Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "verbatim full sections up to 12k chars each (over the state budget: code abstains, the agent must split); question is code config"
+    }
    ],
    "visual": {
     "fed": [

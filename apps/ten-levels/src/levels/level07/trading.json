@@ -36,7 +36,7 @@
    "thresholds": {
     "notice": 1.2,
     "recommend": 1.5,
-    "request": 2.0,
+    "request": 2,
     "promote": 0.7
    },
    "outputs": [
@@ -99,88 +99,195 @@
    },
    "inputs": [
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "recent": "Still a low-vol uptrend, tech leading",
-     "strategy": "ema_pullback",
-     "tuned_on": "Low-vol uptrend led by megacap tech",
-     "venue": "NYSE",
-     "vol_ratio": 1.0
+     "data_cutoff": "2023-11-16T14:35:00Z",
+     "recent": "Now: AAPL at 2023-11-16: 20d realised vol 20% annualised, above_sma50, +0.0% from the 60-session high, ATR14 3.07 (1.6% of price).",
+     "strategy": "breakout_20d",
+     "tuned_on": "Tuning window: AAPL at 2023-05-19: 20d realised vol 22% annualised, above_sma50, +0.0% from the 60-session high, ATR14 2.84 (1.6% of price).",
+     "venue": "NASDAQ",
+     "vol_ratio": 0.919
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "recent": "VIX 35, sharp selloff, defensives leading",
-     "strategy": "ema_pullback",
-     "tuned_on": "Low-vol uptrend",
-     "venue": "NYSE",
-     "vol_ratio": 2.3
+     "data_cutoff": "2023-09-01T13:35:00Z",
+     "recent": "Now: ADBE at 2023-09-01: 20d realised vol 27% annualised, above_sma50, +0.0% from the 60-session high, ATR14 13.88 (2.4% of price).",
+     "strategy": "breakout_20d",
+     "tuned_on": "Tuning window: ADBE at 2023-03-03: 20d realised vol 39% annualised, below_sma50, -12.3% from the 60-session high, ATR14 10.10 (2.9% of price).",
+     "venue": "NASDAQ",
+     "vol_ratio": 0.695
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "recent": "Choppier but uptrend intact",
-     "strategy": "ema_pullback",
-     "tuned_on": "Low-vol uptrend",
-     "venue": "NYSE",
-     "vol_ratio": 1.6
+     "data_cutoff": "2023-11-14T14:35:00Z",
+     "recent": "Now: AMD at 2023-11-14: 20d realised vol 50% annualised, above_sma50, +0.0% from the 60-session high, ATR14 4.34 (3.6% of price).",
+     "strategy": "breakout_20d",
+     "tuned_on": "Tuning window: AMD at 2023-05-18: 20d realised vol 56% annualised, above_sma50, +0.0% from the 60-session high, ATR14 4.87 (4.6% of price).",
+     "venue": "NASDAQ",
+     "vol_ratio": 0.897
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "recent": "Rotation into small caps and value; tech lagging for 6 weeks",
-     "strategy": "ema_pullback",
-     "tuned_on": "Tech-led uptrend",
-     "venue": "NYSE",
-     "vol_ratio": 1.25
+     "data_cutoff": "2024-01-22T15:30:00Z",
+     "recent": "Now: AMGN at 2024-01-22: 20d realised vol 19% annualised, above_sma50, +0.0% from the 60-session high, ATR14 5.98 (1.9% of price).",
+     "strategy": "breakout_20d",
+     "tuned_on": "Tuning window: AMGN at 2023-07-26: 20d realised vol 17% annualised, above_sma50, -1.9% from the 60-session high, ATR14 3.98 (1.7% of price).",
+     "venue": "NASDAQ",
+     "vol_ratio": 1.122
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "recent": "Still range bound, a bit more movement",
-     "strategy": "ema_pullback",
-     "tuned_on": "Range-bound market",
-     "venue": "NYSE",
-     "vol_ratio": 1.3
+     "data_cutoff": "2023-09-14T14:45:00Z",
+     "recent": "Now: AMZN at 2023-09-14: 20d realised vol 25% annualised, above_sma50, +0.0% from the 60-session high, ATR14 3.22 (2.2% of price).",
+     "strategy": "breakout_20d",
+     "tuned_on": "Tuning window: AMZN at 2023-03-17: 20d realised vol 31% annualised, above_sma50, -12.3% from the 60-session high, ATR14 3.08 (3.1% of price).",
+     "venue": "NASDAQ",
+     "vol_ratio": 0.794
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "recent": "Lower highs for 3 months, rates spiking",
-     "strategy": "ema_pullback",
-     "tuned_on": "Bull trend, buy-the-dip",
-     "venue": "NYSE",
-     "vol_ratio": 1.6
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "recent": "Range-bound",
-     "strategy": "ema_pullback",
-     "tuned_on": "Range-bound",
-     "venue": "NYSE",
-     "vol_ratio": 1.1
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "recent": "Calm-ish",
-     "strategy": "ema_pullback",
-     "tuned_on": "Calm",
-     "venue": "NYSE",
-     "vol_ratio": 2.5
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "recent": "b",
-     "strategy": "ema_pullback",
-     "tuned_on": "a",
-     "venue": "OTC",
-     "vol_ratio": 1.0
+     "data_cutoff": "2023-11-14T14:35:00Z",
+     "recent": "Now: AVGO at 2023-11-14: 20d realised vol 33% annualised, above_sma50, +0.0% from the 60-session high, ATR14 23.15 (2.4% of price).",
+     "strategy": "breakout_20d",
+     "tuned_on": "Tuning window: AVGO at 2023-05-18: 20d realised vol 26% annualised, above_sma50, +0.0% from the 60-session high, ATR14 13.81 (2.1% of price).",
+     "venue": "NASDAQ",
+     "vol_ratio": 1.259
     }
    ],
    "expected": [
-    "silent",
-    "request",
-    "recommend",
-    "recommend",
-    "notice",
-    "request",
-    "silent",
-    "request",
-    "abstain"
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "sets": [
+    {
+     "set_id": "L7.A:1ec9eb733b8a",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2023-11-16T14:35:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AAPL",
+       "published_at": "2023-05-20T14:35:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      },
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AAPL",
+       "published_at": "2023-11-16T14:35:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "both regime descriptions are code templates of real point-in-time features"
+    },
+    {
+     "set_id": "L7.A:83fdb50a7f64",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2023-09-01T13:35:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=ADBE",
+       "published_at": "2023-03-05T13:35:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      },
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=ADBE",
+       "published_at": "2023-09-01T13:35:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "both regime descriptions are code templates of real point-in-time features"
+    },
+    {
+     "set_id": "L7.A:f0886af121f3",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2023-11-14T14:35:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AMD",
+       "published_at": "2023-05-18T14:35:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      },
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AMD",
+       "published_at": "2023-11-14T14:35:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "both regime descriptions are code templates of real point-in-time features"
+    },
+    {
+     "set_id": "L7.A:7b347fa509cc",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2024-01-22T15:30:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AMGN",
+       "published_at": "2023-07-26T15:30:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      },
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AMGN",
+       "published_at": "2024-01-22T15:30:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "both regime descriptions are code templates of real point-in-time features"
+    },
+    {
+     "set_id": "L7.A:2d0f1f330ea3",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2023-09-14T14:45:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AMZN",
+       "published_at": "2023-03-18T14:45:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      },
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AMZN",
+       "published_at": "2023-09-14T14:45:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "both regime descriptions are code templates of real point-in-time features"
+    },
+    {
+     "set_id": "L7.A:c1041c59d273",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2023-11-14T14:35:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AVGO",
+       "published_at": "2023-05-18T14:35:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      },
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AVGO",
+       "published_at": "2023-11-14T14:35:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "both regime descriptions are code templates of real point-in-time features"
+    }
    ],
    "visual": {
     "fed": [
@@ -191,7 +298,7 @@
      "recent",
      "vol_ratio"
     ],
-    "excerpt": "recent",
+    "excerpt": "tuned_on",
     "state_fields": [
      "tuned_on",
      "recent",
@@ -378,88 +485,255 @@
    },
    "inputs": [
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "days_held": 3,
-     "since": "Two hyperscalers raised capex",
-     "symbol": "NVDA",
-     "thesis": "Hyperscaler capex up",
+     "data_cutoff": "2023-02-10T21:00:00Z",
+     "days_held": 5,
+     "since": "Close 151.02 (-0.2% vs entry); path high 155.23, low 149.22 (stop 147.67 not breached); now above_sma50, 20d vol 24%. Filings since entry: no 8-K/10-Q/10-K filed since entry.",
+     "symbol": "AAPL",
+     "thesis": "Breakout continuation: 5m close 151.32 at 2023-02-03 09:45 ET broke the 20-session high 151.18 on 2.13x relative volume; ATR14 3.65; gap -1.92%.",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "days_held": 4,
-     "since": "Lost the main customer to a rival",
-     "symbol": "AMD",
-     "thesis": "MI400 wins",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "days_held": 25,
-     "since": "Fee hike confirmed, nothing else",
-     "symbol": "COST",
-     "thesis": "Fee hike",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "days_held": 30,
-     "since": "Foundry customer cancelled, guide cut",
-     "symbol": "INTC",
-     "thesis": "Foundry turnaround",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "days_held": 45,
-     "since": "Nothing new",
-     "symbol": "KO",
-     "thesis": "Defensive yield",
-     "venue": "NYSE"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "days_held": 12,
-     "since": "Azure grew in line",
-     "symbol": "MSFT",
-     "thesis": "Azure acceleration",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
+     "data_cutoff": "2023-02-10T21:00:00Z",
      "days_held": 15,
-     "since": "Price cuts again, margins down",
-     "symbol": "TSLA",
-     "thesis": "Margin recovery",
+     "since": "Close 371.02 (+5.7% vs entry); path high 402.49, low 350.57 (stop 340.84 not breached); now above_sma50, 20d vol 31%. Filings since entry: ADOBE INC. 8-K: Items 5.02 Departure/Election of Directors or Officers (2023-01-26).",
+     "symbol": "ADBE",
+     "thesis": "Breakout continuation: 5m close 351.15 at 2023-01-20 11:05 ET broke the 20-session high 350.79 on 1.55x relative volume; ATR14 10.31; gap +0.22%.",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "days_held": 1,
-     "since": "No news",
-     "symbol": "META",
-     "thesis": "Ad pricing",
+     "data_cutoff": "2023-02-28T21:00:00Z",
+     "days_held": 25,
+     "since": "Close 78.57 (+7.6% vs entry); path high 88.94, low 72.03 (stop 70.20 not breached); now above_sma50, 20d vol 63%. Filings since entry: ADVANCED MICRO DEVICES INC 10-K (2023-02-27); ADVANCED MICRO DEVICES INC 8-K: Items 5.02 Departure/Election of Directors or Officers (2023-02-21); ADVANCED MICRO DEVICES INC 8-K: Items 2.02 Results of Operations and Financial Condition, 7.01 Regulation FD Disclosure (2023-01-31).",
+     "symbol": "AMD",
+     "thesis": "Breakout continuation: 5m close 73.02 at 2023-01-23 09:40 ET broke the 20-session high 72.78 on 1.94x relative volume; ATR14 2.82; gap +3.09%.",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "days_held": 1,
-     "since": "y",
-     "symbol": "PNKX",
-     "thesis": "x",
-     "venue": "OTC"
+     "data_cutoff": "2023-08-22T20:00:00Z",
+     "days_held": 45,
+     "since": "Close 257.69 (+11.8% vs entry); path high 268.24, low 218.44 (stop 225.88 breached); now above_sma50, 20d vol 27%. Filings since entry: AMGEN INC 10-Q (2023-08-04); AMGEN INC 8-K: Items 5.02 Departure/Election of Directors or Officers (2023-08-04); AMGEN INC 8-K: Items 2.02 Results of Operations and Financial Condition (2023-08-03).",
+     "symbol": "AMGN",
+     "thesis": "Breakout continuation: 5m close 230.44 at 2023-06-16 09:35 ET broke the 20-session high 228.85 on 12.60x relative volume; ATR14 4.56; gap +0.68%.",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2023-02-09T21:00:00Z",
+     "days_held": 5,
+     "since": "Close 98.27 (-11.6% vs entry); path high 108.78, low 97.57 (stop 107.68 breached); now above_sma50, 20d vol 54%. Filings since entry: AMAZON COM INC 10-K (2023-02-03); AMAZON COM INC 8-K: Items 2.02 Results of Operations and Financial Condition (2023-02-02).",
+     "symbol": "AMZN",
+     "thesis": "Breakout continuation: 5m close 111.22 at 2023-02-02 09:35 ET broke the 20-session high 106.24 on 2.36x relative volume; ATR14 3.53; gap +4.83%.",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2023-03-24T20:00:00Z",
+     "days_held": 15,
+     "since": "Close 636.26 (+2.2% vs entry); path high 648.50, low 606.88 (stop 610.93 breached); now above_sma50, 20d vol 27%. Filings since entry: Broadcom Inc. 10-Q (2023-03-08).",
+     "symbol": "AVGO",
+     "thesis": "Breakout continuation: 5m close 622.31 at 2023-03-03 09:35 ET broke the 20-session high 617.01 on 6.66x relative volume; ATR14 11.38; gap +3.03%.",
+     "venue": "NASDAQ"
     }
    ],
    "expected": [
-    "silent",
-    "notice",
-    "recommend",
-    "request",
-    "request",
-    "notice",
-    "recommend",
-    "silent",
-    "abstain"
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "sets": [
+    {
+     "set_id": "L7.B:4997d06e4a24",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2023-02-10T21:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AAPL",
+       "published_at": "2023-02-03T14:45:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      },
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AAPL",
+       "published_at": "2023-02-10T21:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "thesis and since are code templates of real bars and real EDGAR item titles; 5 sessions held"
+    },
+    {
+     "set_id": "L7.B:38c82d44a816",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2023-02-10T21:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=ADBE",
+       "published_at": "2023-01-20T16:05:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      },
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=ADBE",
+       "published_at": "2023-02-10T21:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      },
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634323000011/adbe-20230124.htm",
+       "published_at": "2023-01-26T21:14:22Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "thesis and since are code templates of real bars and real EDGAR item titles; 15 sessions held"
+    },
+    {
+     "set_id": "L7.B:ea858e4283e1",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2023-02-28T21:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AMD",
+       "published_at": "2023-01-23T14:40:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      },
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AMD",
+       "published_at": "2023-02-28T21:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      },
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248823000047/amd-20221231.htm",
+       "published_at": "2023-02-27T21:20:39Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      },
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248823000040/amd-20230214.htm",
+       "published_at": "2023-02-21T22:14:58Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      },
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248823000007/amd-20230131.htm",
+       "published_at": "2023-01-31T21:55:24Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "thesis and since are code templates of real bars and real EDGAR item titles; 25 sessions held"
+    },
+    {
+     "set_id": "L7.B:32e53057255c",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2023-08-22T20:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AMGN",
+       "published_at": "2023-06-16T13:35:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      },
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AMGN",
+       "published_at": "2023-08-22T20:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      },
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815423000053/amgn-20230630.htm",
+       "published_at": "2023-08-03T23:28:03Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      },
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/318154/000119312523203033/d525761d8k.htm",
+       "published_at": "2023-08-03T21:48:29Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      },
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815423000049/amgn-20230803.htm",
+       "published_at": "2023-08-03T20:12:08Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "thesis and since are code templates of real bars and real EDGAR item titles; 45 sessions held"
+    },
+    {
+     "set_id": "L7.B:bcb33586ca7e",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2023-02-09T21:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AMZN",
+       "published_at": "2023-02-02T14:35:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      },
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AMZN",
+       "published_at": "2023-02-09T21:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      },
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872423000004/amzn-20221231.htm",
+       "published_at": "2023-02-02T23:27:34Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      },
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872423000002/amzn-20230202.htm",
+       "published_at": "2023-02-02T21:08:48Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "thesis and since are code templates of real bars and real EDGAR item titles; 5 sessions held"
+    },
+    {
+     "set_id": "L7.B:45c68218f2bf",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2023-03-24T20:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AVGO",
+       "published_at": "2023-03-03T14:35:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      },
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AVGO",
+       "published_at": "2023-03-24T20:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      },
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016823000008/avgo-20230129.htm",
+       "published_at": "2023-03-08T21:10:18Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "thesis and since are code templates of real bars and real EDGAR item titles; 15 sessions held"
+    }
    ],
    "visual": {
     "fed": [
@@ -645,82 +919,11 @@
      }
     }
    },
-   "inputs": [
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "next_request": "Now the NVDA segment table",
-     "recent_turns": "Reading NVDA 10-Q",
-     "usage_pct": 20,
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "next_request": "Switch to KO dividend history",
-     "recent_turns": "NVDA 10-Q deep dive",
-     "usage_pct": 55,
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "next_request": "New task: screen biotech PDUFA dates",
-     "recent_turns": "Six AMD filings read",
-     "usage_pct": 80,
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "next_request": "Use the bridge numbers from earlier to model Q4",
-     "recent_turns": "Built the INTC revenue bridge",
-     "usage_pct": 72,
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "next_request": "Continue TSLA",
-     "recent_turns": "Long TSLA session",
-     "usage_pct": 90,
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "next_request": "More MSFT",
-     "recent_turns": "MSFT notes",
-     "usage_pct": 52,
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "next_request": "Now META",
-     "recent_turns": "AAPL",
-     "usage_pct": 10,
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "next_request": "More META",
-     "recent_turns": "META notes",
-     "usage_pct": 71,
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "next_request": "b",
-     "recent_turns": "a",
-     "usage_pct": 10,
-     "venue": "OTC"
-    }
-   ],
-   "expected": [
-    "silent",
-    "recommend",
-    "request",
-    "notice",
-    "request",
-    "notice",
-    "silent",
-    "recommend",
-    "abstain"
-   ],
+   "inputs": [],
+   "expected": [],
+   "sets": [],
+   "data_status": "needs_your_data",
+   "data_reason": "needs your data: your research agent's own session turns and usage (no public source)",
    "visual": {
     "fed": [
      "venue",
@@ -729,7 +932,7 @@
      "recent_turns",
      "next_request"
     ],
-    "excerpt": "next_request",
+    "excerpt": null,
     "state_fields": [
      "usage_pct",
      "recent_turns",
@@ -850,7 +1053,7 @@
    "thresholds": {
     "notice": 1.5,
     "recommend": 2.5,
-    "request": 4.0,
+    "request": 4,
     "promote": 0.7
    },
    "outputs": [
@@ -909,79 +1112,159 @@
    },
    "inputs": [
     {
-     "context": "CPI release at 8:30, market digesting",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "intraday_vol_ratio": 2.0,
-     "symbol": "SPY",
-     "venue": "NYSE"
-    },
-    {
-     "context": "Unexpected military escalation overnight",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "intraday_vol_ratio": 3.0,
-     "symbol": "SPY",
-     "venue": "NYSE"
-    },
-    {
-     "context": "Quiet session",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "intraday_vol_ratio": 1.0,
-     "symbol": "KO",
-     "venue": "NYSE"
-    },
-    {
-     "context": "FOMC day",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "intraday_vol_ratio": 4.5,
-     "symbol": "SPY",
-     "venue": "NYSE"
-    },
-    {
-     "context": "FOMC decision and presser",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "intraday_vol_ratio": 2.6,
-     "symbol": "QQQ",
+     "context": "CHTR at 2023-12-05 10:30 ET: first-hour 5m vol 1.71x its 20-session norm; gap -0.41%; relative volume 1.34x. EDGAR: no 8-K filed in the prior 30 hours.",
+     "data_cutoff": "2023-12-05T15:30:00Z",
+     "intraday_vol_ratio": 1.711,
+     "symbol": "CHTR",
      "venue": "NASDAQ"
     },
     {
-     "context": "Exchange outage halted trading for 20 minutes",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "intraday_vol_ratio": 1.8,
-     "symbol": "AAPL",
+     "context": "CHTR at 2023-04-28 10:30 ET: first-hour 5m vol 11.05x its 20-session norm; gap +0.78%; relative volume 6.31x. EDGAR: CHARTER COMMUNICATIONS, INC. /MO/ 8-K: Items 2.02 Results of Operations and Financial Condition accepted 2023-04-28 07:01 ET.",
+     "data_cutoff": "2023-04-28T14:30:00Z",
+     "intraday_vol_ratio": 11.055,
+     "symbol": "CHTR",
      "venue": "NASDAQ"
     },
     {
-     "context": "Netflix earnings after the close yesterday",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "intraday_vol_ratio": 2.2,
-     "symbol": "NFLX",
+     "context": "AVGO at 2023-05-30 10:30 ET: first-hour 5m vol 8.89x its 20-session norm; gap +2.75%; relative volume 10.08x. EDGAR: no 8-K filed in the prior 30 hours.",
+     "data_cutoff": "2023-05-30T14:30:00Z",
+     "intraday_vol_ratio": 8.891,
+     "symbol": "AVGO",
      "venue": "NASDAQ"
     },
     {
-     "context": "Slightly busy",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "intraday_vol_ratio": 1.2,
-     "symbol": "JNJ",
-     "venue": "NYSE"
+     "context": "SBUX at 2024-07-19 10:30 ET: first-hour 5m vol 1.48x its 20-session norm; gap +0.66%; relative volume 1.11x. EDGAR: no 8-K filed in the prior 30 hours.",
+     "data_cutoff": "2024-07-19T14:30:00Z",
+     "intraday_vol_ratio": 1.484,
+     "symbol": "SBUX",
+     "venue": "NASDAQ"
     },
     {
-     "context": "x",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "intraday_vol_ratio": 5,
-     "symbol": "PNKX",
-     "venue": "OTC"
+     "context": "AMD at 2023-05-04 10:30 ET: first-hour 5m vol 2.00x its 20-session norm; gap +0.00%; relative volume 1.17x. EDGAR: no 8-K filed in the prior 30 hours.",
+     "data_cutoff": "2023-05-04T14:30:00Z",
+     "intraday_vol_ratio": 1.998,
+     "symbol": "AMD",
+     "venue": "NASDAQ"
+    },
+    {
+     "context": "CMCSA at 2023-12-05 10:30 ET: first-hour 5m vol 1.90x its 20-session norm; gap -0.30%; relative volume 1.17x. EDGAR: no 8-K filed in the prior 30 hours.",
+     "data_cutoff": "2023-12-05T15:30:00Z",
+     "intraday_vol_ratio": 1.898,
+     "symbol": "CMCSA",
+     "venue": "NASDAQ"
     }
    ],
    "expected": [
-    "notice",
-    "request",
-    "silent",
-    "request",
-    "recommend",
-    "recommend",
-    "notice",
-    "silent",
-    "abstain"
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "sets": [
+    {
+     "set_id": "L7.D:17641de641ec",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2023-12-05T15:30:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=CHTR",
+       "published_at": "2023-12-05T15:30:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "numbers point-in-time from real bars; EDGAR item titles verbatim; template text"
+    },
+    {
+     "set_id": "L7.D:60b1b41b4070",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2023-04-28T14:30:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=CHTR",
+       "published_at": "2023-04-28T14:30:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      },
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1091667/000109166723000082/chtr-20230428.htm",
+       "published_at": "2023-04-28T11:01:25Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "numbers point-in-time from real bars; EDGAR item titles verbatim; template text"
+    },
+    {
+     "set_id": "L7.D:8d8a74776283",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2023-05-30T14:30:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AVGO",
+       "published_at": "2023-05-30T14:30:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "numbers point-in-time from real bars; EDGAR item titles verbatim; template text"
+    },
+    {
+     "set_id": "L7.D:e6de68fde239",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2024-07-19T14:30:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=SBUX",
+       "published_at": "2024-07-19T14:30:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "numbers point-in-time from real bars; EDGAR item titles verbatim; template text"
+    },
+    {
+     "set_id": "L7.D:5f4526a066c4",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2023-05-04T14:30:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AMD",
+       "published_at": "2023-05-04T14:30:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "numbers point-in-time from real bars; EDGAR item titles verbatim; template text"
+    },
+    {
+     "set_id": "L7.D:d80fd102fdd4",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2023-12-05T15:30:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=CMCSA",
+       "published_at": "2023-12-05T15:30:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "numbers point-in-time from real bars; EDGAR item titles verbatim; template text"
+    }
    ],
    "visual": {
     "fed": [
@@ -1160,79 +1443,153 @@
    },
    "inputs": [
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "drawdown_pct": 1.0,
-     "recent_trades": "W L W L L W, mixed",
-     "strategy": "orb_5m",
+     "data_cutoff": "2024-06-18T20:00:00Z",
+     "drawdown_pct": 0,
+     "recent_trades": "AAPL last trades: 2023-11-16 in 190.08 out 189.98 time -0.03R; 2023-12-05 in 193.24 out 194.67 time +0.60R; 2023-12-14 in 199.25 out 196.39 stop -1.00R; 2024-05-03 in 185.01 out 181.51 stop -1.00R; 2024-06-11 in 197.76 out 214.38 time +5.65R",
+     "strategy": "breakout_20d:AAPL",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "drawdown_pct": 2.5,
-     "recent_trades": "Five losses in a row, all stopped out by an opening reversal",
-     "strategy": "orb_5m",
+     "data_cutoff": "2023-09-08T20:00:00Z",
+     "drawdown_pct": 0.386,
+     "recent_trades": "ADBE last trades: 2023-02-02 in 396.47 out 386.37 stop -1.00R; 2023-05-25 in 380.19 out 436.50 time +6.50R; 2023-06-09 in 455.57 out 495.26 time +2.69R; 2023-07-31 in 543.60 out 530.54 stop -1.00R; 2023-08-31 in 551.95 out 560.23 time +0.62R",
+     "strategy": "breakout_20d:ADBE",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "drawdown_pct": 6.5,
-     "recent_trades": "Mixed",
-     "strategy": "orb_5m",
+     "data_cutoff": "2023-12-14T21:00:00Z",
+     "drawdown_pct": 0,
+     "recent_trades": "AMD last trades: 2023-03-17 in 98.36 out 94.41 stop -1.00R; 2023-05-10 in 97.23 out 103.76 time +1.51R; 2023-05-25 in 117.90 out 117.87 time -0.01R; 2023-11-14 in 120.37 out 119.16 time -0.28R; 2023-12-07 in 125.73 out 138.03 time +3.57R",
+     "strategy": "breakout_20d:AMD",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "drawdown_pct": 3.0,
-     "recent_trades": "Losses spread across setups, normal slippage",
-     "strategy": "orb_5m",
+     "data_cutoff": "2024-09-23T20:00:00Z",
+     "drawdown_pct": 4.126,
+     "recent_trades": "AMGN last trades: 2024-01-22 in 311.45 out 305.47 stop -1.00R; 2024-02-05 in 328.62 out 323.29 stop -1.00R; 2024-05-03 in 314.43 out 309.02 stop -1.00R; 2024-06-25 in 324.04 out 318.65 stop -1.00R; 2024-09-16 in 336.62 out 335.35 time -0.20R",
+     "strategy": "breakout_20d:AMGN",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "drawdown_pct": 4.5,
-     "recent_trades": "Every breakout failed after the spread widened",
-     "strategy": "orb_5m",
+     "data_cutoff": "2023-12-21T21:00:00Z",
+     "drawdown_pct": 3.934,
+     "recent_trades": "AMZN last trades: 2023-07-13 in 134.26 out 131.27 stop -1.00R; 2023-08-04 in 140.50 out 137.18 stop -1.00R; 2023-09-14 in 145.38 out 142.16 stop -1.00R; 2023-11-14 in 145.91 out 142.01 stop -1.00R; 2023-12-14 in 149.63 out 153.84 time +1.43R",
+     "strategy": "breakout_20d:AMZN",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "drawdown_pct": 4.0,
-     "recent_trades": "Random",
-     "strategy": "orb_5m",
+     "data_cutoff": "2023-12-18T21:00:00Z",
+     "drawdown_pct": 0,
+     "recent_trades": "AVGO last trades: 2023-05-19 in 681.62 out 812.73 time +8.98R; 2023-05-30 in 853.86 out 832.94 stop -1.00R; 2023-08-31 in 911.98 out 885.47 stop -1.00R; 2023-11-14 in 959.16 out 981.33 time +0.96R; 2023-12-11 in 1003.46 out 1147.00 time +6.47R",
+     "strategy": "breakout_20d:AVGO",
      "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "drawdown_pct": 1.5,
-     "recent_trades": "Three gap fades lost on the same news type",
-     "strategy": "orb_5m",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "drawdown_pct": 0.2,
-     "recent_trades": "One small loss",
-     "strategy": "orb_5m",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "drawdown_pct": 1,
-     "recent_trades": "x",
-     "strategy": "orb_5m",
-     "venue": "OTC"
     }
    ],
    "expected": [
-    "silent",
-    "recommend",
-    "request",
-    "notice",
-    "request",
-    "recommend",
-    "notice",
-    "silent",
-    "abstain"
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "sets": [
+    {
+     "set_id": "L7.E:0c7b7244cbf5",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2024-06-18T20:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AAPL",
+       "published_at": "2024-06-18T20:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "paper replay of a code rule on real bars; trades listed are the replay's last five"
+    },
+    {
+     "set_id": "L7.E:46cef4fc8d1c",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2023-09-08T20:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=ADBE",
+       "published_at": "2023-09-08T20:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "paper replay of a code rule on real bars; trades listed are the replay's last five"
+    },
+    {
+     "set_id": "L7.E:8450aa858392",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2023-12-14T21:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AMD",
+       "published_at": "2023-12-14T21:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "paper replay of a code rule on real bars; trades listed are the replay's last five"
+    },
+    {
+     "set_id": "L7.E:5e707a84f36e",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2024-09-23T20:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AMGN",
+       "published_at": "2024-09-23T20:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "paper replay of a code rule on real bars; trades listed are the replay's last five"
+    },
+    {
+     "set_id": "L7.E:8bb036f0d5ae",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2023-12-21T21:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AMZN",
+       "published_at": "2023-12-21T21:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "paper replay of a code rule on real bars; trades listed are the replay's last five"
+    },
+    {
+     "set_id": "L7.E:819f5f2b5d81",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2023-12-18T21:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AVGO",
+       "published_at": "2023-12-18T21:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "paper replay of a code rule on real bars; trades listed are the replay's last five"
+    }
    ],
    "visual": {
     "fed": [
@@ -1242,7 +1599,7 @@
      "drawdown_pct",
      "recent_trades"
     ],
-    "excerpt": "data_cutoff",
+    "excerpt": "recent_trades",
     "state_fields": [
      "drawdown_pct",
      "recent_trades"
@@ -1343,10 +1700,6 @@
      "type": "choice",
      "instructions": "From which note in `notes` does the work on `current_task` start?",
      "criteria": {
-      "n1": "NVDA 10-Q read",
-      "n2": "NVDA segment table",
-      "n3": "Started AMD: MI400 customers",
-      "n4": "AMD pricing",
       "none": "No note relates to the current task"
      }
     }
@@ -1406,178 +1759,11 @@
      }
     }
    },
-   "inputs": [
-    {
-     "current_task": "Model AMD MI400 revenue",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "notes": [
-      {
-       "id": "n1",
-       "text": "NVDA 10-Q read"
-      },
-      {
-       "id": "n2",
-       "text": "NVDA segment table"
-      },
-      {
-       "id": "n3",
-       "text": "Started AMD: MI400 customers"
-      },
-      {
-       "id": "n4",
-       "text": "AMD pricing"
-      }
-     ],
-     "venue": "NASDAQ"
-    },
-    {
-     "current_task": "KO dividend safety",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "notes": [
-      {
-       "id": "n1",
-       "text": "Market recap"
-      },
-      {
-       "id": "n2",
-       "text": "KO payout ratio"
-      },
-      {
-       "id": "n3",
-       "text": "KO FCF"
-      }
-     ],
-     "venue": "NASDAQ"
-    },
-    {
-     "current_task": "TSLA margins",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "notes": [
-      {
-       "id": "n1",
-       "text": "AAPL"
-      },
-      {
-       "id": "n2",
-       "text": "MSFT"
-      },
-      {
-       "id": "n3",
-       "text": "META"
-      },
-      {
-       "id": "n4",
-       "text": "TSLA price cuts"
-      },
-      {
-       "id": "n5",
-       "text": "TSLA COGS"
-      }
-     ],
-     "venue": "NASDAQ"
-    },
-    {
-     "current_task": "Write a CPI note",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "notes": [
-      {
-       "id": "n1",
-       "text": "AAPL"
-      },
-      {
-       "id": "n2",
-       "text": "MSFT"
-      }
-     ],
-     "venue": "NASDAQ"
-    },
-    {
-     "current_task": "INTC foundry",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "notes": [
-      {
-       "id": "n1",
-       "text": "INTC foundry intro"
-      },
-      {
-       "id": "n2",
-       "text": "INTC customers"
-      }
-     ],
-     "venue": "NASDAQ"
-    },
-    {
-     "current_task": "x",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "notes": [
-      {
-       "id": "n1",
-       "text": "a"
-      },
-      {
-       "id": "n1",
-       "text": "b"
-      }
-     ],
-     "venue": "NASDAQ"
-    },
-    {
-     "current_task": "x",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "notes": [
-      {
-       "id": "n1",
-       "text": "a"
-      }
-     ],
-     "venue": "NASDAQ"
-    },
-    {
-     "current_task": "Biotech PDUFA screen",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "notes": [
-      {
-       "id": "n1",
-       "text": "Old ORB backtest"
-      },
-      {
-       "id": "n2",
-       "text": "PDUFA list"
-      },
-      {
-       "id": "n3",
-       "text": "VRTX date"
-      }
-     ],
-     "venue": "NASDAQ"
-    },
-    {
-     "current_task": "x",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "notes": [
-      {
-       "id": "n1",
-       "text": "a"
-      },
-      {
-       "id": "n2",
-       "text": "b"
-      }
-     ],
-     "venue": "OTC"
-    }
-   ],
-   "expected": [
-    "n3",
-    "n2",
-    "n4",
-    "abstain",
-    "n1",
-    "abstain",
-    "abstain",
-    "n2",
-    "abstain"
-   ],
+   "inputs": [],
+   "expected": [],
+   "sets": [],
+   "data_status": "needs_your_data",
+   "data_reason": "needs your data: your research agent's own notes to cut (no public source)",
    "visual": {
     "fed": [
      "venue",
@@ -1585,7 +1771,7 @@
      "current_task",
      "notes"
     ],
-    "excerpt": "notes[0].text",
+    "excerpt": null,
     "state_fields": [
      "current_task",
      "notes"
@@ -1597,10 +1783,6 @@
       "short": "live from",
       "text": "From which note in `notes` does the work on `current_task` start?",
       "options": [
-       "n1",
-       "n2",
-       "n3",
-       "n4",
        "none"
       ]
      }

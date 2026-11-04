@@ -83,7 +83,7 @@ watch(
     <div v-if="agentNote" class="agent-note">
       <b>Agent level, honest note:</b> upstream runs level {{ n }} inside a pi agent session (hooks, tools, compaction).
       This trading scenario is the typed Jev decision that the hook or tool makes, run here as one schema call
-      (inputs, POST /build, Jev via TypeSafe or the mock, POST /policy). The pi session itself is not run for it;
+      (inputs, POST /build, a live Jev call via TypeSafe, POST /policy). The pi session itself is not run for it;
       the original examples still run the real session.
     </div>
 

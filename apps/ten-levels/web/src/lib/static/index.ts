@@ -1,23 +1,20 @@
 /**
- * Patch 0009: static demo mode (VITE_STATIC=1, e.g. GitHub Pages). No backend: level metadata, options, input schemas
- * and the per-set run streams are bundled JSON under <base>/data/ (written by the workbench's publish script).
+ * Patch 0009 / 0013: static demo mode (VITE_STATIC=1, e.g. GitHub Pages). No backend: level metadata, options, input
+ * schemas and the per-set run streams are bundled JSON under <base>/data/ (written by the workbench's publish script).
+ * Every bundled set is REAL market data (unlabelled; news text reduced to the publishable excerpt).
  *
  * Run, per input set:
- *   recorded  a REAL Jev response recorded by the workbench (decisions/runs), sanitised; policy rows computed by the
- *             decisions service over those recorded answers at publish time
- *   mock      the upstream deterministic offline mock over the bundled set, with the decisions service's real state
- *             builder and policy rows computed at publish time (labelled: not a real Jev answer)
- *   edited    inputs that match no bundled set: the mock runs in the browser over the RAW inputs (the state builder and
- *             the policy engine are Python and are not in the demo; labelled)
+ *   recorded  a REAL Jev response recorded live by the workbench (decisions/runs), sanitised; policy rows computed by
+ *             the decisions service over those recorded answers at publish time
+ *   local     anything else (edited inputs, a set without a recording, agent sessions): "Run locally for a live Jev
+ *             answer". No result is fabricated; there is no offline answer path in this build.
  * PAPER ONLY. Nothing here talks to a broker, a model provider or any server.
  */
-import { MockJev } from "./mock";
-
 export const STATIC = import.meta.env.VITE_STATIC === "1";
 export const dataUrl = (p: string) => `${import.meta.env.BASE_URL}data/${p}`;
 
 export type StaticSet = {
-  source: "recorded" | "mock" | "none";
+  source: "recorded" | "none";
   label: string;
   build?: any;
   stream?: { event: string; data: any }[];
@@ -62,47 +59,19 @@ export async function staticBuild(n: number, key: string, input: Record<string, 
 }
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
-const mock = new MockJev();
+export const RUN_LOCALLY = "Run locally for a live Jev answer";
 
 export async function* staticRun(n: number, key: string, input: Record<string, unknown>) {
-  const { option, set } = await findSet(n, key, input);
-  if (set && set.stream && set.source !== "none") {
-    yield { event: "static-note", data: { source: set.source, label: set.label } };
+  const { set, index } = await findSet(n, key, input);
+  if (set && set.stream && set.source === "recorded") {
+    yield { event: "static-note", data: { source: "recorded", label: set.label } };
     for (const e of set.stream) { await sleep(120); yield e; }
     return;
   }
-  // Edited inputs: the browser mock over the raw inputs, with the questions of the first bundled set.
-  const ref = (option.static ?? []).find((s: StaticSet) => s.stream?.some((e) => e.event === "request"));
-  const req = ref?.stream?.find((e: any) => e.event === "request")?.data;
-  if (!req) {
-    yield { event: "static-note", data: { source: "none", label: "Not runnable in the static demo (no bundled questions for this option)." } };
-    yield { event: "option-error", data: { error: "static demo: this option needs the local lab server" } };
-    return;
-  }
-  const schema = !!option.input_schema;
-  yield { event: "static-note", data: { source: "edited", label: schema
-    ? "Edited inputs: offline mock, not a real Jev answer. The mock reads your RAW inputs (the spec's state builder and the policy engine are Python and are not in this demo)."
-    : "Edited inputs: offline mock, not a real Jev answer. Your edited input is sent as the state with the questions of this option's first set; the level's own post-processing is not run in the demo." } };
-  const state = input;
-  const questions = req.questions;
-  await sleep(150);
-  yield { event: "request", data: { kind: "request", provider: "mock", model: mock.model, state, questions } };
-  const t0 = performance.now();
-  const out = mock.systemOne({ state, questions });
-  await sleep(150);
-  yield { event: "response", data: { kind: "response", result: { ...out, meta: { provider: "mock", requestedModel: mock.model, resolvedModel: out.model,
-    elapsedMs: Math.round(performance.now() - t0), attempts: 1, cost: { amount: 0, source: "mock" } } } } };
-  const [id, a] = Object.entries(out.answers)[0] as [string, any];
-  if (schema) {
-    yield { event: "policy", data: { kind: "policy", offline: true, static_unavailable: true, decision: option.decision ?? option.key } };
-    const pick = a.type === "noul" ? `${id} ${a.noul >= 0.5 ? "yes" : "no"}` : a.type === "choice" ? a.choice : `${id} ${a.score.toFixed(2)}`;
-    const confidence = a.type === "noul" ? Math.max(a.noul, 1 - a.noul) : a.confidence;
-    const floor = option.review_floor ?? 0.5;
-    yield { event: "decision", data: { level: n, option: key, input, output: { pick, confidence, gate: confidence >= floor ? "proceed" : "human review",
-      policy: "policy engine not available in demo" } } };
-  } else {
-    yield { event: "decision", data: { level: n, option: key, input, output: out.answers } };
-  }
+  const why = index < 0
+    ? "these inputs were edited, so no recorded answer exists for them"
+    : (set?.label || "no recorded live answer is bundled for this set");
+  yield { event: "static-note", data: { source: "local", label: `${RUN_LOCALLY}: ${why}. This static site makes no model call and shows no result.` } };
   yield { event: "level-done", data: { level: n } };
 }
 

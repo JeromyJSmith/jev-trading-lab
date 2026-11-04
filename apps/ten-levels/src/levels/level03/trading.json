@@ -110,88 +110,217 @@
    },
    "inputs": [
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headline": "Sage Therapeutics agrees to be acquired by Biogen for $12/share in cash; 8-K filed",
-     "published_at": "2026-10-07T12:05:00Z",
-     "source": "newswire (synthetic)",
-     "symbol": "SAGE",
+     "body": "Neuronetics and Greenbrook TMS Announce Definitive Agreement to Merge MALVERN, Pa. and TORONTO, On., August 12, 2024 (GLOBE NEWSWIRE) — Neuronetics, Inc. (NASDAQ: STIM) (“Neuronetics”) and Greenbrook TMS Inc. (OTCMKTS: GBNHF) (“Greenbrook”) today announced that they have entered into a definitive arrangement agreement (the “Definitive Agreement”) in which Neuronetics will acquire all of the outstanding common shares of Greenbrook in an all-stock transaction. “This transaction brings together two of the leaders in the mental health space in the U.S., which will allow us to provide access to innovative care to patients suffering from mental health conditions. Leveraging the significant scale and capabilities of the two businesses, we can drive increased awareness of NeuroStar, consistently deliver best practices, facilitate improved reimbursement on a regional and national level, and provide additional services and training opportunities to all of our customers which can improve their business operations,” said Keith Sullivan, President and Chief Executive Officer of Neuronetics. “Beyond the strategic benefits, we believe this acquisition will help create a more attractive financial profile for the combined company, including the increased scale and growth trajectory of our top line, the ability to realize material cost synergies, the acceleration of our path to profitability, and a bolstered balance sheet. In combination, we expect this transaction will create significant long-term value for shareholders.” “This transaction combines two organizations who share a common mission to better care for the growing number of patients who are suffering from mental health conditions, many of whom are poorly served by medication alone,” said Bill Leonard, President and Chief Executive Officer of Greenbrook. “By combining Neuronetics’ innovative NeuroStar platform as well as their education and training expertise, with Greenbrook’s well established practice operations and suppor",
+     "data_cutoff": "2024-08-12T12:47:00Z",
+     "headline": "Neuronetics and Greenbrook TMS Announce Definitive Agreement to Merge MALVERN, Pa. and TORONTO, On., August 12, 2024 (GLOBE NEWSWIRE) — Neuronetics, Inc.",
+     "published_at": "2024-08-12T12:32:00Z",
+     "source": "SEC EDGAR 8-K Items 2.02, 7.01, 9.01",
+     "symbol": "STIM",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headline": "Snap could be a takeover target, blogger speculates",
-     "published_at": "2026-10-07T12:05:00Z",
-     "source": "newswire (synthetic)",
-     "symbol": "SNAP",
+     "body": "Aquestive Therapeutics Comments on Recent FDA Approval of Non- Injection-Based Epinephrine Product for the Treatment of Anaphylaxis and Reiterates Expected Timing for NDA Filing of Anaphylm™ Your publication date and time will appear here. | Source: Aquestive Therapeutics, Inc. Applauds �rst FDA approval of non-injection-based epinephrine device Reiterates expected timing for �ling of New Drug Application (NDA) for Anaphylm™ (epinephrine) Sublingual Film to the FDA in the �rst quarter of 2025 WARREN, N.J., Aug. 14, 2024 (GLOBE NEWSWIRE) -- Aquestive Therapeutics, Inc. (NASDAQ: AQST) (“Aquestive” or the “Company”), a pharmaceutical company advancing medicines to bring meaningful improvement to patients' lives through innovative science and delivery technologies, today commented on the approval of a non-injection-based device for delivery of epinephrine for the treatment of severe allergic reactions, including anaphylaxis, by the United States Food and Drug Administration (FDA). “Use of epinephrine for the treatment of severe allergic reactions, including anaphylaxis, has been in needle-based form since its original U.S. FDA approval in 1939,” said Daniel Barber, President & Chief Executive Officer of Aquestive. “We are excited to see the FDA’s recent approval of an alternative non-injection-based device form of epinephrine. Literature and patient surveys indicate that adherence and compliance will likely improve as products become less invasive, easier to carry, easier to use, and easier to fit into daily life. We look forward to seeing more products in the hands of patients, including our lead pipeline program, Anaphylm™ (epinephrine) Sublingual Film, if approved by the FDA. Anaphylm is in late-stage Share development and has the potential to be the first and only oral epinephrine product for the treatment of severe allergic reactions, including anaphylaxis.” “As both a clinician and a food allergy patient, I recognize the critical role needle-free epinephrine deliv",
+     "data_cutoff": "2024-08-14T12:23:37Z",
+     "headline": "Aquestive Therapeutics Comments on Recent FDA Approval of Non- Injection-Based Epinephrine Product for the Treatment of Anaphylaxis and Reiterates Expected Timing for NDA Filing of Anaphylm™ Your publication date and time will appear here. ...",
+     "published_at": "2024-08-14T12:08:37Z",
+     "source": "SEC EDGAR 8-K Items 8.01, 9.01",
+     "symbol": "AQST",
+     "venue": "NASDAQ"
+    },
+    {
+     "body": "Workday and Insperity Announce Exclusive Strategic Partnership to Provide Best in Class HR Service and Technology to Small and Midsize Businesses Partnership to Produce Industry-First HR Solution to Help Customers Accelerate Business Growth PLEASANTON, Calif., and HOUSTON, Texas, Feb. 8, 2024 – Workday, Inc. (NASDAQ: WDAY), a leader in enterprise cloud applications for finance and human resources, and Insperity, Inc. (NYSE: NSP), a leading provider of human resources and business performance solutions, today announced an exclusive strategic partnership and plans to jointly develop, brand, market, and sell a preeminent full service HR solution for small and midsize businesses. The combination of Workday’s best in class technology platform and Insperity’s unmatched service experience will yield an industry-first solution to increase the likelihood, degree, and speed of success for growing companies. Through this strategic partnership and joint offering, customers will have the benefit of Insperity’s Workforce Optimization premium service experience, which includes dedicated HR specialists, payroll and benefits, risk management, and compliance support, along with Workday Human Capital Management (HCM). This will enable businesses to seamlessly manage their entire employee lifecycle, from hire to retire, and optimize their talent management, payroll, benefits, and compliance in a unified, cloud-based system. “This strategic partnership is a game-changer for our industry. With Workday’s leading cloud technology and Insperity’s proven HR service, we will be able to offer our clients the best of both worlds,” said Paul J. Sarvadi, chairman and chief executive officer of Insperity. “We’re excited about the potential this brings to accelerate Insperity’s long-term trajectory for growth, profitability, and value creation.” Insperity and Workday bring a combined deep understanding of business challenges and the complexities of a rapidly changing environment. This strategic par",
+     "data_cutoff": "2024-02-08T13:30:42Z",
+     "headline": "Workday and Insperity Announce Exclusive Strategic Partnership to Provide Best in Class HR Service and Technology to Small and Midsize Businesses Partnership to Produce Industry-First HR Solution to Help Customers Accelerate Business ...",
+     "published_at": "2024-02-08T13:15:42Z",
+     "source": "SEC EDGAR 8-K Items 2.02, 7.01, 9.01",
+     "symbol": "NSP",
      "venue": "NYSE"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headline": "Costco beats estimates as expected; comps +6%",
-     "published_at": "2026-10-07T12:05:00Z",
-     "source": "newswire (synthetic)",
-     "symbol": "COST",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headline": "Vertex wins early FDA approval months ahead of PDUFA date",
-     "published_at": "2026-10-07T12:05:00Z",
-     "source": "newswire (synthetic)",
-     "symbol": "VRTX",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headline": "Apple's iPhone 17 goes on sale as announced",
-     "published_at": "2026-10-07T12:05:00Z",
-     "source": "newswire (synthetic)",
-     "symbol": "AAPL",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headline": "Palantir wins $100M Navy contract",
-     "published_at": "2026-10-07T12:05:00Z",
-     "source": "newswire (synthetic)",
-     "symbol": "PLTR",
+     "body": "Ocean Power Technologies Reaches Agreement in Principle for Delivery of Multiple Unmanned Surface Vehicles to US Government Sole Source Contract will lead to further growth with the US Government MONROE TOWNSHIP, NJ, June 26, 2024- Ocean Power Technologies, Inc. (NYSE American: OPTT) (“OPT” or the “Company”), a leader in innovative and cost-effective low-carbon marine power, data, and service solutions, today announced it has reached an agreement in principle on a sole source contract award for multiple WAM-Vs for delivery to a Department of the US Government. The final contract award will be a Firm-Fixed-Price purchase order on a noncompetitive basis. Revenue will be recognized ratably over the course of the contract with an expected near-term delivery date. Due to the sensitive nature of this relationship, terms have not been disclosed. This award builds on the recent commercial success of OPT’s vehicles and PowerBuoys for autonomous Maritime Domain Awareness, Counter Unmanned Underwater Vehicles, and Mine Counter Measure Solutions in North America, Sub Saharan Africa, and the Middle East. Philipp Stratmann, CEO and President of OPT, expressed his enthusiasm about this revenue generating contract, stating, “We believe this agreement is further proof that our systems form an important part of building out the future of ocean security. Using small Unmanned Surface Vehicles, like our WAM-V, is a cost-efficient force multiplier for the US Government and other offshore operators. The dual use nature of our technologies enables us to provide systems to a broad set of customers.” For additional information about OPT and its services, please visit our website Ocean Power Technologies. ABOUT OCEAN POWER TECHNOLOGIES OPT provides intelligent maritime solutions and services that enable safer, cleaner, and more productive ocean operations for the defense and security, oil and gas, science and research, and offshore wind markets. Our PowerBuoy® platforms provide clean and reli",
+     "data_cutoff": "2024-06-26T20:20:31Z",
+     "headline": "Ocean Power Technologies Reaches Agreement in Principle for Delivery of Multiple Unmanned Surface Vehicles to US Government Sole Source Contract will lead to further growth with the US Government MONROE TOWNSHIP, NJ, June 26, 2024- Ocean ...",
+     "published_at": "2024-06-26T20:05:31Z",
+     "source": "SEC EDGAR 8-K Items 8.01, 9.01",
+     "symbol": "OPTT",
      "venue": "NYSE"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headline": "This AI stock could 10x, says newsletter",
-     "published_at": "2026-10-07T12:05:00Z",
-     "source": "newswire (synthetic)",
-     "symbol": "GRWX",
+     "body": "PRESS RELEASE OF THE COMPANY DATED OCTOBER 25, 2024 Exhibit 99.1 Avalon GloboCare and Qi Diagnostics Enter into Memorandum of Understanding for Proposed Co-Development of Real-Time Cannabis Breathalyzer for Detecting Potential Impaired Driving FREEHOLD, N.J., October 25, 2024 (GLOBE NEWSWIRE) – Avalon GloboCare Corp. (“Avalon” or the “Company”) (NASDAQ: ALBT) , a developer of innovative precision diagnostics and laboratory services, today announced that it entered into a memorandum of understanding (the “MOU”) with Qi Diagnostics Limited (“Qi Diagnostics”), a nanosensor-based diagnostic technologies company, to explore a proposed strategic collaboration to co-develop a VOC (volatile organic compound) nanosensor-based point-of-care cannabis breathalyzer. The MOU provides Avalon with an exclusivity period of 120 days (the “Exclusivity Period”), during which Avalon intends to negotiate with Qi Diagnostics and enter into a definitive agreement regarding the proposed strategic collaboration. If Avalon and Qi Diagnostics enter into a definitive agreement within the Exclusivity Period, then the proposed collaboration would focus on the initial prototype-enabling stage, which would involve critical research, data collection, software development, and drafting of the prototype design of a breathalyzer that is capable of detecting cannabis. Avalon believes that its regulatory expertise would be beneficial to such collaboration, including but not limited to its experience with regulatory pathways, clinical trials, and approval process in the United States. “The proposed collaboration with Qi Diagnostics would be a milestone in our commitment to developing innovative diagnostic solutions,” stated David Jin, M.D., Ph.D., President and Chief Executive Officer of Avalon GloboCare. “We intend to enter into a definitive agreement with Qi Diagnostics during the Exclusivity Period, and then put our effort into the development of a VOC nanosensor-based cannabis breathalyzer that is cap",
+     "data_cutoff": "2024-10-25T13:15:07Z",
+     "headline": "PRESS RELEASE OF THE COMPANY DATED OCTOBER 25, 2024 Exhibit 99.1 Avalon GloboCare and Qi Diagnostics Enter into Memorandum of Understanding for Proposed Co-Development of Real-Time Cannabis Breathalyzer for Detecting Potential Impaired ...",
+     "published_at": "2024-10-25T13:00:07Z",
+     "source": "SEC EDGAR 8-K Items 7.01, 9.01",
+     "symbol": "CHGA",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headline": "Basko withdraws guidance after losing its largest customer, 8-K filed",
-     "published_at": "2026-10-07T12:05:00Z",
-     "source": "newswire (synthetic)",
-     "symbol": "BASK",
+     "body": "Contacts: Alnylam Pharmaceuticals, Inc. Christine Regan Lindenboom (Investors and Media) +1-617-682-4340 Josh Brodsky (Investors) +1-617-551-8276 Alnylam Announces FDA Approval of AMVUTTRA ® (vutrisiran), the First RNAi Therapeutic to Reduce Cardiovascular Death, Hospitalizations and Urgent Heart Failure Visits in Adults with ATTR Amyloidosis with Cardiomyopathy (ATTR-CM) − Novel Mechanism of Action Delivers Rapid Knockdown of Transthyretin, Addressing the Disease at its Source – − Proven Consistency of Effect on Cardiovascular Outcomes, Function, and Quality of Life in ATTR-CM Population Representative of Today’s Patients – – Only Therapeutic Approved in the U.S. to Address Both Cardiomyopathy and Polyneuropathy Manifestations of ATTR Amyloidosis − – Alnylam Offers Multiple Programs to Support Broad and Seamless Patient Access; Majority of Patients Expected to Pay $0 in Out-of-Pocket Costs for AMVUTTRA – – Alnylam to Host Conference Call Today at 6:00 pm ET – CAMBRIDGE, Mass. -- Mar. 20, 2025—Alnylam Pharmaceuticals, Inc. (Nasdaq: ALNY), the leading RNAi therapeutics company, today announced the U.S. Food and Drug Administration (FDA) approval of the supplemental New Drug Application (sNDA) for its RNAi therapeutic, AMVUTTRA ® (vutrisiran), for the treatment of the cardiomyopathy of wild-type or hereditary transthyretin-mediated amyloidosis (ATTR-CM) in adults to reduce cardiovascular mortality, cardiovascular hospitalizations and urgent heart failure visits. The approval expands the indication for AMVUTTRA, which now becomes the first and only therapeutic approved by the FDA for the treatment of ATTR-CM and the polyneuropathy of hereditary transthyretin-mediated amyloidosis (hATTR-PN) in adults. ATTR-CM is a devastating, rapidly progressive, and ultimately fatal disease estimated to affect approximately 150,000 people in the U.S. and over 300,000 people worldwide. There is no cure for ATTR-CM, and the deposition of misfolded transthyretin (TTR) fibrils causes irre",
+     "data_cutoff": "2025-03-20T22:28:54Z",
+     "headline": "Contacts: Alnylam Pharmaceuticals, Inc.",
+     "published_at": "2025-03-20T22:13:54Z",
+     "source": "SEC EDGAR 8-K Items 8.01",
+     "symbol": "ALNY",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headline": "PNKX takeover",
-     "published_at": "2026-10-07T12:05:00Z",
-     "source": "newswire (synthetic)",
-     "symbol": "PNKX",
-     "venue": "OTC"
+     "body": "​ ​ ​ Cryoport Completes CRYOPDP Divestiture and Commences Strategic Partnership with DHL Group ​ NASHVILLE, Tennessee, June 12, 2025 - Cryoport, Inc. (Nasdaq: CYRX) ( “ Cryoport ” or the “ Company ” ), a leader in temperature-controlled supply chain solutions for the Life Sciences, with a focus on regenerative medicine, today announced the completion of the previously disclosed divestiture of its specialty courier business, CRYOPDP, to DHL Group ( “ DHL ” ), one of the world ’ s leading logistics providers, in a transaction that includes cash payments of approximately $200 million to Cryoport. ​ Concurrently, Cryoport and DHL have established a strategic partnership aimed at enhancing their respective supply chain service offerings for the global life sciences and healthcare sector. This newly formed strategic partnership enables the companies to collaborate on strategic opportunities, leveraging Cryoport's industry-leading expertise in specialized supply chain solutions with DHL ’ s expansive global health logistics infrastructure and services, bringing an array of specialized pharma logistics and services to the rapidly growing life science and healthcare market segment. ​ Jerrell Shelton, CEO of Cryoport, commented, “ Our strategic partnership and this transaction mark a significant step that contributes to the continued evolution of our industry and aligns with Cryoport ’ s long-term strategic vision. With this partnership, we are enhancing our core capabilities as we develop a strong global partner network. We believe this partnership with DHL will enhance our positioning in the Asia Pacific ( “ APAC ” ) and Europe, Middle East and Africa ( “ EMEA ” ) regions where it will reshape our competitive profile. It provides for greater opportunities to offer highly targeted, top-tier services in these regions in response to growing market demand. Most importantly, it allows us to intensify our focus on advancing our Life Science Services platform globally, particular",
+     "data_cutoff": "2025-06-13T20:10:20Z",
+     "headline": "​ ​ ​ Cryoport Completes CRYOPDP Divestiture and Commences Strategic Partnership with DHL Group ​ NASHVILLE, Tennessee, June 12, 2025 - Cryoport, Inc.",
+     "published_at": "2025-06-13T19:55:20Z",
+     "source": "SEC EDGAR 8-K Items 2.01, 7.01, 9.01",
+     "symbol": "CYRX",
+     "venue": "NASDAQ"
+    },
+    {
+     "body": "Intuitive Machines Strengthens Lunar Service Capabilities with $116.9 million NASA Lunar Contract Award Houston, TX – August 29, 2024 – NASA has awarded Intuitive Machines, Inc. (Nasdaq: LUNR, LUNRW) (“Intuitive Machines”) (“Company”), a leading space exploration, infrastructure, and services company, a $116.9 million contract to deliver six science and technology payloads, including one European Space Agency-led drill suite to the Moon’s South Pole. This award will leverage Intuitive Machines’ lunar delivery, data transmission, and autonomous operation capabilities to explore the region targeted for sustained human operations. “Over the last several years, we’ve witnessed NASA’s successful Artemis I mission and the campaign’s progress toward sustainably returning humans to the surface of the Moon, highlighting the importance of autonomous missions that advance humanity’s understanding of the Moon and the commercial services required to support the industry,” said Intuitive Machines CEO Steve Altemus. “Intuitive Machines looks forward to working closely with the NASA team to deliver mission success once again.” As part of NASA’s Commercial Lunar Payload Services (CLPS) initiative, this marks Intuitive Machines’ fourth contract award to deliver science and technology payloads and return valuable data while autonomously operating on the surface of the Moon. Commercial payload mass is expected to be available in addition to CLPS payloads, including: • Lunar Explorer Instrument for Space Biology Applications (LEIA) will deliver yeast to the lunar surface and study its response to radiation and lunar gravity. LEIA is managed by NASA’s Ames Research Center. • Package for Resource Observation and In-Situ Prospecting for Exploration, Characterization, and Testing (PROSPECT) is a suite of instruments that will extract samples from beneath the lunar surface to identify possible volatiles (water, ice, or gas) trapped at extremely cold temperatures. PROSPECT is led by the Europ",
+     "data_cutoff": "2024-08-29T20:45:39Z",
+     "headline": "Intuitive Machines Strengthens Lunar Service Capabilities with $116.9 million NASA Lunar Contract Award Houston, TX – August 29, 2024 – NASA has awarded Intuitive Machines, Inc.",
+     "published_at": "2024-08-29T20:30:39Z",
+     "source": "SEC EDGAR 8-K Items 7.01, 8.01, 9.01",
+     "symbol": "LUNR",
+     "venue": "NASDAQ"
     }
    ],
    "expected": [
-    "grade_a",
-    "grade_c",
-    "grade_b",
-    "grade_a",
-    "grade_c",
-    "grade_b",
-    "grade_c",
-    "grade_a",
-    "abstain"
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "sets": [
+    {
+     "set_id": "L3.A:001ed3444852",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-08-12T12:47:00Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1227636/000119312524198417/d760452dex992.htm",
+       "published_at": "2024-08-12T12:32:00Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real 8-K text found by EDGAR full-text search \"definitive agreement\""
+    },
+    {
+     "set_id": "L3.A:57e6bd7082f6",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-08-14T12:23:37Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1398733/000162828024037053/aqst-pressreleasefinalx8.htm",
+       "published_at": "2024-08-14T12:08:37Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real 8-K text found by EDGAR full-text search \"FDA approval\""
+    },
+    {
+     "set_id": "L3.A:1fd71fe33169",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-02-08T13:30:42Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1000753/000100075324000007/ex992.htm",
+       "published_at": "2024-02-08T13:15:42Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real 8-K text found by EDGAR full-text search \"strategic partnership\""
+    },
+    {
+     "set_id": "L3.A:e5de75204313",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-06-26T20:20:31Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1378140/000149315224025260/ex99-2.htm",
+       "published_at": "2024-06-26T20:05:31Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real 8-K text found by EDGAR full-text search \"contract award\""
+    },
+    {
+     "set_id": "L3.A:2f070cc5f1da",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-10-25T13:15:07Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1630212/000121390024090541/ea021863201ex99-1_avalon.htm",
+       "published_at": "2024-10-25T13:00:07Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real 8-K text found by EDGAR full-text search \"definitive agreement\""
+    },
+    {
+     "set_id": "L3.A:be35e0731733",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2025-03-20T22:28:54Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1178670/000117867025000038/pressreleaseforcmapproval.htm",
+       "published_at": "2025-03-20T22:13:54Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real 8-K text found by EDGAR full-text search \"FDA approval\""
+    },
+    {
+     "set_id": "L3.A:cbedefe1066c",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2025-06-13T20:10:20Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1124524/000155837025008613/cyrx-20250611xex99d1.htm",
+       "published_at": "2025-06-13T19:55:20Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real 8-K text found by EDGAR full-text search \"strategic partnership\""
+    },
+    {
+     "set_id": "L3.A:0c8b828c1ab1",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-08-29T20:45:39Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1844452/000184445224000103/ex991cp-22contractaward.htm",
+       "published_at": "2024-08-29T20:30:39Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real 8-K text found by EDGAR full-text search \"contract award\""
+    }
    ],
    "visual": {
     "fed": [
@@ -429,82 +558,11 @@
      }
     }
    },
-   "inputs": [
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "plan": "Buy on a hold of 130; stop 121 (below the base); 0.5% risk; exit before earnings if not working.",
-     "symbol": "NVDA",
-     "thesis": "Data center capex guides up 30% at hyperscalers; consensus models only 15%, so FY27 EPS is too low.",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "plan": "Buy.",
-     "symbol": "TSLA",
-     "thesis": "Tesla is the future.",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "plan": "Will figure out the entry later.",
-     "symbol": "AMD",
-     "thesis": "MI400 wins at two hyperscalers not in consensus.",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "plan": "Short below 30 on a failed bounce; stop 35; 0.25% risk; cover on 10-K filing.",
-     "symbol": "SMCI",
-     "thesis": "Restatement risk: 4.02 filed, auditor resigned, covenants tested in Q4.",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "plan": "Buy some, maybe a stop.",
-     "symbol": "AAPL",
-     "thesis": "Apple is a good company.",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "plan": "Buy 880, stop 840, 0.5% risk.",
-     "symbol": "COST",
-     "thesis": "Membership fee hike not in numbers.",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "plan": "Buy calls spread capped at 0.3% risk; exit on decision.",
-     "symbol": "VRTX",
-     "thesis": "PDUFA Oct 30; panel voted 12-1 for; options imply a 6% move vs our 12% base case.",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "plan": "All in.",
-     "symbol": "GME",
-     "thesis": "Saw it on a forum.",
-     "venue": "NYSE"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "plan": "y",
-     "symbol": "PNKX",
-     "thesis": "x",
-     "venue": "OTC"
-    }
-   ],
-   "expected": [
-    "review",
-    "pass",
-    "watch",
-    "review",
-    "pass",
-    "watch",
-    "review",
-    "pass",
-    "abstain"
-   ],
+   "inputs": [],
+   "expected": [],
+   "sets": [],
+   "data_status": "needs_your_data",
+   "data_reason": "needs your data: the trader's own written trade ideas; no public real source",
    "visual": {
     "fed": [
      "symbol",
@@ -513,7 +571,7 @@
      "thesis",
      "plan"
     ],
-    "excerpt": "plan",
+    "excerpt": null,
     "state_fields": [
      "symbol",
      "thesis",
@@ -758,88 +816,217 @@
    },
    "inputs": [
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headline": "Netflix revenue +17% organic, operating margin expands 4 pts, raises full-year guide",
-     "published_at": "2026-10-07T12:05:00Z",
-     "source": "newswire (synthetic)",
-     "symbol": "NFLX",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headline": "Walgreens EPS beat driven by a one-time tax benefit; sales fall; guide cut",
-     "published_at": "2026-10-07T12:05:00Z",
-     "source": "newswire (synthetic)",
-     "symbol": "WBA",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headline": "PepsiCo revenue flat, margins stable, outlook reaffirmed",
-     "published_at": "2026-10-07T12:05:00Z",
-     "source": "newswire (synthetic)",
-     "symbol": "PEP",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headline": "Azure +33%, operating margin up, guide above street",
-     "published_at": "2026-10-07T12:05:00Z",
-     "source": "newswire (synthetic)",
-     "symbol": "MSFT",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headline": "Nike gross margin falls 3 pts, guidance withdrawn",
-     "published_at": "2026-10-07T12:05:00Z",
-     "source": "newswire (synthetic)",
-     "symbol": "NKE",
+     "body": "EMERGENT BIOSO LUTIONS REPORTS THIRD QUARTER 2024 FINANCIAL RESULTS • Third Quarter 2024 Total Revenues of $293.8 million, increase of 9% versus prior year • Third Quarter 2024 Net Income of $114.8 million, increase of 144% versus prior year • Third Quarter 2024 Adjusted EBITDA of $105.3 million, in [...] Q3 2023 ($ in millions, except per share amounts) Q3 2024 Q3 2023 % Change Total Revenues $ 293.8 $ 270.5 9 % Net Income (Loss) $ 114.8 $ (263.4) 144 % Net Income (Loss) per Diluted Share $ 2.06 $ (5.08) 141 % Adjusted Net Income (Loss) (2) $ 76.2 $ (56.2) 236 % Adjusted Net Income (Loss) per Diluted Share (2) $ 1.37 $ (1.09) 226 % Adjusted EBITDA (2) $ 105.3 $ 19.8 432 % Total Segment Gross Margin % (2) 57 % 33 % Total Segment Adjusted Gross Margin % (2) 59 % 38 % Year to Date ( “ YTD ” ) 2024 vs. YTD 2023 ($ in millions, except per share amounts) YTD 2024 YTD 2023 % Change Total Revenues $ 848.9 $ 772.7 10 % Net Loss $ (159.3) $ (711.0) 78 % Net Loss per Diluted Share $ (3.03) $ (13.97) 78 % Adjusted Net Loss (2) $ (14.7) $ (273.0) 95 % Adjusted Net Loss per Diluted Share (2) $ (0.28) $ (5.36) 95 % Adjusted EBITDA (2) $ 162.1 $ (25.7) 731 % Total Segment Gross Margin % (2) 32 % 31 % Total Segment Adjusted Gross Margin % (2) 46 % 33 % 1 SELECT Q3 2024 BUSINESS UPDATES • Secured a new Term Loan for $250 million with OHA Agency, LLC as administrative agent. • Closed on a new asset backed loan facility for $100 million with Wells Fargo Bank, National Association. • Received $75 million for the sale of our RSDL ® (Reactive Skin Decontamination Lotion) product to a subsidiary of SERB Pharmaceuticals (\"SERB\"), subject to customary adjustments based on inventory value at closing • Completed the sale of the Baltimore-Camden manufacturing site for $35 million, including customary post-closing adjustments • Sold an underutilized warehouse at our Canton, MA facility for $7 million • Received $50 million in the third quarter related to the resolution of the contractual dis",
+     "data_cutoff": "2024-11-06T21:27:02Z",
+     "headline": "EMERGENT BIOSO LUTIONS REPORTS THIRD QUARTER 2024 FINANCIAL RESULTS • Third Quarter 2024 Total Revenues of $293.8 million, increase of 9% versus prior year • Third Quarter 2024 Net Income of $114.8 million, increase of 144% versus prior ...",
+     "published_at": "2024-11-06T21:12:02Z",
+     "source": "SEC EDGAR 8-K Items 2.02, 7.01, 9.01",
+     "symbol": "EBS",
      "venue": "NYSE"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headline": "Ford beats on gain from sale of a stake; maintains outlook",
-     "published_at": "2026-10-07T12:05:00Z",
-     "source": "newswire (synthetic)",
-     "symbol": "F",
-     "venue": "NYSE"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headline": "Costco sales +8%, membership income +10%, margins expand, raises target",
-     "published_at": "2026-10-07T12:05:00Z",
-     "source": "newswire (synthetic)",
-     "symbol": "COST",
+     "body": "Contact: Kathleen Nemeth Omnicell, Inc. Senior Vice President, Investor Relations 4220 North Freeway 650-435-3318 Fort Worth, TX 76137 [e-mail withheld] Omnicell Announces First Quarter 2024 Results Results exceed prior first quarter guidance across all metrics Total GAAP revenues of $246 million FORT WORTH, Texas -- May 2, 2024 -- Omnicell, Inc. (NASDAQ:OMCL) (“Omnicell,” “we,” “our,” “us,” “management,” or the “Company”), a leader in transforming the pharmacy care delivery model, today announced results for its first quarter ended March 31, 2024. Randall Lipps, chairman, president, chief executive officer, and founder of Omnicell, said, “We are pleased with the first quarter results that we announced today, which exceeded our previously issued guidance across all key metrics, including revenue, non-GAAP EBITDA and non-GAAP earnings per share.” “As we have navigated through a challenging customer environment, we have continued to place a priority on innovation. Reflecting this, we recently hosted our customer event, Illuminate 2024, during which we announced new and exciting outcomes-based solutions for our XT automated dispensing systems platform. Key among these is XTExtend, among other recently introduced enhancements for our XT automated dispensing systems that are part of our comprehensive XTAmplify offering, which appears to be resonating very well with our customers,” Mr. Lipps continued. “Finally, last quarter, we announced that we initiated a holistic review of our business in an effort to identify areas for financial or operational improvement intended to enhance stockholder value. That work is underway, and we are optimistic that when completed, the results of this review will positively impact our performance. We remain confident in Omnicell’s long-term opportunities as we work to transform the pharmacy care delivery model across the continuum of care,” Mr. Lipps concluded. Financial Results Total GAAP revenues for the first quarter of 2024 w",
+     "data_cutoff": "2024-05-02T11:47:29Z",
+     "headline": "Contact: Kathleen Nemeth Omnicell, Inc.",
+     "published_at": "2024-05-02T11:32:29Z",
+     "source": "SEC EDGAR 8-K Items 2.02, 2.05, 9.01",
+     "symbol": "OMCL",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headline": "Snap misses revenue, margins contract, no guidance",
-     "published_at": "2026-10-07T12:05:00Z",
-     "source": "newswire (synthetic)",
-     "symbol": "SNAP",
+     "body": "Scholastic Reports Fourth Quarter and Fiscal 2025 Results Strong Execution and Cost Management Deliver Adjusted EBITDA In Line With Original Guidance Returned Over $90 Million to Shareholders During Fiscal Year Targeting Robust Profit Growth in Fiscal 2026, With Continued Cost Management New York –  [...] 1 Fiscal 2025 Q4 Review In $ millions (except per share data) Fourth Quarter Change Fiscal 2025 Fiscal 2024 $ % Revenues $ 508.3 $ 474.9 $ 33.4 7 % Operating income (loss) $ 53.5 $ 47.2 $ 6.3 13 % Earnings (loss) before taxes $ 48.9 $ 47.3 $ 1.6 3 % Diluted earnings (loss) per share $ 0.59 $ 1.23 $ (0.64) (52) % Operating income (loss), ex. one-time items* $ 63.4 $ 66.8 $ (3.4) (5) % Diluted earnings (loss) per share, ex. one-time items * $ 0.87 $ 1.73 $ (0.86) (50) % Adjusted EBITDA* $ 91.2 $ 90.7 $ 0.5 1 % * Please refer to the non-GAAP financial tables attached Revenues increased 7% to $508.3 million reflecting higher revenues in Children’s Book Publishing and Distribution and the contribution of 9 Story Media Group, recorded in the Entertainment segment, partly offset by lower sales in Education Solutions. Operating Income increased 13% to $53.5 million in the quarter compared to $47.2 million a year ago, including $9.9 million and $19.6 million in one-time charges in each period, respectively. Excluding one-time charges in both periods, operating income decreased $3.4 million, reflecting the timing of employee-related expenses in the quarter. Adjusted EBITDA (a non-GAAP measure of operations explained in the accompanying tables) increased 1% to $91.2 million. Quarterly Results Children’s Book Publishing and Distribution In the fiscal fourth quarter, the Children’s Book Publishing and Distribution segment’s revenues increased 9% to $288.2 million. In School Reading Events, Book Fairs revenues were $177.8 million, up 5% from the prior year period, reflecting higher fair count. Book Clubs revenues were $13.1 million, a decline of 9% from the prior year period,",
+     "data_cutoff": "2025-07-24T20:16:31Z",
+     "headline": "Scholastic Reports Fourth Quarter and Fiscal 2025 Results Strong Execution and Cost Management Deliver Adjusted EBITDA In Line With Original Guidance Returned Over $90 Million to Shareholders During Fiscal Year Targeting Robust Profit ...",
+     "published_at": "2025-07-24T20:01:31Z",
+     "source": "SEC EDGAR 8-K Items 2.02, 9.01",
+     "symbol": "SCHL",
+     "venue": "NASDAQ"
+    },
+    {
+     "body": "2375 Waterview Drive Northbrook, IL 60062 www.cfindustries.com CF Industries Holdings, Inc. Reports First Quarter 2024 Net Earnings of $194 Million, Adjusted EBITDA of $459 million Severe Cold, High Maintenance Activity Leads to Challenging Production Environment Continued Strong Cash Generation Out [...] (4) Free cash flow is defined as net cash from operating activities less capital expenditures and distributions to noncontrolling interest. See reconciliation of free cash flow to the most directly comparable GAAP measure in the table accompanying this release. 4 Consolidated Results Three months ended March 31, 2024 2023 (dollars in millions, except per share and per MMBtu amounts) Net sales $ 1,470 $ 2,012 Cost of sales 1,061 1,149 Gross margin $ 409 $ 863 Gross margin percentage 27.8 % 42.9 % Net earnings attributable to common stockholders $ 194 $ 560 Net earnings per diluted share $ 1.03 $ 2.85 EBITDA (1) $ 488 $ 924 Adjusted EBITDA (1) $ 459 $ 866 Sales volume by product tons (000s) 4,524 4,535 Natural gas supplemental data (per MMBtu): Natural gas costs in cost of sales (2) $ 2.73 $ 5.14 Realized derivatives loss in cost of sales (3) 0.46 1.48 Cost of natural gas used for production in cost of sales $ 3.19 $ 6.62 Average daily market price of natural gas Henry Hub (Louisiana) $ 2.43 $ 2.68 Unrealized net mark-to-market gain on natural gas derivatives $ (33) $ (72) Depreciation and amortization $ 253 $ 206 Capital expenditures $ 98 $ 69 Production volume by product tons (000s): Ammonia (4) 2,148 2,359 Granular urea 959 1,211 UAN (32%) 1,631 1,598 Ammonium nitrate (AN) 341 388 _______________________________________________________________________________ (1) See reconciliations of EBITDA and adjusted EBITDA to the most directly comparable GAAP measures in the tables accompanying this release. (2) Includes the cost of natural gas used for production and related transportation that is included in cost of sales during the period under the first-in, first-out ",
+     "data_cutoff": "2024-05-01T21:26:00Z",
+     "headline": "2375 Waterview Drive Northbrook, IL 60062 www.cfindustries.com CF Industries Holdings, Inc.",
+     "published_at": "2024-05-01T21:11:00Z",
+     "source": "SEC EDGAR 8-K Items 2.02, 9.01",
+     "symbol": "CF",
      "venue": "NYSE"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headline": "Netflix beats",
-     "published_at": "2026-10-07T15:30:00Z",
-     "source": "newswire (synthetic)",
-     "symbol": "NFLX",
+     "body": "- JKHY 2024.12.31 - Q2 FY'2025 Press Release Mimi L. Carsley | Chief Financial Officer | [e-mail withheld] FOR IMMEDIATE RELEASE Jack Henry & Associates, Inc. Reports Second Quarter Fiscal 2025 Results Second quarter summary : • GAAP revenue increased 5.2% and GAAP operating income increased 3.4% for the fiscal three months ended December 31, 2024, compared to the prior fiscal year quarter. • Non-GAAP adjusted revenue increased 6.1% and non-GAAP adjusted operating income increased 7.3% for the fiscal three months ended December 31, 2024, compared to the prior fiscal year quarter. 1 ▪ GAAP EPS was $1.34 per diluted share for the fiscal three months ended December 31, 2024, compared to $1.26 per diluted share in the prior fiscal year quarter. Fiscal year-to-date summary : • GAAP revenue increased 5.2% and GAAP operating income increased 9.0% for the fiscal year-to-date period ended December 31, 2024, compared to the prior fiscal year-to-date period. • Non-GAAP adjusted revenue increased 5.7% and non-GAAP adjusted operating income increased 4.2% for the fiscal year-to-date period ended December 31, 2024, compared to the prior fiscal year-to-date period. 1 ▪ GAAP EPS was $2.97 per diluted share for the fiscal year-to-date period ended December 31, 2024, compared to $2.65 per diluted share in the prior fiscal year-to-date period. ▪ Cash and cash equivalents were $26 million at December 31, 2024, and $27 million at December 31, 2023. ▪ Debt outstanding related to credit facilities was $150 million at December 31, 2024, and $255 million at December 31, 2023. Full year fiscal 2025 guidance (In millions) : 2 Current GAAP Low High Revenue $2,369 $2,391 Operating margin 3 23.0% 23.2% EPS $5.78 $5.87 Non-GAAP 4 Adjusted revenue $2,353 $2,375 Adjusted operating margin 22.7% 22.8% Second Qtr Revenue Second Qtr Operating Income F'25 YTD Net Income GAAP Non-GAAP 1 GAAP Non-GAAP 1 GAAP Non-GAAP 1 increased increased increased increased increased increased 5.2% 6.1% 3.4% 7.3% 12",
+     "data_cutoff": "2025-02-04T21:35:09Z",
+     "headline": "- JKHY 2024.12.31 - Q2 FY'2025 Press Release Mimi L. Carsley | Chief Financial Officer | [e-mail withheld] FOR IMMEDIATE RELEASE Jack Henry & Associates, Inc.",
+     "published_at": "2025-02-04T21:20:09Z",
+     "source": "SEC EDGAR 8-K Items 2.02, 9.01",
+     "symbol": "JKHY",
+     "venue": "NASDAQ"
+    },
+    {
+     "body": "Evolv Technology Completes Restatement of Previously Issued Financial Statements and Reports Third Quarter, Fourth Quarter and Full Year 2024 Financial Results — Company Regains Compliance with SEC Reporting and NASDAQ Listing Requirements — — Company Achieves Positive Adjusted EBITDA 1 in Q4'24 — • [...] 1 Non-GAAP Financial Measures In this press release, the Company’s adjusted gross profit (loss), adjusted gross margin, adjusted operating expenses, adjusted operating income (loss), adjusted EBITDA, adjusted earnings (loss), and adjusted earnings per diluted share are not presented in accordance with generally accepted accounting principles (GAAP) and are not intended to be used in lieu of GAAP presentations of results of operations. Adjusted operating expenses is defined as operating expenses less stock-based compensation expense, loss on impairment of lease equipment, one-time employee separation costs, and one-time legal and regulatory costs, which management believes provides a more meaningful representation of on-going operating expense levels. One time legal and regulatory costs include one-time legal, accounting and professional fees related to the internal investigation, subsequent restatement, certain one-time regulatory, litigation and legal matters, as well as fees related to the resolution of the U.S. Federal Trade Commission investigation. Adjusted gross profit and adjusted gross margin exclude stock-based compensation expense, amortization of capitalized stock-based compensation, losses from impairment of intangible assets, one-time employee separation costs, and one-time inventory charges, which management believes provides a more meaningful representation of contribution margin. Adjusted operating loss is defined as operating loss, excluding stock-based compensation expense, amortization of capitalized stock-based compensation, losses from impairment of lease equipment and intangible assets, one-time employee separation costs, one-time inventory",
+     "data_cutoff": "2025-04-28T21:16:45Z",
+     "headline": "Evolv Technology Completes Restatement of Previously Issued Financial Statements and Reports Third Quarter, Fourth Quarter and Full Year 2024 Financial Results — Company Regains Compliance with SEC Reporting and NASDAQ Listing Requirements ...",
+     "published_at": "2025-04-28T21:01:45Z",
+     "source": "SEC EDGAR 8-K Items 2.02, 9.01",
+     "symbol": "EVLV",
+     "venue": "NASDAQ"
+    },
+    {
+     "body": "Canopy Growth Reports Fourth Quarter and Fiscal Year 2025 Financial Results Canada cannabis revenue increased 4% in Q4 FY2025 year-over-year, led by 13% growth in Canada medical cannabis Reduced total debt by $293 million or 49% during FY2025 Refined strategy, focus and organizational structure expe [...] We are committed to achieving positive Adjusted EBITDA in the near-term and positive Free Cash Flow over time as we accelerate growth across our global medical cannabis businesses, improve margins in Canada adult-use cannabis and further reduce costs in all areas of our businesses.\" Judy Hong, Chief Financial Officer Fourth Quarter Fiscal Year 2025 Financial Summary (in thousands of Canadian dollars, unaudited) Net Revenue Gross margin percentage Adjusted gross margin percentage 1 Net loss from continuing operations Adjusted EBITDA 2 Free cash flow 3 Reported $65,031 16% 19% $(221,501) $(9,248) $(36,241) vs. Q4 FY2024 (11%) (500) bps (200) bps (134%) 39% (60%) Fiscal Year 2025 Financial Summary (in thousands of Canadian dollars, unaudited) Net Revenue Gross margin percentage Adjusted gross margin percentage 4 Net loss from continuing operations Adjusted EBITDA Free cash flow Reported $268,995 30% 30% $(604,138) $(23,504) $(176,563) vs. FY2024 (9%) 300 bps 300 bps (25%) 60% 24% - 1 1 Adjusted gross margin and adjusted gross margin percentage are non-GAAP measures, and for Q4 FY2025 exclude $2.0 million of restructuring costs recorded in cost of goods sold (\"COGS\") (Q4 FY2024 - excludes $(0.3) million of restructuring cost reversals recorded in COGS). See \"Non-GAAP Measures\" and Schedule 4 for a reconciliation of net revenue to adjusted gross margin. 2 Adjusted EBITDA is a non-GAAP measure. See \"Non-GAAP Measures\" and Schedule 5 for a reconciliation of net loss from continuing operations to adjusted EBITDA. 3 Free cash flow is a non-GAAP measure. See \"Non-GAAP Measures\" and Schedule 6 for a reconciliation of net cash used in operating activities - continuing opera",
+     "data_cutoff": "2025-05-30T11:34:59Z",
+     "headline": "Canopy Growth Reports Fourth Quarter and Fiscal Year 2025 Financial Results Canada cannabis revenue increased 4% in Q4 FY2025 year-over-year, led by 13% growth in Canada medical cannabis Reduced total debt by $293 million or 49% during ...",
+     "published_at": "2025-05-30T11:19:59Z",
+     "source": "SEC EDGAR 8-K Items 2.02, 9.01",
+     "symbol": "CGC",
+     "venue": "NASDAQ"
+    },
+    {
+     "body": "PRESS RELEASE Blackbaud Announces 2024 Third Quarter Results At bbcon® 2024, Blackbaud Launched Its Most Aggressive Innovation Plans Yet Charleston, S.C. (October 30, 2024) — Blackbaud (NASDAQ: BLKB), the leading provider of software for powering social impact, today announced financial results for its third quarter ended September 30, 2024. \"Blackbaud is a clear market leader with a path to penetrate even further into a rich market opportunity while empowering our existing customers through continued innovation. In September at our annual tech conference, bbcon, we introduced six waves of innovation that were met with overwhelming enthusiasm from our customers,\" said Mike Gianoni, president, CEO and vice chairman of the board of directors, Blackbaud. \"Blackbaud remains focused on our operating plan and delivering an attractive multi-year financial profile of balanced mid single-digit plus organic revenue growth and improving profitability and cash flows. We plan to put our strong cash flow to work in a purposeful capital allocation strategy that benefits our stockholders. I continue to be excited about the company's mid- and long-term future.\" Third Quarter 2024 Results Compared to Third Quarter 2023 Results: • GAAP total revenue was $286.7 million, up 3.3% and non-GAAP organic revenue increased 4.3%. • GAAP recurring revenue was $280.0 million, up 4.1% and represented 98% of total revenue. Non-GAAP organic recurring revenue increased 4.1%. • GAAP income from operations was $43.8 million, with GAAP operating margin of 15.3%, an increase of 740 basis points. • Non-GAAP income from operations was $78.9 million, with non-GAAP operating margin of 27.5%, a decrease of 120 basis points. • GAAP net income was $20.5 million, with GAAP diluted earnings per share of $0.40, up $0.23 per share. • Non-GAAP net income was $51.1 million, with non-GAAP diluted earnings per share of $0.99, down $0.13 per share. • Non-GAAP adjusted EBITDA was $95.2 million, down $1.9 million, with n",
+     "data_cutoff": "2024-10-30T11:26:36Z",
+     "headline": "PRESS RELEASE Blackbaud Announces 2024 Third Quarter Results At bbcon® 2024, Blackbaud Launched Its Most Aggressive Innovation Plans Yet Charleston, S.C. (October 30, 2024) — Blackbaud (NASDAQ: BLKB), the leading provider of software for ...",
+     "published_at": "2024-10-30T11:11:36Z",
+     "source": "SEC EDGAR 8-K Items 2.02, 9.01",
+     "symbol": "BLKB",
      "venue": "NASDAQ"
     }
    ],
    "expected": [
-    "drift_candidate",
-    "fade_candidate",
-    "neutral",
-    "drift_candidate",
-    "fade_candidate",
-    "neutral",
-    "drift_candidate",
-    "fade_candidate",
-    "abstain"
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "sets": [
+    {
+     "set_id": "L3.C:2c1cadcc80ea",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-11-06T21:27:02Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1367644/000136764424000176/ebs2024-09x30ex99earningsr.htm",
+       "published_at": "2024-11-06T21:12:02Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real 8-K text found by EDGAR full-text search \"gross margin\""
+    },
+    {
+     "set_id": "L3.C:f0e12a881c8b",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-05-02T11:47:29Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/926326/000092632624000012/exhibit991q1-24.htm",
+       "published_at": "2024-05-02T11:32:29Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real 8-K text found by EDGAR full-text search \"non-GAAP\""
+    },
+    {
+     "set_id": "L3.C:08beef538450",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2025-07-24T20:16:31Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/866729/000086672925000015/fy25q4pressrelease.htm",
+       "published_at": "2025-07-24T20:01:31Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real 8-K text found by EDGAR full-text search \"one-time\""
+    },
+    {
+     "set_id": "L3.C:4e2c03c6facf",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-05-01T21:26:00Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1324404/000132440424000012/cf-05012024_ex991xearnings.htm",
+       "published_at": "2024-05-01T21:11:00Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real 8-K text found by EDGAR full-text search \"gross margin\""
+    },
+    {
+     "set_id": "L3.C:deae3120e413",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2025-02-04T21:35:09Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/779152/000077915225000007/jkhy-20241231xex99pressrel.htm",
+       "published_at": "2025-02-04T21:20:09Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real 8-K text found by EDGAR full-text search \"non-GAAP\""
+    },
+    {
+     "set_id": "L3.C:ee65c1811ed3",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2025-04-28T21:16:45Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1805385/000162828025020351/evlv-20250428exx991.htm",
+       "published_at": "2025-04-28T21:01:45Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real 8-K text found by EDGAR full-text search \"one-time\""
+    },
+    {
+     "set_id": "L3.C:68da89bf5088",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2025-05-30T11:34:59Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1737927/000095017025079321/cgc-ex99_1.htm",
+       "published_at": "2025-05-30T11:19:59Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real 8-K text found by EDGAR full-text search \"gross margin\""
+    },
+    {
+     "set_id": "L3.C:e89f344688c4",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-10-30T11:26:36Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1280058/000128005824000062/blkbq32024exhibit991.htm",
+       "published_at": "2024-10-30T11:11:36Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real 8-K text found by EDGAR full-text search \"non-GAAP\""
+    }
    ],
    "visual": {
     "fed": [
@@ -1083,79 +1270,159 @@
    },
    "inputs": [
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "oos_sharpe": 1.1,
-     "report": "3 params, 2010-2025, 5-fold walk-forward, OOS Sharpe 1.1 vs IS 1.3, 5 bps slippage + commissions.",
-     "strategy": "ema_pullback",
-     "trades": 412
+     "data_cutoff": "2024-09-27T20:00:00Z",
+     "oos_sharpe": 2.07,
+     "report": "Code-run backtest on real daily bars of 12 Nasdaq-100 names (hf_dfg_5m, split-adjusted, survivorship-biased: current members only). Rule: short the open after an up-gap of >= 2%, cover at the close (1 param). Costs 5 bps per side, no borrow fee, no slippage model beyond that. In-sample 2023: 63 trades, mean -66.6 bps, win rate 42.9%, annualised per-trade Sharpe -3.53. Out-of-sample 2024-01..2024-09 (rule not refit): 62 trades, mean 38.8 bps, win rate 53.2%, Sharpe 2.07. No walk-forward; one split.",
+     "strategy": "gap_fade_2pct",
+     "trades": 125,
+     "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "oos_sharpe": null,
-     "report": "Optimized 14 parameters on 2021 only, Sharpe 4.2, no costs.",
-     "strategy": "magic_12",
-     "trades": 88
+     "data_cutoff": "2024-09-28T20:00:00Z",
+     "oos_sharpe": -0.88,
+     "report": "Code-run backtest on real daily bars of 12 Nasdaq-100 names (hf_dfg_5m, split-adjusted, survivorship-biased: current members only). Rule: buy the close above the prior 20-day high, sell the next close (1 param). Costs 5 bps per side, no borrow fee, no slippage model beyond that. In-sample 2023: 282 trades, mean 3.1 bps, win rate 47.5%, annualised per-trade Sharpe 0.25. Out-of-sample 2024-01..2024-09 (rule not refit): 180 trades, mean -12.9 bps, win rate 48.3%, Sharpe -0.88. No walk-forward; one split.",
+     "strategy": "breakout_20d",
+     "trades": 462,
+     "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "oos_sharpe": null,
-     "report": "4 params, 2015-2025 in-sample only, Sharpe 1.4, 2 bps slippage.",
-     "strategy": "gap_fade",
-     "trades": 230
+     "data_cutoff": "2024-09-18T20:00:00Z",
+     "oos_sharpe": 0.07,
+     "report": "Code-run backtest on real daily bars of 12 Nasdaq-100 names (hf_dfg_5m, split-adjusted, survivorship-biased: current members only). Rule: buy the close when RSI(14) < 30, sell the next close (2 params). Costs 5 bps per side, no borrow fee, no slippage model beyond that. In-sample 2023: 249 trades, mean 16.3 bps, win rate 51.0%, annualised per-trade Sharpe 1.42. Out-of-sample 2024-01..2024-09 (rule not refit): 266 trades, mean 1.0 bps, win rate 47.4%, Sharpe 0.07. No walk-forward; one split.",
+     "strategy": "rsi14_dip",
+     "trades": 515,
+     "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "oos_sharpe": 0.9,
-     "report": "2 params, rolling OOS 2008-2025, OOS Sharpe 0.9, 10 bps slippage, borrow fees.",
-     "strategy": "earnings_drift",
-     "trades": 640
+     "data_cutoff": "2024-09-28T20:00:00Z",
+     "oos_sharpe": -1.35,
+     "report": "Code-run backtest on real daily bars of 12 Nasdaq-100 names (hf_dfg_5m, split-adjusted, survivorship-biased: current members only). Rule: buy the open after an up-gap of >= 1%, sell the close (1 param). Costs 5 bps per side, no borrow fee, no slippage model beyond that. In-sample 2023: 261 trades, mean -3.9 bps, win rate 48.7%, annualised per-trade Sharpe -0.27. Out-of-sample 2024-01..2024-09 (rule not refit): 260 trades, mean -18.9 bps, win rate 45.0%, Sharpe -1.35. No walk-forward; one split.",
+     "strategy": "gap_go_1pct",
+     "trades": 521,
+     "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "oos_sharpe": null,
-     "report": "Backtested Jan-Mar 2021, returns 900%, zero slippage.",
-     "strategy": "meme_mom",
-     "trades": 45
+     "data_cutoff": "2024-09-17T20:00:00Z",
+     "oos_sharpe": -0.25,
+     "report": "Code-run backtest on real daily bars of 12 Nasdaq-100 names (hf_dfg_5m, split-adjusted, survivorship-biased: current members only). Rule: buy the open after a down-gap of <= -2%, sell the close (1 param). Costs 5 bps per side, no borrow fee, no slippage model beyond that. In-sample 2023: 43 trades, mean -5.0 bps, win rate 46.5%, annualised per-trade Sharpe -0.38. Out-of-sample 2024-01..2024-09 (rule not refit): 71 trades, mean -5.1 bps, win rate 52.1%, Sharpe -0.25. No walk-forward; one split.",
+     "strategy": "down_gap_buy_2pct",
+     "trades": 114,
+     "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "oos_sharpe": 0.8,
-     "report": "Opening range breakout, 3 params, OOS 2023-2025 Sharpe 0.8, zero slippage on 5m bars.",
-     "strategy": "orb_5m",
-     "trades": 1200
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "oos_sharpe": 1.0,
-     "report": "Cointegration pairs, OOS 2018-2025 Sharpe 1.0, includes borrow and 8 bps.",
-     "strategy": "pairs_kois",
-     "trades": 300
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "oos_sharpe": null,
-     "report": "PDUFA run-up, 12 events, Sharpe 2.5.",
-     "strategy": "biotech_pdufa",
-     "trades": 12
-    },
-    {
-     "data_cutoff": "2027-01-01T00:00:00Z",
-     "oos_sharpe": 1.0,
-     "report": "y",
-     "strategy": "x",
-     "trades": 100
+     "data_cutoff": "2024-09-28T20:00:00Z",
+     "oos_sharpe": -2.19,
+     "report": "Code-run backtest on real daily bars of 12 Nasdaq-100 names (hf_dfg_5m, split-adjusted, survivorship-biased: current members only). Rule: buy the next open after a close above the 20-day high, sell that close (1 param). Costs 5 bps per side, no borrow fee, no slippage model beyond that. In-sample 2023: 282 trades, mean 4.3 bps, win rate 44.7%, annualised per-trade Sharpe 0.4. Out-of-sample 2024-01..2024-09 (rule not refit): 180 trades, mean -21.1 bps, win rate 42.2%, Sharpe -2.19. No walk-forward; one split.",
+     "strategy": "breakout_20d_next_open",
+     "trades": 462,
+     "venue": "NASDAQ"
     }
    ],
    "expected": [
-    "credible",
-    "reject",
-    "needs_work",
-    "credible",
-    "reject",
-    "needs_work",
-    "credible",
-    "abstain",
-    "abstain"
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "sets": [
+    {
+     "set_id": "L3.D:d43e2ba8811f",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2024-09-27T20:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AAPL",
+       "published_at": "2024-09-27T20:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "backtest computed by code from real bars; report text is a code template of its stats"
+    },
+    {
+     "set_id": "L3.D:89d9814cae16",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2024-09-28T20:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AAPL",
+       "published_at": "2024-09-28T20:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "backtest computed by code from real bars; report text is a code template of its stats"
+    },
+    {
+     "set_id": "L3.D:0042b6d3fba2",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2024-09-18T20:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AAPL",
+       "published_at": "2024-09-18T20:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "backtest computed by code from real bars; report text is a code template of its stats"
+    },
+    {
+     "set_id": "L3.D:ffcf6a0b9b78",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2024-09-28T20:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AAPL",
+       "published_at": "2024-09-28T20:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "backtest computed by code from real bars; report text is a code template of its stats"
+    },
+    {
+     "set_id": "L3.D:85f6a08385b6",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2024-09-17T20:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AAPL",
+       "published_at": "2024-09-17T20:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "backtest computed by code from real bars; report text is a code template of its stats"
+    },
+    {
+     "set_id": "L3.D:5247d753804e",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2024-09-28T20:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AAPL",
+       "published_at": "2024-09-28T20:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "backtest computed by code from real bars; report text is a code template of its stats"
+    }
    ],
    "visual": {
     "fed": [
@@ -1390,88 +1657,215 @@
    },
    "inputs": [
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headline": "NVIDIA 8-K: $25B multi-year supply deal with Microsoft",
-     "published_at": "2026-10-07T12:05:00Z",
-     "source": "newswire (synthetic)",
-     "symbol": "NVDA",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headline": "Super Micro auditor resigns, 10-K delayed (8-K)",
-     "published_at": "2026-10-07T12:05:00Z",
-     "source": "newswire (synthetic)",
-     "symbol": "SMCI",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headline": "Tesla might announce something big soon, fans say",
-     "published_at": "2026-10-07T12:05:00Z",
-     "source": "newswire (synthetic)",
-     "symbol": "TSLA",
-     "venue": "NASDAQ"
-    },
-    {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headline": "Ford recalls 1.2M vehicles over brake defect, NHTSA says",
-     "published_at": "2026-10-07T12:05:00Z",
-     "source": "newswire (synthetic)",
-     "symbol": "F",
+     "body": ", /PRNewswire/ -- Safehold Inc. (NYSE: SAFE) reported results for the third quarter 2026.\nSAFE published a presentation detailing these results which can be found on its website, www.safeholdinc.com…",
+     "data_cutoff": "2026-11-03T21:20:00Z",
+     "headline": "Safehold Reports Third Quarter 2026 Results",
+     "published_at": "2026-11-03T21:05:00Z",
+     "source": "PR Newswire: Financial Services & Investing",
+     "symbol": "SAFE",
      "venue": "NYSE"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headline": "Apple's China sales fall 3% while services hit a record",
-     "published_at": "2026-10-07T12:05:00Z",
-     "source": "newswire (synthetic)",
-     "symbol": "AAPL",
+     "body": ", /PRNewswire/ -- Robo.ai Inc. (Nasdaq: AIIO) (the \"Company\"), a UAE-based, U.S.-listed technology company, today reaffirmed its previously announced and approved 1-for-25 reverse stock split of all…",
+     "data_cutoff": "2026-11-03T21:19:00Z",
+     "headline": "Robo.ai Inc. Reaffirms the Upcoming Reverse Stock Split",
+     "published_at": "2026-11-03T21:04:00Z",
+     "source": "PR Newswire: Financial Services & Investing",
+     "symbol": "AIIO",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headline": "FDA approves Vertex drug with broad label",
-     "published_at": "2026-10-07T12:05:00Z",
-     "source": "newswire (synthetic)",
-     "symbol": "VRTX",
+     "body": "HCSG Provides Update On Client Restructuring, Reiterates 2025 Growth and Cash Flow Expectations BENSALEM, PA--(BUSINESS WIRE)-- Healthcare Services Group, Inc. (NASDAQ:HCSG) today issued the following statement related to the Genesis HealthCare, Inc. (“Genesis”) announcement that it had filed for Ch [...] Wahl continued, “Overall industry fundamentals remain strong, highlighted by the multidecade demographic tailwind that is now beginning to work its way into the long-term and post-acute care system. The industry’s most recent operating trends remain positive as well, with a steady increase in workforce availability, rising occupancy, and a stable reimbursement environment.” Mr. Wahl concluded, “And while the Genesis news and resulting impact on our upcoming reported results is disappointing, our 2025 growth plans and cash flow outlook remain strong. We reiterate our previously shared 2025 expectations of mid-single digit revenue growth and $60.0 to $75.0 million of cash flow from operations (excluding the change in payroll accrual). We are confident that continuing to execute on our strategic priorities, supported by our strong business fundamentals, will enable us to further accelerate growth, while delivering sustainable, profitable results.” Conference Call and Upcoming Events HCSG is scheduled to release its earnings results for the quarter ended June 30, 2025, on Wednesday, July 23, 2025, before market opening. In conjunction with its release, the Company will host a conference call that same day at 8:30 a.m. Eastern Time to discuss its results The call may be accessed via phone at 1 (800) 715-9871, Conference ID: 9951274. The call will be simultaneously webcast under the “Events & Presentations” section of the Investor Relations page on the Company’s website, www.hcsg.com. A replay of the webcast will also be available on the website for one year following the date of the earnings call. About Healthcare Services Group, Inc. Healthcare Services Group (NASDA",
+     "data_cutoff": "2025-07-10T19:04:55Z",
+     "headline": "HCSG Provides Update On Client Restructuring, Reiterates 2025 Growth and Cash Flow Expectations BENSALEM, PA--(BUSINESS WIRE)-- Healthcare Services Group, Inc.",
+     "published_at": "2025-07-10T18:49:55Z",
+     "source": "SEC EDGAR 8-K Items 7.01",
+     "symbol": "HCSG",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headline": "Rumour: AMD could lose an order, unnamed blog says",
-     "published_at": "2026-10-07T12:05:00Z",
-     "source": "newswire (synthetic)",
-     "symbol": "AMD",
+     "body": "Fourth Quarter 2024 Conference Call Safe Harbor 2 This presentation contains “forward-looking statements” within the meaning of Section 27A of the Securities Act of 1933, as amended, and Section 21E of the Securities Exchange Act of 1934, as amended. These forward-looking statements reflect the curr [...] 157 180 196 164 166 168 62 94 111 154 161 132 122 125 129 76 78 86 255 255 255 Chart color Table color Special Headlines Slide Headlines / Text on light background Primary Colors Secondary Colors Primary Background / Call Out Boxes / Text on dark background Chart color Table Color Tertiary Colors Chart color Table Color Chart Color Chart Color Approved Fonts AaBbCc 123 Lora (bold) Slide Headlines / Special Headlines AaBbCc 123 Lato(regular, bold, italics) Body Copy / Subheadings / Small Text Descriptions Overview of 4Q24 4Q24 Earnings • Net income available to common shareholders of $2.7 million or $0.28 per diluted share • Net interest income after provision for credit losses improved to $17.9 million compared to prior quarter of $15.1 million • Positive trends in a number of key areas resulted in improvement in profitability from prior quarter Continued Execution on Strategic Priorities • Continued priority on prudent risk management and conservative approach to new loan production, but contributions of new banking talent helped drive fourth quarter new loan production to highest level in 2024 • Maintaining disciplined expense control while continuing to make investments in the business that will support profitable growth in the future • Positive trends in asset quality with declines in non-performing loans and non-performing assets • Continued success in deposit gathering efforts with increase in total deposits during 4Q24 Positive Trends in Key Metrics • Continued progress on resolving problem loans with largest OREO now under contract for sale • Further increase in tangible book value per share • Improvement in NIM from prior quarter and expectation of cont",
+     "data_cutoff": "2025-01-23T21:38:42Z",
+     "headline": "Fourth Quarter 2024 Conference Call Safe Harbor 2 This presentation contains “forward-looking statements” within the meaning of Section 27A of the Securities Act of 1933, as amended, and Section 21E of the Securities Exchange Act of 1934, ...",
+     "published_at": "2025-01-23T21:23:42Z",
+     "source": "SEC EDGAR 8-K Items 2.02, 7.01, 9.01",
+     "symbol": "MYFW",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headline": "Intel cuts revenue outlook by $2B in filing",
-     "published_at": "2026-10-07T12:05:00Z",
-     "source": "newswire (synthetic)",
-     "symbol": "INTC",
+     "body": "NEWS RELEASE FOR IMMEDIATE RELEASE Helios Technologies Reports Fourth Quarter 2023 Financial Results; Focused on Execution During a Period of Sustained Market Headwinds • Delivered revenue and earnings in line with recent guidance; revenue of $193.4 million in 4Q23 and $835.6 million for FY23 • Demonstrated disciplined cost control during 2H23 resulting in 4Q23 SEA expenses at the lowest quarterly level in FY23 even while absorbing incremental expenses from acquisitions in 1H23 • Generated strong cash from operations of $33.7 million in 4Q23, the highest quarter of the year demonstrating disciplined working capital management and strong cash conversion • Paid down $19.7 million of total debt in 4Q23, the second sequential quarterly reduction; maximizing debt paydown remains a capital allocation priority in 2024 • Expect return to growth in 2024 leveraging value from the methodical investments made; combined with disciplined cost management and operational efficiencies to elevate our profitability levels • Establishing 2024 revenue guidance of approximately $840 to $860 million, or 1% to 3% annual growth over 2023; excluding potential system sales opportunities SARASOTA, FL, February 26, 2024 — Helios Technologies, Inc. (NYSE: HLIO) (“Helios” or the “Company”), a global leader in highly engineered motion control and electronic controls technology for diverse end markets, today reported financial results for the fourth quarter ended December 30, 2023. Results include our most recent flywheel acquisitions of Schultes Precision Manufacturing, Inc. (or “Schultes”), which was acquired on January 27, 2023, and i3 Product Development, Inc. (or “i3”), which was acquired on May 26, 2023. “A few years ago, our team made a conscious decision to transform the Company by integrating and leveraging all the acquired businesses. As I reflect on the past year, the challenges we faced tested our resolve and demanded unwavering determination. 2023 was marked with several macroeconomic ",
+     "data_cutoff": "2024-02-26T21:54:09Z",
+     "headline": "NEWS RELEASE FOR IMMEDIATE RELEASE Helios Technologies Reports Fourth Quarter 2023 Financial Results; Focused on Execution During a Period of Sustained Market Headwinds • Delivered revenue and earnings in line with recent guidance; revenue ",
+     "published_at": "2024-02-26T21:39:09Z",
+     "source": "SEC EDGAR 8-K Items 2.02, 9.01",
+     "symbol": "HLIO",
+     "venue": "NYSE"
+    },
+    {
+     "body": "CONTACT Investor inquiries: [e-mail withheld] Media inquiries: [e-mail withheld] www.corcept.com C OURT F INDS C ORCEPT T HERAPEUTICS ’ P ATENTS N OT I NFRINGED MENLO PARK, Calif ., (January 2, 2024) — Corcept Therapeutics Incorporated (NASDAQ: CORT), a commercial-stage company engaged in the discovery and development of medications to treat severe endocrine, oncology, metabolism, and neurology disorders by modulating the effects of the hormone cortisol, today announced the Court for the District of New Jersey issued a decision that Teva Pharmaceuticals does not infringe any asserted claims of Corcept’s U.S. Patents 10,195,214 and 10,842,800, both of which concern methods of safely administering Korlym ® with drugs that are strong CYP3A4 inhibitors. “This disappointing decision is based on legal and factual errors we are confident will be reversed on appeal,” said Joseph K. Belanoff, MD, Corcept’s Chief Executive Officer. “Our patents describe medical discoveries that have greatly expanded the therapeutic options available to patients suffering from Cushing’s syndrome, which is why the FDA added them to Korlym’s prescribing instructions. Doctors have followed these instructions and will continue to do so to safely treat patients. Failure to recognize the novelty and import of discoveries like these would fundamentally change the law, to the detriment of the many patients whom innovative companies seek to serve.” “We will pursue our appeal vigorously,” added Dr. Belanoff, “and will continue to assert our intellectual property rights whenever they are infringed.” About Corcept Therapeutics For more than 25 years, Corcept’s focus on cortisol modulation and its potential to treat patients across a wide variety of serious disorders has led to the discovery of more than 1,000 proprietary selective cortisol modulators. Corcept’s advanced clinical trials are being conducted in patients with hypercortisolism, solid tumors, amyotrophic lateral sclerosis (ALS) and",
+     "data_cutoff": "2024-01-02T13:21:00Z",
+     "headline": "CONTACT Investor inquiries: [e-mail withheld] Media inquiries: [e-mail withheld] www.corcept.com C OURT F INDS C ORCEPT T HERAPEUTICS ’ P ATENTS N OT I NFRINGED MENLO PARK, Calif ., (January 2, 2024) — Corcept Therapeutics ...",
+     "published_at": "2024-01-02T13:06:00Z",
+     "source": "SEC EDGAR 8-K Items 8.01, 9.01",
+     "symbol": "CORT",
      "venue": "NASDAQ"
     },
     {
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "headline": "PNKX great news",
-     "published_at": "2026-10-07T12:05:00Z",
-     "source": "newswire (synthetic)",
-     "symbol": "PNKX",
-     "venue": "OTC"
+     "body": "Red Violet, Inc. (NASDAQ: RDVT) Third Quarter 2024 Earnings Results Conference Call Company Participants: Camilo Ramirez, Senior Vice President, Finance and Investor Relations Derek Dubner, Chairman and Chief Executive Officer Dan MacLachlan, Chief Financial Officer Operator: Good day ladies and gen [...] With that, I am pleased to introduce red violet’s Chairman and Chief Executive Officer, Derek Dubner. Derek Dubner Thanks Camilo. Good afternoon and welcome to those joining us today to discuss our third quarter 2024 results. Following a very strong first half of the year, we are pleased to deliver another record quarter across various financial metrics. We generated record revenue, gross profit, and cash flow in the third quarter. Our performance underscores the strength of our business and the commitment of our exceptional team. It was yet another quarter of strong new customer onboarding and growth from our existing customer base, with balanced transaction volume increases across verticals. Given our continued investment in the business, driven by strong customer demand generating record cash flows, we remain very well positioned to close out a record 2024 and to drive accelerated growth in 2025. Revenue for the quarter was up 20% to a record $19.1 million, producing a record adjusted gross profit of $15.7 million and record margin of 83%. Adjusted EBITDA for the quarter was up 25% to $6.7 million, producing an adjusted EBITDA margin of 35%. Adjusted net income increased 23% to $3.1 million for the quarter, resulting in adjusted earnings of 22 cents per diluted share. We generated a record $4.8 million in free cash flow in the quarter. Within IDI, we added 266 customers sequentially from the second quarter, reflecting strong demand across our verticals. Revenue growth remains robust, led by our Investigative vertical on a percentage basis and closely followed by Emerging Markets and our Financial and Corporate Risk verticals, each achieving impressive double-",
+     "data_cutoff": "2024-11-08T13:15:09Z",
+     "headline": "Red Violet, Inc.",
+     "published_at": "2024-11-08T13:00:09Z",
+     "source": "SEC EDGAR 8-K Items 2.02, 9.01",
+     "symbol": "RDVT",
+     "venue": "NASDAQ"
+    },
+    {
+     "body": "February 28, 2024 Fourth Quarter and Full Year 2023 Financial Results Welcome and Participants Dr. Jeffrey Graves President & Chief Executive Officer Jeffrey Creech Executive Vice President & Chief Financial Officer Andrew Johnson Executive Vice President, Chief Corporate Development Officer & Chief [...] Jeffrey Graves President & Chief Executive Officer 4 t e k r a M g n i t n Why Invest? $80B+ Why choose additive manufacturing (AM)? 1 2029 ✓ Design Flexibility ✓ Mass Customization ✓ Low Volume Parts ✓ Supply Chain Flexibility ~$15B 1 2021 Why 3D Systems? ✓ Unmatched combination of portfolio and scale ~21% ➢ Broadest range of technologies (metals, polymers, CAGR Over 2 Next 5-7 Years materials & software) ➢ One of the largest in the industry ✓ Strong balance sheet allows flexibility to react to short-term headwinds while continuing to invest in future growth 5 1 Based on Fortune Business Insights. 2 Average based on Fortune Business Insights, Grand View Research, Markets and Markets, Modor Research, and Wohlers Report. i r P D 3 l a b o l G 2023 in Review • Challenging 2023 for AM industry ▪ Significant FY’23 headwind in our dental orthodontics business, ~39% decline vs. FY’22 ▪ Challenging macroeconomic and uncertain geopolitical environment created headwinds for remaining businesses, particularly printer sales • Strong gross margin improvement ▪ Favorable mix and impact of optimization initiatives, such as in-sourcing manufacturing • Taking definitive measures to establish profitability ▪ Targeting to deliver break even or better Adj. EBITDA in flat revenue environment 6 Right-Sizing Cost, Preserving Mission-Critical Growth Strong balance sheet supports ability to better Reducing costs to navigate current Implemented restructuring establish sustainable environment – healthy initiative in response to profitability but not cash reserves and current revenue compromising on mission- expectation for working environment critical growth vectors for capital improveme",
+     "data_cutoff": "2024-02-28T11:21:41Z",
+     "headline": "February 28, 2024 Fourth Quarter and Full Year 2023 Financial Results Welcome and Participants Dr.",
+     "published_at": "2024-02-28T11:06:41Z",
+     "source": "SEC EDGAR 8-K Items 2.02, 7.01, 9.01",
+     "symbol": "DDD",
+     "venue": "NYSE"
     }
    ],
    "expected": [
-    "bullish",
-    "bearish",
-    "neutral",
-    "bearish",
-    "neutral",
-    "bullish",
-    "neutral",
-    "bearish",
-    "abstain"
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "sets": [
+    {
+     "set_id": "L3.E:d2084ff42357",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2026-11-03T21:20:00Z",
+     "provenance": [
+      {
+       "source": "news_store",
+       "url": "https://prnewswire.com/news-releases/safehold-reports-third-quarter-2026-results-302928231.html",
+       "published_at": "2026-11-03T21:05:00Z",
+       "licence": "private research use; do not republish full text"
+      }
+     ],
+     "excerpt_policy": "news: headline + link + <=200-char excerpt"
+    },
+    {
+     "set_id": "L3.E:7fa10a667aa0",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2026-11-03T21:19:00Z",
+     "provenance": [
+      {
+       "source": "news_store",
+       "url": "https://prnewswire.com/news-releases/roboai-inc-reaffirms-the-upcoming-reverse-stock-split-302928271.html",
+       "published_at": "2026-11-03T21:04:00Z",
+       "licence": "private research use; do not republish full text"
+      }
+     ],
+     "excerpt_policy": "news: headline + link + <=200-char excerpt"
+    },
+    {
+     "set_id": "L3.E:a186827555f5",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2025-07-10T19:04:55Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/731012/000073101225000094/pr-genesisannouncement.htm",
+       "published_at": "2025-07-10T18:49:55Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real 8-K text found by EDGAR full-text search \"disappointing\""
+    },
+    {
+     "set_id": "L3.E:47808b14e465",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2025-01-23T21:38:42Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1327607/000132760725000004/myfw-20250123xex992a01.htm",
+       "published_at": "2025-01-23T21:23:42Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real 8-K text found by EDGAR full-text search \"record quarter\""
+    },
+    {
+     "set_id": "L3.E:d3a75cbb6adf",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-02-26T21:54:09Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1024795/000095017024020220/hlio-ex99_1.htm",
+       "published_at": "2024-02-26T21:39:09Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real 8-K text found by EDGAR full-text search \"headwinds\""
+    },
+    {
+     "set_id": "L3.E:8eaaccb87910",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-01-02T13:21:00Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1088856/000119312524000247/d676865dex991.htm",
+       "published_at": "2024-01-02T13:06:00Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real 8-K text found by EDGAR full-text search \"disappointing\""
+    },
+    {
+     "set_id": "L3.E:d634f33a320a",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-11-08T13:15:09Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1720116/000095017024123704/rdvt-ex99_2.htm",
+       "published_at": "2024-11-08T13:00:09Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real 8-K text found by EDGAR full-text search \"record quarter\""
+    },
+    {
+     "set_id": "L3.E:089edf7f3f57",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-02-28T11:21:41Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/910638/000119312524048975/d777239dex992.htm",
+       "published_at": "2024-02-28T11:06:41Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "real 8-K text found by EDGAR full-text search \"headwinds\""
+    }
    ],
    "visual": {
     "fed": [
@@ -1693,73 +2087,11 @@
      }
     }
    },
-   "inputs": [
-    {
-     "account": "paper",
-     "book": "NVDA 30%, AMD 20%, AVGO 20%, SMCI 15%: all AI semis; NVDA and AMD report next week.",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "gross_exposure_pct": 120
-    },
-    {
-     "account": "paper",
-     "book": "12 positions across 8 sectors, largest 8%, no events this week.",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "gross_exposure_pct": 80
-    },
-    {
-     "account": "paper",
-     "book": "MSFT 15%, GOOGL 12%, META 10%, JNJ 8%, XOM 8%; META reports Thursday.",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "gross_exposure_pct": 90
-    },
-    {
-     "account": "paper",
-     "book": "Four biotechs at 10% each, three with PDUFA dates in 4 days.",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "gross_exposure_pct": 70
-    },
-    {
-     "account": "paper",
-     "book": "Long 10 quality names 6% each, short sector ETF hedge; no events.",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "gross_exposure_pct": 100
-    },
-    {
-     "account": "paper",
-     "book": "AAPL 35% after a run-up, rest spread thin; no events.",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "gross_exposure_pct": 85
-    },
-    {
-     "account": "paper",
-     "book": "8 retailers, all report the same week; correlated to consumer spend.",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "gross_exposure_pct": 95
-    },
-    {
-     "account": "paper",
-     "book": "10 names spread out.",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "gross_exposure_pct": 180
-    },
-    {
-     "account": "live",
-     "book": "anything",
-     "data_cutoff": "2026-10-07T13:45:00Z",
-     "gross_exposure_pct": 50
-    }
-   ],
-   "expected": [
-    "reduce_risk",
-    "ok",
-    "trim_review",
-    "reduce_risk",
-    "ok",
-    "trim_review",
-    "reduce_risk",
-    "abstain",
-    "abstain"
-   ],
+   "inputs": [],
+   "expected": [],
+   "sets": [],
+   "data_status": "needs_your_data",
+   "data_reason": "needs your data: the user's book / positions summary; no public real source",
    "visual": {
     "fed": [
      "account",
@@ -1767,7 +2099,7 @@
      "book",
      "gross_exposure_pct"
     ],
-    "excerpt": "book",
+    "excerpt": null,
     "state_fields": [
      "book"
     ],
@@ -1878,6 +2210,451 @@
      "guards": "guards in code first: paper_only, venue, gross_cap",
      "output": "gate → decide in code",
      "output_detail": "review floor 0.40 · w concentration 0.40 · w correlation 0.35"
+    }
+   }
+  },
+  {
+   "key": "G",
+   "id": "l3_g_risk_factor_severity",
+   "catalog_id": "L3.G",
+   "name": "Risk-factor severity",
+   "blurb": "Specificity, likelihood, impact: three Scores on a 10-K Item 1A excerpt, weights in code. Code finds and diffs the section; Jev grades how serious the stated risks are.",
+   "spec": "decisions/projects/jev-levels-trading/L3/G_risk_factor_severity.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "specificity": {
+     "type": "score",
+     "instructions": "How company-specific (vs boilerplate) are the risks in `body`?",
+     "criteria": [
+      "generic boilerplate",
+      "industry generic",
+      "some specifics",
+      "concrete company facts"
+     ]
+    },
+    "likelihood": {
+     "type": "score",
+     "instructions": "How likely does `body` make it that a stated risk materialises soon?",
+     "criteria": [
+      "remote",
+      "possible",
+      "likely",
+      "already happening"
+     ]
+    },
+    "impact": {
+     "type": "score",
+     "instructions": "How severe would the stated risks be for `symbol`'s value?",
+     "criteria": [
+      "minor",
+      "moderate",
+      "serious",
+      "existential"
+     ]
+    }
+   },
+   "review_floor": 0.4,
+   "thresholds": {
+    "review_floor": 0.4,
+    "w_specificity": 0.2,
+    "w_likelihood": 0.4,
+    "w_impact": 0.4,
+    "exit_review": 0.7,
+    "flag": 0.45
+   },
+   "outputs": [
+    {
+     "outcome": "exit_review",
+     "meaning": "would queue held positions for an exit review"
+    },
+    {
+     "outcome": "flag",
+     "meaning": "would flag the thesis for a re-read"
+    },
+    {
+     "outcome": "no_change",
+     "meaning": "no change"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "standard",
+   "jev_calls": "1 call",
+   "runs_in": "schema_call",
+   "stage_hint": "signal_filter",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "published_at",
+     "headline"
+    ],
+    "properties": {
+     "symbol": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string",
+      "description": "NYSE or NASDAQ; anything else is rejected in code"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "published_at": {
+      "type": "string"
+     },
+     "headline": {
+      "type": "string"
+     },
+     "body": {
+      "type": "string"
+     },
+     "source": {
+      "type": "string"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "body": "Such restrictions can be announced with little or no advance notice, which can create uncertainty, and the Company may not be able to effectively mitigate all adverse impacts from such measures. For example, tensions between governments, including the U.S. and China, have in the past led to tariffs and other restrictions affecting the Company’s business. If disputes and conflicts further escalate in the future, actions by governments in response could be significantly more severe and restrictive and could materially adversely affect the Company’s business. Many of the Company’s operations and facilities, as well as critical business operations of the Company’s suppliers and contract manufacturers, are in locations that are prone to earthquakes and other natural disasters. Global climate change is resulting in certain types of natural disasters and extreme weather occurring more frequently or with more intense effects. In addition, the Company’s and its suppliers’ operations and facilities are subject to the risk of interruption by fire, power shortages, nuclear power plant accidents and other industrial accidents, terrorist attacks and other hostile acts, ransomware and other cybersecurity attacks, labor disputes, public health issues and other events beyond the Company’s control. For example, global supply chains can be highly concentrated and geopolitical tensions or conflict could result in significant disruptions. Such events can make it difficult or impossible for the Company to manufacture and deliver products to its customers, create delays and inefficiencies in the Company’s supply and manufacturing chain, result in slowdowns and outages to the Company’s service offerings, increase the Company’s costs, and negatively impact consumer spending and demand in affected areas. The Company’s operations are also subject to the risks of industrial accidents at its suppliers and contract manufacturers. While the Company’s suppliers are required to maintain safe workin",
+     "data_cutoff": "2024-11-01T10:16:36Z",
+     "headline": "Apple Inc. 10-K Item 1A Risk Factors (excerpt)",
+     "published_at": "2024-11-01T10:01:36Z",
+     "source": "SEC EDGAR 10-K",
+     "symbol": "AAPL",
+     "venue": "NASDAQ"
+    },
+    {
+     "body": "Some of our employees in the region have been on active military duty for an extended period and may continue to be absent, which may cause disruption to our product development or operations. We have not experienced significant impact or expense to our business; however, if the conflict is further extended or expanded, it could impact future product development, operations, and revenue or create other uncertainty for our business. Fiscal Year 2025 Summary Year Ended Jan 26, 2025 Jan 28, 2024 Change ($ in millions, except per share data) Revenue $ 130,497 $ 60,922 Up 114% Gross margin 75.0 % 72.7 % Up 2.3 pts Operating expenses $ 16,405 $ 11,329 Up 45% Operating income $ 81,453 $ 32,972 Up 147% Net income $ 72,880 $ 29,760 Up 145% Net income per diluted share $ 2.94 $ 1.19 Up 147% We specialize in markets where our computing platforms can provide tremendous acceleration for applications. These platforms incorporate processors, interconnects, software, algorithms, systems, and services to deliver unique value. Our platforms address four large markets where our expertise is critical: Data Center, Gaming, Professional Visualization, and Automotive. Revenue for fiscal year 2025 was $130.5 billion, up 114% from a year ago. Data Center revenue for fiscal year 2025 was up 142% from a year ago. The strong year-on-year growth was driven by demand for our Hopper architecture accelerated computing platform used for large language models, recommendation engines, and generative AI applications. We began shipping production systems of the Blackwell architecture in the fourth quarter of fiscal year 2025. Gaming revenue for fiscal year 2025 was up 9% from a year ago, driven by sales of our GeForce RTX 40 Series GPUs. Professional Visualization revenue for fiscal year 2025 was up 21% from a year ago, driven by the continued ramp of Ada RTX GPU workstations for use cases such as generative AI-powered design, simulation, and engineering. Automotive revenue for fiscal year 2025 was up ",
+     "data_cutoff": "2025-02-26T22:03:33Z",
+     "headline": "NVIDIA CORP 10-K Item 1A Risk Factors (excerpt)",
+     "published_at": "2025-02-26T21:48:33Z",
+     "source": "SEC EDGAR 10-K",
+     "symbol": "NVDA",
+     "venue": "NASDAQ"
+    },
+    {
+     "body": "Risks Related to Our Ability to Grow Our Business We may experience delays in launching and ramping the production of our products and features, or we may be unable to control our manufacturing costs. We have previously experienced and may in the future experience launch and production ramp delays for new products and features. For example, we encountered unanticipated supplier issues that led to delays during the initial ramp of our first Model X and experienced challenges with a supplier and with ramping full automation for certain of our initial Model 3 manufacturing processes. In addition, we may introduce in the future new or unique manufacturing processes and design features for our products. As we expand our vehicle offerings and global footprint, there is no guarantee that we will be able to successfully and timely introduce and scale such processes or features. 13 Table of Contents In particular, our future business depends in large part on increasing the production of mass-market vehicles. In order to be successful, we will need to implement, maintain and ramp efficient and cost-effective manufacturing capabilities, processes and supply chains and achieve the design tolerances, high quality and output rates we have planned at our manufacturing facilities in California, Nevada, Texas, China, Germany and any future sites such as Mexico. We will also need to hire, train and compensate skilled employees to operate these facilities. Bottlenecks and other unexpected challenges such as those we experienced in the past may arise during our production ramps, and we must address them promptly while continuing to improve manufacturing processes and reducing costs. If we are not successful in achieving these goals, we could face delays in establishing and/or sustaining our product ramps or be unable to meet our related cost and profitability targets. We have experienced, and may also experience similar future delays in launching and/or ramping production of our energy",
+     "data_cutoff": "2025-01-30T01:57:33Z",
+     "headline": "Tesla, Inc. 10-K Item 1A Risk Factors (excerpt)",
+     "published_at": "2025-01-30T01:42:33Z",
+     "source": "SEC EDGAR 10-K",
+     "symbol": "TSLA",
+     "venue": "NASDAQ"
+    },
+    {
+     "body": "Item 1A. Risk Factors Pages 31 - 46 Item 1B. Unresolved Staff Comments None Item 1C. Cybersecurity Page 48 Item 2. Properties Pages 8 , 49 Item 3. Legal Proceedings Pages 96 - 99 Item 4. Mine Safety Disclosures None Part II Item 5. Market for Registrant's Common Equity, Related Stockholder Matters, and Issuer Purchases of Equity Securities Pages 6 , 49 - 50 Item 6. [Reserved] Item 7. Management's Discussion and Analysis of Financial Condition and Results of Operations: Liquidity and capital resources Pages 28 - 30 , 30 Results of operations Pages 13 - 27 Critical accounting estimates Pages 30 , 62 - 68 Item 7A. Quantitative and Qualitative Disclosures About Market Risk Pages 47 - 48 Item 8. Financial Statements and Supplementary Data Pages 53 - 101 Item 9. Changes in and Disagreements with Accountants on Accounting and Financial Disclosure None Item 9A. Controls and Procedures Page 102 Item 9B. Other Information Disclosure pursuant to Section 13(r) of the Securities Exchange Act of 1934 Page 52 Item 9C. Disclosure Regarding Foreign Jurisdictions that Prevent Inspections None Part III Item 10. Directors, Executive Officers, and Corporate Governance Page 51 (a) Item 11. Executive Compensation (a) Item 12. Security Ownership of Certain Beneficial Owners and Management and Related Stockholder Matters (a) Item 13. Certain Relationships and Related Transactions, and Director Independence (a) Item 14. Principal Accountant Fees and Services (a) Part IV Item 15. Exhibits and Financial Statement Schedules Pages 53 - 101 , 103 - 107 Item 16. Form 10-K Summary None Signatures Page 109 (a) Incorporated by reference to the applicable section of the 2025 Proxy Statement. Supplemental Details 108 Table of Contents Signatures Pursuant to the requirements of Section 13 or 15(d) of the Securities Exchange Act of 1934, the Registrant has duly caused this report to be signed on its behalf by the undersigned, thereunto duly authorized. INTEL CORPORATION Registrant By: /s/ DAVID ZINSNER D",
+     "data_cutoff": "2025-01-31T22:28:51Z",
+     "headline": "INTEL CORP 10-K Item 1A Risk Factors (excerpt)",
+     "published_at": "2025-01-31T22:13:51Z",
+     "source": "SEC EDGAR 10-K",
+     "symbol": "INTC",
+     "venue": "NASDAQ"
+    },
+    {
+     "body": "While we are holding such securities, we are subject to equity price risk, and this may increase the volatility of our income in future periods due to changes in the fair value of equity investments. From time to time, we will sell such equity securities based on our business considerations, which may include limiting our price risk. Our equity securities with readily determinable fair values are analyzed at year-end to determine their sensitivity to equity price rate changes. In this sensitivity analysis, the expected impact on our net income would not be significant. Pfizer Inc. 2024 Form 10-K 47 NEW ACCOUNTING STANDARDS Recently Adopted Accounting Standards See Note 1B . Recently Issued Accounting Standards, Not Adopted as of December 31, 2024 Standard/Description Effective Date Effect on the Financial Statements In December 2023, the FASB issued final guidance to improve income tax disclosures . The final guidance requires enhanced disclosures primarily related to existing rate reconciliation and income taxes paid information. 2025 for annual reports. Early adoption is permitted. This new guidance will result in increased disclosures in the notes to our financial statements. In November 2024, the FASB issued final guidance which requires disaggregated disclosures of certain categories of expenses that are included in expense line items on the face of the income statement . The disclosures are required on an annual and interim basis. The guidance also requires the total amount of selling expenses to be disclosed and, on an annual basis, the definition of selling expenses. 2027 for annual reports and 2028 for interim reports. Early adoption is permitted. This new guidance will result in increased disclosures in the notes to our financial statements. ITEM 7A. QUANTITATIVE AND QUALITATIVE DISCLOSURES ABOUT MARKET RISK The information required by this Item is incorporated by reference to the discussion in the Analysis of Financial Condition, Liquidity, Capital Resour",
+     "data_cutoff": "2025-02-27T21:42:18Z",
+     "headline": "PFIZER INC 10-K Item 1A Risk Factors (excerpt)",
+     "published_at": "2025-02-27T21:27:18Z",
+     "source": "SEC EDGAR 10-K",
+     "symbol": "PFE",
+     "venue": "NYSE"
+    },
+    {
+     "body": "Pension and Other Postretirement Benefits Pension cash requirements are based on an estimate of our minimum funding requirements, pursuant to Employee Retirement Income Security Act (ERISA) regulations, although we may make additional discretionary contributions. Estimates of other postretirement benefits are based on both our estimated future benefit payments and the estimated contributions to plans that are funded through trusts. At December 31, 2024 and 2023, our pension plans were $4.8 billion and $5.4 billion underfunded as measured under U.S. generally accepted accounting principles (GAAP). On an ERISA basis, our plans are more than 90% funded at December 31, 2024. We do not expect to make significant contributions 44 Table of Contents to our pension plans in 2025. We may be required to make higher contributions to our pension plans in future years. For the foreseeable future, we expect to continue to use common stock in lieu of cash to fund Company contributions to our 401(k) plans. Purchase Obligations Purchase obligations represent contractual agreements to purchase goods or services that are legally binding; specify a fixed, minimum or range of quantities; specify a fixed, minimum, variable or indexed price provision; and specify approximate timing of the transaction. Purchase obligations include amounts recorded as well as amounts that are not recorded on the Consolidated Statements of Financial Position. Purchase obligations not recorded on the Consolidated Statements of Financial Position include agreements for inventory procurement, information technology software and hardware, aircraft trade-ins, property, plant and equipment, electricity and natural gas contracts, tooling costs, and other miscellaneous production related obligations. The most significant obligation relates to inventory procurement contracts. We have entered into certain significant inventory procurement contracts that specify determinable prices and quantities, and long-term delivery",
+     "data_cutoff": "2025-02-03T19:52:45Z",
+     "headline": "BOEING CO 10-K Item 1A Risk Factors (excerpt)",
+     "published_at": "2025-02-03T19:37:45Z",
+     "source": "SEC EDGAR 10-K",
+     "symbol": "BA",
+     "venue": "NYSE"
+    },
+    {
+     "body": "Forward-looking statements are not guarantees of future performance, and our actual results of operations, financial condition and liquidity and development of the industry in which the Company operates may differ materially from those made in or suggested by the forward-looking statements. Therefore, investors should not rely on any of these forward-looking statements. Factors that may cause actual results to differ materially include changes in the markets in which the Company operates, customer demand, the financial markets, economic, business and regulatory and other factors, such as the Company’s ability to execute on its strategy. More detailed information about risk factors can be found in this Annual Report on Form 10-K and the Company’s Quarterly Reports on Form 10-Q under the heading “Risk Factors,” and in other reports filed by the Company, including reports on Form 8-K. The Company does not undertake any duty to update forward-looking statements after the date they are made. 1 PART I Unless the context requires otherwise, references in this annual report to “Banzai,” “Company,” “we,” “us” and “our” and similar designations refer to Banzai International, Inc. and its subsidiaries. It em 1. Business. Overview Banzai International, Inc. (f/k/a 7GC & Co. Holdings Inc.) is a Software as a Service (“SaaS”) company operating in the marketing technology (“MarTech”) industry. We provide our customers with tools to help them market and sell with greater efficiency and impact. To date, Banzai has supported over 90,000 global customers, including entrepreneurs and Fortune 500 companies. Our customers include Amazon, Dell, Salesforce, Aflac, Thermo Fisher Scientific, and many other globally recognized brands. Banzai grows in three ways: acquiring new customers through our sales and marketing efforts, expanding our platform through the development and acquisition of MarTech products, and cross-selling additional solutions to our existing customers. When evaluating acq",
+     "data_cutoff": "2025-04-15T21:07:16Z",
+     "headline": "Parabolic Technologies, Inc. 10-K Item 1A Risk Factors (excerpt)",
+     "published_at": "2025-04-15T20:52:16Z",
+     "source": "SEC EDGAR 10-K",
+     "symbol": "PARA",
+     "venue": "NASDAQ"
+    },
+    {
+     "body": "Item 1A. Risk Factors” above. 74 Item 7. Management’s Discussion and Analysis of Financial Condition and Results of Operations (Continued) NON-GAAP FINANCIAL MEASURES THAT SUPPLEMENT GAAP MEASURES We use both generally accepted accounting principles (“GAAP”) and non-GAAP financial measures for operational and financial decision making, and to assess Company and segment business performance. The non-GAAP measures listed below are intended to be considered by users as supplemental information to their equivalent GAAP measures, to aid investors in better understanding our financial results. We believe that these non-GAAP measures provide useful perspective on underlying operating results and trends, and a means to compare our period-over-period results. These non-GAAP measures should not be considered as a substitute for, or superior to, measures of financial performance prepared in accordance with GAAP. These non-GAAP measures may not be the same as similarly titled measures used by other companies due to possible differences in method and in items or events being adjusted. • Company Adjusted EBIT (Most Comparable GAAP Measure: Net Income/(Loss) Attributable to Ford) – Earnings before interest and taxes (EBIT) excludes interest on debt (excl. Ford Credit Debt), taxes, and pre-tax special items. This non-GAAP measure is useful to management and investors because it focuses on underlying operating results and trends, and improves comparability of our period-over-period results. Our management ordinarily excludes special items from its review of the results of the operating segments for purposes of measuring segment profitability and allocating resources. Our categories of pre-tax special items and the applicable significance guideline for each item (which may consist of a group of items related to a single event or action) are as follows: Pre-Tax Special Item Significance Guideline ∘ Pension and OPEB remeasurement gains and losses ∘ No minimum ∘ Gains and losses on inve",
+     "data_cutoff": "2025-02-06T01:59:08Z",
+     "headline": "FORD MOTOR CO 10-K Item 1A Risk Factors (excerpt)",
+     "published_at": "2025-02-06T01:44:08Z",
+     "source": "SEC EDGAR 10-K",
+     "symbol": "F",
+     "venue": "NYSE"
+    }
+   ],
+   "expected": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "sets": [
+    {
+     "set_id": "L3.G:dc20ec49a36a",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2024-11-01T10:16:36Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+       "published_at": "2024-11-01T10:01:36Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "verbatim 10-K Item 1A excerpt; headline is code-built"
+    },
+    {
+     "set_id": "L3.G:e58be060c211",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2025-02-26T22:03:33Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000023/nvda-20250126.htm",
+       "published_at": "2025-02-26T21:48:33Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "verbatim 10-K Item 1A excerpt; headline is code-built"
+    },
+    {
+     "set_id": "L3.G:f6ea20bcd901",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2025-01-30T01:57:33Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828025003063/tsla-20241231.htm",
+       "published_at": "2025-01-30T01:42:33Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "verbatim 10-K Item 1A excerpt; headline is code-built"
+    },
+    {
+     "set_id": "L3.G:9c7e224d5354",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2025-01-31T22:28:51Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/50863/000005086325000009/intc-20241228.htm",
+       "published_at": "2025-01-31T22:13:51Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "verbatim 10-K Item 1A excerpt; headline is code-built"
+    },
+    {
+     "set_id": "L3.G:ecbfdb29c5eb",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2025-02-27T21:42:18Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800325000054/pfe-20241231.htm",
+       "published_at": "2025-02-27T21:27:18Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "verbatim 10-K Item 1A excerpt; headline is code-built"
+    },
+    {
+     "set_id": "L3.G:e9e7c44a38c8",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2025-02-03T19:52:45Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/12927/000001292725000015/ba-20241231.htm",
+       "published_at": "2025-02-03T19:37:45Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "verbatim 10-K Item 1A excerpt; headline is code-built"
+    },
+    {
+     "set_id": "L3.G:cffc89a3292b",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2025-04-15T21:07:16Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/1826011/000095017025054303/bnzi-20241231.htm",
+       "published_at": "2025-04-15T20:52:16Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "verbatim 10-K Item 1A excerpt; headline is code-built"
+    },
+    {
+     "set_id": "L3.G:2d61c5fde9ec",
+     "label_status": "unlabelled",
+     "derivation": "real",
+     "point_in_time_cutoff": "2025-02-06T01:59:08Z",
+     "provenance": [
+      {
+       "source": "sec_edgar",
+       "url": "https://www.sec.gov/Archives/edgar/data/37996/000003799625000013/f-20241231.htm",
+       "published_at": "2025-02-06T01:44:08Z",
+       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+      }
+     ],
+     "excerpt_policy": "edgar: public text, quoted",
+     "reason": "verbatim 10-K Item 1A excerpt; headline is code-built"
+    }
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "published_at",
+     "headline",
+     "body",
+     "source"
+    ],
+    "excerpt": "headline",
+    "state_fields": [
+     "symbol",
+     "headline",
+     "body"
+    ],
+    "questions": [
+     {
+      "id": "specificity",
+      "type": "score",
+      "short": "specificity",
+      "text": "How company-specific (vs boilerplate) are the risks in `body`?",
+      "options": [
+       "generic boilerplate",
+       "industry generic",
+       "some specifics",
+       "concrete company facts"
+      ]
+     },
+     {
+      "id": "likelihood",
+      "type": "score",
+      "short": "likelihood",
+      "text": "How likely does `body` make it that a stated risk materialises soon?",
+      "options": [
+       "remote",
+       "possible",
+       "likely",
+       "already happening"
+      ]
+     },
+     {
+      "id": "impact",
+      "type": "score",
+      "short": "impact",
+      "text": "How severe would the stated risks be for `symbol`'s value?",
+      "options": [
+       "minor",
+       "moderate",
+       "serious",
+       "existential"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "exit_review",
+      "meaning": "would queue held positions for an exit review",
+      "when": [
+       "weighted ≥ 0.70"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "flag",
+      "meaning": "would flag the thesis for a re-read",
+      "when": [
+       "weighted ≥ 0.45"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "no_change",
+      "meaning": "no change",
+      "when": [
+       "otherwise: below every band"
+      ],
+      "more": 0,
+      "stages": [
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope",
+       "published_at is after the data cutoff (no future data in replay)"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "__abstain__",
+      "meaning": "abstain: no outcome, a person reviews",
+      "when": [
+       "specificity conf < 0.40 or likelihood conf < 0.40 or impact conf < 0.…"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, headline, body (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue, future_data",
+     "output": "gate → decide in code",
+     "output_detail": "review floor 0.40 · w specificity 0.20 · w likelihood 0.40"
     }
    }
   }

@@ -399,3 +399,7 @@ body{padding-bottom:70px}
 .modal .fed-field b,.modal .fed-q b{color:var(--accent);font-weight:600;margin-right:4px}
 .modal .fed-opts{opacity:.7}
 .modal .scene-wrap.compact .scene{max-height:58vh}
+
+/* Patch 0013: the real example set card (set id, unlabelled badge, provenance links). */
+.set-card { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 8px 0; }
+.set-card a { font-size: 12px; }
