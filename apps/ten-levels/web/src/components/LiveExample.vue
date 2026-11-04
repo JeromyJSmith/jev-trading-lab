@@ -299,6 +299,12 @@ async function run() {
         <h3>Inputs</h3>
         <div class="meta">{{ option.input_schema ? "Edit the inputs; the decisions service builds the state from them" : "Edit the state the code receives" }}</div>
         <h4>Input Examples</h4>
+        <div v-if="option.coverage" class="outcomes-strip" data-testid="outcomes-strip">
+          <span class="meta-inline">Outcomes covered</span>
+          <span v-for="b in option.coverage.boxes" :key="b.id" class="pill" :class="{ off: !!b.unreachable || !b.count }"
+            :title="b.unreachable ? `unreachable: ${b.unreachable}` : `${b.count} example set(s) whose recorded live outcome is ${b.id}`"
+            :data-outcome="b.id">{{ b.id.replace(/_/g, " ") }} {{ b.count }}</span>
+        </div>
         <div class="sets">
           <button
             v-for="(name, i) in setNames"
@@ -316,6 +322,7 @@ async function run() {
           <span class="meta-inline">real market data<template v-if="setMeta.point_in_time_cutoff">, cutoff {{ setMeta.point_in_time_cutoff }}</template></span>
           <span v-for="(p, j) in links" :key="j"><a :href="p.url" target="_blank" rel="noopener" data-testid="provenance">{{ SOURCE_NAME[p.source] ?? p.source }}{{ p.published_at ? ` ${p.published_at.slice(0, 10)}` : "" }}</a></span>
           <span v-if="!links.length" class="meta-inline">{{ (setMeta.provenance[0]?.source && SOURCE_NAME[setMeta.provenance[0].source]) || "computed" }}, no public link</span>
+          <div v-if="setMeta.construction" class="meta construction" data-testid="construction">{{ setMeta.construction }}<template v-if="setMeta.guard_case"> (guard case: {{ setMeta.guard_case.replace(/_/g, " ") }}, decided by code, no Jev call)</template></div>
           <div v-if="STATIC && setMeta.excerpt_policy && setMeta.excerpt_policy.startsWith('news')" class="meta">News text shown as headline + link + an excerpt of at most 200 chars (publishing policy); the live run used the full item.</div>
         </div>
         <SchemaForm v-if="option.input_schema" :key="option.key + setIndex" v-model="input" :schema="option.input_schema" :errors="schemaErrors" />

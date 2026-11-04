@@ -84,6 +84,26 @@
    },
    "inputs": [
     {
+     "as_of": "2024-07-01T14:00:00Z",
+     "data_cutoff": "2024-07-01T14:00:00Z",
+     "observation": {
+      "data_cutoff": "2024-07-01T14:00:00Z",
+      "features": {
+       "gap_pct": -89.982,
+       "range_high_break": false,
+       "relative_volume": 8.833,
+       "trend": "down",
+       "vwap_dist_pct": -0.057
+      },
+      "notes": "Code summary: close 160.33 vs 20-session high 1851.62, gap -89.98%, -0.06% from VWAP, relative volume 8.83x, below_sma50.",
+      "readable": true,
+      "symbol": "AVGO",
+      "timeframe": "5m"
+     },
+     "symbol": "AVGO",
+     "timeframe": "5m"
+    },
+    {
      "as_of": "2023-02-03T14:45:00Z",
      "data_cutoff": "2023-02-03T14:45:00Z",
      "observation": {
@@ -96,6 +116,92 @@
        "vwap_dist_pct": 0.936
       },
       "notes": "Code summary: close 151.32 vs 20-session high 151.18, gap -1.92%, +0.94% from VWAP, relative volume 2.13x, above_sma50.",
+      "readable": true,
+      "symbol": "AAPL",
+      "timeframe": "5m"
+     },
+     "symbol": "AAPL",
+     "timeframe": "5m"
+    },
+    {
+     "as_of": "2023-07-10T16:00:00Z",
+     "data_cutoff": "2023-07-10T16:00:00Z",
+     "observation": {
+      "data_cutoff": "2023-07-10T16:00:00Z",
+      "features": {
+       "drawdown_60d_pct": -13.448,
+       "gap_pct": -0.159,
+       "intraday_vol_ratio": 1.291,
+       "range_high_break": false,
+       "relative_volume": 0.72,
+       "trend": "up",
+       "vwap_dist_pct": 0.422
+      },
+      "notes": "Code summary at 2023-07-10 12:00 ET: close 111.86 vs session open 113.00 and 20-session high 132.83, gap -0.16%, +0.42% from VWAP, -13.4% from the 60-session high, relative volume 0.72x, above_sma50.",
+      "readable": true,
+      "symbol": "AMD",
+      "timeframe": "5m"
+     },
+     "symbol": "AMD",
+     "timeframe": "5m"
+    },
+    {
+     "as_of": "2023-01-23T14:40:00Z",
+     "data_cutoff": "2023-01-23T14:40:00Z",
+     "observation": {
+      "data_cutoff": "2023-01-23T14:40:00Z",
+      "features": {
+       "gap_pct": 3.09,
+       "range_high_break": true,
+       "relative_volume": 1.935,
+       "trend": "up",
+       "vwap_dist_pct": 0.833
+      },
+      "notes": "Code summary: close 73.02 vs 20-session high 72.78, gap +3.09%, +0.83% from VWAP, relative volume 1.94x, above_sma50.",
+      "readable": true,
+      "symbol": "AMD",
+      "timeframe": "5m"
+     },
+     "symbol": "AMD",
+     "timeframe": "5m"
+    },
+    {
+     "as_of": "2023-10-06T16:00:00Z",
+     "data_cutoff": "2023-10-06T16:00:00Z",
+     "observation": {
+      "data_cutoff": "2023-10-06T16:00:00Z",
+      "features": {
+       "drawdown_60d_pct": -10.017,
+       "gap_pct": -0.669,
+       "intraday_vol_ratio": 1.284,
+       "range_high_break": false,
+       "relative_volume": 0.872,
+       "trend": "down",
+       "vwap_dist_pct": 1.135
+      },
+      "notes": "Code summary at 2023-10-06 12:00 ET: close 176.80 vs session open 173.80 and 20-session high 180.30, gap -0.67%, +1.14% from VWAP, -10.0% from the 60-session high, relative volume 0.87x, below_sma50.",
+      "readable": true,
+      "symbol": "AAPL",
+      "timeframe": "5m"
+     },
+     "symbol": "AAPL",
+     "timeframe": "5m"
+    },
+    {
+     "as_of": "2023-02-03T14:45:00Z",
+     "data_cutoff": "2023-02-03T14:45:00Z",
+     "observation": {
+      "data_cutoff": "2023-02-03T14:15:00Z",
+      "features": {
+       "drawdown_60d_pct": -0.258,
+       "gap_pct": 2.365,
+       "intraday_vol_ratio": 1.001,
+       "range_high_break": true,
+       "relative_volume": 1.465,
+       "trend": "up",
+       "vwap_dist_pct": 0.802
+      },
+      "notes": "Code summary at 2023-02-03 09:15 ET: close 150.92 vs session open 148.90 and 20-session high 147.23, gap +2.37%, +0.80% from VWAP, -0.3% from the 60-session high, relative volume 1.47x, above_sma50.",
       "readable": true,
       "symbol": "AAPL",
       "timeframe": "5m"
@@ -124,43 +230,25 @@
      "timeframe": "5m"
     },
     {
-     "as_of": "2023-01-23T14:40:00Z",
-     "data_cutoff": "2023-01-23T14:40:00Z",
+     "as_of": "2024-05-16T16:00:00Z",
+     "data_cutoff": "2024-05-16T16:00:00Z",
      "observation": {
-      "data_cutoff": "2023-01-23T14:40:00Z",
+      "data_cutoff": "2024-05-16T16:00:00Z",
       "features": {
-       "gap_pct": 3.09,
-       "range_high_break": true,
-       "relative_volume": 1.935,
-       "trend": "up",
-       "vwap_dist_pct": 0.833
-      },
-      "notes": "Code summary: close 73.02 vs 20-session high 72.78, gap +3.09%, +0.83% from VWAP, relative volume 1.94x, above_sma50.",
-      "readable": true,
-      "symbol": "AMD",
-      "timeframe": "5m"
-     },
-     "symbol": "AMD",
-     "timeframe": "5m"
-    },
-    {
-     "as_of": "2024-07-01T14:00:00Z",
-     "data_cutoff": "2024-07-01T14:00:00Z",
-     "observation": {
-      "data_cutoff": "2024-07-01T14:00:00Z",
-      "features": {
-       "gap_pct": -89.982,
+       "drawdown_60d_pct": -1.457,
+       "gap_pct": -1.385,
+       "intraday_vol_ratio": 1.352,
        "range_high_break": false,
-       "relative_volume": 8.833,
-       "trend": "down",
-       "vwap_dist_pct": -0.057
+       "relative_volume": 0.888,
+       "trend": "up",
+       "vwap_dist_pct": 0.565
       },
-      "notes": "Code summary: close 160.33 vs 20-session high 1851.62, gap -89.98%, -0.06% from VWAP, relative volume 8.83x, below_sma50.",
+      "notes": "Code summary at 2024-05-16 12:00 ET: close 314.40 vs session open 314.63 and 20-session high 322.60, gap -1.39%, +0.56% from VWAP, -1.5% from the 60-session high, relative volume 0.89x, above_sma50.",
       "readable": true,
-      "symbol": "AVGO",
+      "symbol": "AMGN",
       "timeframe": "5m"
      },
-     "symbol": "AVGO",
+     "symbol": "AMGN",
      "timeframe": "5m"
     },
     {
@@ -182,26 +270,6 @@
      },
      "symbol": "NVDA",
      "timeframe": "5m"
-    },
-    {
-     "as_of": "2023-02-02T15:00:00Z",
-     "data_cutoff": "2023-02-02T15:00:00Z",
-     "observation": {
-      "data_cutoff": "2023-02-02T15:00:00Z",
-      "features": {
-       "gap_pct": 19.77,
-       "range_high_break": true,
-       "relative_volume": 6.342,
-       "trend": "up",
-       "vwap_dist_pct": 0.645
-      },
-      "notes": "Code summary: close 183.13 vs 20-session high 153.58, gap +19.77%, +0.65% from VWAP, relative volume 6.34x, above_sma50.",
-      "readable": true,
-      "symbol": "META",
-      "timeframe": "5m"
-     },
-     "symbol": "META",
-     "timeframe": "5m"
     }
    ],
    "expected": [
@@ -210,9 +278,29 @@
     null,
     null,
     null,
+    null,
+    null,
+    null,
     null
    ],
    "sets": [
+    {
+     "set_id": "L11.A:919242047ca8",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2024-07-01T14:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AVGO",
+       "published_at": "2024-07-01T14:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "observation = real point-in-time features; notes are a code template",
+     "construction": "observation = real point-in-time features; notes are a code template [breakout/gap event features]"
+    },
     {
      "set_id": "L11.A:0cc77bdc1562",
      "label_status": "unlabelled",
@@ -227,23 +315,25 @@
       }
      ],
      "excerpt_policy": "derived numbers from research-only bars",
-     "reason": "observation = real point-in-time features; notes are a code template"
+     "reason": "observation = real point-in-time features; notes are a code template",
+     "construction": "observation = real point-in-time features; notes are a code template [breakout/gap event features]"
     },
     {
-     "set_id": "L11.A:9307e2d6ff3e",
+     "set_id": "L11.A:a8493aa199d4",
      "label_status": "unlabelled",
      "derivation": "derived_from_real_market_data",
-     "point_in_time_cutoff": "2023-01-20T16:05:00Z",
+     "point_in_time_cutoff": "2023-07-10T16:00:00Z",
      "provenance": [
       {
        "source": "prices",
-       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=ADBE",
-       "published_at": "2023-01-20T16:05:00Z",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AMD",
+       "published_at": "2023-07-10T16:00:00Z",
        "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
       }
      ],
      "excerpt_policy": "derived numbers from research-only bars",
-     "reason": "observation = real point-in-time features; notes are a code template"
+     "reason": "observation = real point-in-time features; notes are a code template",
+     "construction": "midday 12:00 ET features on a hash-picked session (any setup family can occur)"
     },
     {
      "set_id": "L11.A:7de4aba930f7",
@@ -259,23 +349,76 @@
       }
      ],
      "excerpt_policy": "derived numbers from research-only bars",
-     "reason": "observation = real point-in-time features; notes are a code template"
+     "reason": "observation = real point-in-time features; notes are a code template",
+     "construction": "observation = real point-in-time features; notes are a code template [breakout/gap event features]"
     },
     {
-     "set_id": "L11.A:919242047ca8",
+     "set_id": "L11.A:8bb97c568c71",
      "label_status": "unlabelled",
      "derivation": "derived_from_real_market_data",
-     "point_in_time_cutoff": "2024-07-01T14:00:00Z",
+     "point_in_time_cutoff": "2023-10-06T16:00:00Z",
      "provenance": [
       {
        "source": "prices",
-       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AVGO",
-       "published_at": "2024-07-01T14:00:00Z",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AAPL",
+       "published_at": "2023-10-06T16:00:00Z",
        "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
       }
      ],
      "excerpt_policy": "derived numbers from research-only bars",
-     "reason": "observation = real point-in-time features; notes are a code template"
+     "reason": "observation = real point-in-time features; notes are a code template",
+     "construction": "midday 12:00 ET features on a hash-picked session (any setup family can occur)"
+    },
+    {
+     "set_id": "L11.A:cacabc050497",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2023-02-03T14:45:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AAPL",
+       "published_at": "2023-02-03T14:15:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "observation = real point-in-time features; notes are a code template",
+     "construction": "stale-observation variant: real features 30 minutes before as_of (limit 900 s); code rejects"
+    },
+    {
+     "set_id": "L11.A:9307e2d6ff3e",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2023-01-20T16:05:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=ADBE",
+       "published_at": "2023-01-20T16:05:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "observation = real point-in-time features; notes are a code template",
+     "construction": "observation = real point-in-time features; notes are a code template [breakout/gap event features]"
+    },
+    {
+     "set_id": "L11.A:e77a68e9a72e",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2024-05-16T16:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AMGN",
+       "published_at": "2024-05-16T16:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "observation = real point-in-time features; notes are a code template",
+     "construction": "midday 12:00 ET features on a hash-picked session (any setup family can occur)"
     },
     {
      "set_id": "L11.A:3646a3c8c08a",
@@ -291,23 +434,8 @@
       }
      ],
      "excerpt_policy": "derived numbers from research-only bars",
-     "reason": "observation = real point-in-time features; notes are a code template"
-    },
-    {
-     "set_id": "L11.A:287efcff94f6",
-     "label_status": "unlabelled",
-     "derivation": "derived_from_real_market_data",
-     "point_in_time_cutoff": "2023-02-02T15:00:00Z",
-     "provenance": [
-      {
-       "source": "prices",
-       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=META",
-       "published_at": "2023-02-02T15:00:00Z",
-       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
-      }
-     ],
-     "excerpt_policy": "derived numbers from research-only bars",
-     "reason": "observation = real point-in-time features; notes are a code template"
+     "reason": "observation = real point-in-time features; notes are a code template",
+     "construction": "observation = real point-in-time features; notes are a code template [breakout/gap event features]"
     }
    ],
    "visual": {
@@ -447,6 +575,50 @@
      "output": "gate → decide in code",
      "output_detail": "family conf 0.55 · max observation age s 900"
     }
+   },
+   "coverage": {
+    "source": "decisions/evidence/jev-levels-trading/outcome-coverage-L6-L13.json",
+    "boxes": [
+     {
+      "id": "breakout",
+      "count": 2
+     },
+     {
+      "id": "gap_and_go",
+      "count": 2
+     },
+     {
+      "id": "mean_reversion",
+      "count": 0,
+      "unreachable": "Jev never chose it in 34 real candidates (breakout/gap events + 24 hash-picked midday sessions)"
+     },
+     {
+      "id": "other",
+      "count": 1
+     },
+     {
+      "id": "pullback_continuation",
+      "count": 2
+     },
+     {
+      "id": "range_bound",
+      "count": 0,
+      "unreachable": "Jev never chose it in 34 real candidates (breakout/gap events + 24 hash-picked midday sessions)"
+     },
+     {
+      "id": "rejected_input",
+      "count": 1
+     },
+     {
+      "id": "reversal",
+      "count": 0,
+      "unreachable": "Jev never chose it in 34 real candidates (breakout/gap events + 24 hash-picked midday sessions)"
+     },
+     {
+      "id": "unclear",
+      "count": 1
+     }
+    ]
    }
   },
   {
@@ -532,29 +704,6 @@
    },
    "inputs": [
     {
-     "as_of": "2023-02-03T14:45:00Z",
-     "data_cutoff": "2023-02-03T14:45:00Z",
-     "features": {
-      "atr_pct": 2.41,
-      "relative_volume": 2.127
-     },
-     "hypothesis": "Breakout continuation: close above the 20-session high with relative volume above 1.5 and an up trend",
-     "observation": {
-      "data_cutoff": "2023-02-03T14:45:00Z",
-      "features": {
-       "above_opening_range_high": true,
-       "relative_volume": 2.127,
-       "trend": "up"
-      },
-      "notes": "Code summary: 5m close 151.32 at 2023-02-03 09:45 ET broke the 20-session high 151.18 on 2.13x relative volume; ATR14 3.65; gap -1.92%.",
-      "readable": true,
-      "symbol": "AAPL",
-      "timeframe": "5m"
-     },
-     "symbol": "AAPL",
-     "timeframe": "5m"
-    },
-    {
      "as_of": "2023-01-20T16:05:00Z",
      "data_cutoff": "2023-01-20T16:05:00Z",
      "features": {
@@ -578,6 +727,98 @@
      "timeframe": "5m"
     },
     {
+     "as_of": "2023-05-05T15:00:00Z",
+     "data_cutoff": "2023-05-05T15:00:00Z",
+     "features": {
+      "atr_pct": 1.469,
+      "relative_volume": 3.184
+     },
+     "hypothesis": "Breakout continuation: close above the 20-session high with relative volume above 1.5 and an up trend",
+     "observation": {
+      "data_cutoff": "2023-05-05T15:00:00Z",
+      "features": {
+       "close_above_20d_high": true,
+       "close_vs_20d_high_pct": 1.54,
+       "relative_volume": 3.184,
+       "trend": "up"
+      },
+      "notes": "Code summary at 2023-05-05 11:00 ET: close 173.56, 20-session high 170.92, relative volume 3.18x, above_sma50, +0.26% from VWAP.",
+      "readable": true,
+      "symbol": "AAPL",
+      "timeframe": "5m"
+     },
+     "symbol": "AAPL",
+     "timeframe": "5m"
+    },
+    {
+     "as_of": "2023-02-03T14:45:00Z",
+     "data_cutoff": "2023-02-03T14:45:00Z",
+     "features": {
+      "atr_pct": 2.41,
+      "relative_volume": 2.127
+     },
+     "hypothesis": "Breakout continuation: close above the 20-session high with relative volume above 1.5 and an up trend",
+     "observation": {
+      "data_cutoff": "2023-02-03T14:45:00Z",
+      "features": {
+       "above_opening_range_high": true,
+       "relative_volume": 2.127,
+       "trend": "up"
+      },
+      "notes": "Code summary: 5m close 151.32 at 2023-02-03 09:45 ET broke the 20-session high 151.18 on 2.13x relative volume; ATR14 3.65; gap -1.92%.",
+      "readable": true,
+      "symbol": "AAPL",
+      "timeframe": "5m"
+     },
+     "symbol": "AAPL",
+     "timeframe": "5m"
+    },
+    {
+     "as_of": "2024-09-06T15:00:00Z",
+     "data_cutoff": "2024-09-06T15:00:00Z",
+     "features": {
+      "atr_pct": 2.164,
+      "relative_volume": 0.963
+     },
+     "hypothesis": "Breakout continuation: close above the 20-session high with relative volume above 1.5 and an up trend",
+     "observation": {
+      "data_cutoff": "2024-09-06T15:00:00Z",
+      "features": {
+       "close_above_20d_high": false,
+       "close_vs_20d_high_pct": -3.64,
+       "relative_volume": 0.963,
+       "trend": "up"
+      },
+      "notes": "Code summary at 2024-09-06 11:00 ET: close 565.36, 20-session high 586.70, relative volume 0.96x, above_sma50, -0.50% from VWAP.",
+      "readable": true,
+      "symbol": "ADBE",
+      "timeframe": "5m"
+     },
+     "symbol": "ADBE",
+     "timeframe": "5m"
+    },
+    {
+     "as_of": "2023-02-03T14:45:00Z",
+     "data_cutoff": "2023-02-03T14:45:00Z",
+     "features": {
+      "atr_pct": 2.41,
+      "relative_volume": 2.127
+     },
+     "hypothesis": "Breakout continuation: close above the 20-session high with relative volume above 1.5 and an up trend",
+     "observation": {
+      "data_cutoff": "2023-02-03T14:15:00Z",
+      "features": {
+       "relative_volume": 1.465
+      },
+      "notes": "Code summary 30 minutes before as_of.",
+      "readable": true,
+      "symbol": "AAPL",
+      "timeframe": "5m"
+     },
+     "symbol": "AAPL",
+     "timeframe": "5m"
+    },
+    {
      "as_of": "2023-01-23T14:40:00Z",
      "data_cutoff": "2023-01-23T14:40:00Z",
      "features": {
@@ -593,6 +834,30 @@
        "trend": "up"
       },
       "notes": "Code summary: 5m close 73.02 at 2023-01-23 09:40 ET broke the 20-session high 72.78 on 1.94x relative volume; ATR14 2.82; gap +3.09%.",
+      "readable": true,
+      "symbol": "AMD",
+      "timeframe": "5m"
+     },
+     "symbol": "AMD",
+     "timeframe": "5m"
+    },
+    {
+     "as_of": "2024-05-09T15:00:00Z",
+     "data_cutoff": "2024-05-09T15:00:00Z",
+     "features": {
+      "atr_pct": 4.131,
+      "relative_volume": 0.712
+     },
+     "hypothesis": "Breakout continuation: close above the 20-session high with relative volume above 1.5 and an up trend",
+     "observation": {
+      "data_cutoff": "2024-05-09T15:00:00Z",
+      "features": {
+       "close_above_20d_high": false,
+       "close_vs_20d_high_pct": -10.76,
+       "relative_volume": 0.712,
+       "trend": "down"
+      },
+      "notes": "Code summary at 2024-05-09 11:00 ET: close 152.55, 20-session high 170.95, relative volume 0.71x, below_sma50, +0.32% from VWAP.",
       "readable": true,
       "symbol": "AMD",
       "timeframe": "5m"
@@ -622,52 +887,6 @@
      },
      "symbol": "AMGN",
      "timeframe": "5m"
-    },
-    {
-     "as_of": "2023-02-02T14:35:00Z",
-     "data_cutoff": "2023-02-02T14:35:00Z",
-     "features": {
-      "atr_pct": 3.177,
-      "relative_volume": 2.359
-     },
-     "hypothesis": "Breakout continuation: close above the 20-session high with relative volume above 1.5 and an up trend",
-     "observation": {
-      "data_cutoff": "2023-02-02T14:35:00Z",
-      "features": {
-       "above_opening_range_high": true,
-       "relative_volume": 2.359,
-       "trend": "up"
-      },
-      "notes": "Code summary: 5m close 111.22 at 2023-02-02 09:35 ET broke the 20-session high 106.24 on 2.36x relative volume; ATR14 3.53; gap +4.83%.",
-      "readable": true,
-      "symbol": "AMZN",
-      "timeframe": "5m"
-     },
-     "symbol": "AMZN",
-     "timeframe": "5m"
-    },
-    {
-     "as_of": "2023-03-03T14:35:00Z",
-     "data_cutoff": "2023-03-03T14:35:00Z",
-     "features": {
-      "atr_pct": 1.828,
-      "relative_volume": 6.662
-     },
-     "hypothesis": "Breakout continuation: close above the 20-session high with relative volume above 1.5 and an up trend",
-     "observation": {
-      "data_cutoff": "2023-03-03T14:35:00Z",
-      "features": {
-       "above_opening_range_high": true,
-       "relative_volume": 6.662,
-       "trend": "up"
-      },
-      "notes": "Code summary: 5m close 622.31 at 2023-03-03 09:35 ET broke the 20-session high 617.01 on 6.66x relative volume; ATR14 11.38; gap +3.03%.",
-      "readable": true,
-      "symbol": "AVGO",
-      "timeframe": "5m"
-     },
-     "symbol": "AVGO",
-     "timeframe": "5m"
     }
    ],
    "expected": [
@@ -676,25 +895,11 @@
     null,
     null,
     null,
+    null,
+    null,
     null
    ],
    "sets": [
-    {
-     "set_id": "L11.B:9364cd6d839a",
-     "label_status": "unlabelled",
-     "derivation": "derived_from_real_market_data",
-     "point_in_time_cutoff": "2023-02-03T14:45:00Z",
-     "provenance": [
-      {
-       "source": "prices",
-       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AAPL",
-       "published_at": "2023-02-03T14:45:00Z",
-       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
-      }
-     ],
-     "excerpt_policy": "derived numbers from research-only bars",
-     "reason": "hypothesis is the code rule; observation is real point-in-time features"
-    },
     {
      "set_id": "L11.B:84d06cd01e8b",
      "label_status": "unlabelled",
@@ -709,7 +914,76 @@
       }
      ],
      "excerpt_policy": "derived numbers from research-only bars",
-     "reason": "hypothesis is the code rule; observation is real point-in-time features"
+     "reason": "hypothesis is the code rule; observation is real point-in-time features",
+     "construction": "hypothesis is the code rule; observation is real point-in-time features [real breakout bars (hypothesis conditions present)]"
+    },
+    {
+     "set_id": "L11.B:95856cf8e68a",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2023-05-05T15:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AAPL",
+       "published_at": "2023-05-05T15:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "hypothesis is the code rule; observation is real point-in-time features",
+     "construction": "11:00 ET features on a hash-picked session (conditions may or may not hold)"
+    },
+    {
+     "set_id": "L11.B:9364cd6d839a",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2023-02-03T14:45:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AAPL",
+       "published_at": "2023-02-03T14:45:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "hypothesis is the code rule; observation is real point-in-time features",
+     "construction": "hypothesis is the code rule; observation is real point-in-time features [real breakout bars (hypothesis conditions present)]"
+    },
+    {
+     "set_id": "L11.B:aa828c88813c",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2024-09-06T15:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=ADBE",
+       "published_at": "2024-09-06T15:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "hypothesis is the code rule; observation is real point-in-time features",
+     "construction": "11:00 ET features on a hash-picked session (conditions may or may not hold)"
+    },
+    {
+     "set_id": "L11.B:474c31ca711e",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2023-02-03T14:45:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AAPL",
+       "published_at": "2023-02-03T14:15:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "stale observation",
+     "construction": "stale-observation variant: observation snapshot 30 minutes before as_of (limit 900 s); code rejects"
     },
     {
      "set_id": "L11.B:1e5d9854b14d",
@@ -725,7 +999,25 @@
       }
      ],
      "excerpt_policy": "derived numbers from research-only bars",
-     "reason": "hypothesis is the code rule; observation is real point-in-time features"
+     "reason": "hypothesis is the code rule; observation is real point-in-time features",
+     "construction": "hypothesis is the code rule; observation is real point-in-time features [real breakout bars (hypothesis conditions present)]"
+    },
+    {
+     "set_id": "L11.B:e26fa0153780",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2024-05-09T15:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AMD",
+       "published_at": "2024-05-09T15:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "hypothesis is the code rule; observation is real point-in-time features",
+     "construction": "11:00 ET features on a hash-picked session (conditions may or may not hold)"
     },
     {
      "set_id": "L11.B:c38e6babb610",
@@ -741,39 +1033,8 @@
       }
      ],
      "excerpt_policy": "derived numbers from research-only bars",
-     "reason": "hypothesis is the code rule; observation is real point-in-time features"
-    },
-    {
-     "set_id": "L11.B:0bb249a38d3f",
-     "label_status": "unlabelled",
-     "derivation": "derived_from_real_market_data",
-     "point_in_time_cutoff": "2023-02-02T14:35:00Z",
-     "provenance": [
-      {
-       "source": "prices",
-       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AMZN",
-       "published_at": "2023-02-02T14:35:00Z",
-       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
-      }
-     ],
-     "excerpt_policy": "derived numbers from research-only bars",
-     "reason": "hypothesis is the code rule; observation is real point-in-time features"
-    },
-    {
-     "set_id": "L11.B:1f65de70f968",
-     "label_status": "unlabelled",
-     "derivation": "derived_from_real_market_data",
-     "point_in_time_cutoff": "2023-03-03T14:35:00Z",
-     "provenance": [
-      {
-       "source": "prices",
-       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AVGO",
-       "published_at": "2023-03-03T14:35:00Z",
-       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
-      }
-     ],
-     "excerpt_policy": "derived numbers from research-only bars",
-     "reason": "hypothesis is the code rule; observation is real point-in-time features"
+     "reason": "hypothesis is the code rule; observation is real point-in-time features",
+     "construction": "hypothesis is the code rule; observation is real point-in-time features [real breakout bars (hypothesis conditions present)]"
     }
    ],
    "visual": {
@@ -899,6 +1160,31 @@
      "output": "gate → route → decide in code",
      "output_detail": "review floor 0.50 · match conf 0.70 · min quality 0.50"
     }
+   },
+   "coverage": {
+    "source": "decisions/evidence/jev-levels-trading/outcome-coverage-L6-L13.json",
+    "boxes": [
+     {
+      "id": "__abstain__",
+      "count": 2
+     },
+     {
+      "id": "paper_candidate",
+      "count": 1
+     },
+     {
+      "id": "reject",
+      "count": 2
+     },
+     {
+      "id": "rejected_input",
+      "count": 1
+     },
+     {
+      "id": "watch",
+      "count": 2
+     }
+    ]
    }
   },
   {
@@ -981,45 +1267,6 @@
    },
    "inputs": [
     {
-     "config_summary": "sma_cross on AAPL params {\"fast\":10,\"slow\":40}; signal on close(t), fill at open(t+1), long/flat; commission 1.0bps + slippage 2.0bps per side; data github://plotly:datasets@master/all_stocks_5yr.csv cutoff 2018-02-07; 1 parameter set(s) tried; in-sample only, no out-of-sample test.",
-     "data_cutoff": "2018-02-07T21:00:00Z",
-     "evaluation_frozen": false,
-     "metrics": {
-      "max_drawdown_pct": -29.532173,
-      "net_per_trade_pct": 2.436132,
-      "profit_factor": 2.246832,
-      "trades": 21,
-      "win_rate_pct": 42.857143
-     },
-     "notes": "real market data; served from local parquet cache 6aea253cd19de60b568143991aaf1fa482456565c389205658d236e595e716cf.parquet (sha256 of original download)"
-    },
-    {
-     "config_summary": "sma_cross on AAPL params {\"fast\":3,\"slow\":20}; signal on close(t), fill at open(t+1), long/flat; commission 1.0bps + slippage 2.0bps per side; data github://plotly:datasets@master/finance-charts-apple.csv cutoff 2017-02-16; 1 parameter set(s) tried; in-sample only, no out-of-sample test.",
-     "data_cutoff": "2017-02-16T21:00:00Z",
-     "evaluation_frozen": false,
-     "metrics": {
-      "max_drawdown_pct": -13.548988,
-      "net_per_trade_pct": 1.898607,
-      "profit_factor": 3.351356,
-      "trades": 16,
-      "win_rate_pct": 43.75
-     },
-     "notes": "real market data; served from local parquet cache 24c7604edfd5afe862ddb9f9535e2fd7351f43711bfc442bca52055e15e37bcd.parquet (sha256 of original download)"
-    },
-    {
-     "config_summary": "sma_cross on AAPL params {\"fast\":10,\"slow\":40}; signal on close(t), fill at open(t+1), long/flat; commission 1.0bps + slippage 2.0bps per side; data github://plotly:datasets@master/finance-charts-apple.csv cutoff 2017-02-16; 1 parameter set(s) tried; in-sample only, no out-of-sample test.",
-     "data_cutoff": "2017-02-16T21:00:00Z",
-     "evaluation_frozen": false,
-     "metrics": {
-      "max_drawdown_pct": -27.332814,
-      "net_per_trade_pct": 0.301499,
-      "profit_factor": 1.108434,
-      "trades": 9,
-      "win_rate_pct": 22.222222
-     },
-     "notes": "real market data; served from local parquet cache 24c7604edfd5afe862ddb9f9535e2fd7351f43711bfc442bca52055e15e37bcd.parquet (sha256 of original download)"
-    },
-    {
      "config_summary": "sma_cross on AAPL params {fast:2,slow:5}; signal on close(t), fill at open(t+1), long/flat; 3 bps per side; 2022-08-01..2024-06-28; 1 parameter set tried; in-sample only.",
      "data_cutoff": "2024-06-28T20:00:00Z",
      "evaluation_frozen": false,
@@ -1031,6 +1278,45 @@
       "win_rate_pct": 43.75
      },
      "notes": "real market data (hf_dfg_5m daily aggregates)"
+    },
+    {
+     "config_summary": "sma_cross on AMGN; params {fast:3,slow:6} picked as the best of 3 tried on the same data; 2022-08-01..2024-06-28 in-sample only; signal on close(t), fill at open(t+1); 3 bps per side commission, no spread or slippage; long/flat.",
+     "data_cutoff": "2024-06-28T20:00:00Z",
+     "evaluation_frozen": false,
+     "metrics": {
+      "max_drawdown_pct": -13.1066,
+      "net_per_trade_pct": 0.4559,
+      "profit_factor": 1.4107,
+      "trades": 40,
+      "win_rate_pct": 50
+     },
+     "notes": "real market data (hf_dfg_5m daily aggregates); replay computed in code"
+    },
+    {
+     "config_summary": "sma_cross on ADBE params {fast:3,slow:10} fixed in advance (textbook 3/10, chosen before seeing this data; no tuning, 1 parameter set run); 2022-08-01..2024-09-27; signal on close(t), fill at open(t+1); costs 5 bps commission + 3 bps half-spread + 2 bps slippage per side; long/flat.",
+     "data_cutoff": "2024-09-27T20:00:00Z",
+     "evaluation_frozen": false,
+     "metrics": {
+      "max_drawdown_pct": -42.5926,
+      "net_per_trade_pct": 0.1943,
+      "profit_factor": 1.0607,
+      "trades": 33,
+      "win_rate_pct": 36.36
+     },
+     "notes": "real market data (hf_dfg_5m daily aggregates); replay computed in code"
+    },
+    {
+     "config_summary": "sma_cross on AAPL params {\"fast\":10,\"slow\":40}; signal on close(t), fill at open(t+1), long/flat; commission 1.0bps + slippage 2.0bps per side; data github://plotly:datasets@master/all_stocks_5yr.csv cutoff 2018-02-07; 1 parameter set(s) tried; in-sample only, no out-of-sample test.",
+     "data_cutoff": "2018-02-07T21:00:00Z",
+     "evaluation_frozen": false,
+     "metrics": {
+      "max_drawdown_pct": -29.532173,
+      "net_per_trade_pct": 2.436132,
+      "profit_factor": 2.246832,
+      "trades": 21,
+      "win_rate_pct": 42.857143
+     },
+     "notes": "real market data; served from local parquet cache 6aea253cd19de60b568143991aaf1fa482456565c389205658d236e595e716cf.parquet (sha256 of original download)"
     },
     {
      "config_summary": "sma_cross on ADBE params {fast:3,slow:8}; signal on close(t), fill at open(t+1), long/flat; 3 bps per side; 2022-08-01..2024-06-28; 1 parameter set tried; in-sample only.",
@@ -1046,17 +1332,43 @@
      "notes": "real market data (hf_dfg_5m daily aggregates)"
     },
     {
-     "config_summary": "sma_cross on AMD params {fast:2,slow:10}; signal on close(t), fill at open(t+1), long/flat; 3 bps per side; 2022-08-01..2024-06-28; 1 parameter set tried; in-sample only.",
+     "config_summary": "sma_cross on AVGO; params {fast:2,slow:5} picked as the best of 3 tried on the same data; 2022-08-01..2024-06-28 in-sample only; signal on close(t), fill at open(t+1); 3 bps per side commission, no spread or slippage; long/flat.",
      "data_cutoff": "2024-06-28T20:00:00Z",
      "evaluation_frozen": false,
      "metrics": {
-      "max_drawdown_pct": -26.1265,
-      "net_per_trade_pct": 1.2823,
-      "profit_factor": 1.4352,
+      "max_drawdown_pct": -16.2037,
+      "net_per_trade_pct": 1.4508,
+      "profit_factor": 2.2301,
+      "trades": 54,
+      "win_rate_pct": 38.89
+     },
+     "notes": "real market data (hf_dfg_5m daily aggregates); replay computed in code"
+    },
+    {
+     "config_summary": "sma_cross on AMD params {fast:3,slow:10} fixed in advance (textbook 3/10, chosen before seeing this data; no tuning, 1 parameter set run); 2022-08-01..2024-09-27; signal on close(t), fill at open(t+1); costs 5 bps commission + 3 bps half-spread + 2 bps slippage per side; long/flat.",
+     "data_cutoff": "2024-09-27T20:00:00Z",
+     "evaluation_frozen": false,
+     "metrics": {
+      "max_drawdown_pct": -27.1309,
+      "net_per_trade_pct": 1.3172,
+      "profit_factor": 1.4409,
       "trades": 33,
       "win_rate_pct": 39.39
      },
-     "notes": "real market data (hf_dfg_5m daily aggregates)"
+     "notes": "real market data (hf_dfg_5m daily aggregates); replay computed in code"
+    },
+    {
+     "config_summary": "sma_cross on AAPL params {\"fast\":3,\"slow\":20}; signal on close(t), fill at open(t+1), long/flat; commission 1.0bps + slippage 2.0bps per side; data github://plotly:datasets@master/finance-charts-apple.csv cutoff 2017-02-16; 1 parameter set(s) tried; in-sample only, no out-of-sample test.",
+     "data_cutoff": "2017-02-16T21:00:00Z",
+     "evaluation_frozen": false,
+     "metrics": {
+      "max_drawdown_pct": -13.548988,
+      "net_per_trade_pct": 1.898607,
+      "profit_factor": 3.351356,
+      "trades": 16,
+      "win_rate_pct": 43.75
+     },
+     "notes": "real market data; served from local parquet cache 24c7604edfd5afe862ddb9f9535e2fd7351f43711bfc442bca52055e15e37bcd.parquet (sha256 of original download)"
     }
    ],
    "expected": [
@@ -1065,57 +1377,11 @@
     null,
     null,
     null,
+    null,
+    null,
     null
    ],
    "sets": [
-    {
-     "set_id": "L11.C:481c99ff8d22",
-     "label_status": "unlabelled",
-     "derivation": "derived_from_real_market_data",
-     "point_in_time_cutoff": "2018-02-07T21:00:00Z",
-     "provenance": [
-      {
-       "source": "prices",
-       "url": "lab/evidence/gate_inputs/backtest_result_review-1cfaccc169b3304b.json",
-       "published_at": "2018-02-07T21:00:00Z",
-       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
-      }
-     ],
-     "excerpt_policy": "derived numbers from research-only bars",
-     "reason": "metrics from a real lab backtest run over real bars"
-    },
-    {
-     "set_id": "L11.C:c5ae8e1d0a3d",
-     "label_status": "unlabelled",
-     "derivation": "derived_from_real_market_data",
-     "point_in_time_cutoff": "2017-02-16T21:00:00Z",
-     "provenance": [
-      {
-       "source": "prices",
-       "url": "lab/evidence/gate_inputs/backtest_result_review-a95e4936d24d58ca.json",
-       "published_at": "2017-02-16T21:00:00Z",
-       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
-      }
-     ],
-     "excerpt_policy": "derived numbers from research-only bars",
-     "reason": "metrics from a real lab backtest run over real bars"
-    },
-    {
-     "set_id": "L11.C:81fd3147f5df",
-     "label_status": "unlabelled",
-     "derivation": "derived_from_real_market_data",
-     "point_in_time_cutoff": "2017-02-16T21:00:00Z",
-     "provenance": [
-      {
-       "source": "prices",
-       "url": "lab/evidence/gate_inputs/backtest_result_review-f8d723e0f08aaea8.json",
-       "published_at": "2017-02-16T21:00:00Z",
-       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
-      }
-     ],
-     "excerpt_policy": "derived numbers from research-only bars",
-     "reason": "metrics from a real lab backtest run over real bars"
-    },
     {
      "set_id": "L11.C:60f813793691",
      "label_status": "unlabelled",
@@ -1130,7 +1396,59 @@
       }
      ],
      "excerpt_policy": "derived numbers from research-only bars",
-     "reason": "deterministic backtest replay of a code rule on real bars"
+     "reason": "deterministic backtest replay of a code rule on real bars",
+     "construction": "deterministic backtest replay of a code rule on real bars [lab gate inputs / short in-sample replays]"
+    },
+    {
+     "set_id": "L11.C:898fbf3c7cd3",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2024-06-28T20:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AMGN",
+       "published_at": "2024-06-28T20:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "deterministic backtest replay of a code rule on real bars",
+     "construction": "in-sample best-of-3 params, commissions only"
+    },
+    {
+     "set_id": "L11.C:1c67f1b5f342",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2024-09-27T20:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=ADBE",
+       "published_at": "2024-09-27T20:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "deterministic backtest replay of a code rule on real bars",
+     "construction": "fixed params, out-of-sample, full costs"
+    },
+    {
+     "set_id": "L11.C:481c99ff8d22",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2018-02-07T21:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "lab/evidence/gate_inputs/backtest_result_review-1cfaccc169b3304b.json",
+       "published_at": "2018-02-07T21:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "metrics from a real lab backtest run over real bars",
+     "construction": "metrics from a real lab backtest run over real bars [lab gate inputs / short in-sample replays]"
     },
     {
      "set_id": "L11.C:5f6ef679b972",
@@ -1146,23 +1464,59 @@
       }
      ],
      "excerpt_policy": "derived numbers from research-only bars",
-     "reason": "deterministic backtest replay of a code rule on real bars"
+     "reason": "deterministic backtest replay of a code rule on real bars",
+     "construction": "deterministic backtest replay of a code rule on real bars [lab gate inputs / short in-sample replays]"
     },
     {
-     "set_id": "L11.C:572772c841bd",
+     "set_id": "L11.C:2966b9b9ea57",
      "label_status": "unlabelled",
      "derivation": "derived_from_real_market_data",
      "point_in_time_cutoff": "2024-06-28T20:00:00Z",
      "provenance": [
       {
        "source": "prices",
-       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AMD",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AVGO",
        "published_at": "2024-06-28T20:00:00Z",
        "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
       }
      ],
      "excerpt_policy": "derived numbers from research-only bars",
-     "reason": "deterministic backtest replay of a code rule on real bars"
+     "reason": "deterministic backtest replay of a code rule on real bars",
+     "construction": "in-sample best-of-3 params, commissions only"
+    },
+    {
+     "set_id": "L11.C:31766b8a3323",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2024-09-27T20:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "hf://datasets/deerfieldgreen/stk-intraday-data-5min/data/train-00000-of-00001.parquet#symbol=AMD",
+       "published_at": "2024-09-27T20:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "deterministic backtest replay of a code rule on real bars",
+     "construction": "fixed params, out-of-sample, full costs"
+    },
+    {
+     "set_id": "L11.C:c5ae8e1d0a3d",
+     "label_status": "unlabelled",
+     "derivation": "derived_from_real_market_data",
+     "point_in_time_cutoff": "2017-02-16T21:00:00Z",
+     "provenance": [
+      {
+       "source": "prices",
+       "url": "lab/evidence/gate_inputs/backtest_result_review-a95e4936d24d58ca.json",
+       "published_at": "2017-02-16T21:00:00Z",
+       "licence": "research-only (dataset card declares no licence); do not redistribute raw bars"
+      }
+     ],
+     "excerpt_policy": "derived numbers from research-only bars",
+     "reason": "metrics from a real lab backtest run over real bars",
+     "construction": "metrics from a real lab backtest run over real bars [lab gate inputs / short in-sample replays]"
     }
    ],
    "visual": {
@@ -1283,6 +1637,32 @@
      "output": "guard → gate → decide in code",
      "output_detail": "min trades 30 · lookahead 0.50 · overfit 0.60"
     }
+   },
+   "coverage": {
+    "source": "decisions/evidence/jev-levels-trading/outcome-coverage-L6-L13.json",
+    "boxes": [
+     {
+      "id": "__abstain__",
+      "count": 0,
+      "unreachable": "abstains only when Jev's overfit/cost confidence < 0.34; it was confident on all 20 real replays"
+     },
+     {
+      "id": "eligible_for_frozen_evaluation",
+      "count": 2
+     },
+     {
+      "id": "insufficient_sample",
+      "count": 2
+     },
+     {
+      "id": "needs_more_evidence",
+      "count": 2
+     },
+     {
+      "id": "reject",
+      "count": 2
+     }
+    ]
    }
   },
   {
@@ -1336,19 +1716,19 @@
      "origin": "web"
     },
     {
-     "content": "ITEM 2.02 RESULTS OF OPERATIONS AND FINANCIAL CONDITION.\n\nOn August 22, 2024, Intuit Inc. announced its financial results for the fiscal quarter and year ended July 31, 2024 and provided forward-looking guidance. A copy of the press release is attached to this Report as Exhibit 99.01.\n\nThe information in this Report and the exhibit attached hereto shall not be deemed “filed” for purposes of Section 18 of the Securities Exchange Act of 1934, as amended (the “Exchange Act”), nor shall it be deemed incorporated by reference in any filing under the Securities Act of 1933, as amended, or the Exchange Act, except as shall be expressly stated by specific reference in such filing.\n\nITEM 8.01 OTHER EVENTS.\n\nOn August 22, 2024, Intuit also announced that its Board of Directors approved a cash dividend of $1.04 per share. The cash dividend will be paid on October 18, 2024 to shareholders of record as of the close of business on October 10, 2024. Future declarations of dividends and the establishment of future record dates and payment dates are subject to the final determination of the Intuit Board of Directors. A copy of the press release announcing the cash dividend is furnished as Exhibit 99.01 to this Report.\n\nITEM 9.01 FINANCIAL STATEMENTS AND EXHIBITS.\n\n(d) Exhibits\n\n99.01\nPress release issued on August 22, 2024, reporting financial results for the quarter and year ended July 31, 2024 and announcing the cash dividend. *\n\n104 Cover Page Interactive Data File (the cover page XBRL tags are embedded within the inline XBRL document)\n\n* This exhibit is intended to be furnished and shall not be deemed “filed” for purposes of the Securities Exchange Act of 1934, as amended.\n\nSIGNATURES\n\nPursuant to the requirements of the Securities Exchange Act of 1934, the Registrant has duly caused this report to be signed on its behalf by the undersigned hereunto duly authorized.\n\nDate: August 22, 2024\nINTUIT INC.\n\nBy: /s/ SANDEEP S. AUJLA\n\nSandeep S. Aujla\n\nExecutive Vice President and\nChief Financial Officer",
-     "data_cutoff": "2024-08-22T20:16:49Z",
-     "origin": "filing"
+     "content": ", /PRNewswire/ -- First Industrial Realty Trust, Inc. (NYSE: FR), a leading fully integrated owner, operator and developer of logistics real estate, today announced that its board of directors declar…",
+     "data_cutoff": "2026-11-03T21:59:00Z",
+     "origin": "web"
     },
     {
-     "content": "Item 5.02 Departure of Directors or Certain Officers; Election of Directors; Appointment of Certain Officers; Compensatory Arrangements of Certain Officers.\n\nThe Board of Directors (the “Board”) of MercadoLibre, Inc. (the “Company”) is saddened to announce that Mr. Mario Vázquez, one of the directors of the Company, died on August 3, 2024. Mr. Vázquez had been a director since 2008 and served as Chairman of the Company’s Audit Committee and a member of the Company’s Compensation Committee and Nominating and Corporate Governance Committee. He made substantial contributions to the Company and will be deeply missed by all who have worked with him all these years at MercadoLibre, his family, friends and colleagues.\n\nDue to Mr. Vázquez’s death, the Board currently consists of 8 members, of which 6 are independent, and the Audit Committee currently consists of 2 members. Under NASDAQ Listing Rule 5605, the Company is required to have a majority of its directors be independent. Additionally, the Audit Committee must consist of at least 3 directors, all of which must be independent, subject to a cure period for temporary vacancies.\n\nOn August 19, 2024, the Board appointed Mr. Richard Sanders, a current member of the Board, to the Compensation Committee and the Nominating and Corporate Governance Committee of the Board, filling the vacancies resulting from the passing of Mr. Vázquez.\n\nOn September 12, 2024, the Board, upon the recommendation of the Nominating and Corporate Governance Committee of the Board, unanimously approved the appointment of Mr. Stelleo Tolda as a Class I director of the Company, to serve from September 12, 2024 until the Company’s 2025 Annual Meeting of Stockholders and until his successor is duly elected and qualified or until his earlier death, resignation or removal. In addition, the Board, upon the recommendation of the Nominating and Corporate Governance Committee, appointed Mr. Tolda to the Audit Committee in reliance of NASDAQ Listing Rule 5605(c)(2)(B). The Board’s decision was based on its finding that the exceptional and limited circumstances contemplated by NASDAQ Listing Rule 5605(c)(2)(B) were present and justified the appointment of Mr. Tolda to the Audit Committee, and that appointing Mr. Tolda would be in the best interest of the Company and its shareholders. The Board’s determination was based, in part, on (i) the fact that the unanticipated vacancy would have otherwise left the Audit Committee with only two members, (ii) Mr. Tolda’s unique combination of expertise and education, including institutional knowledge and familiarity with the Company and the industries in which it operates and (iii) the belief by the Board that Mr. Tolda’s prior service as an officer of the Company will not compromise his ability to exercise independent judgment as a member of the Audit Committee.\n\nMr. Tolda, 56, most recently served as an advisor to the Company from April 2022 until September 12, 2024, providing strategic guidance and i",
-     "data_cutoff": "2024-09-16T20:47:14Z",
-     "origin": "filing"
+     "content": "Casino Introduces 20 Wheel of Fortune Slots Games with Jackpots Resetting as High as $1.125 Million LAS VEGAS, Nov. 3, 2026 /PRNewswire/ -- IGT and MGM Springfield announced today the launch of the f…",
+     "data_cutoff": "2026-11-03T21:46:00Z",
+     "origin": "web"
     },
     {
-     "content": "Item 5.03 Amendments to Articles of Incorporation or Bylaws; Change in Fiscal Year.\n\nOn September 5, 2024, the Board of Directors (the “Board”) of Meta Platforms, Inc. (the “Company”) amended and restated the Company’s bylaws (the “Amended and Restated Bylaws”), which became effective as of such date. The Amended and Restated Bylaws, among other things, enhance and clarify certain procedural and disclosure requirements related to shareholder nominations of directors and submissions of proposals regarding other business at annual or special meetings of shareholders, including with respect to the information about any such shareholders and their affiliates required to be disclosed to the Company, the number of nominees that shareholders may nominate for election, and certain other updates in light of the “universal proxy” rules adopted by the Securities and Exchange Commission pursuant to Rule 14a-19 of the Securities Exchange Act of 1934, as amended. The Amended and Restated Bylaws also include updates to matters related to meetings of shareholders, including who may preside over such meetings, and certain other technical, clarifying and conforming changes, including updates to conform to the Delaware General Corporation Law.\n\nThe foregoing summary of the Amended and Restated Bylaws does not purport to be complete and is qualified in its entirety by reference to the full text of the Amended and Restated Bylaws, a copy of which is attached hereto as Exhibit 3.1 and incorporated in this Item 5.03 by reference.\n\nItem 9.01 Financial Statements and Exhibits.\n\n(d) Exhibits\n\nExhibit Number Exhibit Title or Description\n\n3.1\nAmended and Restated Bylaws\n\n104 Cover Page Interactive Data File (Embedded within the inline XBRL document and included in Exhibit)\n\nSIGNATURES\n\nPursuant to the requirements of the Securities Exchange Act of 1934, the Registrant has duly caused this report to be signed on its behalf by the undersigned hereunto duly authorized.\n\nMETA PLATFORMS, INC.\n\nDate: September 10, 2024 By: /s/ Katherine R. Kelly\n\nName:\n\nKatherine R. Kelly\n\nTitle:\n\nVice President and Corporate Secretary",
-     "data_cutoff": "2024-09-10T21:08:12Z",
-     "origin": "filing"
+     "content": "Third Quarter Operating Income Increased 90.3% to $16.3 Million; Adjusted EBITDAre Increased 11.8% to $43.9 MillionThird Quarter Pro Forma RevPAR Increased 7.2%, Driving a 14.4% Increase in Pro Forma…",
+     "data_cutoff": "2026-11-03T21:45:00Z",
+     "origin": "web"
     }
    ],
    "expected": [
@@ -1374,7 +1754,8 @@
       }
      ],
      "excerpt_policy": "news: headline + link + <=200-char excerpt",
-     "reason": "verbatim news-store item body"
+     "reason": "verbatim news-store item body",
+     "construction": "verbatim real text, junk-filtered"
     },
     {
      "set_id": "L11.D:548670bd2af8",
@@ -1390,7 +1771,8 @@
       }
      ],
      "excerpt_policy": "news: headline + link + <=200-char excerpt",
-     "reason": "verbatim news-store item body"
+     "reason": "verbatim news-store item body",
+     "construction": "verbatim real text, junk-filtered"
     },
     {
      "set_id": "L11.D:402957ce336a",
@@ -1406,55 +1788,59 @@
       }
      ],
      "excerpt_policy": "news: headline + link + <=200-char excerpt",
-     "reason": "verbatim news-store item body"
+     "reason": "verbatim news-store item body",
+     "construction": "verbatim real text, junk-filtered"
     },
     {
-     "set_id": "L11.D:dcec83edf2dd",
+     "set_id": "L11.D:97f57b53163e",
      "label_status": "unlabelled",
      "derivation": "real",
-     "point_in_time_cutoff": "2024-08-22T20:16:49Z",
+     "point_in_time_cutoff": "2026-11-03T21:59:00Z",
      "provenance": [
       {
-       "source": "sec_edgar",
-       "url": "https://www.sec.gov/Archives/edgar/data/896878/000089687824000035/intu-20240822.htm",
-       "published_at": "2024-08-22T20:01:49Z",
-       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+       "source": "news_store",
+       "url": "https://prnewswire.com/news-releases/first-industrial-declares-common-stock-dividends-302928471.html",
+       "published_at": "2026-11-03T21:44:00Z",
+       "licence": "private research use; do not republish full text"
       }
      ],
-     "excerpt_policy": "edgar: public text, quoted",
-     "reason": "verbatim EDGAR 8-K text"
+     "excerpt_policy": "news: headline + link + <=200-char excerpt",
+     "reason": "verbatim news-store item body",
+     "construction": "verbatim real text, junk-filtered"
     },
     {
-     "set_id": "L11.D:452599d82e01",
+     "set_id": "L11.D:2623c816d42f",
      "label_status": "unlabelled",
      "derivation": "real",
-     "point_in_time_cutoff": "2024-09-16T20:47:14Z",
+     "point_in_time_cutoff": "2026-11-03T21:46:00Z",
      "provenance": [
       {
-       "source": "sec_edgar",
-       "url": "https://www.sec.gov/Archives/edgar/data/1099590/000109959024000030/meli-20240912.htm",
-       "published_at": "2024-09-16T20:32:14Z",
-       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+       "source": "news_store",
+       "url": "https://prnewswire.com/news-releases/igt-and-mgm-springfield-launch-first-wide-area-progressive-jackpot-games-in-massachusetts-302927041.html",
+       "published_at": "2026-11-03T21:31:00Z",
+       "licence": "private research use; do not republish full text"
       }
      ],
-     "excerpt_policy": "edgar: public text, quoted",
-     "reason": "verbatim EDGAR 8-K text"
+     "excerpt_policy": "news: headline + link + <=200-char excerpt",
+     "reason": "verbatim news-store item body",
+     "construction": "verbatim real text, junk-filtered"
     },
     {
-     "set_id": "L11.D:e0f221d3f198",
+     "set_id": "L11.D:1f6bb925bd78",
      "label_status": "unlabelled",
      "derivation": "real",
-     "point_in_time_cutoff": "2024-09-10T21:08:12Z",
+     "point_in_time_cutoff": "2026-11-03T21:45:00Z",
      "provenance": [
       {
-       "source": "sec_edgar",
-       "url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000072/meta-20240905.htm",
-       "published_at": "2024-09-10T20:53:12Z",
-       "licence": "public (SEC EDGAR, US government work); fair-access rules apply"
+       "source": "news_store",
+       "url": "https://prnewswire.com/news-releases/summit-hotel-properties-reports-third-quarter-2026-results-302928152.html",
+       "published_at": "2026-11-03T21:30:00Z",
+       "licence": "private research use; do not republish full text"
       }
      ],
-     "excerpt_policy": "edgar: public text, quoted",
-     "reason": "verbatim EDGAR 8-K text"
+     "excerpt_policy": "news: headline + link + <=200-char excerpt",
+     "reason": "verbatim news-store item body",
+     "construction": "verbatim real text, junk-filtered"
     }
    ],
    "visual": {
@@ -1513,6 +1899,20 @@
      "output": "guard in code",
      "output_detail": "injection 0.70"
     }
+   },
+   "coverage": {
+    "source": "decisions/evidence/jev-levels-trading/outcome-coverage-L6-L13.json",
+    "boxes": [
+     {
+      "id": "clean",
+      "count": 6
+     },
+     {
+      "id": "flag_as_data",
+      "count": 0,
+      "unreachable": "no real ingested text with instructions aimed at an AI agent: the news store has 19 items, and EDGAR full-text hits for 'ignore all previous instructions' / 'prompt injection' (2023-06..2024-09, NYSE/Nasdaq) contain no such phrase verbatim"
+     }
+    ]
    }
   }
  ]

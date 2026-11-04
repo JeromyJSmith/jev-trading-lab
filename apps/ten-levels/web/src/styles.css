@@ -404,6 +404,11 @@ body{padding-bottom:70px}
 /* Patch 0013: the real example set card (set id, unlabelled badge, provenance links). */
 .set-card { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 8px 0; }
 .set-card a { font-size: 12px; }
+.set-card .construction { flex-basis: 100%; margin: 0; }
+/* Patch 0017: outcomes covered by the selected sets; unreachable / unobserved boxes greyed, the reason in the tooltip. */
+.outcomes-strip { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 4px 0 8px; }
+.outcomes-strip .pill { font-size: 12px; padding: 2px 10px; }
+.outcomes-strip .pill.off { opacity: .45; border-style: dashed; cursor: help; }
 /* Patch 0014: set pills, Run and Reset in the fixed nav bar. The pills scroll sideways, never overflow. */
 .nav{gap:14px}
 .nav-sets{flex:1;min-width:0;display:flex;gap:8px;overflow-x:auto;justify-content:safe center;padding:4px 6px;scrollbar-width:thin}

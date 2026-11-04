@@ -25,6 +25,8 @@ export interface OptionMeta {
   sets?: RealSetMeta[];
   data_status?: "needs_your_data";
   data_reason?: string;
+  /** Patch 0017: which outcome boxes the selected sets cover (recorded live outcomes, from the coverage reports). */
+  coverage?: { source: string; boxes: { id: string; count: number; unreachable?: string }[] };
 }
 
 export interface RealSetMeta {
@@ -35,6 +37,9 @@ export interface RealSetMeta {
   provenance: { source: string; url?: string; published_at?: string; licence?: string }[];
   excerpt_policy?: string;
   reason?: string;
+  /** Patch 0017: how the set was assembled from real records, and the code guard it exercises (venue / future_data). */
+  construction?: string;
+  guard_case?: string;
 }
 
 export interface LevelPayload {

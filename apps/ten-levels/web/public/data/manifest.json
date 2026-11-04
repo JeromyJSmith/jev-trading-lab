@@ -1,7 +1,7 @@
 {
  "schema": "jev-lab-static.v1",
  "generated": "2026-11-04",
- "recorded_sets": 426,
+ "recorded_sets": 466,
  "unrecorded_sets": 0,
  "note": "Every set is real market data (unlabelled). Recorded sets replay real Jev answers recorded live by the workbench; every other run says: Run locally for a live Jev answer. PAPER ONLY."
 }
