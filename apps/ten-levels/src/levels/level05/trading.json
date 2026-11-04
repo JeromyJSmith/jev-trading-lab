@@ -1,0 +1,882 @@
+{
+ "project": "jev-levels-trading",
+ "engine_sha": "eadcd661230408e20e94af9becbfdf7ba8746c32039394644b91968ad9a2e3af",
+ "options": [
+  {
+   "key": "A",
+   "id": "l5_a_news_depth_router",
+   "catalog_id": "L5.A",
+   "name": "News depth router",
+   "blurb": "Send each headline to the cheap rule, the deep model review, or an analyst. Most headlines never touch the big model.",
+   "spec": "decisions/projects/jev-levels-trading/L5/A_news_depth_router.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "depth": {
+     "type": "choice",
+     "instructions": "How much work does `headline` need before it can affect a trade in `symbol`?",
+     "criteria": {
+      "rule": "Routine and mechanical: dividend, conference, scheduled date",
+      "deep": "Material but readable: earnings, contracts, guidance",
+      "analyst": "Complex, legal or ambiguous: M&A terms, litigation, restatement"
+     }
+    }
+   },
+   "review_floor": 0.5,
+   "thresholds": {
+    "review_floor": 0.5
+   },
+   "outputs": [
+    {
+     "outcome": "cheap_rule",
+     "meaning": "would apply the cheap rule (no model)"
+    },
+    {
+     "outcome": "deep_review",
+     "meaning": "would send to the deep model review"
+    },
+    {
+     "outcome": "analyst",
+     "meaning": "would route to an analyst"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "cheap",
+   "jev_calls": "1 call",
+   "runs_in": "schema_call",
+   "stage_hint": "pre_signal",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "published_at",
+     "headline"
+    ],
+    "properties": {
+     "symbol": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string",
+      "description": "NYSE or NASDAQ; anything else is rejected in code"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "published_at": {
+      "type": "string"
+     },
+     "headline": {
+      "type": "string"
+     },
+     "body": {
+      "type": "string"
+     },
+     "source": {
+      "type": "string"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Coca-Cola declares quarterly dividend of $0.51",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "KO",
+     "venue": "NYSE"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Netflix Q3 revenue +15%, raises guide",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "NFLX",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Sage agrees to mixed cash-and-CVR offer with regulatory conditions",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "SAGE",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "AMD to present at Nasdaq investor conference",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "AMD",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Super Micro to restate three years of results",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "SMCI",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Palantir wins $480M Army contract",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "PLTR",
+     "venue": "NYSE"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Apple to report on October 30",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "AAPL",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Judge orders remedies in Google search antitrust case",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "GOOGL",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "dividend",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "PNKX",
+     "venue": "OTC"
+    }
+   ],
+   "expected": [
+    "cheap_rule",
+    "deep_review",
+    "analyst",
+    "cheap_rule",
+    "analyst",
+    "deep_review",
+    "cheap_rule",
+    "analyst",
+    "abstain"
+   ]
+  },
+  {
+   "key": "B",
+   "id": "l5_b_trader_question_router",
+   "catalog_id": "L5.B",
+   "name": "Trader question router",
+   "blurb": "A desk question goes to a data lookup (no model), the research model, or a human analyst. Position and P&L questions never touch an LLM.",
+   "spec": "decisions/projects/jev-levels-trading/L5/B_trader_question_router.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "route": {
+     "type": "choice",
+     "instructions": "What does `question` need to be answered?",
+     "criteria": {
+      "lookup": "A fact from our own data: price, position, P&L, order status, calendar",
+      "research": "An explanation or summary from documents and news",
+      "judgment": "A judgment call with risk or compliance consequences"
+     }
+    }
+   },
+   "review_floor": 0.5,
+   "thresholds": {
+    "review_floor": 0.5
+   },
+   "outputs": [
+    {
+     "outcome": "data_lookup",
+     "meaning": "would answer from a data lookup (no LLM)"
+    },
+    {
+     "outcome": "research_model",
+     "meaning": "would send to the research model"
+    },
+    {
+     "outcome": "analyst",
+     "meaning": "would route to a human analyst"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "cheap",
+   "jev_calls": "1 call",
+   "runs_in": "schema_call",
+   "stage_hint": "pre_signal",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "data_cutoff",
+     "question"
+    ],
+    "properties": {
+     "data_cutoff": {
+      "type": "string"
+     },
+     "question": {
+      "type": "string"
+     },
+     "symbol": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "question": "what's my P&L on NVDA today?",
+     "symbol": "NVDA",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "question": "why did AMD drop 6% this morning?",
+     "symbol": "AMD",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "question": "can I trade SNOW while I'm on the deal team?",
+     "symbol": "SNOW",
+     "venue": "NYSE"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "question": "when does AAPL report?",
+     "symbol": "AAPL",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "question": "summarize the risks in TSLA's latest 10-Q",
+     "symbol": "TSLA",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "question": "should I double my position in SMCI after the restatement?",
+     "symbol": "SMCI",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "question": "list my open orders",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "question": "compare MSFT and GOOGL cloud growth last quarter",
+     "symbol": "MSFT",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "question": "price?",
+     "symbol": "PNKX",
+     "venue": "OTC"
+    }
+   ],
+   "expected": [
+    "data_lookup",
+    "research_model",
+    "analyst",
+    "data_lookup",
+    "research_model",
+    "analyst",
+    "data_lookup",
+    "research_model",
+    "abstain"
+   ]
+  },
+  {
+   "key": "C",
+   "id": "l5_c_research_model_router",
+   "catalog_id": "L5.C",
+   "name": "Research model router",
+   "blurb": "Pick the least costly model tier that can do a research task, plus an effort score. Code maps tier to model id; a person takes the rest.",
+   "spec": "decisions/projects/jev-levels-trading/L5/C_research_model_router.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "tier": {
+     "type": "choice",
+     "instructions": "Which is the least costly model tier that can complete `task` well?",
+     "criteria": {
+      "small": "Extraction or classification of a short text",
+      "large": "Multi-document synthesis or reasoning over numbers",
+      "human": "Needs judgment, accountability or non-public context"
+     }
+    },
+    "effort": {
+     "type": "score",
+     "instructions": "How much reasoning depth does `task` need?",
+     "criteria": [
+      "minimal",
+      "some",
+      "deep"
+     ]
+    }
+   },
+   "review_floor": 0.5,
+   "thresholds": {
+    "review_floor": 0.5
+   },
+   "outputs": [
+    {
+     "outcome": "small_model",
+     "meaning": "would use the small model"
+    },
+    {
+     "outcome": "large_model",
+     "meaning": "would use the large model"
+    },
+    {
+     "outcome": "analyst",
+     "meaning": "would route to an analyst"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "cheap",
+   "jev_calls": "1 call",
+   "runs_in": "schema_call",
+   "stage_hint": "pre_signal",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "data_cutoff",
+     "task"
+    ],
+    "properties": {
+     "data_cutoff": {
+      "type": "string"
+     },
+     "task": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "task": "extract the dividend amount and pay date from this press release",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "task": "compare the last four 10-Qs of INTC and explain the margin trend",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "task": "decide whether we should cover our short before the merger vote",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "task": "tag each of these 40 headlines with its sector",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "task": "rebuild the revenue bridge for NVDA from segment disclosures",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "task": "figure out what the CFO meant on the private call yesterday",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "task": "check whether these two headlines report the same event",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "task": "write bull/base/bear scenarios for TSLA with probabilities from the 10-K risks",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "task": "x",
+     "venue": "OTC"
+    }
+   ],
+   "expected": [
+    "small_model",
+    "large_model",
+    "analyst",
+    "small_model",
+    "large_model",
+    "analyst",
+    "small_model",
+    "large_model",
+    "abstain"
+   ]
+  },
+  {
+   "key": "D",
+   "id": "l5_d_alert_router",
+   "catalog_id": "L5.D",
+   "name": "Alert router",
+   "blurb": "Every system alert goes to log-only, a desk notification, or the on-call person. Code also pages directly on kill-switch words.",
+   "spec": "decisions/projects/jev-levels-trading/L5/D_alert_router.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "severity": {
+     "type": "choice",
+     "instructions": "How urgent is `alert` for the paper trading desk?",
+     "criteria": {
+      "log": "Informational, no action",
+      "notify": "Needs attention today",
+      "page": "Needs a person now: data feed down, risk limit, runaway orders"
+     }
+    }
+   },
+   "review_floor": 0.5,
+   "thresholds": {
+    "review_floor": 0.5
+   },
+   "outputs": [
+    {
+     "outcome": "log_only",
+     "meaning": "would log only"
+    },
+    {
+     "outcome": "notify_desk",
+     "meaning": "would notify the desk channel"
+    },
+    {
+     "outcome": "page_on_call",
+     "meaning": "would page the on-call person"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "cheap",
+   "jev_calls": "1 call",
+   "runs_in": "schema_call",
+   "stage_hint": "pre_signal",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "account",
+     "data_cutoff",
+     "alert"
+    ],
+    "properties": {
+     "account": {
+      "type": "string"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "alert": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "account": "paper",
+     "alert": "Nightly backtest finished in 41 minutes",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "paper",
+     "alert": "Fundamentals snapshot is 2 days stale",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "paper",
+     "alert": "Market data feed disconnected; last tick 4 minutes ago",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "paper",
+     "alert": "Paper strategy ORB_5m sent 240 orders in 60 seconds",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "paper",
+     "alert": "Dashboard redeployed, no changes to strategies",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "paper",
+     "alert": "Paper book drawdown reached 3% (limit 5%)",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "paper",
+     "alert": "Risk limit breached: gross exposure 162%",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "paper",
+     "alert": "Scheduler heartbeat ok",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "paper",
+     "alert": "x",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "venue": "OTC"
+    }
+   ],
+   "expected": [
+    "log_only",
+    "notify_desk",
+    "page_on_call",
+    "page_on_call",
+    "log_only",
+    "notify_desk",
+    "page_on_call",
+    "log_only",
+    "abstain"
+   ]
+  },
+  {
+   "key": "E",
+   "id": "l5_e_filing_router",
+   "catalog_id": "L5.E",
+   "name": "Filing router",
+   "blurb": "Each new SEC filing goes to skip, a cheap summary, full analysis, or legal review. Code skips forms on the ignore list before any call.",
+   "spec": "decisions/projects/jev-levels-trading/L5/E_filing_router.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "handling": {
+     "type": "choice",
+     "instructions": "How should our desk handle this `form` filing for `symbol` described by `headline`?",
+     "criteria": {
+      "skip": "Routine or administrative",
+      "summary": "Worth a one-paragraph summary",
+      "full": "Material financial content worth a full read",
+      "legal": "Litigation, restatement, going concern, or deal terms"
+     }
+    }
+   },
+   "review_floor": 0.5,
+   "thresholds": {
+    "review_floor": 0.5
+   },
+   "outputs": [
+    {
+     "outcome": "skip",
+     "meaning": "would skip"
+    },
+    {
+     "outcome": "summarize",
+     "meaning": "would summarize cheaply"
+    },
+    {
+     "outcome": "full_analysis",
+     "meaning": "would run the full analysis"
+    },
+    {
+     "outcome": "legal_review",
+     "meaning": "would send to legal review"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "cheap",
+   "jev_calls": "1 call",
+   "runs_in": "schema_call",
+   "stage_hint": "pre_signal",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "published_at",
+     "form",
+     "headline"
+    ],
+    "properties": {
+     "symbol": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string",
+      "description": "NYSE or NASDAQ; anything else is rejected in code"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "published_at": {
+      "type": "string"
+     },
+     "form": {
+      "type": "string"
+     },
+     "headline": {
+      "type": "string"
+     },
+     "body": {
+      "type": "string"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "form": "S-8",
+     "headline": "Registration of shares for employee stock plan",
+     "published_at": "2026-10-07T12:05:00Z",
+     "symbol": "AAPL",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "form": "10-Q",
+     "headline": "Quarterly report with segment margin detail",
+     "published_at": "2026-10-07T12:05:00Z",
+     "symbol": "INTC",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "form": "10-K",
+     "headline": "Annual report; auditor includes going-concern paragraph",
+     "published_at": "2026-10-07T12:05:00Z",
+     "symbol": "CRVX",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "form": "8-K",
+     "headline": "Appointment of new chief marketing officer",
+     "published_at": "2026-10-07T12:05:00Z",
+     "symbol": "PEP",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "form": "DEFM14A",
+     "headline": "Definitive merger proxy with CVR terms",
+     "published_at": "2026-10-07T12:05:00Z",
+     "symbol": "SAGE",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "form": "SC 13G",
+     "headline": "Vanguard reports 8.9% passive stake",
+     "published_at": "2026-10-07T12:05:00Z",
+     "symbol": "NVDA",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "form": "10-K",
+     "headline": "Annual report with new segment disclosure",
+     "published_at": "2026-10-07T12:05:00Z",
+     "symbol": "MSFT",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "form": "424B2",
+     "headline": "Pricing supplement for structured notes",
+     "published_at": "2026-10-07T12:05:00Z",
+     "symbol": "KO",
+     "venue": "NYSE"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "form": "10-K",
+     "headline": "annual",
+     "published_at": "2026-10-07T12:05:00Z",
+     "symbol": "PNKX",
+     "venue": "OTC"
+    }
+   ],
+   "expected": [
+    "skip",
+    "full_analysis",
+    "legal_review",
+    "summarize",
+    "legal_review",
+    "summarize",
+    "full_analysis",
+    "abstain",
+    "abstain"
+   ]
+  },
+  {
+   "key": "F",
+   "id": "l5_f_desk_message_router",
+   "catalog_id": "L5.F",
+   "name": "Desk message router",
+   "blurb": "Messages from the broker simulator and data vendors go to ops, compliance or the risk desk. Compliance words never take the cheap path.",
+   "spec": "decisions/projects/jev-levels-trading/L5/F_desk_message_router.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "desk": {
+     "type": "choice",
+     "instructions": "Which desk should handle `message`?",
+     "criteria": {
+      "ops": "Operational: corporate action, symbol change, data correction",
+      "compliance": "Restricted list, personal trading, communications, regulatory",
+      "risk": "Margin, exposure, borrow recall, limit"
+     }
+    }
+   },
+   "review_floor": 0.5,
+   "thresholds": {
+    "review_floor": 0.5
+   },
+   "outputs": [
+    {
+     "outcome": "ops",
+     "meaning": "would route to ops"
+    },
+    {
+     "outcome": "compliance",
+     "meaning": "would route to compliance"
+    },
+    {
+     "outcome": "risk_desk",
+     "meaning": "would route to the risk desk"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "cheap",
+   "jev_calls": "1 call",
+   "runs_in": "schema_call",
+   "stage_hint": "pre_signal",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "account",
+     "data_cutoff",
+     "message"
+    ],
+    "properties": {
+     "account": {
+      "type": "string"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "message": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "message": "FB will trade as META starting Thursday; update the security master",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "message": "SNOW added to the restricted list effective immediately",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "message": "Borrow recalled on 2,000 GME; cover or re-locate by 3pm",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "message": "NVDA 10-for-1 split effective June 10; adjust historical bars",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "message": "Please pre-clear my personal purchase of AAPL",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "message": "Paper account margin usage at 92%",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "message": "Vendor corrected yesterday's close for KO from 61.20 to 62.10",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "message": "A client asked us to keep a trade off the records",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "message": "x",
+     "venue": "OTC"
+    }
+   ],
+   "expected": [
+    "ops",
+    "compliance",
+    "risk_desk",
+    "ops",
+    "compliance",
+    "risk_desk",
+    "ops",
+    "compliance",
+    "abstain"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1877 @@
+{
+ "project": "jev-levels-trading",
+ "engine_sha": "eadcd661230408e20e94af9becbfdf7ba8746c32039394644b91968ad9a2e3af",
+ "options": [
+  {
+   "key": "A",
+   "id": "l9_a_filing_screen",
+   "catalog_id": "L9.A",
+   "name": "Screen a batch of filings: which to open first?",
+   "blurb": "Screen 500 filings in batches of 40: code drops empties, duplicates and future items, then one Choice keyed by filing id picks the one an analyst should open first for going-concern or dilution risk.",
+   "spec": "decisions/projects/jev-levels-trading/L9/A_filing_screen.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "open_first": {
+     "type": "choice",
+     "instructions": "Which filing in `items` should an analyst open first to find going-concern or dilution risk for its company?",
+     "criteria": {
+      "f1": "AAPL 10-Q, no changes",
+      "f2": "KO 8-K dividend",
+      "f3": "CRVX 10-K: auditor raises substantial doubt",
+      "f4": "MSFT S-8",
+      "none": "None of them"
+     }
+    }
+   },
+   "review_floor": 0.4,
+   "thresholds": {
+    "review_floor": 0.4
+   },
+   "outputs": [
+    {
+     "outcome": "pick",
+     "meaning": "the outcome is the picked item id"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "heavy",
+   "jev_calls": "1 call per batch of <= 40 items (500 items = 13 calls)",
+   "runs_in": "schema_call_agent_shape",
+   "stage_hint": "pre_signal",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "items"
+    ],
+    "properties": {
+     "symbol": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string",
+      "description": "NYSE or NASDAQ; anything else is rejected in code"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "items": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": [
+        "id",
+        "published_at",
+        "text"
+       ],
+       "properties": {
+        "id": {
+         "type": "string"
+        },
+        "published_at": {
+         "type": "string"
+        },
+        "text": {
+         "type": "string"
+        }
+       }
+      }
+     }
+    }
+   },
+   "inputs": [
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "id": "f1",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "AAPL 10-Q, no changes"
+      },
+      {
+       "id": "f2",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "KO 8-K dividend"
+      },
+      {
+       "id": "f3",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "CRVX 10-K: auditor raises substantial doubt"
+      },
+      {
+       "id": "f4",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "MSFT S-8"
+      }
+     ],
+     "symbol": "MULTI",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "id": "f1",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "PEP 8-K director"
+      },
+      {
+       "id": "f2",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "MULN 424B5 ATM prospectus $50M"
+      },
+      {
+       "id": "f3",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "NVDA 13G"
+      }
+     ],
+     "symbol": "MULTI",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "id": "f1",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "KO dividend"
+      },
+      {
+       "id": "f2",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "PEP director"
+      }
+     ],
+     "symbol": "MULTI",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "id": "f1",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "BLNK 10-Q: cash runway under 12 months"
+      },
+      {
+       "id": "f2",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "AAPL 10-Q"
+      }
+     ],
+     "symbol": "MULTI",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [],
+     "symbol": "MULTI",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "id": "f1",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "a"
+      },
+      {
+       "id": "f1",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "b"
+      }
+     ],
+     "symbol": "MULTI",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "id": "f1",
+       "published_at": "2026-10-07T15:30:00Z",
+       "text": "a"
+      }
+     ],
+     "symbol": "MULTI",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "id": "f1",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "AAPL 8-K"
+      },
+      {
+       "id": "f2",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "MSFT 8-K"
+      },
+      {
+       "id": "f3",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "META 13G"
+      },
+      {
+       "id": "f4",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "CRVX 10-Q: may breach liquidity covenant"
+      }
+     ],
+     "symbol": "MULTI",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "id": "f0",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "f1",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "f2",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "f3",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "f4",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "f5",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "f6",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "f7",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "f8",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "f9",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "f10",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "f11",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "f12",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "f13",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "f14",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "f15",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "f16",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "f17",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "f18",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "f19",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "f20",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "f21",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "f22",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "f23",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "f24",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "f25",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "f26",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "f27",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "f28",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "f29",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "f30",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "f31",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "f32",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "f33",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "f34",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "f35",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "f36",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "f37",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "f38",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "f39",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "f40",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      }
+     ],
+     "symbol": "MULTI",
+     "venue": "NASDAQ"
+    }
+   ],
+   "expected": [
+    "f3",
+    "f2",
+    "abstain",
+    "f1",
+    "abstain",
+    "abstain",
+    "abstain",
+    "f4",
+    "abstain"
+   ]
+  },
+  {
+   "key": "B",
+   "id": "l9_b_move_driver",
+   "catalog_id": "L9.B",
+   "name": "Which headline drove the move?",
+   "blurb": "A stock moved; dozens of headlines. One Choice keyed by headline id picks the driver (or none). Code caps the batch and drops future items.",
+   "spec": "decisions/projects/jev-levels-trading/L9/B_move_driver.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "driver": {
+     "type": "choice",
+     "instructions": "Which item in `items` best explains the price move in `symbol` described by `move`?",
+     "criteria": {
+      "h1": "Netflix to stream NFL games",
+      "h2": "Netflix Q3 beats, raises guide",
+      "h3": "Hollywood strike ends",
+      "none": "None of them"
+     }
+    }
+   },
+   "review_floor": 0.4,
+   "thresholds": {
+    "review_floor": 0.4
+   },
+   "outputs": [
+    {
+     "outcome": "pick",
+     "meaning": "the outcome is the picked item id"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "heavy",
+   "jev_calls": "1 call per batch of <= 40 items (500 items = 13 calls)",
+   "runs_in": "schema_call_agent_shape",
+   "stage_hint": "pre_signal",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "items"
+    ],
+    "properties": {
+     "symbol": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string",
+      "description": "NYSE or NASDAQ; anything else is rejected in code"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "items": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": [
+        "id",
+        "published_at",
+        "text"
+       ],
+       "properties": {
+        "id": {
+         "type": "string"
+        },
+        "published_at": {
+         "type": "string"
+        },
+        "text": {
+         "type": "string"
+        }
+       }
+      }
+     },
+     "move": {
+      "type": "string"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "id": "h1",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Netflix to stream NFL games"
+      },
+      {
+       "id": "h2",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Netflix Q3 beats, raises guide"
+      },
+      {
+       "id": "h3",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Hollywood strike ends"
+      }
+     ],
+     "move": "+9% after hours",
+     "symbol": "NFLX",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "id": "h1",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "UBS downgrades Tesla to Sell"
+      },
+      {
+       "id": "h2",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Tesla opens a Supercharger in Ohio"
+      }
+     ],
+     "move": "-4% premarket",
+     "symbol": "TSLA",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "id": "h1",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Coca-Cola holiday cans"
+      },
+      {
+       "id": "h2",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Soda tax debate"
+      }
+     ],
+     "move": "+0.2%",
+     "symbol": "KO",
+     "venue": "NYSE"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "id": "h1",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Biotech ETF up"
+      },
+      {
+       "id": "h2",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Sage at a conference"
+      },
+      {
+       "id": "h3",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Biogen offers $12/share for Sage"
+      }
+     ],
+     "move": "+35%",
+     "symbol": "SAGE",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "id": "h1",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Server demand strong"
+      },
+      {
+       "id": "h2",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "DOJ opens probe into Super Micro"
+      }
+     ],
+     "move": "-20%",
+     "symbol": "SMCI",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "id": "h1",
+       "published_at": "2026-10-07T15:30:00Z",
+       "text": "beat"
+      }
+     ],
+     "move": "+9%",
+     "symbol": "NFLX",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "id": "h1",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "FDA approves Vertex pain drug"
+      },
+      {
+       "id": "h2",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Vertex CFO speaks at a conference"
+      }
+     ],
+     "move": "+12%",
+     "symbol": "VRTX",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [],
+     "move": "+1%",
+     "symbol": "AAPL",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "id": "h1",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      }
+     ],
+     "move": "+50%",
+     "symbol": "PNKX",
+     "venue": "OTC"
+    }
+   ],
+   "expected": [
+    "h2",
+    "h1",
+    "abstain",
+    "h3",
+    "h2",
+    "abstain",
+    "h1",
+    "abstain",
+    "abstain"
+   ]
+  },
+  {
+   "key": "C",
+   "id": "l9_c_watchlist_pick",
+   "catalog_id": "L9.C",
+   "name": "Which watchlist name has the cleanest catalyst?",
+   "blurb": "Morning watchlist: code prunes by price, volume and venue upstream; one Choice keyed by ticker picks the cleanest catalyst to plan first.",
+   "spec": "decisions/projects/jev-levels-trading/L9/C_watchlist_pick.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "first": {
+     "type": "choice",
+     "instructions": "Which candidate in `items` has the cleanest, most specific catalyst today?",
+     "criteria": {
+      "NFLX": "Beat and raise, +9% premarket",
+      "GME": "No news, social buzz",
+      "KO": "Dividend",
+      "none": "None of them"
+     }
+    }
+   },
+   "review_floor": 0.4,
+   "thresholds": {
+    "review_floor": 0.4
+   },
+   "outputs": [
+    {
+     "outcome": "pick",
+     "meaning": "the outcome is the picked item id"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "heavy",
+   "jev_calls": "1 call per batch of <= 40 items (500 items = 13 calls)",
+   "runs_in": "schema_call_agent_shape",
+   "stage_hint": "pre_signal",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "items"
+    ],
+    "properties": {
+     "symbol": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string",
+      "description": "NYSE or NASDAQ; anything else is rejected in code"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "items": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": [
+        "id",
+        "published_at",
+        "text"
+       ],
+       "properties": {
+        "id": {
+         "type": "string"
+        },
+        "published_at": {
+         "type": "string"
+        },
+        "text": {
+         "type": "string"
+        }
+       }
+      }
+     }
+    }
+   },
+   "inputs": [
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "id": "NFLX",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Beat and raise, +9% premarket"
+      },
+      {
+       "id": "GME",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "No news, social buzz"
+      },
+      {
+       "id": "KO",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Dividend"
+      }
+     ],
+     "symbol": "WATCH",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "id": "SAGE",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Takeover offer at $12 cash"
+      },
+      {
+       "id": "AMD",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Analyst note"
+      }
+     ],
+     "symbol": "WATCH",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "id": "GME",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Meme chatter"
+      },
+      {
+       "id": "AMC",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Meme chatter"
+      }
+     ],
+     "symbol": "WATCH",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "id": "AAPL",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Store opening"
+      },
+      {
+       "id": "VRTX",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "FDA approval with broad label"
+      }
+     ],
+     "symbol": "WATCH",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "id": "PLTR",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "$480M Army contract"
+      },
+      {
+       "id": "SNAP",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Rumour of a deal"
+      }
+     ],
+     "symbol": "WATCH",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "id": "AAPL",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "a"
+      },
+      {
+       "id": "AAPL",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "b"
+      }
+     ],
+     "symbol": "WATCH",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "id": "INTC",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Cuts Q4 view by $2B"
+      },
+      {
+       "id": "MSFT",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Event next week"
+      }
+     ],
+     "symbol": "WATCH",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [],
+     "symbol": "WATCH",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "id": "X",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "y"
+      }
+     ],
+     "symbol": "WATCH",
+     "venue": "OTC"
+    }
+   ],
+   "expected": [
+    "NFLX",
+    "SAGE",
+    "abstain",
+    "VRTX",
+    "PLTR",
+    "abstain",
+    "INTC",
+    "abstain",
+    "abstain"
+   ]
+  },
+  {
+   "key": "D",
+   "id": "l9_d_sympathy_peer",
+   "catalog_id": "L9.D",
+   "name": "Which peer is most exposed?",
+   "blurb": "A leader reports; which peer in the list is most directly exposed to the same news? Options are the peers' tickers; 'none' is the exit.",
+   "spec": "decisions/projects/jev-levels-trading/L9/D_sympathy_peer.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "peer": {
+     "type": "choice",
+     "instructions": "Given `news` about `symbol`, which peer in `items` is most directly exposed to the same driver?",
+     "criteria": {
+      "AMD": "GPU maker",
+      "KO": "Beverages",
+      "JPM": "Bank",
+      "none": "None of them"
+     }
+    }
+   },
+   "review_floor": 0.4,
+   "thresholds": {
+    "review_floor": 0.4
+   },
+   "outputs": [
+    {
+     "outcome": "pick",
+     "meaning": "the outcome is the picked item id"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "heavy",
+   "jev_calls": "1 call per batch of <= 40 items (500 items = 13 calls)",
+   "runs_in": "schema_call_agent_shape",
+   "stage_hint": "pre_signal",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "items"
+    ],
+    "properties": {
+     "symbol": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string",
+      "description": "NYSE or NASDAQ; anything else is rejected in code"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "items": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": [
+        "id",
+        "published_at",
+        "text"
+       ],
+       "properties": {
+        "id": {
+         "type": "string"
+        },
+        "published_at": {
+         "type": "string"
+        },
+        "text": {
+         "type": "string"
+        }
+       }
+      }
+     },
+     "news": {
+      "type": "string"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "id": "AMD",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "GPU maker"
+      },
+      {
+       "id": "KO",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Beverages"
+      },
+      {
+       "id": "JPM",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Bank"
+      }
+     ],
+     "news": "NVIDIA says data center GPU demand exceeds supply",
+     "symbol": "NVDA",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "id": "VRT",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Data center cooling"
+      },
+      {
+       "id": "PEP",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Snacks"
+      }
+     ],
+     "news": "Hyperscalers double AI data center builds",
+     "symbol": "NVDA",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "id": "XOM",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Oil"
+      },
+      {
+       "id": "JPM",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Bank"
+      }
+     ],
+     "news": "Netflix subscribers beat",
+     "symbol": "NFLX",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "id": "TGT",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "General merchandise retailer"
+      },
+      {
+       "id": "MSFT",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Software"
+      }
+     ],
+     "news": "Walmart sees consumer trading down",
+     "symbol": "WMT",
+     "venue": "NYSE"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "id": "MRNA",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "mRNA vaccines"
+      },
+      {
+       "id": "AAPL",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Phones"
+      }
+     ],
+     "news": "FDA tightens COVID vaccine rules",
+     "symbol": "PFE",
+     "venue": "NYSE"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "id": "AMD",
+       "published_at": "2026-10-07T15:30:00Z",
+       "text": "GPU"
+      }
+     ],
+     "news": "x",
+     "symbol": "NVDA",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "id": "LCID",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "EV maker"
+      },
+      {
+       "id": "KO",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Beverages"
+      }
+     ],
+     "news": "EV tax credit ends",
+     "symbol": "TSLA",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [],
+     "news": "x",
+     "symbol": "NVDA",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "id": "A",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "b"
+      }
+     ],
+     "news": "x",
+     "symbol": "PNKX",
+     "venue": "OTC"
+    }
+   ],
+   "expected": [
+    "AMD",
+    "VRT",
+    "abstain",
+    "TGT",
+    "MRNA",
+    "abstain",
+    "LCID",
+    "abstain",
+    "abstain"
+   ]
+  },
+  {
+   "key": "E",
+   "id": "l9_e_duplicate_story",
+   "catalog_id": "L9.E",
+   "name": "Is this headline a duplicate?",
+   "blurb": "Before alerting, ask which earlier item (by id) this headline repeats, or none. Duplicates are suppressed; options are the real earlier ids.",
+   "spec": "decisions/projects/jev-levels-trading/L9/E_duplicate_story.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "duplicate_of": {
+     "type": "choice",
+     "instructions": "Which earlier item in `items` reports the same event as `headline`? Pick none if it is new.",
+     "criteria": {
+      "e1": "Apple raises dividend 4%",
+      "e2": "Apple opens store",
+      "none": "It is a new event"
+     }
+    }
+   },
+   "review_floor": 0.4,
+   "thresholds": {
+    "review_floor": 0.4
+   },
+   "outputs": [
+    {
+     "outcome": "pick",
+     "meaning": "the outcome is the picked item id"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "heavy",
+   "jev_calls": "1 call per batch of <= 40 items (500 items = 13 calls)",
+   "runs_in": "schema_call_agent_shape",
+   "stage_hint": "pre_signal",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "items"
+    ],
+    "properties": {
+     "symbol": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string",
+      "description": "NYSE or NASDAQ; anything else is rejected in code"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "items": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": [
+        "id",
+        "published_at",
+        "text"
+       ],
+       "properties": {
+        "id": {
+         "type": "string"
+        },
+        "published_at": {
+         "type": "string"
+        },
+        "text": {
+         "type": "string"
+        }
+       }
+      }
+     },
+     "headline": {
+      "type": "string"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Apple lifts quarterly payout by 4 percent",
+     "items": [
+      {
+       "id": "e1",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Apple raises dividend 4%"
+      },
+      {
+       "id": "e2",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Apple opens store"
+      }
+     ],
+     "symbol": "AAPL",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Apple delays headset to 2027",
+     "items": [
+      {
+       "id": "e1",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Apple raises dividend"
+      },
+      {
+       "id": "e2",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Apple opens store"
+      }
+     ],
+     "symbol": "AAPL",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Sage receives $12/share cash offer from Biogen",
+     "items": [
+      {
+       "id": "e1",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Sage at conference"
+      },
+      {
+       "id": "e2",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Biogen bids $12 for Sage"
+      }
+     ],
+     "symbol": "SAGE",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Justice Department investigating Super Micro",
+     "items": [
+      {
+       "id": "e1",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "SMCI earnings"
+      },
+      {
+       "id": "e2",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "SMCI new server"
+      },
+      {
+       "id": "e3",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "DOJ probes Super Micro"
+      }
+     ],
+     "symbol": "SMCI",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Netflix Q3 beats estimates",
+     "items": [
+      {
+       "id": "e1",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Netflix to report Oct 21"
+      }
+     ],
+     "symbol": "NFLX",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "x",
+     "items": [
+      {
+       "id": "e1",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "a"
+      },
+      {
+       "id": "e1",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "b"
+      }
+     ],
+     "symbol": "AAPL",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "UBS downgrade: Tesla now rated sell",
+     "items": [
+      {
+       "id": "e1",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "UBS cuts Tesla to Sell"
+      }
+     ],
+     "symbol": "TSLA",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "x",
+     "items": [],
+     "symbol": "AAPL",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "x",
+     "items": [
+      {
+       "id": "e1",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      }
+     ],
+     "symbol": "PNKX",
+     "venue": "OTC"
+    }
+   ],
+   "expected": [
+    "e1",
+    "abstain",
+    "e2",
+    "e3",
+    "abstain",
+    "abstain",
+    "e1",
+    "abstain",
+    "abstain"
+   ]
+  },
+  {
+   "key": "F",
+   "id": "l9_f_universe_screen",
+   "catalog_id": "L9.F",
+   "name": "Screen the universe for a thesis",
+   "blurb": "A theme thesis over a pruned universe batch: one Choice keyed by ticker picks the best match. 500 names = 13 batches; code keeps the batch cap.",
+   "spec": "decisions/projects/jev-levels-trading/L9/F_universe_screen.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "best": {
+     "type": "choice",
+     "instructions": "Which company in `items` best fits `thesis`?",
+     "criteria": {
+      "VRT": "Vertiv: data center power and cooling",
+      "KO": "Coca-Cola",
+      "PEP": "PepsiCo",
+      "none": "None of them"
+     }
+    }
+   },
+   "review_floor": 0.4,
+   "thresholds": {
+    "review_floor": 0.4
+   },
+   "outputs": [
+    {
+     "outcome": "pick",
+     "meaning": "the outcome is the picked item id"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "heavy",
+   "jev_calls": "1 call per batch of <= 40 items (500 items = 13 calls)",
+   "runs_in": "schema_call_agent_shape",
+   "stage_hint": "pre_signal",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "items"
+    ],
+    "properties": {
+     "symbol": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string",
+      "description": "NYSE or NASDAQ; anything else is rejected in code"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "items": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": [
+        "id",
+        "published_at",
+        "text"
+       ],
+       "properties": {
+        "id": {
+         "type": "string"
+        },
+        "published_at": {
+         "type": "string"
+        },
+        "text": {
+         "type": "string"
+        }
+       }
+      }
+     },
+     "thesis": {
+      "type": "string"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "id": "VRT",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Vertiv: data center power and cooling"
+      },
+      {
+       "id": "KO",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Coca-Cola"
+      },
+      {
+       "id": "PEP",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "PepsiCo"
+      }
+     ],
+     "symbol": "UNIV",
+     "thesis": "AI data centers need more power and cooling",
+     "venue": "NYSE"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "id": "XOM",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Exxon Mobil"
+      },
+      {
+       "id": "AAPL",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Apple"
+      }
+     ],
+     "symbol": "UNIV",
+     "thesis": "Oil supply shortfall lifts upstream producers",
+     "venue": "NYSE"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "id": "KO",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Coca-Cola"
+      },
+      {
+       "id": "PEP",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "PepsiCo"
+      }
+     ],
+     "symbol": "UNIV",
+     "thesis": "Quantum computing breakthroughs",
+     "venue": "NYSE"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "id": "JPM",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "JPMorgan Chase"
+      },
+      {
+       "id": "NFLX",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Netflix"
+      }
+     ],
+     "symbol": "UNIV",
+     "thesis": "Higher-for-longer rates lift bank net interest income",
+     "venue": "NYSE"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "id": "LLY",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Eli Lilly: GLP-1 drugs"
+      },
+      {
+       "id": "F",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Ford"
+      }
+     ],
+     "symbol": "UNIV",
+     "thesis": "Obesity drugs keep growing",
+     "venue": "NYSE"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "id": "T0",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "T1",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "T2",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "T3",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "T4",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "T5",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "T6",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "T7",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "T8",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "T9",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "T10",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "T11",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "T12",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "T13",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "T14",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "T15",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "T16",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "T17",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "T18",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "T19",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "T20",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "T21",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "T22",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "T23",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "T24",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "T25",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "T26",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "T27",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "T28",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "T29",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "T30",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "T31",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "T32",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "T33",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "T34",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "T35",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "T36",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "T37",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "T38",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "T39",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      },
+      {
+       "id": "T40",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "x"
+      }
+     ],
+     "symbol": "UNIV",
+     "thesis": "x",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "id": "COST",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Costco membership warehouses"
+      },
+      {
+       "id": "SMCI",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "Servers"
+      }
+     ],
+     "symbol": "UNIV",
+     "thesis": "Value-seeking consumers favour warehouse clubs",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [],
+     "symbol": "UNIV",
+     "thesis": "x",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "id": "X",
+       "published_at": "2026-10-07T12:05:00Z",
+       "text": "y"
+      }
+     ],
+     "symbol": "UNIV",
+     "thesis": "x",
+     "venue": "OTC"
+    }
+   ],
+   "expected": [
+    "VRT",
+    "XOM",
+    "abstain",
+    "JPM",
+    "LLY",
+    "abstain",
+    "COST",
+    "abstain",
+    "abstain"
+   ]
+  }
+ ]
+}

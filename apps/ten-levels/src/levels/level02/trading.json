@@ -1,0 +1,1261 @@
+{
+ "project": "jev-levels-trading",
+ "engine_sha": "eadcd661230408e20e94af9becbfdf7ba8746c32039394644b91968ad9a2e3af",
+ "options": [
+  {
+   "key": "A",
+   "id": "l2_a_headline_triage",
+   "catalog_id": "L2.A",
+   "name": "Headline triage",
+   "blurb": "Two Choices in one call: what kind of event, which direction for shareholders. Code maps the pair to alert, watch or ignore.",
+   "spec": "decisions/projects/jev-levels-trading/L2/A_headline_triage.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "event": {
+     "type": "choice",
+     "instructions": "What kind of event does `headline` report for `symbol`?",
+     "criteria": {
+      "earnings": "Results or guidance",
+      "m_and_a": "Merger, acquisition, takeover offer",
+      "financing": "Offering, debt, convertible",
+      "legal_regulatory": "Lawsuit, probe, approval, fine",
+      "management": "Executive change",
+      "product": "Product, contract, customer",
+      "routine": "Dividend, conference, routine filing",
+      "other": "None of these"
+     }
+    },
+    "direction": {
+     "type": "choice",
+     "instructions": "For `symbol` shareholders, is this news positive, negative or neutral?",
+     "criteria": {
+      "positive": "Likely raises the value",
+      "negative": "Likely lowers the value",
+      "neutral": "No clear effect"
+     }
+    }
+   },
+   "review_floor": 0.4,
+   "thresholds": {
+    "review_floor": 0.4
+   },
+   "outputs": [
+    {
+     "outcome": "alert",
+     "meaning": "would alert the desk now"
+    },
+    {
+     "outcome": "watch",
+     "meaning": "would add to the watch list"
+    },
+    {
+     "outcome": "ignore",
+     "meaning": "no action"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "cheap",
+   "jev_calls": "1 call",
+   "runs_in": "schema_call",
+   "stage_hint": "signal_filter",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "published_at",
+     "headline"
+    ],
+    "properties": {
+     "symbol": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string",
+      "description": "NYSE or NASDAQ; anything else is rejected in code"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "published_at": {
+      "type": "string"
+     },
+     "headline": {
+      "type": "string"
+     },
+     "body": {
+      "type": "string"
+     },
+     "source": {
+      "type": "string"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Biogen offers $12 per share to acquire Sage Therapeutics",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "SAGE",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "DOJ opens probe into Super Micro accounting",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "SMCI",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Netflix subscribers beat; revenue up 15%",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "NFLX",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Coca-Cola declares regular quarterly dividend",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "KO",
+     "venue": "NYSE"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Palantir wins $480M Army data contract",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "PLTR",
+     "venue": "NYSE"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Rivian prices $1.5B stock offering at a 9% discount",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "RIVN",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "AMD to present at Nasdaq investor conference",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "AMD",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Intel CFO to retire next year; search underway",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "INTC",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "PNKX to be acquired",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "PNKX",
+     "venue": "OTC"
+    }
+   ],
+   "expected": [
+    "alert",
+    "alert",
+    "watch",
+    "ignore",
+    "watch",
+    "alert",
+    "ignore",
+    "watch",
+    "abstain"
+   ]
+  },
+  {
+   "key": "B",
+   "id": "l2_b_8k_item",
+   "catalog_id": "L2.B",
+   "name": "Which 8-K item is this?",
+   "blurb": "One Choice over the 8-K item types (with an exit) plus a Noul for 'material'. Code routes results, deals and departures to different readers.",
+   "spec": "decisions/projects/jev-levels-trading/L2/B_8k_item.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "item": {
+     "type": "choice",
+     "instructions": "Which 8-K item does this filing (`headline`, `body`) mainly report?",
+     "criteria": {
+      "2_02_results": "Item 2.02 results of operations",
+      "1_01_agreement": "Item 1.01 material definitive agreement",
+      "5_02_officers": "Item 5.02 departure or appointment of officers/directors",
+      "3_01_delisting": "Item 3.01 delisting or listing deficiency",
+      "4_02_restatement": "Item 4.02 non-reliance on prior financials",
+      "8_01_other": "Item 8.01 other events / 7.01 Reg FD",
+      "none": "Not an 8-K or cannot tell"
+     }
+    },
+    "material": {
+     "type": "noul",
+     "instructions": "Is the reported event material to the company's value?",
+     "criteria": {
+      "true": "Material",
+      "false": "Routine or immaterial"
+     }
+    }
+   },
+   "review_floor": 0.4,
+   "thresholds": {
+    "review_floor": 0.4
+   },
+   "outputs": [
+    {
+     "outcome": "risk_review",
+     "meaning": "would send to risk review"
+    },
+    {
+     "outcome": "earnings_reader",
+     "meaning": "would send to the earnings reader"
+    },
+    {
+     "outcome": "analyst_queue",
+     "meaning": "would queue for an analyst"
+    },
+    {
+     "outcome": "log_only",
+     "meaning": "would log only"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "cheap",
+   "jev_calls": "1 call",
+   "runs_in": "schema_call",
+   "stage_hint": "signal_filter",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "published_at",
+     "headline",
+     "body"
+    ],
+    "properties": {
+     "symbol": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string",
+      "description": "NYSE or NASDAQ; anything else is rejected in code"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "published_at": {
+      "type": "string"
+     },
+     "headline": {
+      "type": "string"
+     },
+     "body": {
+      "type": "string"
+     },
+     "source": {
+      "type": "string"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "body": "The audit committee concluded FY2025 statements should no longer be relied upon.",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "8-K: Item 4.02 non-reliance on previously issued financial statements",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "SMCI",
+     "venue": "NASDAQ"
+    },
+    {
+     "body": "Nasdaq notified the company of non-compliance with the $1 minimum bid.",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "8-K: Item 3.01 notice of failure to satisfy minimum bid price",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "MULN",
+     "venue": "NASDAQ"
+    },
+    {
+     "body": "Apple announced financial results for its fiscal fourth quarter.",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "8-K: Item 2.02 results of operations",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "AAPL",
+     "venue": "NASDAQ"
+    },
+    {
+     "body": "Five-year $480M agreement with the U.S. Army.",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "8-K: Item 1.01 entry into a material definitive agreement",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "PLTR",
+     "venue": "NYSE"
+    },
+    {
+     "body": "The CEO resigned effective immediately; no successor named.",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "8-K: Item 5.02 departure of CEO",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "ARGO",
+     "venue": "NASDAQ"
+    },
+    {
+     "body": "The company updated its investor presentation.",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "8-K: Item 8.01 other events",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "KO",
+     "venue": "NYSE"
+    },
+    {
+     "body": "A limited edition flavor for the holidays.",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Coca-Cola launches a new flavor",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "KO",
+     "venue": "NYSE"
+    },
+    {
+     "body": "Board adds an independent director, expanding to 13 seats.",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "8-K: Item 5.02 appointment of director",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "PEP",
+     "venue": "NASDAQ"
+    },
+    {
+     "body": "results",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "8-K item 2.02",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "PNKX",
+     "venue": "OTC"
+    }
+   ],
+   "expected": [
+    "risk_review",
+    "risk_review",
+    "earnings_reader",
+    "analyst_queue",
+    "analyst_queue",
+    "log_only",
+    "abstain",
+    "log_only",
+    "abstain"
+   ]
+  },
+  {
+   "key": "C",
+   "id": "l2_c_analyst_action",
+   "catalog_id": "L2.C",
+   "name": "Analyst action",
+   "blurb": "Two Choices: what the analyst did (upgrade, downgrade, initiate, target only) and to which rating. Only rating changes reach the signal.",
+   "spec": "decisions/projects/jev-levels-trading/L2/C_analyst_action.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "action": {
+     "type": "choice",
+     "instructions": "What analyst action on `symbol` does `headline` report?",
+     "criteria": {
+      "upgrade": "Rating raised",
+      "downgrade": "Rating lowered",
+      "initiate": "New coverage started",
+      "target_only": "Price target changed, rating unchanged",
+      "reiterate": "Rating reiterated",
+      "none": "No analyst action"
+     }
+    },
+    "rating": {
+     "type": "choice",
+     "instructions": "What is the resulting rating?",
+     "criteria": {
+      "buy": "Buy, Outperform, Overweight",
+      "hold": "Hold, Neutral, Equal weight",
+      "sell": "Sell, Underperform, Underweight",
+      "unknown": "Not stated"
+     }
+    }
+   },
+   "review_floor": 0.4,
+   "thresholds": {
+    "review_floor": 0.4
+   },
+   "outputs": [
+    {
+     "outcome": "bullish_note",
+     "meaning": "would add a bullish analyst note to the symbol"
+    },
+    {
+     "outcome": "bearish_note",
+     "meaning": "would add a bearish analyst note"
+    },
+    {
+     "outcome": "ignore",
+     "meaning": "no rating signal"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "cheap",
+   "jev_calls": "1 call",
+   "runs_in": "schema_call",
+   "stage_hint": "signal_filter",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "published_at",
+     "headline"
+    ],
+    "properties": {
+     "symbol": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string",
+      "description": "NYSE or NASDAQ; anything else is rejected in code"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "published_at": {
+      "type": "string"
+     },
+     "headline": {
+      "type": "string"
+     },
+     "body": {
+      "type": "string"
+     },
+     "source": {
+      "type": "string"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Morgan Stanley upgrades AMD to Overweight from Equal-weight",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "AMD",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "UBS downgrades Tesla to Sell",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "TSLA",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Goldman raises NVIDIA target to $220, keeps Buy",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "NVDA",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Jefferies initiates Arm at Buy",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "ARM",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Barclays initiates Snowflake at Equal Weight",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "SNOW",
+     "venue": "NYSE"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Wedbush starts GameStop at Underperform",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "GME",
+     "venue": "NYSE"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Wedbush reiterates Outperform on Apple ahead of earnings",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "AAPL",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Apple opens store in Mumbai",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "AAPL",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "AMD upgraded",
+     "published_at": "2026-10-07T15:30:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "AMD",
+     "venue": "NASDAQ"
+    }
+   ],
+   "expected": [
+    "bullish_note",
+    "bearish_note",
+    "ignore",
+    "bullish_note",
+    "ignore",
+    "bearish_note",
+    "ignore",
+    "ignore",
+    "abstain"
+   ]
+  },
+  {
+   "key": "D",
+   "id": "l2_d_earnings_read",
+   "catalog_id": "L2.D",
+   "name": "Earnings read",
+   "blurb": "Two Choices: results vs expectations, and what guidance did. Code maps beat + raise to long watch, miss or cut to short watch.",
+   "spec": "decisions/projects/jev-levels-trading/L2/D_earnings_read.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "results": {
+     "type": "choice",
+     "instructions": "Versus expectations, how were the reported results in `headline`/`body`?",
+     "criteria": {
+      "beat": "Above expectations",
+      "inline": "In line",
+      "miss": "Below expectations",
+      "unclear": "Not stated"
+     }
+    },
+    "guidance": {
+     "type": "choice",
+     "instructions": "What did forward guidance do?",
+     "criteria": {
+      "raised": "Raised",
+      "maintained": "Reaffirmed or maintained",
+      "cut": "Lowered or withdrawn",
+      "none": "No guidance given"
+     }
+    }
+   },
+   "review_floor": 0.4,
+   "thresholds": {
+    "review_floor": 0.4
+   },
+   "outputs": [
+    {
+     "outcome": "long_watch",
+     "meaning": "would add to the post-earnings long watch list"
+    },
+    {
+     "outcome": "short_watch",
+     "meaning": "would add to the short/avoid list"
+    },
+    {
+     "outcome": "neutral",
+     "meaning": "no post-earnings bias"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "cheap",
+   "jev_calls": "1 call",
+   "runs_in": "schema_call",
+   "stage_hint": "signal_filter",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "published_at",
+     "headline"
+    ],
+    "properties": {
+     "symbol": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string",
+      "description": "NYSE or NASDAQ; anything else is rejected in code"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "published_at": {
+      "type": "string"
+     },
+     "headline": {
+      "type": "string"
+     },
+     "body": {
+      "type": "string"
+     },
+     "source": {
+      "type": "string"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Netflix beats on revenue and EPS, raises full-year guidance",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "NFLX",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Nike misses, lowers outlook",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "NKE",
+     "venue": "NYSE"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Intel tops estimates but cuts Q4 view",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "INTC",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Costco EPS beats; reaffirms comparable sales target",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "COST",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "PepsiCo results in line; no change to outlook",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "PEP",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Snap revenue misses estimates",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "SNAP",
+     "venue": "NYSE"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Uber misses on EPS but raises bookings guidance",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "UBER",
+     "venue": "NYSE"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Apple to report results on October 30",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "AAPL",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Netflix beats",
+     "published_at": "2026-10-07T15:30:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "NFLX",
+     "venue": "NASDAQ"
+    }
+   ],
+   "expected": [
+    "long_watch",
+    "short_watch",
+    "short_watch",
+    "long_watch",
+    "neutral",
+    "short_watch",
+    "neutral",
+    "abstain",
+    "abstain"
+   ]
+  },
+  {
+   "key": "E",
+   "id": "l2_e_setup_family",
+   "catalog_id": "L2.E",
+   "name": "Which setup is this chart?",
+   "blurb": "One Choice over setup families with a 'none' exit, plus a Noul 'is volume confirming'. Code sends each family to its own playbook.",
+   "spec": "decisions/projects/jev-levels-trading/L2/E_setup_family.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "family": {
+     "type": "choice",
+     "instructions": "Which setup family does `chart_description` on `timeframe` show for `symbol`?",
+     "criteria": {
+      "breakout": "Price clears a well-defined resistance or range high",
+      "pullback": "Retrace to support/moving average in an uptrend",
+      "range": "Sideways between support and resistance",
+      "reversal": "Trend change pattern (double top/bottom, failed breakdown)",
+      "none": "No clear setup"
+     }
+    },
+    "volume_confirms": {
+     "type": "noul",
+     "instructions": "Does the description say volume confirms the move?",
+     "criteria": {
+      "true": "Volume expands with the move",
+      "false": "Volume is flat, falling, or not mentioned"
+     }
+    }
+   },
+   "review_floor": 0.4,
+   "thresholds": {
+    "review_floor": 0.4
+   },
+   "outputs": [
+    {
+     "outcome": "breakout",
+     "meaning": "would load the breakout playbook"
+    },
+    {
+     "outcome": "pullback",
+     "meaning": "would load the pullback playbook"
+    },
+    {
+     "outcome": "range",
+     "meaning": "would load the range playbook"
+    },
+    {
+     "outcome": "reversal",
+     "meaning": "would load the reversal playbook"
+    },
+    {
+     "outcome": "watch",
+     "meaning": "would watch, not act"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "cheap",
+   "jev_calls": "1 call",
+   "runs_in": "schema_call",
+   "stage_hint": "signal_filter",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "timeframe",
+     "chart_description"
+    ],
+    "properties": {
+     "symbol": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string",
+      "description": "NYSE or NASDAQ; anything else is rejected in code"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "timeframe": {
+      "type": "string"
+     },
+     "chart_description": {
+      "type": "string"
+     },
+     "as_of": {
+      "type": "string"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "as_of": "2026-10-07T13:30:00Z",
+     "chart_description": "Closed above the 6-week range high at 142 on volume 2x the 20-day average.",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "symbol": "NVDA",
+     "timeframe": "1d",
+     "venue": "NASDAQ"
+    },
+    {
+     "as_of": "2026-10-07T13:30:00Z",
+     "chart_description": "Pushed through 160 resistance intraday on below-average volume.",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "symbol": "AMD",
+     "timeframe": "1d",
+     "venue": "NASDAQ"
+    },
+    {
+     "as_of": "2026-10-07T13:30:00Z",
+     "chart_description": "Uptrend; pulled back to the rising 20-day EMA and held with a hammer candle.",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "symbol": "MSFT",
+     "timeframe": "1d",
+     "venue": "NASDAQ"
+    },
+    {
+     "as_of": "2026-10-07T13:30:00Z",
+     "chart_description": "Third month between 60 and 64; bounced off 60 again.",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "symbol": "KO",
+     "timeframe": "1d",
+     "venue": "NYSE"
+    },
+    {
+     "as_of": "2026-10-07T13:30:00Z",
+     "chart_description": "Double top at 270 with a break of the neckline at 255.",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "symbol": "TSLA",
+     "timeframe": "1h",
+     "venue": "NASDAQ"
+    },
+    {
+     "as_of": "2026-10-07T13:30:00Z",
+     "chart_description": "Choppy candles, no structure, spread widening.",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "symbol": "PEP",
+     "timeframe": "5m",
+     "venue": "NASDAQ"
+    },
+    {
+     "as_of": "2026-10-07T13:30:00Z",
+     "chart_description": "Broke below 500 support then reclaimed it the next day on heavy volume.",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "symbol": "META",
+     "timeframe": "1d",
+     "venue": "NASDAQ"
+    },
+    {
+     "as_of": "2026-10-07T13:30:00Z",
+     "chart_description": "New 52-week high above 185, volume 3x average, tight base before.",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "symbol": "AVGO",
+     "timeframe": "1d",
+     "venue": "NASDAQ"
+    },
+    {
+     "as_of": "2026-10-07T13:30:00Z",
+     "chart_description": "breakout",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "symbol": "PNKX",
+     "timeframe": "1d",
+     "venue": "OTC"
+    }
+   ],
+   "expected": [
+    "breakout",
+    "watch",
+    "pullback",
+    "range",
+    "reversal",
+    "abstain",
+    "reversal",
+    "breakout",
+    "abstain"
+   ]
+  },
+  {
+   "key": "F",
+   "id": "l2_f_theme_bucket",
+   "catalog_id": "L2.F",
+   "name": "Theme bucket",
+   "blurb": "One Choice: which theme bucket does the story belong to (with 'other'). Code caps exposure per bucket, so the label must be one we declared.",
+   "spec": "decisions/projects/jev-levels-trading/L2/F_theme_bucket.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "theme": {
+     "type": "choice",
+     "instructions": "Which investment theme does `headline` most belong to?",
+     "criteria": {
+      "ai_compute": "AI chips, data centers, AI software",
+      "biotech": "Drug trials, FDA, biotech deals",
+      "energy": "Oil, gas, power, utilities",
+      "rates_financials": "Banks, rates, insurance, brokers",
+      "consumer": "Retail, restaurants, consumer brands",
+      "ev_auto": "Electric vehicles, autos, batteries",
+      "other": "None of these"
+     }
+    }
+   },
+   "review_floor": 0.4,
+   "thresholds": {
+    "review_floor": 0.4
+   },
+   "outputs": [
+    {
+     "outcome": "ai_compute",
+     "meaning": "bucket ai_compute"
+    },
+    {
+     "outcome": "biotech",
+     "meaning": "bucket biotech"
+    },
+    {
+     "outcome": "energy",
+     "meaning": "bucket energy"
+    },
+    {
+     "outcome": "rates_financials",
+     "meaning": "bucket rates_financials"
+    },
+    {
+     "outcome": "consumer",
+     "meaning": "bucket consumer"
+    },
+    {
+     "outcome": "ev_auto",
+     "meaning": "bucket ev_auto"
+    },
+    {
+     "outcome": "other",
+     "meaning": "no bucket"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "cheap",
+   "jev_calls": "1 call",
+   "runs_in": "schema_call",
+   "stage_hint": "signal_filter",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "published_at",
+     "headline"
+    ],
+    "properties": {
+     "symbol": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string",
+      "description": "NYSE or NASDAQ; anything else is rejected in code"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "published_at": {
+      "type": "string"
+     },
+     "headline": {
+      "type": "string"
+     },
+     "body": {
+      "type": "string"
+     },
+     "source": {
+      "type": "string"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "NVIDIA ships Rubin GPUs to hyperscalers",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "NVDA",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Vertex wins FDA approval for pain drug",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "VRTX",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Exxon raises Permian output target",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "XOM",
+     "venue": "NYSE"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "JPMorgan net interest income beats as rates hold",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "JPM",
+     "venue": "NYSE"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Costco October comparable sales rise 7%",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "COST",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Rivian deliveries rise 30% on R2 demand",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "RIVN",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Deere sees lower farm equipment demand",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "DE",
+     "venue": "NYSE"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Vertiv wins AI data center cooling orders",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "VRT",
+     "venue": "NYSE"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "NVIDIA ships",
+     "published_at": "2026-10-07T15:30:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "NVDA",
+     "venue": "NASDAQ"
+    }
+   ],
+   "expected": [
+    "ai_compute",
+    "biotech",
+    "energy",
+    "rates_financials",
+    "consumer",
+    "ev_auto",
+    "abstain",
+    "ai_compute",
+    "abstain"
+   ]
+  },
+  {
+   "key": "G",
+   "id": "l2_g_order_note_parse",
+   "catalog_id": "L2.G",
+   "name": "Parse a trader's order note",
+   "blurb": "Three Choices on a free-text note: side, order type, time in force. Code drafts a paper ticket only when every field is a declared label.",
+   "spec": "decisions/projects/jev-levels-trading/L2/G_order_note_parse.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "side": {
+     "type": "choice",
+     "instructions": "In `note`, does the trader want to buy, sell, or short?",
+     "criteria": {
+      "buy": "Buy / go long",
+      "sell": "Sell to close a long",
+      "short": "Sell short",
+      "unclear": "Not stated"
+     }
+    },
+    "order_type": {
+     "type": "choice",
+     "instructions": "What order type does `note` ask for?",
+     "criteria": {
+      "market": "Market",
+      "limit": "Limit",
+      "stop": "Stop or stop-limit",
+      "unclear": "Not stated"
+     }
+    },
+    "tif": {
+     "type": "choice",
+     "instructions": "What time in force?",
+     "criteria": {
+      "day": "Day or not stated",
+      "gtc": "Good till cancelled",
+      "ext": "Extended hours"
+     }
+    }
+   },
+   "review_floor": 0.4,
+   "thresholds": {
+    "review_floor": 0.4
+   },
+   "outputs": [
+    {
+     "outcome": "draft_paper_ticket",
+     "meaning": "would draft a PAPER ticket for human confirmation (never sent)"
+    },
+    {
+     "outcome": "needs_clarification",
+     "meaning": "would ask the trader"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "standard",
+   "jev_calls": "1 call",
+   "runs_in": "schema_call",
+   "stage_hint": "signal_filter",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "account",
+     "data_cutoff",
+     "note"
+    ],
+    "properties": {
+     "account": {
+      "type": "string",
+      "description": "paper only"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "note": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "note": "buy 100 AAPL at 228.50 limit, good for the day",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "note": "if NVDA trades 131 get me out, stop order, GTC",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "note": "AMD around 150 please",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "note": "short 50 TSLA limit 272, day",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "note": "market buy 200 PLTR in the premarket",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "note": "sell my META",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "note": "market sell 30 MSFT, today",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "note": "place a GTC limit buy for 10 COST at 880",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "live",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "note": "buy 100 AAPL limit 228",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "note": "buy PNKX",
+     "venue": "OTC"
+    }
+   ],
+   "expected": [
+    "draft_paper_ticket",
+    "draft_paper_ticket",
+    "needs_clarification",
+    "draft_paper_ticket",
+    "needs_clarification",
+    "needs_clarification",
+    "draft_paper_ticket",
+    "draft_paper_ticket",
+    "abstain",
+    "abstain"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1015 @@
+{
+ "project": "jev-levels-trading",
+ "engine_sha": "eadcd661230408e20e94af9becbfdf7ba8746c32039394644b91968ad9a2e3af",
+ "options": [
+  {
+   "key": "A",
+   "id": "l4_a_halt_response",
+   "catalog_id": "L4.A",
+   "name": "Halted symbol: skip, confirm or human",
+   "blurb": "One Choice on why the symbol is halted. Confident 'news pending' auto-skips new entries; anything that touches a held position needs 0.9 or a confirm; low confidence goes to a person.",
+   "spec": "decisions/projects/jev-levels-trading/L4/A_halt_response.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "halt_kind": {
+     "type": "choice",
+     "instructions": "Why is `symbol` halted according to `headline` and `halt_code`?",
+     "criteria": {
+      "news_pending": "Halt for pending news (T1)",
+      "volatility": "Limit up/limit down pause (LULD)",
+      "regulatory": "SEC/exchange regulatory suspension",
+      "merger": "Halt ahead of a merger announcement",
+      "other": "Unclear"
+     }
+    }
+   },
+   "review_floor": 0.5,
+   "thresholds": {
+    "review_floor": 0.5,
+    "destructive_bar": 0.9
+   },
+   "outputs": [
+    {
+     "outcome": "ask_human",
+     "meaning": "would ask human (paper)"
+    },
+    {
+     "outcome": "confirm",
+     "meaning": "would ask for one-click confirmation"
+    },
+    {
+     "outcome": "skip_entries",
+     "meaning": "would skip entries (paper)"
+    },
+    {
+     "outcome": "flatten_paper_position",
+     "meaning": "would flatten paper position (paper)"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "cheap",
+   "jev_calls": "1 call",
+   "runs_in": "schema_call",
+   "stage_hint": "signal_filter",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "published_at",
+     "headline"
+    ],
+    "properties": {
+     "symbol": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string",
+      "description": "NYSE or NASDAQ; anything else is rejected in code"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "published_at": {
+      "type": "string"
+     },
+     "headline": {
+      "type": "string"
+     },
+     "body": {
+      "type": "string"
+     },
+     "halt_code": {
+      "type": "string"
+     },
+     "has_position": {
+      "type": "boolean"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "halt_code": "T1",
+     "has_position": false,
+     "headline": "Nasdaq halts Acme Biotech, news pending",
+     "published_at": "2026-10-07T12:05:00Z",
+     "symbol": "ACME",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "halt_code": "LUDP",
+     "has_position": false,
+     "headline": "GMEX LULD pause after 12% move",
+     "published_at": "2026-10-07T12:05:00Z",
+     "symbol": "GMEX",
+     "venue": "NYSE"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "halt_code": "H10",
+     "has_position": true,
+     "headline": "SEC suspends trading in QBTZ for 10 days",
+     "published_at": "2026-10-07T12:05:00Z",
+     "symbol": "QBTZ",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "halt_code": "T1",
+     "has_position": false,
+     "headline": "HALO halted, merger news to follow",
+     "published_at": "2026-10-07T12:05:00Z",
+     "symbol": "HALO",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "halt_code": "?",
+     "has_position": false,
+     "headline": "Trading in ZZZ is not available",
+     "published_at": "2026-10-07T12:05:00Z",
+     "symbol": "ZZZ",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "halt_code": "H10",
+     "has_position": true,
+     "headline": "SEC suspends trading in FRDX over false press releases; exchange delisting to follow",
+     "published_at": "2026-10-07T12:05:00Z",
+     "symbol": "FRDX",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "halt_code": "T1",
+     "has_position": false,
+     "headline": "Vertex halted ahead of FDA advisory news",
+     "published_at": "2026-10-07T12:05:00Z",
+     "symbol": "VRTX",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "halt_code": "9Z9",
+     "has_position": false,
+     "headline": "halt? code 9Z9 maybe",
+     "published_at": "2026-10-07T12:05:00Z",
+     "symbol": "ACME",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "halt_code": "T1",
+     "has_position": false,
+     "headline": "halted",
+     "published_at": "2026-10-07T12:05:00Z",
+     "symbol": "PNKX",
+     "venue": "OTC"
+    }
+   ],
+   "expected": [
+    "skip_entries",
+    "skip_entries",
+    "confirm",
+    "skip_entries",
+    "ask_human",
+    "flatten_paper_position",
+    "skip_entries",
+    "ask_human",
+    "abstain"
+   ]
+  },
+  {
+   "key": "B",
+   "id": "l4_b_order_action_request",
+   "catalog_id": "L4.B",
+   "name": "Order-management request",
+   "blurb": "One Choice on what the trader asked (status, cancel one, cancel all, flatten). Read-only runs above the floor; cancel-all and flatten need the 0.9 bar.",
+   "spec": "decisions/projects/jev-levels-trading/L4/B_order_action_request.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "action": {
+     "type": "choice",
+     "instructions": "What does `message` ask the paper trading assistant to do?",
+     "criteria": {
+      "status": "Show orders/positions (read only)",
+      "cancel_one": "Cancel one specific order",
+      "cancel_all": "Cancel all open orders",
+      "flatten": "Close all positions",
+      "other": "Something else"
+     }
+    }
+   },
+   "review_floor": 0.5,
+   "thresholds": {
+    "review_floor": 0.5,
+    "destructive_bar": 0.9
+   },
+   "outputs": [
+    {
+     "outcome": "ask_human",
+     "meaning": "would ask human (paper)"
+    },
+    {
+     "outcome": "confirm",
+     "meaning": "would ask for one-click confirmation"
+    },
+    {
+     "outcome": "show_status",
+     "meaning": "would show status (paper)"
+    },
+    {
+     "outcome": "cancel_one_paper_order",
+     "meaning": "would cancel one paper order (paper)"
+    },
+    {
+     "outcome": "cancel_all_paper_orders",
+     "meaning": "would cancel all paper orders (paper)"
+    },
+    {
+     "outcome": "flatten_paper_book",
+     "meaning": "would flatten paper book (paper)"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "cheap",
+   "jev_calls": "1 call",
+   "runs_in": "schema_call",
+   "stage_hint": "signal_filter",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "account",
+     "data_cutoff",
+     "message"
+    ],
+    "properties": {
+     "account": {
+      "type": "string"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "message": {
+      "type": "string"
+     },
+     "open_orders": {
+      "type": "integer"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "message": "what are my open orders?",
+     "open_orders": 3
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "message": "Cancel ALL my open orders right now, every one of them.",
+     "open_orders": 3
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "message": "cancel the AAPL limit buy at 228",
+     "open_orders": 3
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "message": "get me flat I guess?",
+     "open_orders": 3
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "message": "Close every position in the paper account immediately, flatten the whole book.",
+     "open_orders": 3
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "message": "the thing with the orders from before",
+     "open_orders": 3
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "message": "show my positions and P&L",
+     "open_orders": 3
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "message": "maybe cancel the rest of them",
+     "open_orders": 3
+    },
+    {
+     "account": "live",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "message": "cancel all",
+     "open_orders": 3
+    }
+   ],
+   "expected": [
+    "show_status",
+    "cancel_all_paper_orders",
+    "cancel_one_paper_order",
+    "confirm",
+    "flatten_paper_book",
+    "ask_human",
+    "show_status",
+    "confirm",
+    "abstain"
+   ]
+  },
+  {
+   "key": "C",
+   "id": "l4_c_thesis_citation",
+   "catalog_id": "L4.C",
+   "name": "Does the source support the thesis claim?",
+   "blurb": "One Choice: supports, partial, contradicts, unrelated. Only a confident 'supports' attaches the evidence; contradicts needs the bar to kill the thesis.",
+   "spec": "decisions/projects/jev-levels-trading/L4/C_thesis_citation.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "support": {
+     "type": "choice",
+     "instructions": "Does `quote` within `source_text` support `claim`?",
+     "criteria": {
+      "supports": "Directly supports the claim",
+      "partial": "Supports part of it or a weaker version",
+      "contradicts": "Contradicts the claim",
+      "unrelated": "Not about the claim"
+     }
+    }
+   },
+   "review_floor": 0.5,
+   "thresholds": {
+    "review_floor": 0.5,
+    "destructive_bar": 0.9
+   },
+   "outputs": [
+    {
+     "outcome": "ask_human",
+     "meaning": "would ask human (paper)"
+    },
+    {
+     "outcome": "confirm",
+     "meaning": "would ask for one-click confirmation"
+    },
+    {
+     "outcome": "attach_evidence",
+     "meaning": "would attach evidence (paper)"
+    },
+    {
+     "outcome": "mark_thesis_broken",
+     "meaning": "would mark thesis broken (paper)"
+    },
+    {
+     "outcome": "drop_citation",
+     "meaning": "would drop citation (paper)"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "cheap",
+   "jev_calls": "1 call",
+   "runs_in": "schema_call",
+   "stage_hint": "signal_filter",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "data_cutoff",
+     "claim",
+     "quote",
+     "source_text"
+    ],
+    "properties": {
+     "data_cutoff": {
+      "type": "string"
+     },
+     "claim": {
+      "type": "string"
+     },
+     "quote": {
+      "type": "string"
+     },
+     "source_text": {
+      "type": "string"
+     },
+     "symbol": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "claim": "Services revenue hit a record",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "quote": "services revenue reached an all-time high",
+     "source_text": "Apple said services revenue reached an all-time high of $28B.",
+     "symbol": "AAPL",
+     "venue": "NASDAQ"
+    },
+    {
+     "claim": "Margins expanded every quarter",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "quote": "gross margin rose",
+     "source_text": "Gross margin rose this quarter after two quarters of decline.",
+     "symbol": "AAPL",
+     "venue": "NASDAQ"
+    },
+    {
+     "claim": "China sales are growing",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "quote": "China revenue fell 11%",
+     "source_text": "Greater China revenue fell 11% year over year.",
+     "symbol": "AAPL",
+     "venue": "NASDAQ"
+    },
+    {
+     "claim": "Buyback will double",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "quote": "new store opened",
+     "source_text": "Apple opened a new store in Mumbai.",
+     "symbol": "AAPL",
+     "venue": "NASDAQ"
+    },
+    {
+     "claim": "Data center revenue more than doubled",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "quote": "data center revenue rose 112%",
+     "source_text": "Data center revenue rose 112% to $30.8B.",
+     "symbol": "NVDA",
+     "venue": "NASDAQ"
+    },
+    {
+     "claim": "Guidance was raised",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "quote": "outlook is unchanged",
+     "source_text": "The company said its outlook is unchanged; analysts had hoped for a raise.",
+     "symbol": "AAPL",
+     "venue": "NASDAQ"
+    },
+    {
+     "claim": "CEO is staying",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "quote": "weather delayed shipments",
+     "source_text": "Weather delayed shipments in the Northeast.",
+     "symbol": "AAPL",
+     "venue": "NASDAQ"
+    },
+    {
+     "claim": "Azure grew over 30%",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "quote": "Azure grew 33%",
+     "source_text": "Azure and other cloud services revenue grew 33%.",
+     "symbol": "MSFT",
+     "venue": "NASDAQ"
+    },
+    {
+     "claim": "x",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "quote": "y",
+     "source_text": "z",
+     "symbol": "AAPL",
+     "venue": "OTC"
+    }
+   ],
+   "expected": [
+    "attach_evidence",
+    "ask_human",
+    "mark_thesis_broken",
+    "drop_citation",
+    "attach_evidence",
+    "confirm",
+    "drop_citation",
+    "attach_evidence",
+    "abstain"
+   ]
+  },
+  {
+   "key": "D",
+   "id": "l4_d_fill_reconcile",
+   "catalog_id": "L4.D",
+   "name": "Does the fill match the intended paper order?",
+   "blurb": "One Choice comparing the intended ticket with the simulator's fill report. A confident match books it; a mismatch needs the bar to auto-correct, else confirm.",
+   "spec": "decisions/projects/jev-levels-trading/L4/D_fill_reconcile.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "match": {
+     "type": "choice",
+     "instructions": "Does `report` match the `intended` paper order (symbol, side, quantity, price limit)?",
+     "criteria": {
+      "match": "Same symbol, side, quantity and within the limit",
+      "partial": "Partial fill of the right order",
+      "mismatch": "Wrong symbol, side, size or price",
+      "unreadable": "Cannot tell"
+     }
+    }
+   },
+   "review_floor": 0.5,
+   "thresholds": {
+    "review_floor": 0.5,
+    "destructive_bar": 0.9
+   },
+   "outputs": [
+    {
+     "outcome": "ask_human",
+     "meaning": "would ask human (paper)"
+    },
+    {
+     "outcome": "confirm",
+     "meaning": "would ask for one-click confirmation"
+    },
+    {
+     "outcome": "book_fill",
+     "meaning": "would book fill (paper)"
+    },
+    {
+     "outcome": "book_partial",
+     "meaning": "would book partial (paper)"
+    },
+    {
+     "outcome": "reverse_paper_fill",
+     "meaning": "would reverse paper fill (paper)"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "cheap",
+   "jev_calls": "1 call",
+   "runs_in": "schema_call",
+   "stage_hint": "signal_filter",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "account",
+     "data_cutoff",
+     "intended",
+     "report"
+    ],
+    "properties": {
+     "account": {
+      "type": "string"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "intended": {
+      "type": "string"
+     },
+     "report": {
+      "type": "string"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "intended": "BUY 100 AAPL LMT 228.50",
+     "report": "Filled: bought 100 AAPL @ 228.41"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "intended": "BUY 500 AMD LMT 150.00",
+     "report": "Partial: bought 200 AMD @ 149.95; 300 working"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "intended": "SELL 50 TSLA LMT 270",
+     "report": "Filled: 50 TSLA @ 270.10 (side: B)"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "intended": "BUY 100 META LMT 500",
+     "report": "Filled: bought 100 MET @ 49.80 (MetLife)"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "intended": "BUY 10 COST LMT 880",
+     "report": "status ??? ref 0x3f"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "intended": "SELL SHORT 40 SNAP LMT 11.20",
+     "report": "Filled: sold short 40 SNAP @ 11.22"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "intended": "BUY 100 NVDA LMT 130",
+     "report": "Filled: bought 1,000 NVDA @ 138.90"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "intended": "SELL 300 MSFT LMT 430",
+     "report": "Partial fill 120 of 300 MSFT @ 430.05"
+    },
+    {
+     "account": "live",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "intended": "BUY 1 AAPL",
+     "report": "Filled"
+    }
+   ],
+   "expected": [
+    "book_fill",
+    "book_partial",
+    "confirm",
+    "reverse_paper_fill",
+    "ask_human",
+    "book_fill",
+    "reverse_paper_fill",
+    "book_partial",
+    "abstain"
+   ]
+  },
+  {
+   "key": "E",
+   "id": "l4_e_earnings_date_status",
+   "catalog_id": "L4.E",
+   "name": "Is the earnings date confirmed?",
+   "blurb": "One Choice: confirmed, estimated, or not stated. Confident 'confirmed' arms the earnings blackout; estimates confirm with a person before use.",
+   "spec": "decisions/projects/jev-levels-trading/L4/E_earnings_date_status.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "date_status": {
+     "type": "choice",
+     "instructions": "Does `headline` give a company-confirmed earnings date for `symbol`?",
+     "criteria": {
+      "confirmed": "The company announced the date/time",
+      "estimated": "An estimate from a data vendor or analysts",
+      "none": "No earnings date"
+     }
+    }
+   },
+   "review_floor": 0.5,
+   "thresholds": {
+    "review_floor": 0.5,
+    "destructive_bar": 0.9
+   },
+   "outputs": [
+    {
+     "outcome": "ask_human",
+     "meaning": "would ask human (paper)"
+    },
+    {
+     "outcome": "confirm",
+     "meaning": "would confirm (paper)"
+    },
+    {
+     "outcome": "arm_blackout",
+     "meaning": "would arm blackout (paper)"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "cheap",
+   "jev_calls": "1 call",
+   "runs_in": "schema_call",
+   "stage_hint": "signal_filter",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "published_at",
+     "headline"
+    ],
+    "properties": {
+     "symbol": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string",
+      "description": "NYSE or NASDAQ; anything else is rejected in code"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "published_at": {
+      "type": "string"
+     },
+     "headline": {
+      "type": "string"
+     },
+     "body": {
+      "type": "string"
+     },
+     "source": {
+      "type": "string"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Apple will report fiscal Q4 results on Thursday, October 30, after the close",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "AAPL",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Tesla expected to report around Oct 22, per estimates",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "TSLA",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Coca-Cola launches holiday cans",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "KO",
+     "venue": "NYSE"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "NVIDIA sets Q3 earnings call for November 19 at 2 p.m. PT",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "NVDA",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "AMD earnings date not yet confirmed; typically late October",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "AMD",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Meta to announce third quarter results on October 29",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "META",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Snap earnings likely next week, traders say",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "SNAP",
+     "venue": "NYSE"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Costco opens new warehouse in Texas",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "COST",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Apple date",
+     "published_at": "2026-10-07T15:30:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "AAPL",
+     "venue": "NASDAQ"
+    }
+   ],
+   "expected": [
+    "arm_blackout",
+    "confirm",
+    "ask_human",
+    "arm_blackout",
+    "confirm",
+    "arm_blackout",
+    "confirm",
+    "ask_human",
+    "abstain"
+   ]
+  },
+  {
+   "key": "F",
+   "id": "l4_f_stop_change_request",
+   "catalog_id": "L4.F",
+   "name": "Stop change request",
+   "blurb": "One Choice on what the trader wants done to the stop. Tightening runs when confident; widening or removing a stop always needs the 0.9 bar (code also caps the widen at 5%).",
+   "spec": "decisions/projects/jev-levels-trading/L4/F_stop_change_request.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "change": {
+     "type": "choice",
+     "instructions": "What does `message` ask to do with the stop on `symbol`?",
+     "criteria": {
+      "tighten": "Move the stop closer to price (less risk)",
+      "widen": "Move the stop further away (more risk)",
+      "remove": "Remove the stop entirely",
+      "keep": "Leave it",
+      "other": "Unclear"
+     }
+    }
+   },
+   "review_floor": 0.5,
+   "thresholds": {
+    "review_floor": 0.5,
+    "destructive_bar": 0.9
+   },
+   "outputs": [
+    {
+     "outcome": "ask_human",
+     "meaning": "would ask human (paper)"
+    },
+    {
+     "outcome": "confirm",
+     "meaning": "would ask for one-click confirmation"
+    },
+    {
+     "outcome": "tighten_paper_stop",
+     "meaning": "would tighten paper stop (paper)"
+    },
+    {
+     "outcome": "widen_paper_stop",
+     "meaning": "would widen paper stop (paper)"
+    },
+    {
+     "outcome": "no_change",
+     "meaning": "would no change (paper)"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "cheap",
+   "jev_calls": "1 call",
+   "runs_in": "schema_call",
+   "stage_hint": "signal_filter",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "account",
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "message",
+     "current_stop",
+     "requested_stop"
+    ],
+    "properties": {
+     "account": {
+      "type": "string"
+     },
+     "symbol": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string",
+      "description": "NYSE or NASDAQ; anything else is rejected in code"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "message": {
+      "type": "string"
+     },
+     "current_stop": {
+      "type": "number"
+     },
+     "requested_stop": {
+      "type": "number"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "account": "paper",
+     "current_stop": 121,
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "message": "move my NVDA stop up to 128 to lock in gains",
+     "requested_stop": 128,
+     "symbol": "NVDA",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "paper",
+     "current_stop": 121,
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "message": "give it room, drop the stop to 118",
+     "requested_stop": 118,
+     "symbol": "NVDA",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "paper",
+     "current_stop": 121,
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "message": "just remove the stop, I believe in it",
+     "requested_stop": 0,
+     "symbol": "NVDA",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "paper",
+     "current_stop": 121,
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "message": "leave the stop where it is",
+     "requested_stop": 121,
+     "symbol": "NVDA",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "paper",
+     "current_stop": 121,
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "message": "raise stop to breakeven at 130",
+     "requested_stop": 130,
+     "symbol": "NVDA",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "paper",
+     "current_stop": 121,
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "message": "maybe a bit lower on the stop?",
+     "requested_stop": 119,
+     "symbol": "NVDA",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "paper",
+     "current_stop": 121,
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "message": "stop stuff",
+     "requested_stop": 121,
+     "symbol": "NVDA",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "paper",
+     "current_stop": 121,
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "message": "move stop to 100",
+     "requested_stop": 100,
+     "symbol": "NVDA",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "live",
+     "current_stop": 121,
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "message": "tighten",
+     "requested_stop": 125,
+     "symbol": "NVDA",
+     "venue": "NASDAQ"
+    }
+   ],
+   "expected": [
+    "tighten_paper_stop",
+    "confirm",
+    "ask_human",
+    "no_change",
+    "tighten_paper_stop",
+    "confirm",
+    "ask_human",
+    "abstain",
+    "abstain"
+   ]
+  }
+ ]
+}

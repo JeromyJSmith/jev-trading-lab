@@ -1,0 +1,583 @@
+{
+ "project": "chart-shapes",
+ "engine_sha": "eadcd661230408e20e94af9becbfdf7ba8746c32039394644b91968ad9a2e3af",
+ "options": [
+  {
+   "key": "A",
+   "id": "residual_pattern_family",
+   "name": "Residual pattern family",
+   "blurb": "Name the intraday pattern family from structured shape/residual features computed in code (never pixels). Hook for the intraday shape-overlay lab in lab/, which calls `decisions run chart-shapes/residual_pattern_family`.",
+   "spec": "decisions/projects/chart-shapes/residual_pattern_family.yaml",
+   "version": "1.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "family": {
+     "type": "choice",
+     "instructions": "Which intraday pattern family do the features (and `shape_summary`) for `symbol` on `timeframe` describe? Judge the intraday path first; the gap fields are already thresholded in code.",
+     "criteria": {
+      "trend_day": "Residual moves steadily one way all session (high residual_r2, large slope, few mean crossings), closes near the extreme; a real gap that is not filled and keeps going is still a trend_day",
+      "reversal": "A strong move early in the session is fully retraced and the session closes on the other side of the open",
+      "range": "Residual oscillates around zero with many mean crossings, small net change, no persistent slope",
+      "gap_fill": "A REAL opening gap (gap_size_class small, medium or large) that is closed back to the prior close during the session (real_gap_filled true). Never gap_fill when gap_size_class is none or unknown, or real_gap_filled is false or absent",
+      "unclear": "Features are contradictory or too weak to name a family",
+      "other": "A recognisable pattern that is none of the above"
+     }
+    },
+    "clarity": {
+     "type": "score",
+     "instructions": "How clearly do `features` show a single pattern?",
+     "criteria": [
+      "Mixed or contradictory signals",
+      "One pattern is suggested but weak",
+      "One pattern is clear in every feature"
+     ]
+    }
+   },
+   "review_floor": 0.5,
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "symbol",
+     "timeframe",
+     "session_date",
+     "data_cutoff",
+     "features_cutoff",
+     "bars",
+     "features"
+    ],
+    "properties": {
+     "symbol": {
+      "type": "string",
+      "minLength": 1
+     },
+     "timeframe": {
+      "type": "string",
+      "minLength": 1
+     },
+     "session_date": {
+      "type": "string"
+     },
+     "data_cutoff": {
+      "type": "string",
+      "description": "decision cutoff (RFC3339 with timezone)"
+     },
+     "features_cutoff": {
+      "type": "string",
+      "description": "last bar time used to compute the features"
+     },
+     "bars": {
+      "type": "integer",
+      "minimum": 0
+     },
+     "features": {
+      "type": "object",
+      "description": "residual = price minus session VWAP/linear baseline, in pct of open",
+      "properties": {
+       "open_gap_pct": {
+        "type": "number",
+        "description": "raw open gap vs prior RTH close, pct (absent if unknown)"
+       },
+       "close_vs_open_pct": {
+        "type": "number"
+       },
+       "range_pct": {
+        "type": "number"
+       },
+       "residual_slope": {
+        "type": "number",
+        "description": "slope of residual vs time, pct per hour"
+       },
+       "residual_r2": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+       },
+       "max_up_pct": {
+        "type": "number"
+       },
+       "max_down_pct": {
+        "type": "number"
+       },
+       "extreme_time_frac": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1,
+        "description": "when the session extreme happened (0 open, 1 close)"
+       },
+       "mean_crossings": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "times the residual crossed zero"
+       },
+       "gap_size_class": {
+        "enum": [
+         "unknown",
+         "none",
+         "small",
+         "medium",
+         "large"
+        ],
+        "description": "|open_gap_pct| vs gap_threshold_pct: none < 1x, small < 2x, medium < 4x, large"
+       },
+       "gap_threshold_pct": {
+        "type": "number",
+        "minimum": 0
+       },
+       "real_gap_filled": {
+        "type": "boolean",
+        "description": "a real gap (class small/medium/large) was filled"
+       }
+      },
+      "additionalProperties": false
+     },
+     "shape_summary": {
+      "type": "string"
+     },
+     "gap_raw": {
+      "type": "object",
+      "description": "raw gap values kept for audit; never put in state"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "symbol": "SPY",
+     "timeframe": "5m",
+     "session_date": "2026-11-02",
+     "data_cutoff": "2026-11-02T15:30:00Z",
+     "features_cutoff": "2026-11-02T15:30:00Z",
+     "bars": 78,
+     "features": {
+      "close_vs_open_pct": 2.4,
+      "range_pct": 2.6,
+      "residual_slope": 0.4,
+      "residual_r2": 0.93,
+      "max_up_pct": 2.5,
+      "max_down_pct": -0.1,
+      "extreme_time_frac": 0.98,
+      "mean_crossings": 1,
+      "open_gap_pct": 0.1,
+      "gap_size_class": "none",
+      "gap_threshold_pct": 0.25,
+      "real_gap_filled": false
+     },
+     "shape_summary": "Residual climbs steadily all session and closes at the high",
+     "gap_raw": {
+      "open_gap_pct": 0.1,
+      "gap_filled": false,
+      "threshold_basis": "abs",
+      "min_gap_pct": 0.25
+     }
+    },
+    {
+     "symbol": "SPY",
+     "timeframe": "5m",
+     "session_date": "2026-11-02",
+     "data_cutoff": "2026-11-02T15:30:00Z",
+     "features_cutoff": "2026-11-02T15:30:00Z",
+     "bars": 78,
+     "features": {
+      "close_vs_open_pct": -1.2,
+      "range_pct": 3.0,
+      "residual_slope": -0.1,
+      "residual_r2": 0.2,
+      "max_up_pct": 1.8,
+      "max_down_pct": -1.3,
+      "extreme_time_frac": 0.15,
+      "mean_crossings": 2,
+      "open_gap_pct": 0.1,
+      "gap_size_class": "none",
+      "gap_threshold_pct": 0.25,
+      "real_gap_filled": false
+     },
+     "shape_summary": "Strong rally in the first hour fully retraced; closes below the open",
+     "gap_raw": {
+      "open_gap_pct": 0.1,
+      "gap_filled": false,
+      "threshold_basis": "abs",
+      "min_gap_pct": 0.25
+     }
+    },
+    {
+     "symbol": "SPY",
+     "timeframe": "5m",
+     "session_date": "2026-11-02",
+     "data_cutoff": "2026-11-02T15:30:00Z",
+     "features_cutoff": "2026-11-02T15:30:00Z",
+     "bars": 78,
+     "features": {
+      "close_vs_open_pct": 0.05,
+      "range_pct": 0.6,
+      "residual_slope": 0.0,
+      "residual_r2": 0.02,
+      "max_up_pct": 0.3,
+      "max_down_pct": -0.3,
+      "extreme_time_frac": 0.5,
+      "mean_crossings": 14,
+      "open_gap_pct": 0.1,
+      "gap_size_class": "none",
+      "gap_threshold_pct": 0.25,
+      "real_gap_filled": false
+     },
+     "shape_summary": "Residual oscillates around zero all day, many crossings, no slope",
+     "gap_raw": {
+      "open_gap_pct": 0.1,
+      "gap_filled": false,
+      "threshold_basis": "abs",
+      "min_gap_pct": 0.25
+     }
+    },
+    {
+     "symbol": "SPY",
+     "timeframe": "5m",
+     "session_date": "2026-11-02",
+     "data_cutoff": "2026-11-02T15:30:00Z",
+     "features_cutoff": "2026-11-02T15:30:00Z",
+     "bars": 78,
+     "features": {
+      "close_vs_open_pct": -1.6,
+      "range_pct": 1.8,
+      "residual_slope": -0.2,
+      "residual_r2": 0.7,
+      "max_up_pct": 0.1,
+      "max_down_pct": -1.7,
+      "extreme_time_frac": 0.8,
+      "mean_crossings": 2,
+      "open_gap_pct": 1.5,
+      "gap_size_class": "large",
+      "gap_threshold_pct": 0.25,
+      "real_gap_filled": true
+     },
+     "shape_summary": "Opens with a 1.5% gap up that is closed back to the prior close by the afternoon",
+     "gap_raw": {
+      "open_gap_pct": 1.5,
+      "gap_filled": true,
+      "threshold_basis": "abs",
+      "min_gap_pct": 0.25
+     }
+    },
+    {
+     "symbol": "SPY",
+     "timeframe": "5m",
+     "session_date": "2026-11-02",
+     "data_cutoff": "2026-11-02T15:30:00Z",
+     "features_cutoff": "2026-11-02T16:00:00Z",
+     "bars": 78,
+     "features": {
+      "close_vs_open_pct": 2.4,
+      "range_pct": 2.6,
+      "residual_slope": 0.4,
+      "residual_r2": 0.93,
+      "mean_crossings": 1,
+      "open_gap_pct": 0.1,
+      "gap_size_class": "none",
+      "gap_threshold_pct": 0.25,
+      "real_gap_filled": false
+     },
+     "shape_summary": "",
+     "gap_raw": {
+      "open_gap_pct": 0.1,
+      "gap_filled": false,
+      "threshold_basis": "abs",
+      "min_gap_pct": 0.25
+     }
+    }
+   ],
+   "expected": [
+    "trend_day",
+    "reversal",
+    "range",
+    "gap_fill",
+    "abstain"
+   ]
+  },
+  {
+   "key": "B",
+   "id": "residual_pattern_family_nogap",
+   "name": "Residual pattern family nogap",
+   "blurb": "Ablation arm B: residual_pattern_family 1.1.0 with every gap field removed from Jev's state.",
+   "spec": "decisions/projects/chart-shapes/residual_pattern_family_nogap.yaml",
+   "version": "1.0.0",
+   "approval_status": "experimental",
+   "questions": {
+    "family": {
+     "type": "choice",
+     "instructions": "Which intraday pattern family do the features (and `shape_summary`) for `symbol` on `timeframe` describe? Judge the intraday path.",
+     "criteria": {
+      "trend_day": "Residual moves steadily one way all session (high residual_r2, large slope, few mean crossings), closes near the extreme",
+      "reversal": "A strong move early in the session is fully retraced and the session closes on the other side of the open",
+      "range": "Residual oscillates around zero with many mean crossings, small net change, no persistent slope",
+      "unclear": "Features are contradictory or too weak to name a family",
+      "other": "A recognisable pattern that is none of the above"
+     }
+    },
+    "clarity": {
+     "type": "score",
+     "instructions": "How clearly do `features` show a single pattern?",
+     "criteria": [
+      "Mixed or contradictory signals",
+      "One pattern is suggested but weak",
+      "One pattern is clear in every feature"
+     ]
+    }
+   },
+   "review_floor": 0.5,
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "symbol",
+     "timeframe",
+     "session_date",
+     "data_cutoff",
+     "features_cutoff",
+     "bars",
+     "features"
+    ],
+    "properties": {
+     "symbol": {
+      "type": "string",
+      "minLength": 1
+     },
+     "timeframe": {
+      "type": "string",
+      "minLength": 1
+     },
+     "session_date": {
+      "type": "string"
+     },
+     "data_cutoff": {
+      "type": "string",
+      "description": "decision cutoff (RFC3339 with timezone)"
+     },
+     "features_cutoff": {
+      "type": "string",
+      "description": "last bar time used to compute the features"
+     },
+     "bars": {
+      "type": "integer",
+      "minimum": 0
+     },
+     "features": {
+      "type": "object",
+      "description": "residual = price minus session VWAP/linear baseline, in pct of open",
+      "properties": {
+       "open_gap_pct": {
+        "type": "number",
+        "description": "raw open gap vs prior RTH close, pct (absent if unknown)"
+       },
+       "close_vs_open_pct": {
+        "type": "number"
+       },
+       "range_pct": {
+        "type": "number"
+       },
+       "residual_slope": {
+        "type": "number",
+        "description": "slope of residual vs time, pct per hour"
+       },
+       "residual_r2": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+       },
+       "max_up_pct": {
+        "type": "number"
+       },
+       "max_down_pct": {
+        "type": "number"
+       },
+       "extreme_time_frac": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1,
+        "description": "when the session extreme happened (0 open, 1 close)"
+       },
+       "mean_crossings": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "times the residual crossed zero"
+       },
+       "gap_size_class": {
+        "enum": [
+         "unknown",
+         "none",
+         "small",
+         "medium",
+         "large"
+        ],
+        "description": "|open_gap_pct| vs gap_threshold_pct: none < 1x, small < 2x, medium < 4x, large"
+       },
+       "gap_threshold_pct": {
+        "type": "number",
+        "minimum": 0
+       },
+       "real_gap_filled": {
+        "type": "boolean",
+        "description": "a real gap (class small/medium/large) was filled"
+       }
+      },
+      "additionalProperties": false
+     },
+     "shape_summary": {
+      "type": "string"
+     },
+     "gap_raw": {
+      "type": "object",
+      "description": "raw gap values kept for audit; never put in state"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "symbol": "SPY",
+     "timeframe": "5m",
+     "session_date": "2026-11-02",
+     "data_cutoff": "2026-11-02T15:30:00Z",
+     "features_cutoff": "2026-11-02T15:30:00Z",
+     "bars": 78,
+     "features": {
+      "close_vs_open_pct": 2.4,
+      "range_pct": 2.6,
+      "residual_slope": 0.4,
+      "residual_r2": 0.93,
+      "max_up_pct": 2.5,
+      "max_down_pct": -0.1,
+      "extreme_time_frac": 0.98,
+      "mean_crossings": 1,
+      "open_gap_pct": 0.1,
+      "gap_size_class": "none",
+      "gap_threshold_pct": 0.25,
+      "real_gap_filled": false
+     },
+     "shape_summary": "Residual climbs steadily all session and closes at the high",
+     "gap_raw": {
+      "open_gap_pct": 0.1,
+      "gap_filled": false,
+      "threshold_basis": "abs",
+      "min_gap_pct": 0.25
+     }
+    },
+    {
+     "symbol": "SPY",
+     "timeframe": "5m",
+     "session_date": "2026-11-02",
+     "data_cutoff": "2026-11-02T15:30:00Z",
+     "features_cutoff": "2026-11-02T15:30:00Z",
+     "bars": 78,
+     "features": {
+      "close_vs_open_pct": -1.2,
+      "range_pct": 3.0,
+      "residual_slope": -0.1,
+      "residual_r2": 0.2,
+      "max_up_pct": 1.8,
+      "max_down_pct": -1.3,
+      "extreme_time_frac": 0.15,
+      "mean_crossings": 2,
+      "open_gap_pct": 0.1,
+      "gap_size_class": "none",
+      "gap_threshold_pct": 0.25,
+      "real_gap_filled": false
+     },
+     "shape_summary": "Strong rally in the first hour fully retraced; closes below the open",
+     "gap_raw": {
+      "open_gap_pct": 0.1,
+      "gap_filled": false,
+      "threshold_basis": "abs",
+      "min_gap_pct": 0.25
+     }
+    },
+    {
+     "symbol": "SPY",
+     "timeframe": "5m",
+     "session_date": "2026-11-02",
+     "data_cutoff": "2026-11-02T15:30:00Z",
+     "features_cutoff": "2026-11-02T15:30:00Z",
+     "bars": 78,
+     "features": {
+      "close_vs_open_pct": 0.05,
+      "range_pct": 0.6,
+      "residual_slope": 0.0,
+      "residual_r2": 0.02,
+      "max_up_pct": 0.3,
+      "max_down_pct": -0.3,
+      "extreme_time_frac": 0.5,
+      "mean_crossings": 14,
+      "open_gap_pct": 0.1,
+      "gap_size_class": "none",
+      "gap_threshold_pct": 0.25,
+      "real_gap_filled": false
+     },
+     "shape_summary": "Residual oscillates around zero all day, many crossings, no slope",
+     "gap_raw": {
+      "open_gap_pct": 0.1,
+      "gap_filled": false,
+      "threshold_basis": "abs",
+      "min_gap_pct": 0.25
+     }
+    },
+    {
+     "symbol": "SPY",
+     "timeframe": "5m",
+     "session_date": "2026-11-02",
+     "data_cutoff": "2026-11-02T15:30:00Z",
+     "features_cutoff": "2026-11-02T15:30:00Z",
+     "bars": 78,
+     "features": {
+      "close_vs_open_pct": -1.6,
+      "range_pct": 1.8,
+      "residual_slope": -0.2,
+      "residual_r2": 0.7,
+      "max_up_pct": 0.1,
+      "max_down_pct": -1.7,
+      "extreme_time_frac": 0.8,
+      "mean_crossings": 2,
+      "open_gap_pct": 1.5,
+      "gap_size_class": "large",
+      "gap_threshold_pct": 0.25,
+      "real_gap_filled": true
+     },
+     "shape_summary": "Opens with a 1.5% gap up that is closed back to the prior close by the afternoon",
+     "gap_raw": {
+      "open_gap_pct": 1.5,
+      "gap_filled": true,
+      "threshold_basis": "abs",
+      "min_gap_pct": 0.25
+     }
+    },
+    {
+     "symbol": "SPY",
+     "timeframe": "5m",
+     "session_date": "2026-11-02",
+     "data_cutoff": "2026-11-02T15:30:00Z",
+     "features_cutoff": "2026-11-02T16:00:00Z",
+     "bars": 78,
+     "features": {
+      "close_vs_open_pct": 2.4,
+      "range_pct": 2.6,
+      "residual_slope": 0.4,
+      "residual_r2": 0.93,
+      "mean_crossings": 1,
+      "open_gap_pct": 0.1,
+      "gap_size_class": "none",
+      "gap_threshold_pct": 0.25,
+      "real_gap_filled": false
+     },
+     "shape_summary": "",
+     "gap_raw": {
+      "open_gap_pct": 0.1,
+      "gap_filled": false,
+      "threshold_basis": "abs",
+      "min_gap_pct": 0.25
+     }
+    }
+   ],
+   "expected": [
+    "trend_day",
+    "reversal",
+    "range",
+    "gap_fill",
+    "abstain"
+   ]
+  }
+ ]
+}

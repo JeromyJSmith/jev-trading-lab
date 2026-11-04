@@ -1,0 +1,1083 @@
+{
+ "project": "jev-levels-trading",
+ "engine_sha": "eadcd661230408e20e94af9becbfdf7ba8746c32039394644b91968ad9a2e3af",
+ "options": [
+  {
+   "key": "A",
+   "id": "l7_a_regime_moved_on",
+   "catalog_id": "L7.A",
+   "name": "Has the market regime moved on?",
+   "blurb": "The should-I-compact question for a strategy: code tiers the vol ratio (1.2 / 1.5 / 2.0), Jev judges whether the regime described in `recent` has moved on from `tuned_on` and promotes one tier.",
+   "spec": "decisions/projects/jev-levels-trading/L7/A_regime_moved_on.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "moved_on": {
+     "type": "noul",
+     "instructions": "Has the market regime in `recent` moved on from the one in `tuned_on` (trend, volatility, correlation, leadership)?",
+     "criteria": {
+      "true": "A different regime",
+      "false": "Same regime, normal variation"
+     }
+    },
+    "what_changed": {
+     "type": "choice",
+     "instructions": "What changed most?",
+     "criteria": {
+      "volatility": "Volatility level",
+      "trend": "Trend direction",
+      "correlation": "Correlations/leadership",
+      "liquidity": "Liquidity",
+      "none": "Nothing material"
+     }
+    }
+   },
+   "review_floor": 0.5,
+   "thresholds": {
+    "notice": 1.2,
+    "recommend": 1.5,
+    "request": 2.0,
+    "promote": 0.7
+   },
+   "outputs": [
+    {
+     "outcome": "silent",
+     "meaning": "nothing said"
+    },
+    {
+     "outcome": "notice",
+     "meaning": "would show a notice"
+    },
+    {
+     "outcome": "recommend",
+     "meaning": "would recommend a review"
+    },
+    {
+     "outcome": "request",
+     "meaning": "would request a stop-and-review before new paper trades"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "cheap",
+   "jev_calls": "1 call",
+   "runs_in": "schema_call_agent_shape",
+   "stage_hint": "position_monitor",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "strategy",
+     "venue",
+     "data_cutoff",
+     "tuned_on",
+     "recent",
+     "vol_ratio"
+    ],
+    "properties": {
+     "strategy": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "tuned_on": {
+      "type": "string"
+     },
+     "recent": {
+      "type": "string"
+     },
+     "vol_ratio": {
+      "type": "number",
+      "description": "realized vol now / at tuning (code)"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "recent": "Still a low-vol uptrend, tech leading",
+     "strategy": "ema_pullback",
+     "tuned_on": "Low-vol uptrend led by megacap tech",
+     "venue": "NYSE",
+     "vol_ratio": 1.0
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "recent": "VIX 35, sharp selloff, defensives leading",
+     "strategy": "ema_pullback",
+     "tuned_on": "Low-vol uptrend",
+     "venue": "NYSE",
+     "vol_ratio": 2.3
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "recent": "Choppier but uptrend intact",
+     "strategy": "ema_pullback",
+     "tuned_on": "Low-vol uptrend",
+     "venue": "NYSE",
+     "vol_ratio": 1.6
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "recent": "Rotation into small caps and value; tech lagging for 6 weeks",
+     "strategy": "ema_pullback",
+     "tuned_on": "Tech-led uptrend",
+     "venue": "NYSE",
+     "vol_ratio": 1.25
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "recent": "Still range bound, a bit more movement",
+     "strategy": "ema_pullback",
+     "tuned_on": "Range-bound market",
+     "venue": "NYSE",
+     "vol_ratio": 1.3
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "recent": "Lower highs for 3 months, rates spiking",
+     "strategy": "ema_pullback",
+     "tuned_on": "Bull trend, buy-the-dip",
+     "venue": "NYSE",
+     "vol_ratio": 1.6
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "recent": "Range-bound",
+     "strategy": "ema_pullback",
+     "tuned_on": "Range-bound",
+     "venue": "NYSE",
+     "vol_ratio": 1.1
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "recent": "Calm-ish",
+     "strategy": "ema_pullback",
+     "tuned_on": "Calm",
+     "venue": "NYSE",
+     "vol_ratio": 2.5
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "recent": "b",
+     "strategy": "ema_pullback",
+     "tuned_on": "a",
+     "venue": "OTC",
+     "vol_ratio": 1.0
+    }
+   ],
+   "expected": [
+    "silent",
+    "request",
+    "recommend",
+    "recommend",
+    "notice",
+    "request",
+    "silent",
+    "request",
+    "abstain"
+   ]
+  },
+  {
+   "key": "B",
+   "id": "l7_b_thesis_stale",
+   "catalog_id": "L7.B",
+   "name": "Is the trade thesis stale?",
+   "blurb": "Code tiers days held (10 / 20 / 40). Jev judges whether what happened `since` contradicts the thesis; a contradiction promotes one tier.",
+   "spec": "decisions/projects/jev-levels-trading/L7/B_thesis_stale.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "contradicts": {
+     "type": "noul",
+     "instructions": "Does what happened `since` entry contradict `thesis` for `symbol`?",
+     "criteria": {
+      "true": "The thesis is contradicted or overtaken",
+      "false": "Still intact or untested"
+     }
+    }
+   },
+   "review_floor": 0.5,
+   "thresholds": {
+    "notice": 10,
+    "recommend": 20,
+    "request": 40,
+    "promote": 0.7
+   },
+   "outputs": [
+    {
+     "outcome": "silent",
+     "meaning": "nothing said"
+    },
+    {
+     "outcome": "notice",
+     "meaning": "would show a notice"
+    },
+    {
+     "outcome": "recommend",
+     "meaning": "would recommend a review"
+    },
+    {
+     "outcome": "request",
+     "meaning": "would request a stop-and-review before new paper trades"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "cheap",
+   "jev_calls": "1 call",
+   "runs_in": "schema_call_agent_shape",
+   "stage_hint": "position_monitor",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "thesis",
+     "since",
+     "days_held"
+    ],
+    "properties": {
+     "symbol": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string",
+      "description": "NYSE or NASDAQ; anything else is rejected in code"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "thesis": {
+      "type": "string"
+     },
+     "since": {
+      "type": "string"
+     },
+     "days_held": {
+      "type": "integer"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "days_held": 3,
+     "since": "Two hyperscalers raised capex",
+     "symbol": "NVDA",
+     "thesis": "Hyperscaler capex up",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "days_held": 4,
+     "since": "Lost the main customer to a rival",
+     "symbol": "AMD",
+     "thesis": "MI400 wins",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "days_held": 25,
+     "since": "Fee hike confirmed, nothing else",
+     "symbol": "COST",
+     "thesis": "Fee hike",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "days_held": 30,
+     "since": "Foundry customer cancelled, guide cut",
+     "symbol": "INTC",
+     "thesis": "Foundry turnaround",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "days_held": 45,
+     "since": "Nothing new",
+     "symbol": "KO",
+     "thesis": "Defensive yield",
+     "venue": "NYSE"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "days_held": 12,
+     "since": "Azure grew in line",
+     "symbol": "MSFT",
+     "thesis": "Azure acceleration",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "days_held": 15,
+     "since": "Price cuts again, margins down",
+     "symbol": "TSLA",
+     "thesis": "Margin recovery",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "days_held": 1,
+     "since": "No news",
+     "symbol": "META",
+     "thesis": "Ad pricing",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "days_held": 1,
+     "since": "y",
+     "symbol": "PNKX",
+     "thesis": "x",
+     "venue": "OTC"
+    }
+   ],
+   "expected": [
+    "silent",
+    "notice",
+    "recommend",
+    "request",
+    "request",
+    "notice",
+    "recommend",
+    "silent",
+    "abstain"
+   ]
+  },
+  {
+   "key": "C",
+   "id": "l7_c_research_session_compact",
+   "catalog_id": "L7.C",
+   "name": "Should the research agent compact?",
+   "blurb": "Upstream's exact question for a trading research session: context usage in code (50 / 70 / 85%), Jev judges whether the next request is a new topic; a new topic promotes, needing old context demotes.",
+   "spec": "decisions/projects/jev-levels-trading/L7/C_research_session_compact.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "new_topic": {
+     "type": "noul",
+     "instructions": "Is `next_request` a different topic from `recent_turns`?",
+     "criteria": {
+      "true": "A different symbol or task",
+      "false": "Same work continues"
+     }
+    },
+    "needs_old": {
+     "type": "noul",
+     "instructions": "Does `next_request` need details only found in the older turns?",
+     "criteria": {
+      "true": "Needs older details",
+      "false": "Self-contained"
+     }
+    }
+   },
+   "review_floor": 0.5,
+   "thresholds": {
+    "notice": 50,
+    "recommend": 70,
+    "request": 85,
+    "promote": 0.7
+   },
+   "outputs": [
+    {
+     "outcome": "silent",
+     "meaning": "nothing said"
+    },
+    {
+     "outcome": "notice",
+     "meaning": "would show a notice"
+    },
+    {
+     "outcome": "recommend",
+     "meaning": "would recommend a review"
+    },
+    {
+     "outcome": "request",
+     "meaning": "would request a stop-and-review before new paper trades"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "cheap",
+   "jev_calls": "1 call",
+   "runs_in": "schema_call_agent_shape",
+   "stage_hint": "position_monitor",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "data_cutoff",
+     "usage_pct",
+     "recent_turns",
+     "next_request"
+    ],
+    "properties": {
+     "data_cutoff": {
+      "type": "string"
+     },
+     "usage_pct": {
+      "type": "number"
+     },
+     "recent_turns": {
+      "type": "string"
+     },
+     "next_request": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "next_request": "Now the NVDA segment table",
+     "recent_turns": "Reading NVDA 10-Q",
+     "usage_pct": 20,
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "next_request": "Switch to KO dividend history",
+     "recent_turns": "NVDA 10-Q deep dive",
+     "usage_pct": 55,
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "next_request": "New task: screen biotech PDUFA dates",
+     "recent_turns": "Six AMD filings read",
+     "usage_pct": 80,
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "next_request": "Use the bridge numbers from earlier to model Q4",
+     "recent_turns": "Built the INTC revenue bridge",
+     "usage_pct": 72,
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "next_request": "Continue TSLA",
+     "recent_turns": "Long TSLA session",
+     "usage_pct": 90,
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "next_request": "More MSFT",
+     "recent_turns": "MSFT notes",
+     "usage_pct": 52,
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "next_request": "Now META",
+     "recent_turns": "AAPL",
+     "usage_pct": 10,
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "next_request": "More META",
+     "recent_turns": "META notes",
+     "usage_pct": 71,
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "next_request": "b",
+     "recent_turns": "a",
+     "usage_pct": 10,
+     "venue": "OTC"
+    }
+   ],
+   "expected": [
+    "silent",
+    "recommend",
+    "request",
+    "notice",
+    "request",
+    "notice",
+    "silent",
+    "recommend",
+    "abstain"
+   ]
+  },
+  {
+   "key": "D",
+   "id": "l7_d_vol_shock_tier",
+   "catalog_id": "L7.D",
+   "name": "Volatility shock tier",
+   "blurb": "Intraday vol vs 20-day norm in code (1.5 / 2.5 / 4x). Jev judges whether it is an unscheduled shock rather than a known event (CPI, FOMC, earnings); a shock promotes.",
+   "spec": "decisions/projects/jev-levels-trading/L7/D_vol_shock_tier.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "unscheduled": {
+     "type": "noul",
+     "instructions": "Is the move described in `context` an unscheduled shock rather than a known scheduled event?",
+     "criteria": {
+      "true": "Unscheduled: surprise news, outage, geopolitical",
+      "false": "Scheduled: CPI, FOMC, earnings, index rebalance"
+     }
+    }
+   },
+   "review_floor": 0.5,
+   "thresholds": {
+    "notice": 1.5,
+    "recommend": 2.5,
+    "request": 4.0,
+    "promote": 0.7
+   },
+   "outputs": [
+    {
+     "outcome": "silent",
+     "meaning": "nothing said"
+    },
+    {
+     "outcome": "notice",
+     "meaning": "would show a notice"
+    },
+    {
+     "outcome": "recommend",
+     "meaning": "would recommend a review"
+    },
+    {
+     "outcome": "request",
+     "meaning": "would request a stop-and-review before new paper trades"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "cheap",
+   "jev_calls": "1 call",
+   "runs_in": "schema_call_agent_shape",
+   "stage_hint": "position_monitor",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "intraday_vol_ratio",
+     "context"
+    ],
+    "properties": {
+     "symbol": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string",
+      "description": "NYSE or NASDAQ; anything else is rejected in code"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "intraday_vol_ratio": {
+      "type": "number"
+     },
+     "context": {
+      "type": "string"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "context": "CPI release at 8:30, market digesting",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "intraday_vol_ratio": 2.0,
+     "symbol": "SPY",
+     "venue": "NYSE"
+    },
+    {
+     "context": "Unexpected military escalation overnight",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "intraday_vol_ratio": 3.0,
+     "symbol": "SPY",
+     "venue": "NYSE"
+    },
+    {
+     "context": "Quiet session",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "intraday_vol_ratio": 1.0,
+     "symbol": "KO",
+     "venue": "NYSE"
+    },
+    {
+     "context": "FOMC day",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "intraday_vol_ratio": 4.5,
+     "symbol": "SPY",
+     "venue": "NYSE"
+    },
+    {
+     "context": "FOMC decision and presser",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "intraday_vol_ratio": 2.6,
+     "symbol": "QQQ",
+     "venue": "NASDAQ"
+    },
+    {
+     "context": "Exchange outage halted trading for 20 minutes",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "intraday_vol_ratio": 1.8,
+     "symbol": "AAPL",
+     "venue": "NASDAQ"
+    },
+    {
+     "context": "Netflix earnings after the close yesterday",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "intraday_vol_ratio": 2.2,
+     "symbol": "NFLX",
+     "venue": "NASDAQ"
+    },
+    {
+     "context": "Slightly busy",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "intraday_vol_ratio": 1.2,
+     "symbol": "JNJ",
+     "venue": "NYSE"
+    },
+    {
+     "context": "x",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "intraday_vol_ratio": 5,
+     "symbol": "PNKX",
+     "venue": "OTC"
+    }
+   ],
+   "expected": [
+    "notice",
+    "request",
+    "silent",
+    "request",
+    "recommend",
+    "recommend",
+    "notice",
+    "silent",
+    "abstain"
+   ]
+  },
+  {
+   "key": "E",
+   "id": "l7_e_drawdown_tier",
+   "catalog_id": "L7.E",
+   "name": "Paper drawdown tier",
+   "blurb": "Drawdown in code (2 / 4 / 6%). Jev judges whether recent losses show the edge breaking (same failure repeating) rather than noise; a break promotes.",
+   "spec": "decisions/projects/jev-levels-trading/L7/E_drawdown_tier.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "edge_break": {
+     "type": "noul",
+     "instructions": "Do `recent_trades` show the strategy's edge breaking (the same failure repeating, a changed market) rather than normal noise?",
+     "criteria": {
+      "true": "Systematic failure",
+      "false": "Normal variance"
+     }
+    }
+   },
+   "review_floor": 0.5,
+   "thresholds": {
+    "notice": 2,
+    "recommend": 4,
+    "request": 6,
+    "promote": 0.7
+   },
+   "outputs": [
+    {
+     "outcome": "silent",
+     "meaning": "nothing said"
+    },
+    {
+     "outcome": "notice",
+     "meaning": "would show a notice"
+    },
+    {
+     "outcome": "recommend",
+     "meaning": "would recommend a review"
+    },
+    {
+     "outcome": "request",
+     "meaning": "would request a stop-and-review before new paper trades"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "cheap",
+   "jev_calls": "1 call",
+   "runs_in": "schema_call_agent_shape",
+   "stage_hint": "position_monitor",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "strategy",
+     "venue",
+     "data_cutoff",
+     "drawdown_pct",
+     "recent_trades"
+    ],
+    "properties": {
+     "strategy": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "drawdown_pct": {
+      "type": "number"
+     },
+     "recent_trades": {
+      "type": "string"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "drawdown_pct": 1.0,
+     "recent_trades": "W L W L L W, mixed",
+     "strategy": "orb_5m",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "drawdown_pct": 2.5,
+     "recent_trades": "Five losses in a row, all stopped out by an opening reversal",
+     "strategy": "orb_5m",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "drawdown_pct": 6.5,
+     "recent_trades": "Mixed",
+     "strategy": "orb_5m",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "drawdown_pct": 3.0,
+     "recent_trades": "Losses spread across setups, normal slippage",
+     "strategy": "orb_5m",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "drawdown_pct": 4.5,
+     "recent_trades": "Every breakout failed after the spread widened",
+     "strategy": "orb_5m",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "drawdown_pct": 4.0,
+     "recent_trades": "Random",
+     "strategy": "orb_5m",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "drawdown_pct": 1.5,
+     "recent_trades": "Three gap fades lost on the same news type",
+     "strategy": "orb_5m",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "drawdown_pct": 0.2,
+     "recent_trades": "One small loss",
+     "strategy": "orb_5m",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "drawdown_pct": 1,
+     "recent_trades": "x",
+     "strategy": "orb_5m",
+     "venue": "OTC"
+    }
+   ],
+   "expected": [
+    "silent",
+    "recommend",
+    "request",
+    "notice",
+    "request",
+    "recommend",
+    "notice",
+    "silent",
+    "abstain"
+   ]
+  },
+  {
+   "key": "F",
+   "id": "l7_f_cut_point",
+   "catalog_id": "L7.F",
+   "name": "Pick the cut point in the research notes",
+   "blurb": "Before compacting a research session, Jev picks which note starts the live work; older notes become the summary. Options are the real note ids.",
+   "spec": "decisions/projects/jev-levels-trading/L7/F_cut_point.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "live_from": {
+     "type": "choice",
+     "instructions": "From which note in `notes` does the work on `current_task` start?",
+     "criteria": {
+      "n1": "NVDA 10-Q read",
+      "n2": "NVDA segment table",
+      "n3": "Started AMD: MI400 customers",
+      "n4": "AMD pricing",
+      "none": "No note relates to the current task"
+     }
+    }
+   },
+   "review_floor": 0.4,
+   "thresholds": {
+    "review_floor": 0.4
+   },
+   "outputs": [
+    {
+     "outcome": "cut",
+     "meaning": "the outcome is the note id to keep from"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "cheap",
+   "jev_calls": "1 call",
+   "runs_in": "schema_call_agent_shape",
+   "stage_hint": "position_monitor",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "data_cutoff",
+     "notes",
+     "current_task"
+    ],
+    "properties": {
+     "data_cutoff": {
+      "type": "string"
+     },
+     "current_task": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string"
+     },
+     "notes": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": [
+        "id",
+        "text"
+       ],
+       "properties": {
+        "id": {
+         "type": "string"
+        },
+        "text": {
+         "type": "string"
+        }
+       }
+      }
+     }
+    }
+   },
+   "inputs": [
+    {
+     "current_task": "Model AMD MI400 revenue",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "notes": [
+      {
+       "id": "n1",
+       "text": "NVDA 10-Q read"
+      },
+      {
+       "id": "n2",
+       "text": "NVDA segment table"
+      },
+      {
+       "id": "n3",
+       "text": "Started AMD: MI400 customers"
+      },
+      {
+       "id": "n4",
+       "text": "AMD pricing"
+      }
+     ],
+     "venue": "NASDAQ"
+    },
+    {
+     "current_task": "KO dividend safety",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "notes": [
+      {
+       "id": "n1",
+       "text": "Market recap"
+      },
+      {
+       "id": "n2",
+       "text": "KO payout ratio"
+      },
+      {
+       "id": "n3",
+       "text": "KO FCF"
+      }
+     ],
+     "venue": "NASDAQ"
+    },
+    {
+     "current_task": "TSLA margins",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "notes": [
+      {
+       "id": "n1",
+       "text": "AAPL"
+      },
+      {
+       "id": "n2",
+       "text": "MSFT"
+      },
+      {
+       "id": "n3",
+       "text": "META"
+      },
+      {
+       "id": "n4",
+       "text": "TSLA price cuts"
+      },
+      {
+       "id": "n5",
+       "text": "TSLA COGS"
+      }
+     ],
+     "venue": "NASDAQ"
+    },
+    {
+     "current_task": "Write a CPI note",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "notes": [
+      {
+       "id": "n1",
+       "text": "AAPL"
+      },
+      {
+       "id": "n2",
+       "text": "MSFT"
+      }
+     ],
+     "venue": "NASDAQ"
+    },
+    {
+     "current_task": "INTC foundry",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "notes": [
+      {
+       "id": "n1",
+       "text": "INTC foundry intro"
+      },
+      {
+       "id": "n2",
+       "text": "INTC customers"
+      }
+     ],
+     "venue": "NASDAQ"
+    },
+    {
+     "current_task": "x",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "notes": [
+      {
+       "id": "n1",
+       "text": "a"
+      },
+      {
+       "id": "n1",
+       "text": "b"
+      }
+     ],
+     "venue": "NASDAQ"
+    },
+    {
+     "current_task": "x",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "notes": [
+      {
+       "id": "n1",
+       "text": "a"
+      }
+     ],
+     "venue": "NASDAQ"
+    },
+    {
+     "current_task": "Biotech PDUFA screen",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "notes": [
+      {
+       "id": "n1",
+       "text": "Old ORB backtest"
+      },
+      {
+       "id": "n2",
+       "text": "PDUFA list"
+      },
+      {
+       "id": "n3",
+       "text": "VRTX date"
+      }
+     ],
+     "venue": "NASDAQ"
+    },
+    {
+     "current_task": "x",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "notes": [
+      {
+       "id": "n1",
+       "text": "a"
+      },
+      {
+       "id": "n2",
+       "text": "b"
+      }
+     ],
+     "venue": "OTC"
+    }
+   ],
+   "expected": [
+    "n3",
+    "n2",
+    "n4",
+    "abstain",
+    "n1",
+    "abstain",
+    "abstain",
+    "n2",
+    "abstain"
+   ]
+  }
+ ]
+}

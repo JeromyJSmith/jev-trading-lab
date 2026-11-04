@@ -1,0 +1,6 @@
+{
+ "schema": "jev-lab-static.v1",
+ "generated": "2026-11-04",
+ "recorded_sets": 80,
+ "note": "Recorded sets replay real Jev answers recorded by the workbench; every other set is the offline mock. PAPER ONLY."
+}

@@ -1,0 +1,1124 @@
+{
+ "project": "jev-levels-trading",
+ "engine_sha": "eadcd661230408e20e94af9becbfdf7ba8746c32039394644b91968ad9a2e3af",
+ "options": [
+  {
+   "key": "A",
+   "id": "l3_a_catalyst_quality",
+   "catalog_id": "L3.A",
+   "name": "Catalyst quality grade",
+   "blurb": "Novelty, magnitude, credibility: three Scores, weights 0.3/0.5/0.2 in code, bands A/B/C. Retune a weight, not a prompt.",
+   "spec": "decisions/projects/jev-levels-trading/L3/A_catalyst_quality.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "novelty": {
+     "type": "score",
+     "instructions": "How new is the information in `headline` for `symbol` (vs already known/expected)?",
+     "criteria": [
+      "already known",
+      "partly new",
+      "mostly new",
+      "complete surprise"
+     ]
+    },
+    "magnitude": {
+     "type": "score",
+     "instructions": "How large is the likely effect on `symbol`'s revenue or valuation?",
+     "criteria": [
+      "negligible",
+      "small",
+      "material",
+      "transformational"
+     ]
+    },
+    "credibility": {
+     "type": "score",
+     "instructions": "How credible is the source and wording?",
+     "criteria": [
+      "rumour or promo",
+      "unnamed sources",
+      "named outlet",
+      "company filing or press release"
+     ]
+    }
+   },
+   "review_floor": 0.4,
+   "thresholds": {
+    "review_floor": 0.4,
+    "w_novelty": 0.3,
+    "w_magnitude": 0.5,
+    "w_credibility": 0.2,
+    "grade_a": 0.75,
+    "grade_b": 0.5
+   },
+   "outputs": [
+    {
+     "outcome": "grade_a",
+     "meaning": "A catalyst: would size normally"
+    },
+    {
+     "outcome": "grade_b",
+     "meaning": "B catalyst: would size half"
+    },
+    {
+     "outcome": "grade_c",
+     "meaning": "C: would not trade the catalyst"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "standard",
+   "jev_calls": "1 call",
+   "runs_in": "schema_call",
+   "stage_hint": "signal_filter",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "published_at",
+     "headline"
+    ],
+    "properties": {
+     "symbol": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string",
+      "description": "NYSE or NASDAQ; anything else is rejected in code"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "published_at": {
+      "type": "string"
+     },
+     "headline": {
+      "type": "string"
+     },
+     "body": {
+      "type": "string"
+     },
+     "source": {
+      "type": "string"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Sage Therapeutics agrees to be acquired by Biogen for $12/share in cash; 8-K filed",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "SAGE",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Snap could be a takeover target, blogger speculates",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "SNAP",
+     "venue": "NYSE"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Costco beats estimates as expected; comps +6%",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "COST",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Vertex wins early FDA approval months ahead of PDUFA date",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "VRTX",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Apple's iPhone 17 goes on sale as announced",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "AAPL",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Palantir wins $100M Navy contract",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "PLTR",
+     "venue": "NYSE"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "This AI stock could 10x, says newsletter",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "GRWX",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Basko withdraws guidance after losing its largest customer, 8-K filed",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "BASK",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "PNKX takeover",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "PNKX",
+     "venue": "OTC"
+    }
+   ],
+   "expected": [
+    "grade_a",
+    "grade_c",
+    "grade_b",
+    "grade_a",
+    "grade_c",
+    "grade_b",
+    "grade_c",
+    "grade_a",
+    "abstain"
+   ]
+  },
+  {
+   "key": "B",
+   "id": "l3_b_trade_idea_grade",
+   "catalog_id": "L3.B",
+   "name": "Trade idea grade",
+   "blurb": "Thesis clarity, stated edge, risk definition, catalyst timing: four Scores, weighted in code into review / watch / pass.",
+   "spec": "decisions/projects/jev-levels-trading/L3/B_trade_idea_grade.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "clarity": {
+     "type": "score",
+     "instructions": "How clear and falsifiable is `thesis`?",
+     "criteria": [
+      "none",
+      "low",
+      "medium",
+      "high"
+     ]
+    },
+    "edge": {
+     "type": "score",
+     "instructions": "How specific is the edge (why others are wrong)?",
+     "criteria": [
+      "none",
+      "low",
+      "medium",
+      "high"
+     ]
+    },
+    "risk": {
+     "type": "score",
+     "instructions": "How well does `plan` define entry, stop and size?",
+     "criteria": [
+      "none",
+      "low",
+      "medium",
+      "high"
+     ]
+    },
+    "timing": {
+     "type": "score",
+     "instructions": "How well defined is the catalyst or time window?",
+     "criteria": [
+      "none",
+      "low",
+      "medium",
+      "high"
+     ]
+    }
+   },
+   "review_floor": 0.4,
+   "thresholds": {
+    "review_floor": 0.4,
+    "w_clarity": 0.3,
+    "w_edge": 0.25,
+    "w_risk": 0.3,
+    "w_timing": 0.15,
+    "review": 0.7,
+    "watch": 0.45
+   },
+   "outputs": [
+    {
+     "outcome": "review",
+     "meaning": "would send to the human review queue"
+    },
+    {
+     "outcome": "watch",
+     "meaning": "would keep on the idea list"
+    },
+    {
+     "outcome": "pass",
+     "meaning": "would drop the idea"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "standard",
+   "jev_calls": "1 call",
+   "runs_in": "schema_call",
+   "stage_hint": "signal_filter",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "thesis",
+     "plan"
+    ],
+    "properties": {
+     "symbol": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string",
+      "description": "NYSE or NASDAQ; anything else is rejected in code"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "thesis": {
+      "type": "string"
+     },
+     "plan": {
+      "type": "string"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "plan": "Buy on a hold of 130; stop 121 (below the base); 0.5% risk; exit before earnings if not working.",
+     "symbol": "NVDA",
+     "thesis": "Data center capex guides up 30% at hyperscalers; consensus models only 15%, so FY27 EPS is too low.",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "plan": "Buy.",
+     "symbol": "TSLA",
+     "thesis": "Tesla is the future.",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "plan": "Will figure out the entry later.",
+     "symbol": "AMD",
+     "thesis": "MI400 wins at two hyperscalers not in consensus.",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "plan": "Short below 30 on a failed bounce; stop 35; 0.25% risk; cover on 10-K filing.",
+     "symbol": "SMCI",
+     "thesis": "Restatement risk: 4.02 filed, auditor resigned, covenants tested in Q4.",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "plan": "Buy some, maybe a stop.",
+     "symbol": "AAPL",
+     "thesis": "Apple is a good company.",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "plan": "Buy 880, stop 840, 0.5% risk.",
+     "symbol": "COST",
+     "thesis": "Membership fee hike not in numbers.",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "plan": "Buy calls spread capped at 0.3% risk; exit on decision.",
+     "symbol": "VRTX",
+     "thesis": "PDUFA Oct 30; panel voted 12-1 for; options imply a 6% move vs our 12% base case.",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "plan": "All in.",
+     "symbol": "GME",
+     "thesis": "Saw it on a forum.",
+     "venue": "NYSE"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "plan": "y",
+     "symbol": "PNKX",
+     "thesis": "x",
+     "venue": "OTC"
+    }
+   ],
+   "expected": [
+    "review",
+    "pass",
+    "watch",
+    "review",
+    "pass",
+    "watch",
+    "review",
+    "pass",
+    "abstain"
+   ]
+  },
+  {
+   "key": "C",
+   "id": "l3_c_earnings_quality",
+   "catalog_id": "L3.C",
+   "name": "Earnings quality",
+   "blurb": "Revenue quality, margin trend, guidance, one-off reliance: four Scores, weights in code. High quality beats get the drift playbook.",
+   "spec": "decisions/projects/jev-levels-trading/L3/C_earnings_quality.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "revenue": {
+     "type": "score",
+     "instructions": "How strong and organic is the revenue line in `headline`/`body`?",
+     "criteria": [
+      "none",
+      "low",
+      "medium",
+      "high"
+     ]
+    },
+    "margins": {
+     "type": "score",
+     "instructions": "How did margins move?",
+     "criteria": [
+      "contracted sharply",
+      "contracted",
+      "stable",
+      "expanded"
+     ]
+    },
+    "guidance": {
+     "type": "score",
+     "instructions": "How strong is forward guidance?",
+     "criteria": [
+      "cut or withdrawn",
+      "maintained",
+      "raised slightly",
+      "raised clearly"
+     ]
+    },
+    "clean": {
+     "type": "score",
+     "instructions": "How free of one-offs (tax gains, asset sales, adjusted add-backs) is the beat?",
+     "criteria": [
+      "mostly one-offs",
+      "some one-offs",
+      "few",
+      "clean"
+     ]
+    }
+   },
+   "review_floor": 0.4,
+   "thresholds": {
+    "review_floor": 0.4,
+    "w_revenue": 0.3,
+    "w_margins": 0.25,
+    "w_guidance": 0.3,
+    "w_clean": 0.15,
+    "drift": 0.7,
+    "neutral": 0.4
+   },
+   "outputs": [
+    {
+     "outcome": "drift_candidate",
+     "meaning": "would add to post-earnings drift watch"
+    },
+    {
+     "outcome": "neutral",
+     "meaning": "no bias"
+    },
+    {
+     "outcome": "fade_candidate",
+     "meaning": "would add to fade/avoid list"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "standard",
+   "jev_calls": "1 call",
+   "runs_in": "schema_call",
+   "stage_hint": "signal_filter",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "published_at",
+     "headline"
+    ],
+    "properties": {
+     "symbol": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string",
+      "description": "NYSE or NASDAQ; anything else is rejected in code"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "published_at": {
+      "type": "string"
+     },
+     "headline": {
+      "type": "string"
+     },
+     "body": {
+      "type": "string"
+     },
+     "source": {
+      "type": "string"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Netflix revenue +17% organic, operating margin expands 4 pts, raises full-year guide",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "NFLX",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Walgreens EPS beat driven by a one-time tax benefit; sales fall; guide cut",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "WBA",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "PepsiCo revenue flat, margins stable, outlook reaffirmed",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "PEP",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Azure +33%, operating margin up, guide above street",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "MSFT",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Nike gross margin falls 3 pts, guidance withdrawn",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "NKE",
+     "venue": "NYSE"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Ford beats on gain from sale of a stake; maintains outlook",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "F",
+     "venue": "NYSE"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Costco sales +8%, membership income +10%, margins expand, raises target",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "COST",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Snap misses revenue, margins contract, no guidance",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "SNAP",
+     "venue": "NYSE"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Netflix beats",
+     "published_at": "2026-10-07T15:30:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "NFLX",
+     "venue": "NASDAQ"
+    }
+   ],
+   "expected": [
+    "drift_candidate",
+    "fade_candidate",
+    "neutral",
+    "drift_candidate",
+    "fade_candidate",
+    "neutral",
+    "drift_candidate",
+    "fade_candidate",
+    "abstain"
+   ]
+  },
+  {
+   "key": "D",
+   "id": "l3_d_backtest_credibility",
+   "catalog_id": "L3.D",
+   "name": "Backtest credibility",
+   "blurb": "Overfitting smell, out-of-sample evidence, cost realism: three Scores in code weights. Sample size is a precheck (< 30 trades, no call).",
+   "spec": "decisions/projects/jev-levels-trading/L3/D_backtest_credibility.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "overfit": {
+     "type": "score",
+     "instructions": "How free of overfitting signs (many params, cherry-picked window, curve-fit) is `report`?",
+     "criteria": [
+      "clearly overfit",
+      "suspicious",
+      "some care",
+      "robust"
+     ]
+    },
+    "oos": {
+     "type": "score",
+     "instructions": "How strong is the out-of-sample or walk-forward evidence in `report`?",
+     "criteria": [
+      "none",
+      "weak",
+      "decent",
+      "strong"
+     ]
+    },
+    "costs": {
+     "type": "score",
+     "instructions": "How realistic are commissions, slippage and borrow assumptions?",
+     "criteria": [
+      "ignored",
+      "optimistic",
+      "reasonable",
+      "conservative"
+     ]
+    }
+   },
+   "review_floor": 0.4,
+   "thresholds": {
+    "review_floor": 0.4,
+    "w_overfit": 0.4,
+    "w_oos": 0.4,
+    "w_costs": 0.2,
+    "credible": 0.7,
+    "doubtful": 0.4
+   },
+   "outputs": [
+    {
+     "outcome": "credible",
+     "meaning": "would send to paper forward test (human approves promotion)"
+    },
+    {
+     "outcome": "needs_work",
+     "meaning": "would return to research"
+    },
+    {
+     "outcome": "reject",
+     "meaning": "would archive"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "standard",
+   "jev_calls": "1 call",
+   "runs_in": "schema_call",
+   "stage_hint": "signal_filter",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "strategy",
+     "data_cutoff",
+     "report"
+    ],
+    "properties": {
+     "strategy": {
+      "type": "string"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "report": {
+      "type": "string"
+     },
+     "trades": {
+      "type": "integer"
+     },
+     "oos_sharpe": {
+      "type": [
+       "number",
+       "null"
+      ]
+     },
+     "venue": {
+      "type": "string"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "oos_sharpe": 1.1,
+     "report": "3 params, 2010-2025, 5-fold walk-forward, OOS Sharpe 1.1 vs IS 1.3, 5 bps slippage + commissions.",
+     "strategy": "ema_pullback",
+     "trades": 412
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "oos_sharpe": null,
+     "report": "Optimized 14 parameters on 2021 only, Sharpe 4.2, no costs.",
+     "strategy": "magic_12",
+     "trades": 88
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "oos_sharpe": null,
+     "report": "4 params, 2015-2025 in-sample only, Sharpe 1.4, 2 bps slippage.",
+     "strategy": "gap_fade",
+     "trades": 230
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "oos_sharpe": 0.9,
+     "report": "2 params, rolling OOS 2008-2025, OOS Sharpe 0.9, 10 bps slippage, borrow fees.",
+     "strategy": "earnings_drift",
+     "trades": 640
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "oos_sharpe": null,
+     "report": "Backtested Jan-Mar 2021, returns 900%, zero slippage.",
+     "strategy": "meme_mom",
+     "trades": 45
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "oos_sharpe": 0.8,
+     "report": "Opening range breakout, 3 params, OOS 2023-2025 Sharpe 0.8, zero slippage on 5m bars.",
+     "strategy": "orb_5m",
+     "trades": 1200
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "oos_sharpe": 1.0,
+     "report": "Cointegration pairs, OOS 2018-2025 Sharpe 1.0, includes borrow and 8 bps.",
+     "strategy": "pairs_kois",
+     "trades": 300
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "oos_sharpe": null,
+     "report": "PDUFA run-up, 12 events, Sharpe 2.5.",
+     "strategy": "biotech_pdufa",
+     "trades": 12
+    },
+    {
+     "data_cutoff": "2027-01-01T00:00:00Z",
+     "oos_sharpe": 1.0,
+     "report": "y",
+     "strategy": "x",
+     "trades": 100
+    }
+   ],
+   "expected": [
+    "credible",
+    "reject",
+    "needs_work",
+    "credible",
+    "reject",
+    "needs_work",
+    "credible",
+    "abstain",
+    "abstain"
+   ]
+  },
+  {
+   "key": "E",
+   "id": "l3_e_news_sentiment_strength",
+   "catalog_id": "L3.E",
+   "name": "News sentiment strength",
+   "blurb": "Tone, specificity, source reliability: three Scores; code multiplies nothing, it weights. Strong negative news on a held name triggers review.",
+   "spec": "decisions/projects/jev-levels-trading/L3/E_news_sentiment_strength.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "tone": {
+     "type": "score",
+     "instructions": "How negative or positive is `headline` for `symbol`?",
+     "criteria": [
+      "very negative",
+      "negative",
+      "neutral",
+      "positive",
+      "very positive"
+     ]
+    },
+    "specific": {
+     "type": "score",
+     "instructions": "How specific is it (numbers, dates, named parties)?",
+     "criteria": [
+      "none",
+      "low",
+      "medium",
+      "high"
+     ]
+    },
+    "reliable": {
+     "type": "score",
+     "instructions": "How reliable is the source?",
+     "criteria": [
+      "anonymous or promo",
+      "secondary",
+      "major outlet",
+      "primary (filing, company)"
+     ]
+    }
+   },
+   "review_floor": 0.4,
+   "thresholds": {
+    "review_floor": 0.4,
+    "w_tone": 0.5,
+    "w_specific": 0.25,
+    "w_reliable": 0.25,
+    "bullish": 0.75,
+    "neutral": 0.45
+   },
+   "outputs": [
+    {
+     "outcome": "bullish",
+     "meaning": "bullish sentiment tag"
+    },
+    {
+     "outcome": "neutral",
+     "meaning": "neutral tag"
+    },
+    {
+     "outcome": "bearish",
+     "meaning": "bearish sentiment tag (held names go to review)"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "standard",
+   "jev_calls": "1 call",
+   "runs_in": "schema_call",
+   "stage_hint": "signal_filter",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "published_at",
+     "headline"
+    ],
+    "properties": {
+     "symbol": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string",
+      "description": "NYSE or NASDAQ; anything else is rejected in code"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "published_at": {
+      "type": "string"
+     },
+     "headline": {
+      "type": "string"
+     },
+     "body": {
+      "type": "string"
+     },
+     "source": {
+      "type": "string"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "NVIDIA 8-K: $25B multi-year supply deal with Microsoft",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "NVDA",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Super Micro auditor resigns, 10-K delayed (8-K)",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "SMCI",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Tesla might announce something big soon, fans say",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "TSLA",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Ford recalls 1.2M vehicles over brake defect, NHTSA says",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "F",
+     "venue": "NYSE"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Apple's China sales fall 3% while services hit a record",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "AAPL",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "FDA approves Vertex drug with broad label",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "VRTX",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Rumour: AMD could lose an order, unnamed blog says",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "AMD",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "Intel cuts revenue outlook by $2B in filing",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "INTC",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headline": "PNKX great news",
+     "published_at": "2026-10-07T12:05:00Z",
+     "source": "newswire (synthetic)",
+     "symbol": "PNKX",
+     "venue": "OTC"
+    }
+   ],
+   "expected": [
+    "bullish",
+    "bearish",
+    "neutral",
+    "bearish",
+    "neutral",
+    "bullish",
+    "neutral",
+    "bearish",
+    "abstain"
+   ]
+  },
+  {
+   "key": "F",
+   "id": "l3_f_book_risk_review",
+   "catalog_id": "L3.F",
+   "name": "Book risk review",
+   "blurb": "Concentration, correlation and event clustering from a book summary: three Scores, weights in code. Gross exposure > 150% blocks in code first.",
+   "spec": "decisions/projects/jev-levels-trading/L3/F_book_risk_review.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "concentration": {
+     "type": "score",
+     "instructions": "How concentrated is `book` in a single name or theme?",
+     "criteria": [
+      "well spread",
+      "some",
+      "high",
+      "extreme"
+     ]
+    },
+    "correlation": {
+     "type": "score",
+     "instructions": "How correlated are the positions (same factor, sector, beta)?",
+     "criteria": [
+      "diversified",
+      "some overlap",
+      "high",
+      "one bet"
+     ]
+    },
+    "events": {
+     "type": "score",
+     "instructions": "How many positions face a binary event (earnings, FDA, court) in the next 5 days?",
+     "criteria": [
+      "none",
+      "one",
+      "several",
+      "most"
+     ]
+    }
+   },
+   "review_floor": 0.4,
+   "thresholds": {
+    "review_floor": 0.4,
+    "w_concentration": 0.4,
+    "w_correlation": 0.35,
+    "w_events": 0.25,
+    "reduce": 0.6,
+    "trim": 0.35
+   },
+   "outputs": [
+    {
+     "outcome": "reduce_risk",
+     "meaning": "would ask a human to cut risk before new trades"
+    },
+    {
+     "outcome": "trim_review",
+     "meaning": "would flag for trim review"
+    },
+    {
+     "outcome": "ok",
+     "meaning": "within risk appetite"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "standard",
+   "jev_calls": "1 call",
+   "runs_in": "schema_call",
+   "stage_hint": "signal_filter",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "account",
+     "data_cutoff",
+     "book"
+    ],
+    "properties": {
+     "account": {
+      "type": "string"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "book": {
+      "type": "string"
+     },
+     "gross_exposure_pct": {
+      "type": "number"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "account": "paper",
+     "book": "NVDA 30%, AMD 20%, AVGO 20%, SMCI 15%: all AI semis; NVDA and AMD report next week.",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "gross_exposure_pct": 120
+    },
+    {
+     "account": "paper",
+     "book": "12 positions across 8 sectors, largest 8%, no events this week.",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "gross_exposure_pct": 80
+    },
+    {
+     "account": "paper",
+     "book": "MSFT 15%, GOOGL 12%, META 10%, JNJ 8%, XOM 8%; META reports Thursday.",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "gross_exposure_pct": 90
+    },
+    {
+     "account": "paper",
+     "book": "Four biotechs at 10% each, three with PDUFA dates in 4 days.",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "gross_exposure_pct": 70
+    },
+    {
+     "account": "paper",
+     "book": "Long 10 quality names 6% each, short sector ETF hedge; no events.",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "gross_exposure_pct": 100
+    },
+    {
+     "account": "paper",
+     "book": "AAPL 35% after a run-up, rest spread thin; no events.",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "gross_exposure_pct": 85
+    },
+    {
+     "account": "paper",
+     "book": "8 retailers, all report the same week; correlated to consumer spend.",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "gross_exposure_pct": 95
+    },
+    {
+     "account": "paper",
+     "book": "10 names spread out.",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "gross_exposure_pct": 180
+    },
+    {
+     "account": "live",
+     "book": "anything",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "gross_exposure_pct": 50
+    }
+   ],
+   "expected": [
+    "reduce_risk",
+    "ok",
+    "trim_review",
+    "reduce_risk",
+    "ok",
+    "trim_review",
+    "reduce_risk",
+    "abstain",
+    "abstain"
+   ]
+  }
+ ]
+}

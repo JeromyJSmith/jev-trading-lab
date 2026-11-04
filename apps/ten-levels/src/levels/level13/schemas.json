@@ -1,0 +1,1919 @@
+{
+ "project": "jev-trading",
+ "engine_sha": "eadcd661230408e20e94af9becbfdf7ba8746c32039394644b91968ad9a2e3af",
+ "options": [
+  {
+   "key": "A",
+   "id": "microcap_gap",
+   "name": "Microcap gaps",
+   "blurb": "01 Microcap gaps: why did a small stock gap >= 20%? Jev reads the headlines/filings; code owns the gap, size, liquidity and the take/skip filter.",
+   "spec": "decisions/projects/jev-trading/microcap_gap.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "catalyst": {
+     "type": "choice",
+     "instructions": "What is the primary catalyst in `items` behind the price gap in `symbol`?",
+     "criteria": {
+      "fda_or_trial": "FDA decision, approval or clinical trial result",
+      "contract_or_partnership": "A new contract, customer, licence or partnership",
+      "earnings": "Earnings or other financial results",
+      "buyout": "The company is being acquired or received a takeover offer",
+      "product": "A product launch, approval outside the FDA, or product milestone",
+      "offering": "A share, warrant or convertible offering or other capital raise",
+      "reverse_split": "A reverse stock split",
+      "promo_or_no_real_news": "Promotional content, a market-movers list, or no company-specific news",
+      "other": "Some other company-specific reason"
+     }
+    },
+    "raising_money": {
+     "type": "noul",
+     "instructions": "Is the company raising money through shares, warrants or convertibles?",
+     "criteria": {
+      "true": "An offering, registered direct, ATM, PIPE, warrant or convertible issue is announced or priced",
+      "false": "No capital raise is described"
+     }
+    },
+    "substance": {
+     "type": "choice",
+     "instructions": "How substantial is the company-specific news in `items`?",
+     "criteria": {
+      "no_real_news": "Nothing company-specific: lists of movers, promotion, recycled news",
+      "minor": "Small or routine update unlikely to change the business",
+      "real_news": "Concrete company-specific news with business impact",
+      "major": "Transformational news: approval, buyout, very large contract"
+     }
+    }
+   },
+   "review_floor": 0.4,
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "symbol",
+     "data_cutoff",
+     "signal",
+     "items"
+    ],
+    "properties": {
+     "symbol": {
+      "type": "string"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "items": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": [
+        "source",
+        "published_at",
+        "text"
+       ],
+       "properties": {
+        "source": {
+         "type": "string"
+        },
+        "published_at": {
+         "type": "string"
+        },
+        "headline": {
+         "type": "string"
+        },
+        "text": {
+         "type": "string"
+        },
+        "url": {
+         "type": "string"
+        },
+        "available_at": {
+         "type": "string"
+        }
+       }
+      }
+     },
+     "signal": {
+      "type": "object",
+      "required": [
+       "gap_pct",
+       "market_cap_musd",
+       "dollar_volume"
+      ],
+      "properties": {
+       "gap_pct": {
+        "type": "number"
+       },
+       "price": {
+        "type": "number"
+       },
+       "market_cap_musd": {
+        "type": "number"
+       },
+       "dollar_volume": {
+        "type": "number"
+       }
+      }
+     }
+    }
+   },
+   "inputs": [
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "headline": "Qorvex Therapeutics receives FDA approval for QX-12 in adult migraine, the company's first approved drug",
+       "published_at": "2026-10-07T12:05:00Z",
+       "source": "newswire (synthetic)",
+       "text": "Qorvex Therapeutics receives FDA approval for QX-12 in adult migraine, the company's first approved drug. Launch planned for Q1."
+      }
+     ],
+     "signal": {
+      "dollar_volume": 5000000.0,
+      "gap_pct": 88,
+      "market_cap_musd": 80,
+      "price": 2.4
+     },
+     "symbol": "QRVX"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "headline": "Fentra announces a $12 million registered direct offering of common stock and warrants priced at-the-market under Nasdaq",
+       "published_at": "2026-10-07T12:05:00Z",
+       "source": "newswire (synthetic)",
+       "text": "Fentra announces a $12 million registered direct offering of common stock and warrants priced at-the-market under Nasdaq rules."
+      }
+     ],
+     "signal": {
+      "dollar_volume": 5000000.0,
+      "gap_pct": 72,
+      "market_cap_musd": 80,
+      "price": 2.4
+     },
+     "symbol": "FENT"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [],
+     "signal": {
+      "dollar_volume": 5000000.0,
+      "gap_pct": 44,
+      "market_cap_musd": 80,
+      "price": 2.4
+     },
+     "symbol": "NONW"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "headline": "Lumbra Bio reports its Phase 3 trial of LB-4 met its primary endpoint with statistical significance (p<0",
+       "published_at": "2026-10-07T12:05:00Z",
+       "source": "newswire (synthetic)",
+       "text": "Lumbra Bio reports its Phase 3 trial of LB-4 met its primary endpoint with statistical significance (p<0.001); company will file for approval."
+      }
+     ],
+     "signal": {
+      "dollar_volume": 5000000.0,
+      "gap_pct": 64,
+      "market_cap_musd": 80,
+      "price": 2.4
+     },
+     "symbol": "LUMB"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "headline": "Telquin Systems enters a definitive agreement to be acquired by Arvane Corp for $4",
+       "published_at": "2026-10-07T12:05:00Z",
+       "source": "newswire (synthetic)",
+       "text": "Telquin Systems enters a definitive agreement to be acquired by Arvane Corp for $4.10 per share in cash, a 45% premium; closing expected Q1."
+      }
+     ],
+     "signal": {
+      "dollar_volume": 5000000.0,
+      "gap_pct": 41,
+      "market_cap_musd": 80,
+      "price": 2.4
+     },
+     "symbol": "TELQ"
+    }
+   ],
+   "expected": [
+    "take",
+    "skip",
+    "abstain",
+    "take",
+    "take"
+   ]
+  },
+  {
+   "key": "B",
+   "id": "ema_cross_news",
+   "name": "EMA crossover",
+   "blurb": "02 EMA crossover (also RSI dip): before acting on a code signal, does the company news show buyout risk or a serious company problem? Either >= 50% skips the entry.",
+   "spec": "decisions/projects/jev-trading/ema_cross_news.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "buyout_risk": {
+     "type": "noul",
+     "instructions": "Do `items` say `symbol` is being acquired, has a pending buyout, or received a takeover offer?",
+     "criteria": {
+      "true": "A merger agreement, tender offer, takeover bid or confirmed sale process",
+      "false": "No acquisition of this company is described"
+     }
+    },
+    "company_problem": {
+     "type": "noul",
+     "instructions": "Do `items` describe a serious company-specific problem?",
+     "criteria": {
+      "true": "Lawsuit or probe, recall, accounting issue, guidance cut, sudden executive exit, outage, plant shutdown",
+      "false": "Routine or positive news, or only market/sector moves"
+     }
+    },
+    "move_category": {
+     "type": "choice",
+     "instructions": "What best explains the recent move in `symbol` according to `items`?",
+     "criteria": {
+      "company_news": "Company-specific news",
+      "earnings": "Earnings or guidance",
+      "analyst_action": "Analyst upgrade/downgrade or price target",
+      "sector_or_market": "A sector or market-wide move",
+      "buyout": "Takeover or merger news",
+      "no_news": "No identifiable news"
+     }
+    }
+   },
+   "review_floor": 0.5,
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "symbol",
+     "data_cutoff",
+     "signal",
+     "items"
+    ],
+    "properties": {
+     "symbol": {
+      "type": "string"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "items": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": [
+        "source",
+        "published_at",
+        "text"
+       ],
+       "properties": {
+        "source": {
+         "type": "string"
+        },
+        "published_at": {
+         "type": "string"
+        },
+        "headline": {
+         "type": "string"
+        },
+        "text": {
+         "type": "string"
+        },
+        "url": {
+         "type": "string"
+        },
+        "available_at": {
+         "type": "string"
+        }
+       }
+      }
+     },
+     "signal": {
+      "type": "object",
+      "required": [
+       "kind"
+      ],
+      "properties": {
+       "kind": {
+        "enum": [
+         "ema_cross",
+         "sma_cross",
+         "rsi_dip"
+        ]
+       },
+       "fast": {
+        "type": "number"
+       },
+       "slow": {
+        "type": "number"
+       },
+       "close": {
+        "type": "number"
+       },
+       "ma_fast": {
+        "type": "number"
+       },
+       "ma_slow": {
+        "type": "number"
+       },
+       "rsi": {
+        "type": "number"
+       }
+      }
+     }
+    }
+   },
+   "inputs": [
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "headline": "Analyst at a major bank upgrades Altiq to Buy citing improving margins; price target raised to $130",
+       "published_at": "2026-10-07T12:05:00Z",
+       "source": "newswire (synthetic)",
+       "text": "Analyst at a major bank upgrades Altiq to Buy citing improving margins; price target raised to $130."
+      }
+     ],
+     "signal": {
+      "close": 102.0,
+      "fast": 20,
+      "kind": "ema_cross",
+      "ma_fast": 101.0,
+      "ma_slow": 100.0,
+      "slow": 50
+     },
+     "symbol": "ALTQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "headline": "Ivory Health agrees to be acquired by a private equity firm for $58 per share in cash; deal expected to close in Q1",
+       "published_at": "2026-10-07T12:05:00Z",
+       "source": "newswire (synthetic)",
+       "text": "Ivory Health agrees to be acquired by a private equity firm for $58 per share in cash; deal expected to close in Q1."
+      }
+     ],
+     "signal": {
+      "close": 102.0,
+      "fast": 20,
+      "kind": "ema_cross",
+      "ma_fast": 101.0,
+      "ma_slow": 100.0,
+      "slow": 50
+     },
+     "symbol": "IVRY"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "headline": "Towerline upgraded",
+       "published_at": "2026-10-07T12:05:00Z",
+       "source": "newswire (synthetic)",
+       "text": "Towerline upgraded."
+      }
+     ],
+     "signal": {
+      "close": 102.0,
+      "fast": 20,
+      "kind": "ema_cross",
+      "ma_fast": 99.0,
+      "ma_slow": 100.0,
+      "slow": 50
+     },
+     "symbol": "TOWR"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "headline": "Briqo launches its new enterprise platform; early customers include two Fortune 100 firms",
+       "published_at": "2026-10-07T12:05:00Z",
+       "source": "newswire (synthetic)",
+       "text": "Briqo launches its new enterprise platform; early customers include two Fortune 100 firms."
+      }
+     ],
+     "signal": {
+      "close": 102.0,
+      "fast": 20,
+      "kind": "ema_cross",
+      "ma_fast": 101.0,
+      "ma_slow": 100.0,
+      "slow": 50
+     },
+     "symbol": "BRIQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "headline": "Semiconductor stocks rallied broadly on Tuesday as chip demand data beat expectations; Candelo rose with the group",
+       "published_at": "2026-10-07T12:05:00Z",
+       "source": "newswire (synthetic)",
+       "text": "Semiconductor stocks rallied broadly on Tuesday as chip demand data beat expectations; Candelo rose with the group."
+      }
+     ],
+     "signal": {
+      "close": 102.0,
+      "fast": 20,
+      "kind": "ema_cross",
+      "ma_fast": 101.0,
+      "ma_slow": 100.0,
+      "slow": 50
+     },
+     "symbol": "CNDL"
+    }
+   ],
+   "expected": [
+    "proceed",
+    "skip",
+    "abstain",
+    "proceed",
+    "proceed"
+   ]
+  },
+  {
+   "key": "C",
+   "id": "earnings_gap",
+   "name": "Earnings gaps",
+   "blurb": "03 Earnings gaps: trade the earnings gap only when guidance points the same way. Jev reads the release; code lines guidance up with the gap direction.",
+   "spec": "decisions/projects/jev-trading/earnings_gap.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "guidance": {
+     "type": "choice",
+     "instructions": "In the earnings release in `items`, what did `symbol` do with its forward guidance?",
+     "criteria": {
+      "raised": "Raised revenue/EPS guidance or outlook above the prior range",
+      "kept": "Reaffirmed or maintained guidance",
+      "cut": "Lowered or withdrew guidance",
+      "not_given": "No forward guidance in the release"
+     }
+    },
+    "outlook": {
+     "type": "score",
+     "instructions": "How positive does management's outlook sound in `items`?",
+     "criteria": [
+      "Negative or cautious",
+      "Neutral or mixed",
+      "Positive",
+      "Very positive and confident"
+     ]
+    }
+   },
+   "review_floor": 0.5,
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "symbol",
+     "data_cutoff",
+     "signal",
+     "items"
+    ],
+    "properties": {
+     "symbol": {
+      "type": "string"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "items": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": [
+        "source",
+        "published_at",
+        "text"
+       ],
+       "properties": {
+        "source": {
+         "type": "string"
+        },
+        "published_at": {
+         "type": "string"
+        },
+        "headline": {
+         "type": "string"
+        },
+        "text": {
+         "type": "string"
+        },
+        "url": {
+         "type": "string"
+        },
+        "available_at": {
+         "type": "string"
+        }
+       }
+      }
+     },
+     "signal": {
+      "type": "object",
+      "required": [
+       "gap_pct"
+      ],
+      "properties": {
+       "gap_pct": {
+        "type": "number"
+       }
+      }
+     }
+    }
+   },
+   "inputs": [
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "headline": "Acorn Q3 revenue $1",
+       "published_at": "2026-10-07T12:05:00Z",
+       "source": "earnings release (synthetic)",
+       "text": "Acorn Q3 revenue $1.2B up 22%; raises full-year revenue guidance to $4.8-4.9B from $4.5-4.6B. CEO: demand has never been stronger."
+      }
+     ],
+     "signal": {
+      "gap_pct": 8.5
+     },
+     "symbol": "ACRN"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "headline": "Fallow lowers full-year revenue guidance to $900M-$950M from $1",
+       "published_at": "2026-10-07T12:05:00Z",
+       "source": "earnings release (synthetic)",
+       "text": "Fallow lowers full-year revenue guidance to $900M-$950M from $1.05B, citing softer demand; we remain cautious on the near term."
+      }
+     ],
+     "signal": {
+      "gap_pct": -12.0
+     },
+     "symbol": "FALW"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "headline": "Jolt beat Q3 estimates but lowers full-year revenue guidance on weaker Q4 orders",
+       "published_at": "2026-10-07T12:05:00Z",
+       "source": "earnings release (synthetic)",
+       "text": "Jolt beat Q3 estimates but lowers full-year revenue guidance on weaker Q4 orders."
+      }
+     ],
+     "signal": {
+      "gap_pct": 5.5
+     },
+     "symbol": "JOLT"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [],
+     "signal": {
+      "gap_pct": 6.0
+     },
+     "symbol": "REEF"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "headline": "Blaze Q2 beat; raises full-year EPS outlook to $3",
+       "published_at": "2026-10-07T12:05:00Z",
+       "source": "earnings release (synthetic)",
+       "text": "Blaze Q2 beat; raises full-year EPS outlook to $3.40-3.50 from $3.10-3.20 on strong bookings; we are very confident in the second half."
+      }
+     ],
+     "signal": {
+      "gap_pct": 6.1
+     },
+     "symbol": "BLZE"
+    }
+   ],
+   "expected": [
+    "would_long",
+    "would_short",
+    "skip",
+    "abstain",
+    "would_long"
+   ]
+  },
+  {
+   "key": "D",
+   "id": "upcoming_catalyst",
+   "name": "Upcoming catalysts",
+   "blurb": "04 Upcoming catalysts: code pulls every date out of an announcement; Jev says what kind of event it is, whether it is actually scheduled, and which date is the event date. Calendar entries feed a separate event strategy.",
+   "spec": "decisions/projects/jev-trading/upcoming_catalyst.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "event_type": {
+     "type": "choice",
+     "instructions": "What kind of upcoming event does `items` announce for `symbol`?",
+     "criteria": {
+      "fda_decision": "An FDA decision / PDUFA date or advisory committee",
+      "product_launch": "A product launch or release event",
+      "investor_day": "An investor or analyst day",
+      "earnings_date": "A scheduled earnings report or call",
+      "shareholder_vote": "A shareholder meeting or vote",
+      "conference": "A presentation at a third-party conference",
+      "other_event": "Some other dated company event",
+      "no_event": "No upcoming company event"
+     }
+    },
+    "scheduled": {
+     "type": "noul",
+     "instructions": "Is the event formally scheduled on a stated date (not speculative, rumoured or 'expected sometime')?",
+     "criteria": {
+      "true": "The company or regulator states a specific date for the event",
+      "false": "The date is a rumour, an analyst guess, a vague window, or a past event"
+     }
+    },
+    "event_date": {
+     "type": "choice",
+     "instructions": "Which of these dates is the date the event in `items` takes place?",
+     "criteria": {
+      "2026-12-12": "PDUFA target action date",
+      "2011-01-01": "founded in 2011",
+      "none": "None of these dates is the event date"
+     }
+    }
+   },
+   "review_floor": 0.5,
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "symbol",
+     "data_cutoff",
+     "items",
+     "candidate_dates"
+    ],
+    "properties": {
+     "symbol": {
+      "type": "string"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "items": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": [
+        "source",
+        "published_at",
+        "text"
+       ],
+       "properties": {
+        "source": {
+         "type": "string"
+        },
+        "published_at": {
+         "type": "string"
+        },
+        "headline": {
+         "type": "string"
+        },
+        "text": {
+         "type": "string"
+        },
+        "url": {
+         "type": "string"
+        },
+        "available_at": {
+         "type": "string"
+        }
+       }
+      }
+     },
+     "candidate_dates": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": [
+        "date"
+       ],
+       "properties": {
+        "date": {
+         "type": "string",
+         "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "context": {
+         "type": "string"
+        }
+       }
+      }
+     }
+    }
+   },
+   "inputs": [
+    {
+     "candidate_dates": [
+      {
+       "context": "PDUFA target action date",
+       "date": "2026-12-12"
+      },
+      {
+       "context": "founded in 2011",
+       "date": "2011-01-01"
+      }
+     ],
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "headline": "Abra Bio: FDA accepted the NDA for AB-3 and set a PDUFA target action date of December 12, 2026",
+       "published_at": "2026-10-07T12:05:00Z",
+       "source": "company announcement (synthetic)",
+       "text": "Abra Bio: FDA accepted the NDA for AB-3 and set a PDUFA target action date of December 12, 2026. The company was founded in 2011."
+      }
+     ],
+     "symbol": "ABRA"
+    },
+    {
+     "candidate_dates": [
+      {
+       "context": "speculated event",
+       "date": "2026-11-15"
+      }
+     ],
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "headline": "Bloggers speculate Husk might hold a product event sometime around November 15, 2026; the company has not confirmed any ",
+       "published_at": "2026-10-07T12:05:00Z",
+       "source": "company announcement (synthetic)",
+       "text": "Bloggers speculate Husk might hold a product event sometime around November 15, 2026; the company has not confirmed any event."
+      }
+     ],
+     "symbol": "HUSK"
+    },
+    {
+     "candidate_dates": [
+      {
+       "context": "x",
+       "date": "2026-11-01"
+      }
+     ],
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [],
+     "symbol": "NULL"
+    },
+    {
+     "candidate_dates": [
+      {
+       "context": "Investor Day",
+       "date": "2026-11-18"
+      },
+      {
+       "context": "Q2 results released",
+       "date": "2026-08-04"
+      }
+     ],
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "headline": "Bellwether will host its Investor Day on November 18, 2026 in New York",
+       "published_at": "2026-10-07T12:05:00Z",
+       "source": "company announcement (synthetic)",
+       "text": "Bellwether will host its Investor Day on November 18, 2026 in New York. Q2 results were released on August 4, 2026."
+      }
+     ],
+     "symbol": "BELL"
+    },
+    {
+     "candidate_dates": [
+      {
+       "context": "launch event",
+       "date": "2026-10-29"
+      }
+     ],
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "headline": "Cirq will unveil its next-generation headset at a launch event on October 29, 2026",
+       "published_at": "2026-10-07T12:05:00Z",
+       "source": "company announcement (synthetic)",
+       "text": "Cirq will unveil its next-generation headset at a launch event on October 29, 2026."
+      }
+     ],
+     "symbol": "CIRQ"
+    }
+   ],
+   "expected": [
+    "calendar",
+    "ignore",
+    "abstain",
+    "calendar",
+    "calendar"
+   ]
+  },
+  {
+   "key": "E",
+   "id": "breakout_news",
+   "name": "Breakouts",
+   "blurb": "05 Breakouts: code finds new highs on big volume; Jev reads the company news for a real reason and buyout risk. Real reason >= 50% and buyout < 50% keeps the breakout.",
+   "spec": "decisions/projects/jev-trading/breakout_news.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "real_reason": {
+     "type": "noul",
+     "instructions": "Do `items` give a real company-specific reason for `symbol` breaking out today?",
+     "criteria": {
+      "true": "Concrete news about this company: results, guidance, a contract, product, approval, upgrade",
+      "false": "No company-specific news, only lists of movers, or old news"
+     }
+    },
+    "buyout": {
+     "type": "noul",
+     "instructions": "Do `items` say `symbol` is being bought out or acquired?",
+     "criteria": {
+      "true": "Merger agreement, tender offer or takeover bid for this company",
+      "false": "No acquisition of this company"
+     }
+    },
+    "reason_type": {
+     "type": "choice",
+     "instructions": "What type of reason do `items` give for the move?",
+     "criteria": {
+      "earnings": "Earnings or guidance",
+      "product": "Product or approval",
+      "contract": "Contract, customer or partnership",
+      "analyst_action": "Analyst action",
+      "buyout": "Takeover or merger",
+      "sector_or_macro": "Sector or macro move",
+      "no_news": "No identifiable news"
+     }
+    }
+   },
+   "review_floor": 0.5,
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "symbol",
+     "data_cutoff",
+     "signal",
+     "items"
+    ],
+    "properties": {
+     "symbol": {
+      "type": "string"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "items": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": [
+        "source",
+        "published_at",
+        "text"
+       ],
+       "properties": {
+        "source": {
+         "type": "string"
+        },
+        "published_at": {
+         "type": "string"
+        },
+        "headline": {
+         "type": "string"
+        },
+        "text": {
+         "type": "string"
+        },
+        "url": {
+         "type": "string"
+        },
+        "available_at": {
+         "type": "string"
+        }
+       }
+      }
+     },
+     "signal": {
+      "type": "object",
+      "required": [
+       "close",
+       "prior_high",
+       "rel_volume"
+      ],
+      "properties": {
+       "close": {
+        "type": "number"
+       },
+       "prior_high": {
+        "type": "number"
+       },
+       "lookback": {
+        "type": "number"
+       },
+       "rel_volume": {
+        "type": "number"
+       }
+      }
+     }
+    }
+   },
+   "inputs": [
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "headline": "Ampleo beats estimates and raises guidance; shares hit a 52-week high",
+       "published_at": "2026-10-07T12:05:00Z",
+       "source": "newswire (synthetic)",
+       "text": "Ampleo beats estimates and raises guidance; shares hit a 52-week high."
+      }
+     ],
+     "signal": {
+      "close": 105.0,
+      "lookback": 20,
+      "prior_high": 100.0,
+      "rel_volume": 2.4
+     },
+     "symbol": "AMPL"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "headline": "Jets Aviation agrees to be acquired for $72 per share in cash; stock jumps to near the offer price",
+       "published_at": "2026-10-07T12:05:00Z",
+       "source": "newswire (synthetic)",
+       "text": "Jets Aviation agrees to be acquired for $72 per share in cash; stock jumps to near the offer price."
+      }
+     ],
+     "signal": {
+      "close": 105.0,
+      "lookback": 20,
+      "prior_high": 100.0,
+      "rel_volume": 2.4
+     },
+     "symbol": "JETS"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "headline": "Quip upgraded",
+       "published_at": "2026-10-07T12:05:00Z",
+       "source": "newswire (synthetic)",
+       "text": "Quip upgraded."
+      }
+     ],
+     "signal": {
+      "close": 98.0,
+      "lookback": 20,
+      "prior_high": 100.0,
+      "rel_volume": 2.4
+     },
+     "symbol": "QUIP"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "headline": "Boltline wins a $1",
+       "published_at": "2026-10-07T12:05:00Z",
+       "source": "newswire (synthetic)",
+       "text": "Boltline wins a $1.2 billion data center power contract, its largest ever."
+      }
+     ],
+     "signal": {
+      "close": 105.0,
+      "lookback": 20,
+      "prior_high": 100.0,
+      "rel_volume": 2.4
+     },
+     "symbol": "BOLT"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "headline": "Cytera receives FDA approval for its lead oncology drug",
+       "published_at": "2026-10-07T12:05:00Z",
+       "source": "newswire (synthetic)",
+       "text": "Cytera receives FDA approval for its lead oncology drug."
+      }
+     ],
+     "signal": {
+      "close": 105.0,
+      "lookback": 20,
+      "prior_high": 100.0,
+      "rel_volume": 2.4
+     },
+     "symbol": "CYTE"
+    }
+   ],
+   "expected": [
+    "proceed",
+    "skip",
+    "abstain",
+    "proceed",
+    "proceed"
+   ]
+  },
+  {
+   "key": "F",
+   "id": "activist_13d",
+   "name": "Activist intent",
+   "blurb": "06 Activist intent: read Item 4 (purpose of transaction) of a 13D and follow only filers actually pushing for change.",
+   "spec": "decisions/projects/jev-trading/activist_13d.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "plan": {
+     "type": "choice",
+     "instructions": "What does `filer` plan to do according to Item 4 in `item4`?",
+     "criteria": {
+      "passive_investment": "Investment purposes only; no plans beyond holding",
+      "board_seats": "Seek board seats or nominate directors",
+      "sale_or_merger": "Push for a sale, merger or strategic review",
+      "operational_change": "Push for cost cuts, spin-offs or strategy changes",
+      "capital_return": "Push for buybacks or dividends",
+      "management_change": "Push to replace management",
+      "other": "Another stated plan"
+     }
+    },
+    "aggressiveness": {
+     "type": "score",
+     "instructions": "How aggressive is the plan in `item4`?",
+     "criteria": [
+      "Passive: investment only",
+      "Engaged: may talk with management",
+      "Pushing: specific public demands",
+      "Hostile: proxy fight or nomination threat"
+     ]
+    },
+    "board_engagement": {
+     "type": "noul",
+     "instructions": "Is `filer` already talking to the board or management, or seeking board representation?",
+     "criteria": {
+      "true": "Meetings, letters, a cooperation agreement, nominations or a board-seat request are described",
+      "false": "No engagement is described beyond boilerplate reservation of rights"
+     }
+    }
+   },
+   "review_floor": 0.5,
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "symbol",
+     "data_cutoff",
+     "filing"
+    ],
+    "properties": {
+     "symbol": {
+      "type": "string"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "filing": {
+      "type": "object",
+      "required": [
+       "form",
+       "filer",
+       "filed_at",
+       "pct_owned",
+       "item4_text"
+      ],
+      "properties": {
+       "form": {
+        "type": "string"
+       },
+       "filer": {
+        "type": "string"
+       },
+       "filed_at": {
+        "type": "string"
+       },
+       "pct_owned": {
+        "type": "number"
+       },
+       "item4_text": {
+        "type": "string"
+       },
+       "url": {
+        "type": "string"
+       }
+      }
+     }
+    }
+   },
+   "inputs": [
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "filing": {
+      "filed_at": "2026-10-06T21:15:00Z",
+      "filer": "Fund (synthetic)",
+      "form": "SC 13D",
+      "item4_text": "The Reporting Persons intend to nominate three directors at the 2027 annual meeting and have delivered a nomination notice to the Company. They believe the board lacks independence.",
+      "pct_owned": 7.2
+     },
+     "symbol": "ACME"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "filing": {
+      "filed_at": "2026-10-06T21:15:00Z",
+      "filer": "Fund (synthetic)",
+      "form": "SC 13D",
+      "item4_text": "The Reporting Persons acquired the Shares for investment purposes in the ordinary course of business. The Reporting Persons have no present plans or proposals that relate to or would result in any of the actions in Item 4 of Schedule 13D, but reserve the right to change their intentions.",
+      "pct_owned": 7.2
+     },
+     "symbol": "IDLE"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "filing": {
+      "filed_at": "2026-10-06T21:15:00Z",
+      "filer": "Fund (synthetic)",
+      "form": "SC 13D",
+      "item4_text": "We will nominate directors.",
+      "pct_owned": 3.1
+     },
+     "symbol": "OKRA"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "filing": {
+      "filed_at": "2026-10-06T21:15:00Z",
+      "filer": "Fund (synthetic)",
+      "form": "SC 13D",
+      "item4_text": "The Reporting Persons believe the Company should immediately explore a sale. They sent a letter to the Board on October 1 demanding a strategic review and will consider a proxy contest.",
+      "pct_owned": 7.2
+     },
+     "symbol": "BRSK"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "filing": {
+      "filed_at": "2026-10-06T21:15:00Z",
+      "filer": "Fund (synthetic)",
+      "form": "SC 13D",
+      "item4_text": "On October 3, the Reporting Persons entered into a cooperation agreement with the Company under which two designees will join the Board.",
+      "pct_owned": 7.2
+     },
+     "symbol": "CALX"
+    }
+   ],
+   "expected": [
+    "follow",
+    "ignore",
+    "abstain",
+    "follow",
+    "follow"
+   ]
+  },
+  {
+   "key": "G",
+   "id": "sympathy_peers",
+   "name": "Sympathy plays",
+   "blurb": "07 Sympathy plays: a big stock moves on news; which listed peer's business is actually affected? Peers are a dynamic choice; the probabilities rank them.",
+   "spec": "decisions/projects/jev-trading/sympathy_peers.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "spillover": {
+     "type": "noul",
+     "instructions": "Does the news about `lead_symbol` change demand, supply, pricing or regulation for OTHER companies in the same business (not only the lead company's own execution)?",
+     "criteria": {
+      "true": "Industry-wide demand, pricing, supply, regulation or a shared customer/supplier is affected",
+      "false": "Company-specific execution, management, legal or accounting news with no read-across"
+     }
+    },
+    "most_affected": {
+     "type": "choice",
+     "instructions": "Which listed peer's business is most directly affected by the news about `lead_symbol`?",
+     "criteria": {
+      "FABX": "Contract chip foundry for logic chips",
+      "MEMQ": "DRAM and NAND memory maker",
+      "SOFTA": "Accounting software for small businesses",
+      "BEVQ": "Soft drinks bottler",
+      "none": "No listed peer is directly affected"
+     }
+    }
+   },
+   "review_floor": 0.4,
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "symbol",
+     "data_cutoff",
+     "lead",
+     "peers"
+    ],
+    "properties": {
+     "symbol": {
+      "type": "string"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "lead": {
+      "type": "object",
+      "required": [
+       "headline",
+       "published_at",
+       "move_pct"
+      ],
+      "properties": {
+       "headline": {
+        "type": "string"
+       },
+       "text": {
+        "type": "string"
+       },
+       "published_at": {
+        "type": "string"
+       },
+       "move_pct": {
+        "type": "number"
+       }
+      }
+     },
+     "peers": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": [
+        "symbol",
+        "description"
+       ],
+       "properties": {
+        "symbol": {
+         "type": "string"
+        },
+        "description": {
+         "type": "string"
+        }
+       }
+      }
+     }
+    }
+   },
+   "inputs": [
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "lead": {
+      "headline": "ChipCo says memory prices up 40% as AI servers absorb supply",
+      "move_pct": 12.0,
+      "published_at": "2026-10-07T12:05:00Z",
+      "text": "ChipCo reports that DRAM and NAND contract prices rose 40% this quarter as AI server demand absorbs industry supply; shortages expected through 2027."
+     },
+     "peers": [
+      {
+       "description": "Contract chip foundry for logic chips",
+       "symbol": "FABX"
+      },
+      {
+       "description": "DRAM and NAND memory maker",
+       "symbol": "MEMQ"
+      },
+      {
+       "description": "Accounting software for small businesses",
+       "symbol": "SOFTA"
+      },
+      {
+       "description": "Soft drinks bottler",
+       "symbol": "BEVQ"
+      }
+     ],
+     "symbol": "CHPX"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "lead": {
+      "headline": "ChipCo: leading-edge foundry capacity sold out through 2027",
+      "move_pct": 12.0,
+      "published_at": "2026-10-07T12:05:00Z",
+      "text": "ChipCo says demand for leading-edge logic wafers exceeds industry foundry capacity through 2027 and it will outsource more to contract foundries."
+     },
+     "peers": [
+      {
+       "description": "Contract chip foundry for logic chips",
+       "symbol": "FABX"
+      },
+      {
+       "description": "DRAM and NAND memory maker",
+       "symbol": "MEMQ"
+      },
+      {
+       "description": "Accounting software for small businesses",
+       "symbol": "SOFTA"
+      },
+      {
+       "description": "Soft drinks bottler",
+       "symbol": "BEVQ"
+      }
+     ],
+     "symbol": "CHPX"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "lead": {
+      "headline": "AirBig warns of jet fuel shortage pushing fuel prices up",
+      "move_pct": 12.0,
+      "published_at": "2026-10-07T12:05:00Z",
+      "text": "AirBig says a refinery outage has caused a jet fuel shortage; jet fuel prices for refiners and distributors jumped 25%."
+     },
+     "peers": [
+      {
+       "description": "US airline with a mostly domestic network",
+       "symbol": "SKYJ"
+      },
+      {
+       "description": "Jet fuel refiner and distributor",
+       "symbol": "JETF"
+      },
+      {
+       "description": "Hotel chain",
+       "symbol": "HOTL"
+      },
+      {
+       "description": "Toy retailer",
+       "symbol": "TOYZ"
+      }
+     ],
+     "symbol": "AIRB"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "lead": {
+      "headline": "AirBig: record domestic bookings, fares up 15%",
+      "move_pct": 9.0,
+      "published_at": "2026-10-07T12:05:00Z",
+      "text": "AirBig reports record US domestic bookings and fares up 15% industry-wide as capacity stays tight."
+     },
+     "peers": [
+      {
+       "description": "US airline with a mostly domestic network",
+       "symbol": "SKYJ"
+      },
+      {
+       "description": "Jet fuel refiner and distributor",
+       "symbol": "JETF"
+      },
+      {
+       "description": "Hotel chain",
+       "symbol": "HOTL"
+      },
+      {
+       "description": "Toy retailer",
+       "symbol": "TOYZ"
+      }
+     ],
+     "symbol": "AIRB"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "lead": {
+      "headline": "PharmaMax obesity drug gets Medicare coverage",
+      "move_pct": 12.0,
+      "published_at": "2026-10-07T12:05:00Z",
+      "text": "Medicare will cover GLP-1 obesity drugs as a class starting next year, PharmaMax said, expanding the market for all GLP-1 developers."
+     },
+     "peers": [
+      {
+       "description": "Developer of GLP-1 obesity drugs in Phase 3",
+       "symbol": "GLPQ"
+      },
+      {
+       "description": "Maker of insulin pumps for diabetes",
+       "symbol": "DIAB"
+      },
+      {
+       "description": "Dental clinic operator",
+       "symbol": "DENT"
+      },
+      {
+       "description": "Used car dealer",
+       "symbol": "CARZ"
+      }
+     ],
+     "symbol": "PHRM"
+    }
+   ],
+   "expected": [
+    "MEMQ",
+    "FABX",
+    "JETF",
+    "SKYJ",
+    "GLPQ"
+   ]
+  },
+  {
+   "key": "H",
+   "id": "kill_switch",
+   "name": "Kill switch",
+   "blurb": "08 Kill switch: is a new headline on a held position material bad news? Code requires a non-routine event, serious + severe >= 50%, and (if an executive is leaving) sudden >= 50%.",
+   "spec": "decisions/projects/jev-trading/kill_switch.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "event_type": {
+     "type": "choice",
+     "instructions": "What kind of event about `symbol` do `items` report?",
+     "criteria": {
+      "routine": "Routine news: dividends, conferences, product updates, scheduled results",
+      "offering": "A dilutive share or convertible offering",
+      "guidance_cut": "Guidance cut or withdrawn",
+      "executive_departure": "A CEO/CFO or other key executive leaving",
+      "legal_or_regulatory": "Lawsuit, probe, regulatory action or fine",
+      "accounting": "Restatement, auditor resignation, late filing",
+      "product_or_safety": "Recall, safety issue, failed trial",
+      "other_adverse": "Other adverse company event"
+     }
+    },
+    "severity": {
+     "type": "choice",
+     "instructions": "How severe is this news for `symbol` shareholders?",
+     "criteria": {
+      "none": "No impact",
+      "minor": "Small, likely temporary",
+      "serious": "Material hit to the business or valuation",
+      "severe": "Threatens the investment case"
+     }
+    },
+    "sudden_departure": {
+     "type": "noul",
+     "instructions": "If an executive is leaving, is the departure sudden or unplanned?",
+     "criteria": {
+      "true": "Effective immediately, unexplained, under investigation, or no successor named",
+      "false": "Planned retirement or orderly transition, or no executive is leaving"
+     }
+    }
+   },
+   "review_floor": 0.4,
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "symbol",
+     "data_cutoff",
+     "items"
+    ],
+    "properties": {
+     "symbol": {
+      "type": "string"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "items": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": [
+        "source",
+        "published_at",
+        "text"
+       ],
+       "properties": {
+        "source": {
+         "type": "string"
+        },
+        "published_at": {
+         "type": "string"
+        },
+        "headline": {
+         "type": "string"
+        },
+        "text": {
+         "type": "string"
+        },
+        "url": {
+         "type": "string"
+        },
+        "available_at": {
+         "type": "string"
+        }
+       }
+      }
+     }
+    }
+   },
+   "inputs": [
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "headline": "Argo Systems CEO resigns effective immediately amid an internal investigation; no successor named",
+       "published_at": "2026-10-07T12:05:00Z",
+       "source": "newswire (synthetic)",
+       "text": "Argo Systems CEO resigns effective immediately amid an internal investigation; no successor named."
+      }
+     ],
+     "symbol": "ARGO"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "headline": "Jumpstart declares its regular quarterly dividend of $0",
+       "published_at": "2026-10-07T12:05:00Z",
+       "source": "newswire (synthetic)",
+       "text": "Jumpstart declares its regular quarterly dividend of $0.15 per share."
+      }
+     ],
+     "symbol": "JUMP"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [],
+     "symbol": "TUNA"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "headline": "Basko withdraws full-year guidance and warns revenue will fall sharply after losing its largest customer",
+       "published_at": "2026-10-07T12:05:00Z",
+       "source": "newswire (synthetic)",
+       "text": "Basko withdraws full-year guidance and warns revenue will fall sharply after losing its largest customer."
+      }
+     ],
+     "symbol": "BASK"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "items": [
+      {
+       "headline": "Cove prices a deeply discounted offering of 40 million shares, nearly doubling its share count, to fund operations",
+       "published_at": "2026-10-07T12:05:00Z",
+       "source": "newswire (synthetic)",
+       "text": "Cove prices a deeply discounted offering of 40 million shares, nearly doubling its share count, to fund operations."
+      }
+     ],
+     "symbol": "COVE"
+    }
+   ],
+   "expected": [
+    "kill",
+    "hold",
+    "abstain",
+    "kill",
+    "kill"
+   ]
+  },
+  {
+   "key": "I",
+   "id": "annual_report_risks",
+   "name": "Annual report risks",
+   "blurb": "09 Annual report risks: code diffs this year's 10-K risk factors against last year's; Jev says whether the changed text adds a material company-specific risk.",
+   "spec": "decisions/projects/jev-trading/annual_report_risks.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "new_material_risk": {
+     "type": "noul",
+     "instructions": "Does `changed_risk_text` add or materially expand a company-specific risk compared with last year?",
+     "criteria": {
+      "true": "A new concrete risk: lost customer, covenant pressure, investigation, impairment, key-supplier failure",
+      "false": "Boilerplate rewording, generic macro/cyber language, or a risk that got smaller"
+     }
+    },
+    "risk_category": {
+     "type": "choice",
+     "instructions": "Which category best describes the changed risk text?",
+     "criteria": {
+      "going_concern": "Doubt about continuing as a going concern",
+      "liquidity_or_debt": "Liquidity, refinancing or covenant risk",
+      "customer_concentration": "Dependence on or loss of a major customer",
+      "regulatory_or_legal": "Regulation, investigation or litigation",
+      "supply_chain": "Suppliers, sourcing or manufacturing",
+      "competition_or_demand": "Competition or demand",
+      "boilerplate": "Generic or boilerplate wording"
+     }
+    },
+    "going_concern": {
+     "type": "noul",
+     "instructions": "Does `changed_risk_text` raise substantial doubt about the company's ability to continue as a going concern?",
+     "criteria": {
+      "true": "Substantial doubt, going-concern language, cash runway under twelve months",
+      "false": "No going-concern doubt"
+     }
+    }
+   },
+   "review_floor": 0.5,
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "symbol",
+     "data_cutoff",
+     "filing",
+     "changed_risk_text"
+    ],
+    "properties": {
+     "symbol": {
+      "type": "string"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "changed_risk_text": {
+      "type": "string"
+     },
+     "filing": {
+      "type": "object",
+      "required": [
+       "form",
+       "filed_at"
+      ],
+      "properties": {
+       "form": {
+        "type": "string"
+       },
+       "filed_at": {
+        "type": "string"
+       },
+       "fiscal_year": {
+        "type": "number"
+       }
+      }
+     }
+    }
+   },
+   "inputs": [
+    {
+     "changed_risk_text": "Our recurring losses and negative cash flows from operations raise substantial doubt about our ability to continue as a going concern. Our cash will fund operations only into the second quarter of 2027.",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "filing": {
+      "filed_at": "2026-10-01T20:00:00Z",
+      "fiscal_year": 2026,
+      "form": "10-K"
+     },
+     "symbol": "ABYS"
+    },
+    {
+     "changed_risk_text": "NEW: In August 2026 our largest customer, representing 38% of revenue, notified us it will not renew its contract when it expires in March 2027.",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "filing": {
+      "filed_at": "2026-10-01T20:00:00Z",
+      "fiscal_year": 2026,
+      "form": "10-K"
+     },
+     "symbol": "DUSK"
+    },
+    {
+     "changed_risk_text": "We updated our cybersecurity risk factor wording: like all companies, we may be subject to cyber attacks that could disrupt our operations.",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "filing": {
+      "filed_at": "2026-10-01T20:00:00Z",
+      "fiscal_year": 2026,
+      "form": "10-K"
+     },
+     "symbol": "JAZZ"
+    },
+    {
+     "changed_risk_text": "Substantial doubt about going concern.",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "filing": {
+      "filed_at": "2026-10-01T20:00:00Z",
+      "fiscal_year": 2026,
+      "form": "10-Q"
+     },
+     "symbol": "PALM"
+    },
+    {
+     "changed_risk_text": "We have cash to fund operations for approximately six months. These conditions raise substantial doubt about our ability to continue as a going concern unless we raise additional capital.",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "filing": {
+      "filed_at": "2026-10-01T20:00:00Z",
+      "fiscal_year": 2026,
+      "form": "10-K"
+     },
+     "symbol": "BRNE"
+    }
+   ],
+   "expected": [
+    "exit_review",
+    "flag",
+    "no_change",
+    "abstain",
+    "exit_review"
+   ]
+  },
+  {
+   "key": "J",
+   "id": "agent_trade_check",
+   "name": "Agent trade check",
+   "blurb": "10 Agent trade check: numeric guards in code first, then Jev checks an AI agent's written proposal for a setup violation, revenge trading or a missing stop. Any >= 50% blocks.",
+   "spec": "decisions/projects/jev-trading/agent_trade_check.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "setup_violation": {
+     "type": "noul",
+     "instructions": "Does `reasoning` rely on a tip, rumor or gut feeling instead of one of `allowed_setups`?",
+     "criteria": {
+      "true": "A tip, rumour, 'feels like', chat-room call, or a setup not in the allowed list",
+      "false": "The reasoning names an allowed setup with its conditions"
+     }
+    },
+    "revenge_trading": {
+     "type": "noul",
+     "instructions": "Is the trade motivated by recovering a loss? Negative daily P&L alone is not revenge trading.",
+     "criteria": {
+      "true": "The reasoning wants to win back, make up for, or get even on a loss, or doubles size after losing",
+      "false": "The reasoning stands on the setup; a loss is at most mentioned as context"
+     }
+    },
+    "missing_stop": {
+     "type": "noul",
+     "instructions": "Is a concrete stop or actionable invalidation missing from `stop`, `invalidation` and `reasoning`?",
+     "criteria": {
+      "true": "No stop price and no concrete invalidation level or condition ('will watch it', 'mental stop')",
+      "false": "A stop price or a concrete invalidation level/condition is stated"
+     }
+    }
+   },
+   "review_floor": 0.5,
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "symbol",
+     "data_cutoff",
+     "proposal",
+     "account",
+     "allowed_setups"
+    ],
+    "properties": {
+     "symbol": {
+      "type": "string"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "allowed_setups": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "proposal": {
+      "type": "object",
+      "required": [
+       "side",
+       "size_pct",
+       "reasoning"
+      ],
+      "properties": {
+       "side": {
+        "enum": [
+         "buy",
+         "sell"
+        ]
+       },
+       "size_pct": {
+        "type": "number"
+       },
+       "stop": {
+        "type": [
+         "number",
+         "null"
+        ]
+       },
+       "invalidation": {
+        "type": "string"
+       },
+       "reasoning": {
+        "type": "string"
+       }
+      }
+     },
+     "account": {
+      "type": "object",
+      "properties": {
+       "daily_pnl_pct": {
+        "type": "number"
+       },
+       "open_position_side": {
+        "type": "string"
+       },
+       "open_position_pnl_pct": {
+        "type": "number"
+       },
+       "event_blackout": {
+        "type": "boolean"
+       }
+      }
+     }
+    }
+   },
+   "inputs": [
+    {
+     "account": {
+      "daily_pnl_pct": 0.4
+     },
+     "allowed_setups": [
+      "pullback_in_trend",
+      "opening_range_breakout",
+      "vwap_reclaim"
+     ],
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "proposal": {
+      "invalidation": "close below the 20-day low",
+      "reasoning": "Pullback in trend: price is 5% above its 20-day mean, five higher closes, small pullback to the rising 20-day; entry on reclaim.",
+      "side": "buy",
+      "size_pct": 3.0,
+      "stop": 95.0
+     },
+     "symbol": "NVQA"
+    },
+    {
+     "account": {
+      "daily_pnl_pct": 0.4
+     },
+     "allowed_setups": [
+      "pullback_in_trend",
+      "opening_range_breakout",
+      "vwap_reclaim"
+     ],
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "proposal": {
+      "invalidation": "close below the 20-day low",
+      "reasoning": "Got a tip in a Discord group that this is going to rip tomorrow, getting in before everyone else.",
+      "side": "buy",
+      "size_pct": 3.0,
+      "stop": 95.0
+     },
+     "symbol": "TIPS"
+    },
+    {
+     "account": {
+      "daily_pnl_pct": 0.4
+     },
+     "allowed_setups": [],
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "proposal": {
+      "invalidation": "close below the 20-day low",
+      "reasoning": "Pullback in trend.",
+      "side": "buy",
+      "size_pct": 3.0,
+      "stop": 95.0
+     },
+     "symbol": "NOSU"
+    },
+    {
+     "account": {
+      "daily_pnl_pct": 0.4
+     },
+     "allowed_setups": [
+      "pullback_in_trend",
+      "opening_range_breakout",
+      "vwap_reclaim"
+     ],
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "proposal": {
+      "invalidation": "close below the 20-day low",
+      "reasoning": "Opening range breakout: price broke the 30-minute opening range high on 2.5x relative volume; stop under the range low.",
+      "side": "buy",
+      "size_pct": 3.0,
+      "stop": 48.2
+     },
+     "symbol": "ORBQ"
+    },
+    {
+     "account": {
+      "daily_pnl_pct": 0.4
+     },
+     "allowed_setups": [
+      "pullback_in_trend",
+      "opening_range_breakout",
+      "vwap_reclaim"
+     ],
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "proposal": {
+      "invalidation": "close below the 20-day low",
+      "reasoning": "VWAP reclaim: price reclaimed session VWAP after a morning flush and held two 5-minute closes above it.",
+      "side": "buy",
+      "size_pct": 3.0,
+      "stop": 31.5
+     },
+     "symbol": "VWAQ"
+    }
+   ],
+   "expected": [
+    "approve",
+    "block",
+    "abstain",
+    "approve",
+    "approve"
+   ]
+  }
+ ]
+}

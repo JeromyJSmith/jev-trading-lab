@@ -1,0 +1,1196 @@
+{
+ "project": "jev-levels-trading",
+ "engine_sha": "eadcd661230408e20e94af9becbfdf7ba8746c32039394644b91968ad9a2e3af",
+ "options": [
+  {
+   "key": "A",
+   "id": "l8_a_going_concern",
+   "catalog_id": "L8.A",
+   "name": "Does the 10-K raise going-concern doubt?",
+   "blurb": "ask_jev_file_bool on the 10-K: is there substantial doubt about continuing as a going concern? The 10-K never enters the agent's context.",
+   "spec": "decisions/projects/jev-levels-trading/L8/A_going_concern.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "going_concern": {
+     "type": "noul",
+     "instructions": "Does `document` state substantial doubt about the company's ability to continue as a going concern?",
+     "criteria": {
+      "true": "Going-concern doubt is stated (by management or the auditor)",
+      "false": "No such doubt, or doubt alleviated"
+     }
+    }
+   },
+   "review_floor": 0.5,
+   "thresholds": {
+    "threshold": 0.6
+   },
+   "outputs": [
+    {
+     "outcome": "flag_going_concern",
+     "meaning": "would flag the symbol: no new longs, review held positions"
+    },
+    {
+     "outcome": "clear",
+     "meaning": "no going-concern language"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "cheap",
+   "jev_calls": "1 call",
+   "runs_in": "schema_call_agent_shape",
+   "stage_hint": "pre_signal",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "filed_at",
+     "form",
+     "document"
+    ],
+    "properties": {
+     "symbol": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string",
+      "description": "NYSE or NASDAQ; anything else is rejected in code"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "filed_at": {
+      "type": "string"
+     },
+     "form": {
+      "type": "string"
+     },
+     "document": {
+      "type": "string",
+      "description": "the file content; it becomes trimmed state, never the agent's context"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "Item 8 ... Substantial doubt about the Company's ability to continue as a going concern exists. Management plans include raising additional capital.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "10-K",
+     "symbol": "CRVX",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "We generated $118B of operating cash flow and hold $75B in cash.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "10-K",
+     "symbol": "MSFT",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "Substantial doubt previously disclosed has been alleviated by the $200M financing completed in Q3.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "10-K",
+     "symbol": "BLNK",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "Report of Independent Registered Public Accounting Firm: ... raise substantial doubt about its ability to continue as a going concern.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "10-K",
+     "symbol": "MULN",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "Risk factors: global economic conditions could materially adversely affect the Company.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "10-K",
+     "symbol": "AAPL",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "Cash will fund operations only into Q1; these conditions raise substantial doubt about our ability to continue as a going concern.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "10-K",
+     "symbol": "GRWX",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "Liquidity: we believe cash and credit lines are sufficient for the next 12 months.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "10-K",
+     "symbol": "KO",
+     "venue": "NYSE"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "  ",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "10-K",
+     "symbol": "AAPL",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "Substantial doubt about the Company's ability to continue as a going concern exists. Management plans include raising additional capital.",
+     "filed_at": "2026-10-07T15:30:00Z",
+     "form": "10-K",
+     "symbol": "CRVX",
+     "venue": "NASDAQ"
+    }
+   ],
+   "expected": [
+    "flag_going_concern",
+    "clear",
+    "clear",
+    "flag_going_concern",
+    "clear",
+    "flag_going_concern",
+    "clear",
+    "abstain",
+    "abstain"
+   ]
+  },
+  {
+   "key": "B",
+   "id": "l8_b_auditor_change",
+   "catalog_id": "L8.B",
+   "name": "Auditor change in the 8-K",
+   "blurb": "ask_jev_file_choice on an 8-K Item 4.01: did the auditor resign, get dismissed, or is there no change, and were disagreements reported?",
+   "spec": "decisions/projects/jev-levels-trading/L8/B_auditor_change.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "change": {
+     "type": "choice",
+     "instructions": "What does `document` report about the company's auditor?",
+     "criteria": {
+      "resigned": "The auditor resigned/declined to stand",
+      "dismissed": "The company dismissed the auditor",
+      "none": "No auditor change"
+     }
+    },
+    "disagreement": {
+     "type": "noul",
+     "instructions": "Does it report disagreements or reportable events with the auditor?",
+     "criteria": {
+      "true": "Disagreements or reportable events",
+      "false": "None reported"
+     }
+    }
+   },
+   "review_floor": 0.5,
+   "thresholds": {},
+   "outputs": [
+    {
+     "outcome": "red_flag",
+     "meaning": "would flag accounting risk"
+    },
+    {
+     "outcome": "note",
+     "meaning": "would note a routine auditor change"
+    },
+    {
+     "outcome": "clear",
+     "meaning": "no auditor change"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "cheap",
+   "jev_calls": "1 call",
+   "runs_in": "schema_call_agent_shape",
+   "stage_hint": "pre_signal",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "filed_at",
+     "form",
+     "document"
+    ],
+    "properties": {
+     "symbol": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string",
+      "description": "NYSE or NASDAQ; anything else is rejected in code"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "filed_at": {
+      "type": "string"
+     },
+     "form": {
+      "type": "string"
+     },
+     "document": {
+      "type": "string",
+      "description": "the file content; it becomes trimmed state, never the agent's context"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "Item 4.01: Ernst & Young resigned as independent auditor, citing concerns about governance.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "8-K",
+     "symbol": "SMCI",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "Item 4.01: The audit committee approved dismissing KPMG and engaging Deloitte following an RFP. No disagreements.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "8-K",
+     "symbol": "PEP",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "Item 2.02: Results of operations.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "8-K",
+     "symbol": "AAPL",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "Item 4.01: The company dismissed its auditor. There was a disagreement regarding revenue recognition.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "8-K",
+     "symbol": "FRDX",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "Item 4.01: Auditor change following the merger of the audit firms; no disagreements or reportable events.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "8-K",
+     "symbol": "KO",
+     "venue": "NYSE"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "Item 4.01: Auditor declined to stand for reappointment; a material weakness was reported.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "8-K",
+     "symbol": "QBTZ",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "Item 5.02: Director appointment to the audit committee.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "8-K",
+     "symbol": "MSFT",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "Item 4.01: Company dismissed its auditor; no disagreements.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "8-K",
+     "symbol": "COST",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "x",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "8-K",
+     "symbol": "PNKX",
+     "venue": "OTC"
+    }
+   ],
+   "expected": [
+    "red_flag",
+    "note",
+    "clear",
+    "red_flag",
+    "note",
+    "red_flag",
+    "clear",
+    "note",
+    "abstain"
+   ]
+  },
+  {
+   "key": "C",
+   "id": "l8_c_new_risk_factor",
+   "catalog_id": "L8.C",
+   "name": "Did the 10-Q add a material risk factor?",
+   "blurb": "ask_jev_file_bool on Item 1A of a 10-Q: does it add a new, company-specific material risk (not boilerplate)?",
+   "spec": "decisions/projects/jev-levels-trading/L8/C_new_risk_factor.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "new_risk": {
+     "type": "noul",
+     "instructions": "Does `document` add a new, company-specific material risk factor (not generic boilerplate)?",
+     "criteria": {
+      "true": "A new specific material risk",
+      "false": "No change or boilerplate only"
+     }
+    }
+   },
+   "review_floor": 0.5,
+   "thresholds": {
+    "threshold": 0.6
+   },
+   "outputs": [
+    {
+     "outcome": "review_risk",
+     "meaning": "would queue Item 1A for analyst review"
+    },
+    {
+     "outcome": "no_change",
+     "meaning": "no new material risk"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "cheap",
+   "jev_calls": "1 call",
+   "runs_in": "schema_call_agent_shape",
+   "stage_hint": "pre_signal",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "filed_at",
+     "form",
+     "document"
+    ],
+    "properties": {
+     "symbol": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string",
+      "description": "NYSE or NASDAQ; anything else is rejected in code"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "filed_at": {
+      "type": "string"
+     },
+     "form": {
+      "type": "string"
+     },
+     "document": {
+      "type": "string",
+      "description": "the file content; it becomes trimmed state, never the agent's context"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "Item 1A: We recently lost our largest customer, which accounted for 38% of revenue.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "10-Q",
+     "symbol": "BASK",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "Item 1A: There have been no material changes to the risk factors disclosed in our 10-K.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "10-Q",
+     "symbol": "AAPL",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "Item 1A: The DOJ has opened an investigation into our export practices.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "10-Q",
+     "symbol": "SMCI",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "Item 1A: Economic conditions, competition and regulation could affect results.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "10-Q",
+     "symbol": "KO",
+     "venue": "NYSE"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "Item 1A: We may breach the minimum liquidity covenant under our credit facility next quarter.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "10-Q",
+     "symbol": "CRVX",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "Item 1A: Refer to our Annual Report.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "10-Q",
+     "symbol": "MSFT",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "Item 1A: New tariffs on Vietnam imports, where we make 50% of footwear, could cut margins 300bps.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "10-Q",
+     "symbol": "NKE",
+     "venue": "NYSE"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "Item 1A: Cyber attacks could disrupt operations.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "10-Q",
+     "symbol": "PEP",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "x",
+     "filed_at": "2026-10-07T15:30:00Z",
+     "form": "10-Q",
+     "symbol": "BASK",
+     "venue": "NASDAQ"
+    }
+   ],
+   "expected": [
+    "review_risk",
+    "no_change",
+    "review_risk",
+    "no_change",
+    "review_risk",
+    "no_change",
+    "review_risk",
+    "no_change",
+    "abstain"
+   ]
+  },
+  {
+   "key": "D",
+   "id": "l8_d_call_guidance",
+   "catalog_id": "L8.D",
+   "name": "Guidance in the earnings call transcript",
+   "blurb": "ask_jev_file_choice on a transcript: did management raise, maintain or cut guidance, and is the tone confident? The transcript stays out of context.",
+   "spec": "decisions/projects/jev-levels-trading/L8/D_call_guidance.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "guidance": {
+     "type": "choice",
+     "instructions": "What does management do to guidance in `document`?",
+     "criteria": {
+      "raised": "Raised",
+      "maintained": "Maintained/reaffirmed",
+      "cut": "Lowered/withdrawn",
+      "none": "No guidance"
+     }
+    },
+    "tone": {
+     "type": "score",
+     "instructions": "How confident is management's tone?",
+     "criteria": [
+      "defensive",
+      "cautious",
+      "neutral",
+      "confident"
+     ]
+    }
+   },
+   "review_floor": 0.5,
+   "thresholds": {},
+   "outputs": [
+    {
+     "outcome": "positive_read",
+     "meaning": "positive call read"
+    },
+    {
+     "outcome": "negative_read",
+     "meaning": "negative call read"
+    },
+    {
+     "outcome": "neutral_read",
+     "meaning": "neutral call read"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "cheap",
+   "jev_calls": "1 call",
+   "runs_in": "schema_call_agent_shape",
+   "stage_hint": "pre_signal",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "filed_at",
+     "form",
+     "document"
+    ],
+    "properties": {
+     "symbol": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string",
+      "description": "NYSE or NASDAQ; anything else is rejected in code"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "filed_at": {
+      "type": "string"
+     },
+     "form": {
+      "type": "string"
+     },
+     "document": {
+      "type": "string",
+      "description": "the file content; it becomes trimmed state, never the agent's context"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "CFO: we are raising our Q4 outlook to $37B; demand exceeds supply into next year.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "transcript",
+     "symbol": "NVDA",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "CFO: we are lowering full-year revenue guidance to down mid-single digits.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "transcript",
+     "symbol": "NKE",
+     "venue": "NYSE"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "CEO: we reaffirm our full-year outlook.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "transcript",
+     "symbol": "PEP",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "CFO: we nudge guidance up slightly, but visibility is poor and risks remain.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "transcript",
+     "symbol": "INTC",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "CEO: we do not provide guidance; we are proud of our team.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "transcript",
+     "symbol": "AAPL",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "CFO: we now expect revenue above the high end of our prior range; momentum is strong.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "transcript",
+     "symbol": "META",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "CEO: given the customer loss we are withdrawing guidance.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "transcript",
+     "symbol": "BASK",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "CFO: we maintain our delivery target, though conditions are difficult.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "transcript",
+     "symbol": "TSLA",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "x",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "transcript",
+     "symbol": "PNKX",
+     "venue": "OTC"
+    }
+   ],
+   "expected": [
+    "positive_read",
+    "negative_read",
+    "neutral_read",
+    "neutral_read",
+    "abstain",
+    "positive_read",
+    "negative_read",
+    "neutral_read",
+    "abstain"
+   ]
+  },
+  {
+   "key": "E",
+   "id": "l8_e_form4_kind",
+   "catalog_id": "L8.E",
+   "name": "What kind of insider transaction is this Form 4?",
+   "blurb": "ask_jev_file_choice on a Form 4: open-market buy, open-market sale, 10b5-1 sale, grant, or exercise. Only open-market buys feed the insider-buying signal.",
+   "spec": "decisions/projects/jev-levels-trading/L8/E_form4_kind.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "kind": {
+     "type": "choice",
+     "instructions": "What transaction does this Form 4 (`document`) report?",
+     "criteria": {
+      "open_buy": "Open-market purchase (code P)",
+      "open_sell": "Discretionary open-market sale (code S)",
+      "plan_sell": "Sale under a 10b5-1 plan",
+      "grant": "Grant or award (code A)",
+      "exercise": "Option exercise (code M)",
+      "other": "Other"
+     }
+    }
+   },
+   "review_floor": 0.5,
+   "thresholds": {},
+   "outputs": [
+    {
+     "outcome": "insider_buy_signal",
+     "meaning": "would add to the insider-buying signal"
+    },
+    {
+     "outcome": "insider_sell_note",
+     "meaning": "would note a discretionary insider sale"
+    },
+    {
+     "outcome": "ignore",
+     "meaning": "no signal"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "cheap",
+   "jev_calls": "1 call",
+   "runs_in": "schema_call_agent_shape",
+   "stage_hint": "pre_signal",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "filed_at",
+     "form",
+     "document"
+    ],
+    "properties": {
+     "symbol": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string",
+      "description": "NYSE or NASDAQ; anything else is rejected in code"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "filed_at": {
+      "type": "string"
+     },
+     "form": {
+      "type": "string"
+     },
+     "document": {
+      "type": "string",
+      "description": "the file content; it becomes trimmed state, never the agent's context"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "Table I: Common Stock, Transaction Code P, 50,000 shares at $21.10, director.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "4",
+     "symbol": "INTC",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "Code S, 120,000 shares sold pursuant to a Rule 10b5-1 trading plan adopted March 2026.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "4",
+     "symbol": "NVDA",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "Code A, 90,000 restricted stock units granted.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "4",
+     "symbol": "AAPL",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "Code S, CFO sold 200,000 shares; no trading plan footnote.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "4",
+     "symbol": "SMCI",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "Code M, exercise of 10,000 options; shares held.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "4",
+     "symbol": "MSFT",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "CEO purchased 100,000 shares, code P, open market.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "4",
+     "symbol": "PFE",
+     "venue": "NYSE"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "Code G, bona fide gift of 5,000 shares to a charity.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "4",
+     "symbol": "KO",
+     "venue": "NYSE"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "Sales under 10b5-1 plan, code S, footnote 1.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "4",
+     "symbol": "META",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "x",
+     "filed_at": "2026-10-07T15:30:00Z",
+     "form": "4",
+     "symbol": "INTC",
+     "venue": "NASDAQ"
+    }
+   ],
+   "expected": [
+    "insider_buy_signal",
+    "ignore",
+    "ignore",
+    "insider_sell_note",
+    "ignore",
+    "insider_buy_signal",
+    "abstain",
+    "ignore",
+    "abstain"
+   ]
+  },
+  {
+   "key": "F",
+   "id": "l8_f_activist_intent",
+   "catalog_id": "L8.F",
+   "name": "How activist is this 13D?",
+   "blurb": "ask_jev_file_score on Item 4 of a 13D: from passive to hostile. Code reads the score; the filing never reaches the agent.",
+   "spec": "decisions/projects/jev-levels-trading/L8/F_activist_intent.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "intent": {
+     "type": "score",
+     "instructions": "How activist is the filer's intent in Item 4 of `document`?",
+     "criteria": [
+      "passive investment",
+      "engagement with management",
+      "board seats or strategic changes",
+      "proxy fight or sale of the company"
+     ]
+    }
+   },
+   "review_floor": 0.5,
+   "thresholds": {
+    "hot": 0.66,
+    "warm": 0.33
+   },
+   "outputs": [
+    {
+     "outcome": "activist_catalyst",
+     "meaning": "would tag an activist catalyst"
+    },
+    {
+     "outcome": "watch",
+     "meaning": "would watch the engagement"
+    },
+    {
+     "outcome": "ignore",
+     "meaning": "passive"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "cheap",
+   "jev_calls": "1 call",
+   "runs_in": "schema_call_agent_shape",
+   "stage_hint": "pre_signal",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "filed_at",
+     "form",
+     "document"
+    ],
+    "properties": {
+     "symbol": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string",
+      "description": "NYSE or NASDAQ; anything else is rejected in code"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "filed_at": {
+      "type": "string"
+     },
+     "form": {
+      "type": "string"
+     },
+     "document": {
+      "type": "string",
+      "description": "the file content; it becomes trimmed state, never the agent's context"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "Item 4: The Reporting Person intends to nominate four directors and seek a sale of the beverage unit.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "SC 13D",
+     "symbol": "PEP",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "Item 4: Acquired for investment purposes; no plans or proposals.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "SC 13D",
+     "symbol": "KO",
+     "venue": "NYSE"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "Item 4: The Reporting Person intends to engage with management about capital allocation.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "SC 13D",
+     "symbol": "DIS",
+     "venue": "NYSE"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "Item 4: The Reporting Person believes the company should explore a sale and may solicit proxies.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "SC 13D",
+     "symbol": "SAGE",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "Item 4: Discussions with the board regarding operations may occur.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "SC 13D",
+     "symbol": "INTC",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "Item 4: Will seek two board seats at the annual meeting.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "SC 13D",
+     "symbol": "SNOW",
+     "venue": "NYSE"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "Item 4: Shares held in the ordinary course; no intent to change control.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "SC 13D",
+     "symbol": "AAPL",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "SC 13D",
+     "symbol": "PEP",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "x",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "SC 13D",
+     "symbol": "PNKX",
+     "venue": "OTC"
+    }
+   ],
+   "expected": [
+    "activist_catalyst",
+    "ignore",
+    "watch",
+    "activist_catalyst",
+    "watch",
+    "activist_catalyst",
+    "ignore",
+    "abstain",
+    "abstain"
+   ]
+  },
+  {
+   "key": "G",
+   "id": "l8_g_shelf_dilution",
+   "catalog_id": "L8.G",
+   "name": "How imminent is dilution from this shelf?",
+   "blurb": "Code computes shelf size / market cap; ask_jev_file_score on the S-3 says how imminent use is (ATM attached, cash need). Both together grade the dilution risk.",
+   "spec": "decisions/projects/jev-levels-trading/L8/G_shelf_dilution.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "imminent": {
+     "type": "score",
+     "instructions": "How imminent is the company's use of this shelf in `document`?",
+     "criteria": [
+      "no stated plan",
+      "general purposes",
+      "ATM or offering planned",
+      "offering being priced now"
+     ]
+    }
+   },
+   "review_floor": 0.5,
+   "thresholds": {
+    "big_shelf": 0.3,
+    "imminent": 0.66
+   },
+   "outputs": [
+    {
+     "outcome": "high_dilution_risk",
+     "meaning": "would block new longs"
+    },
+    {
+     "outcome": "moderate_dilution_risk",
+     "meaning": "would halve size"
+    },
+    {
+     "outcome": "low_dilution_risk",
+     "meaning": "no dilution flag"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "cheap",
+   "jev_calls": "1 call",
+   "runs_in": "schema_call_agent_shape",
+   "stage_hint": "pre_signal",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "filed_at",
+     "form",
+     "document",
+     "shelf_musd",
+     "market_cap_musd"
+    ],
+    "properties": {
+     "symbol": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string",
+      "description": "NYSE or NASDAQ; anything else is rejected in code"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "filed_at": {
+      "type": "string"
+     },
+     "form": {
+      "type": "string"
+     },
+     "document": {
+      "type": "string"
+     },
+     "shelf_musd": {
+      "type": "number"
+     },
+     "market_cap_musd": {
+      "type": "number"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "S-3 with an at-the-market sales agreement for up to $150M attached.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "S-3",
+     "market_cap_musd": 120,
+     "shelf_musd": 150,
+     "symbol": "CRVX",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "Universal shelf for general corporate purposes.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "S-3",
+     "market_cap_musd": 3400000,
+     "shelf_musd": 5000,
+     "symbol": "AAPL",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "Shelf; no current plans to sell.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "S-3",
+     "market_cap_musd": 200,
+     "shelf_musd": 100,
+     "symbol": "BLNK",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "Prospectus supplement: offering being priced today.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "S-3",
+     "market_cap_musd": 14000,
+     "shelf_musd": 1500,
+     "symbol": "RIVN",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "Underwritten offering being priced; proceeds for working capital.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "S-3",
+     "market_cap_musd": 40,
+     "shelf_musd": 30,
+     "symbol": "BIYA",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "Automatic shelf, general purposes.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "S-3",
+     "market_cap_musd": 3100000,
+     "shelf_musd": 10000,
+     "symbol": "MSFT",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "ATM program up to $50M with H.C. Wainwright attached.",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "S-3",
+     "market_cap_musd": 60,
+     "shelf_musd": 50,
+     "symbol": "MULN",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "S-3",
+     "market_cap_musd": 120,
+     "shelf_musd": 150,
+     "symbol": "CRVX",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "document": "x",
+     "filed_at": "2026-10-07T12:05:00Z",
+     "form": "S-3",
+     "market_cap_musd": 5,
+     "shelf_musd": 10,
+     "symbol": "PNKX",
+     "venue": "OTC"
+    }
+   ],
+   "expected": [
+    "high_dilution_risk",
+    "low_dilution_risk",
+    "moderate_dilution_risk",
+    "moderate_dilution_risk",
+    "high_dilution_risk",
+    "low_dilution_risk",
+    "high_dilution_risk",
+    "abstain",
+    "abstain"
+   ]
+  }
+ ]
+}

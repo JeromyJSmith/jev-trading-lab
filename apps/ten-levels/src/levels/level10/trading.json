@@ -1,0 +1,1060 @@
+{
+ "project": "jev-levels-trading",
+ "engine_sha": "eadcd661230408e20e94af9becbfdf7ba8746c32039394644b91968ad9a2e3af",
+ "options": [
+  {
+   "key": "A",
+   "id": "l10_a_pre_trade_ask",
+   "catalog_id": "L10.A",
+   "name": "Trading agent asks Jev before a paper order",
+   "blurb": "The agent assembles order + thesis + today's headlines and calls ask_jev: is the thesis supported, does any headline contradict it, how risky is it? Code decides proceed / revise / block.",
+   "spec": "decisions/projects/jev-levels-trading/L10/A_pre_trade_ask.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "supported": {
+     "type": "noul",
+     "instructions": "Do `headlines` support `thesis` for `symbol`?",
+     "criteria": {
+      "true": "Supported by today's news",
+      "false": "Not supported or unrelated"
+     }
+    },
+    "contradicted": {
+     "type": "noul",
+     "instructions": "Does any headline contradict `thesis`?",
+     "criteria": {
+      "true": "A headline contradicts it",
+      "false": "No contradiction"
+     }
+    },
+    "risk": {
+     "type": "score",
+     "instructions": "How risky is `order` given the news?",
+     "criteria": [
+      "low",
+      "moderate",
+      "high",
+      "extreme"
+     ]
+    }
+   },
+   "review_floor": 0.5,
+   "thresholds": {},
+   "outputs": [
+    {
+     "outcome": "proceed",
+     "meaning": "would submit the PAPER order"
+    },
+    {
+     "outcome": "revise",
+     "meaning": "would send the plan back to the agent to revise"
+    },
+    {
+     "outcome": "block",
+     "meaning": "would block the paper order"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "heavy",
+   "jev_calls": "1 call per ask_jev; the agent decides when to call (budget: 30 calls, $0.05)",
+   "runs_in": "schema_call_agent_shape",
+   "stage_hint": "sizing_guard",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "account",
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "order",
+     "thesis",
+     "headlines"
+    ],
+    "properties": {
+     "account": {
+      "type": "string"
+     },
+     "symbol": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string",
+      "description": "NYSE or NASDAQ; anything else is rejected in code"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "order": {
+      "type": "string"
+     },
+     "thesis": {
+      "type": "string"
+     },
+     "headlines": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    }
+   },
+   "inputs": [
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headlines": [
+      "Microsoft raises capex 30%",
+      "NVIDIA supply deal with Microsoft"
+     ],
+     "order": "BUY 50 NVDA LMT 130 STP 121",
+     "symbol": "NVDA",
+     "thesis": "Hyperscaler capex up",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headlines": [
+      "Main MI400 customer switches to NVIDIA"
+     ],
+     "order": "BUY 100 AMD LMT 150 STP 142",
+     "symbol": "AMD",
+     "thesis": "MI400 wins",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headlines": [
+      "Coca-Cola launches holiday cans"
+     ],
+     "order": "BUY 100 KO LMT 62 STP 60",
+     "symbol": "KO",
+     "thesis": "Pricing power",
+     "venue": "NYSE"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headlines": [
+      "DOJ probe expands",
+      "Auditor resigned"
+     ],
+     "order": "BUY 2000 SMCI LMT 30 NO STOP",
+     "symbol": "SMCI",
+     "thesis": "Oversold bounce",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headlines": [
+      "Azure +33%"
+     ],
+     "order": "BUY 10 MSFT LMT 420 STP 405",
+     "symbol": "MSFT",
+     "thesis": "Azure acceleration",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headlines": [
+      "Netflix subscribers beat by 2M"
+     ],
+     "order": "SHORT 20 NFLX LMT 700 STP 740",
+     "symbol": "NFLX",
+     "thesis": "Subscriber slowdown",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headlines": [
+      "FDA approves Vertex drug"
+     ],
+     "order": "BUY 20 VRTX LMT 450 STP 430",
+     "symbol": "VRTX",
+     "thesis": "Approval likely",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "live",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headlines": [
+      "y"
+     ],
+     "order": "BUY",
+     "symbol": "NVDA",
+     "thesis": "x",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "headlines": [
+      "y"
+     ],
+     "order": "BUY",
+     "symbol": "PNKX",
+     "thesis": "x",
+     "venue": "OTC"
+    }
+   ],
+   "expected": [
+    "proceed",
+    "block",
+    "revise",
+    "revise",
+    "proceed",
+    "block",
+    "proceed",
+    "abstain",
+    "abstain"
+   ]
+  },
+  {
+   "key": "B",
+   "id": "l10_b_post_trade_review",
+   "catalog_id": "L10.B",
+   "name": "Post-trade journal review",
+   "blurb": "After a paper trade closes the agent asks: did I follow the plan, and what was the main mistake? Code tags the journal entry; repeated mistakes feed the rules.",
+   "spec": "decisions/projects/jev-levels-trading/L10/B_post_trade_review.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "followed": {
+     "type": "noul",
+     "instructions": "Did the trader follow `plan` in `what_happened`?",
+     "criteria": {
+      "true": "Followed entry, stop and size",
+      "false": "Deviated"
+     }
+    },
+    "mistake": {
+     "type": "choice",
+     "instructions": "What was the main mistake, if any?",
+     "criteria": {
+      "none": "No mistake",
+      "moved_stop": "Moved or removed the stop",
+      "oversized": "Too big",
+      "chased": "Chased the entry",
+      "early_exit": "Exited before the plan said"
+     }
+    }
+   },
+   "review_floor": 0.5,
+   "thresholds": {},
+   "outputs": [
+    {
+     "outcome": "tag_clean",
+     "meaning": "journal tag: clean"
+    },
+    {
+     "outcome": "moved_stop",
+     "meaning": "tag: moved stop"
+    },
+    {
+     "outcome": "oversized",
+     "meaning": "tag: oversized"
+    },
+    {
+     "outcome": "chased",
+     "meaning": "tag: chased"
+    },
+    {
+     "outcome": "early_exit",
+     "meaning": "tag: early exit"
+    },
+    {
+     "outcome": "tag_review",
+     "meaning": "tag: needs human review"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "heavy",
+   "jev_calls": "1 call per ask_jev; the agent decides when to call (budget: 30 calls, $0.05)",
+   "runs_in": "schema_call_agent_shape",
+   "stage_hint": "sizing_guard",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "account",
+     "data_cutoff",
+     "plan",
+     "what_happened"
+    ],
+    "properties": {
+     "account": {
+      "type": "string"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "plan": {
+      "type": "string"
+     },
+     "what_happened": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "plan": "Buy 130, stop 121, 50 sh",
+     "venue": "NASDAQ",
+     "what_happened": "Bought 130, stopped at 121 for -1R"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "plan": "Buy 130 stop 121",
+     "venue": "NASDAQ",
+     "what_happened": "Bought 130, moved stop to 110 when it dipped, lost 2R"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "plan": "50 shares",
+     "venue": "NASDAQ",
+     "what_happened": "Bought 300 shares because I felt sure"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "plan": "Buy on pullback to 128",
+     "venue": "NASDAQ",
+     "what_happened": "Bought at 136 after it ran"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "plan": "Target 150",
+     "venue": "NASDAQ",
+     "what_happened": "Sold at 132 on the first red candle"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "plan": "Buy 420 stop 405 target 450",
+     "venue": "NASDAQ",
+     "what_happened": "Bought 420, sold at 450 as planned"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "plan": "Stop 12",
+     "venue": "NASDAQ",
+     "what_happened": "Cancelled the stop, held through the gap"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "plan": "Limit 228",
+     "venue": "NASDAQ",
+     "what_happened": "Market bought at 236 at the open"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "plan": "x",
+     "venue": "OTC",
+     "what_happened": "y"
+    }
+   ],
+   "expected": [
+    "tag_clean",
+    "moved_stop",
+    "oversized",
+    "chased",
+    "early_exit",
+    "tag_clean",
+    "moved_stop",
+    "chased",
+    "abstain"
+   ]
+  },
+  {
+   "key": "C",
+   "id": "l10_c_backtest_failure_triage",
+   "catalog_id": "L10.C",
+   "name": "Triage a failed backtest run",
+   "blurb": "The research agent runs the backtest through ask_jev (command + captured output) and gets the failure classified before touching code. Lookahead bias always goes to a human.",
+   "spec": "decisions/projects/jev-levels-trading/L10/C_backtest_failure_triage.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "kind": {
+     "type": "choice",
+     "instructions": "What kind of failure does `output` show?",
+     "criteria": {
+      "data_missing": "Missing or stale data",
+      "code_bug": "A bug in strategy code",
+      "lookahead": "Future data leaked into the backtest",
+      "config": "Bad config or parameters",
+      "flaky": "Flaky/infra"
+     }
+    },
+    "one_line": {
+     "type": "noul",
+     "instructions": "Is it a one-line fix?",
+     "criteria": {
+      "true": "One-line fix",
+      "false": "Needs more work"
+     }
+    }
+   },
+   "review_floor": 0.5,
+   "thresholds": {},
+   "outputs": [
+    {
+     "outcome": "agent_fix",
+     "meaning": "agent fixes in an isolated branch (no merge)"
+    },
+    {
+     "outcome": "rerun_after_data",
+     "meaning": "would refetch data and rerun"
+    },
+    {
+     "outcome": "human_review",
+     "meaning": "would hand to a person"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "heavy",
+   "jev_calls": "1 call per ask_jev; the agent decides when to call (budget: 30 calls, $0.05)",
+   "runs_in": "schema_call_agent_shape",
+   "stage_hint": "sizing_guard",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "data_cutoff",
+     "command",
+     "output"
+    ],
+    "properties": {
+     "data_cutoff": {
+      "type": "string"
+     },
+     "command": {
+      "type": "string"
+     },
+     "output": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "command": "uv run pytest tests/test_ema.py",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "output": "NameError: name 'ema_fast' is not defined. Did you mean 'fast_ema'?",
+     "venue": "NASDAQ"
+    },
+    {
+     "command": "uv run backtest",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "output": "AssertionError: signal at 2025-03-04 uses close of 2025-03-05",
+     "venue": "NASDAQ"
+    },
+    {
+     "command": "uv run backtest",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "output": "FileNotFoundError: data/bars/2026-10-06.parquet",
+     "venue": "NASDAQ"
+    },
+    {
+     "command": "uv run backtest",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "output": "ConnectionResetError while fetching bars; retry 3/3 failed",
+     "venue": "NASDAQ"
+    },
+    {
+     "command": "uv run backtest",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "output": "ValueError: lookback must be > 0, got 0 (config.yaml)",
+     "venue": "NASDAQ"
+    },
+    {
+     "command": "uv run backtest",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "output": "Sharpe 9.1 with 0 losing trades over 5 years; fills at the high of every bar",
+     "venue": "NASDAQ"
+    },
+    {
+     "command": "uv run pytest",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "output": "assert 19 == 20: rolling window off by one in features.py line 42",
+     "venue": "NASDAQ"
+    },
+    {
+     "command": "uv run backtest",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "output": "Feature 'next_day_return' present in training frame",
+     "venue": "NASDAQ"
+    },
+    {
+     "command": "x",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "output": "y",
+     "venue": "OTC"
+    }
+   ],
+   "expected": [
+    "agent_fix",
+    "human_review",
+    "rerun_after_data",
+    "rerun_after_data",
+    "agent_fix",
+    "human_review",
+    "agent_fix",
+    "human_review",
+    "abstain"
+   ]
+  },
+  {
+   "key": "D",
+   "id": "l10_d_strategy_diff_judge",
+   "catalog_id": "L10.D",
+   "name": "Judge a strategy diff before promotion",
+   "blurb": "The coding agent changed a strategy; it puts git diff through ask_jev for a risk score and a review call. Any diff touching risk/ or orders/ needs a human in code. Never auto-promotes.",
+   "spec": "decisions/projects/jev-levels-trading/L10/D_strategy_diff_judge.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "risk": {
+     "type": "score",
+     "instructions": "How risky is `diff` for live behaviour of the strategy?",
+     "criteria": [
+      "cosmetic",
+      "low",
+      "moderate",
+      "high"
+     ]
+    },
+    "needs_review": {
+     "type": "noul",
+     "instructions": "Should a human review `diff` before it runs even in paper?",
+     "criteria": {
+      "true": "Needs review",
+      "false": "Safe for paper"
+     }
+    }
+   },
+   "review_floor": 0.5,
+   "thresholds": {},
+   "outputs": [
+    {
+     "outcome": "human_review",
+     "meaning": "would require human review"
+    },
+    {
+     "outcome": "paper_forward_test",
+     "meaning": "would run in the paper forward test only"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "heavy",
+   "jev_calls": "1 call per ask_jev; the agent decides when to call (budget: 30 calls, $0.05)",
+   "runs_in": "schema_call_agent_shape",
+   "stage_hint": "sizing_guard",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "data_cutoff",
+     "paths",
+     "diff"
+    ],
+    "properties": {
+     "data_cutoff": {
+      "type": "string"
+     },
+     "paths": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "diff": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "diff": "- MAX_RISK = 0.01\n+ MAX_RISK = 0.05",
+     "paths": [
+      "strategies/orb/risk/limits.py"
+     ],
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "diff": "+ # explain the opening range",
+     "paths": [
+      "strategies/orb/signal.py"
+     ],
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "diff": "- size = 0.5 * base\n+ size = 3 * base",
+     "paths": [
+      "strategies/orb/signal.py"
+     ],
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "diff": "- fast\n+ fast_ema",
+     "paths": [
+      "strategies/ema/features.py"
+     ],
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "diff": "+ retry forever",
+     "paths": [
+      "strategies/ema/orders/submit.py"
+     ],
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "diff": "- stop = entry - 2*atr\n+ stop = None",
+     "paths": [
+      "strategies/ema/signal.py"
+     ],
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "diff": "- lookback: 20\n+ lookback: 21",
+     "paths": [
+      "strategies/ema/config.yaml"
+     ],
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "diff": "+ LIVE = True",
+     "paths": [
+      "strategies/ema/run.py"
+     ],
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "diff": "b",
+     "paths": [
+      "a"
+     ],
+     "venue": "OTC"
+    }
+   ],
+   "expected": [
+    "human_review",
+    "paper_forward_test",
+    "human_review",
+    "paper_forward_test",
+    "human_review",
+    "human_review",
+    "paper_forward_test",
+    "human_review",
+    "abstain"
+   ]
+  },
+  {
+   "key": "E",
+   "id": "l10_e_desk_request_classify",
+   "catalog_id": "L10.E",
+   "name": "Classify a desk request, gate the plan",
+   "blurb": "A PM request arrives; the agent asks Jev: config change, code change, or a decision a human owns? And is it clear enough to plan? Code acts accordingly.",
+   "spec": "decisions/projects/jev-levels-trading/L10/E_desk_request_classify.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "kind": {
+     "type": "choice",
+     "instructions": "What does `request` need?",
+     "criteria": {
+      "config": "A parameter or config change",
+      "code": "A code change",
+      "human": "A product/risk decision a person owns"
+     }
+    },
+    "clear": {
+     "type": "noul",
+     "instructions": "Is `request` clear enough to plan without a question?",
+     "criteria": {
+      "true": "Clear",
+      "false": "Needs a question first"
+     }
+    }
+   },
+   "review_floor": 0.5,
+   "thresholds": {},
+   "outputs": [
+    {
+     "outcome": "escalate",
+     "meaning": "would escalate to the PM/risk owner"
+    },
+    {
+     "outcome": "ask_question",
+     "meaning": "would ask the requester"
+    },
+    {
+     "outcome": "plan_config_change",
+     "meaning": "would draft a config change for review"
+    },
+    {
+     "outcome": "plan_code_change",
+     "meaning": "would draft a code change in an isolated branch"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "heavy",
+   "jev_calls": "1 call per ask_jev; the agent decides when to call (budget: 30 calls, $0.05)",
+   "runs_in": "schema_call_agent_shape",
+   "stage_hint": "sizing_guard",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "data_cutoff",
+     "request"
+    ],
+    "properties": {
+     "data_cutoff": {
+      "type": "string"
+     },
+     "request": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string"
+     }
+    }
+   },
+   "inputs": [
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "request": "Set the ORB strategy's max trades per day to 3",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "request": "Should we double the paper book's risk budget this month?",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "request": "Add a VWAP filter to the EMA pullback entry: only long above VWAP",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "request": "Make the strategy better",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "request": "Turn the ORB strategy on with real money",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "request": "Remove KO and PEP from the pullback universe",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "request": "Fix the signals thing",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "request": "Write fills to a CSV report at the end of each paper session",
+     "venue": "NASDAQ"
+    },
+    {
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "request": "x",
+     "venue": "OTC"
+    }
+   ],
+   "expected": [
+    "plan_config_change",
+    "escalate",
+    "plan_code_change",
+    "ask_question",
+    "escalate",
+    "plan_config_change",
+    "ask_question",
+    "plan_code_change",
+    "abstain"
+   ]
+  },
+  {
+   "key": "F",
+   "id": "l10_f_research_pack_budget",
+   "catalog_id": "L10.F",
+   "name": "Research pack over budget: split, never truncate",
+   "blurb": "The agent hands a pack of documents to ask_jev. Over 1,500 state tokens, code refuses with a split suggestion (no call, nothing truncated); under, one Noul answers the question.",
+   "spec": "decisions/projects/jev-levels-trading/L10/F_research_pack_budget.yaml",
+   "version": "0.1.0",
+   "approval_status": "experimental",
+   "questions": {
+    "answer": {
+     "type": "noul",
+     "instructions": "Do `documents` support a yes to `question` about `symbol`?",
+     "criteria": {
+      "true": "Yes, supported",
+      "false": "No, or not supported"
+     }
+    }
+   },
+   "review_floor": 0.5,
+   "thresholds": {},
+   "outputs": [
+    {
+     "outcome": "supported",
+     "meaning": "documents support it"
+    },
+    {
+     "outcome": "not_supported",
+     "meaning": "documents do not support it"
+    },
+    {
+     "outcome": "rejected_input",
+     "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)"
+    }
+   ],
+   "cost_class": "heavy",
+   "jev_calls": "1 call per ask_jev; the agent decides when to call (budget: 30 calls, $0.05)",
+   "runs_in": "schema_call_agent_shape",
+   "stage_hint": "sizing_guard",
+   "input_schema": {
+    "type": "object",
+    "required": [
+     "account",
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "question",
+     "documents"
+    ],
+    "properties": {
+     "account": {
+      "type": "string"
+     },
+     "symbol": {
+      "type": "string"
+     },
+     "venue": {
+      "type": "string",
+      "description": "NYSE or NASDAQ; anything else is rejected in code"
+     },
+     "data_cutoff": {
+      "type": "string"
+     },
+     "question": {
+      "type": "string"
+     },
+     "documents": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": [
+        "name",
+        "text"
+       ],
+       "properties": {
+        "name": {
+         "type": "string"
+        },
+        "text": {
+         "type": "string"
+        }
+       }
+      }
+     }
+    }
+   },
+   "inputs": [
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "documents": [
+      {
+       "name": "10-Q",
+       "text": "Data center revenue rose 112%."
+      }
+     ],
+     "question": "Did data center revenue more than double?",
+     "symbol": "NVDA",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "documents": [
+      {
+       "name": "10-K",
+       "text": "Greater China revenue fell 11%."
+      }
+     ],
+     "question": "Did China revenue grow?",
+     "symbol": "AAPL",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "documents": [
+      {
+       "name": "10-Q",
+       "text": "Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. "
+      },
+      {
+       "name": "transcript",
+       "text": "Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. "
+      }
+     ],
+     "question": "Did margins expand?",
+     "symbol": "INTC",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "documents": [
+      {
+       "name": "10-Q",
+       "text": "Azure grew 33%."
+      },
+      {
+       "name": "call",
+       "text": "We see strong demand."
+      }
+     ],
+     "question": "Is Azure growing over 30%?",
+     "symbol": "MSFT",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "documents": [
+      {
+       "name": "a",
+       "text": "Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. "
+      },
+      {
+       "name": "b",
+       "text": "Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. "
+      },
+      {
+       "name": "c",
+       "text": "Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. Revenue discussion. "
+      }
+     ],
+     "question": "Did margins recover?",
+     "symbol": "TSLA",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "documents": [
+      {
+       "name": "PR",
+       "text": "Coca-Cola raised its dividend 5%."
+      }
+     ],
+     "question": "Did KO cut its dividend?",
+     "symbol": "KO",
+     "venue": "NYSE"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "documents": [
+      {
+       "name": "PR",
+       "text": "FDA approved the drug."
+      }
+     ],
+     "question": "Was the drug approved?",
+     "symbol": "VRTX",
+     "venue": "NASDAQ"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "documents": [
+      {
+       "name": "a",
+       "text": "b"
+      }
+     ],
+     "question": "x",
+     "symbol": "PNKX",
+     "venue": "OTC"
+    },
+    {
+     "account": "paper",
+     "data_cutoff": "2026-10-07T13:45:00Z",
+     "documents": [
+      {
+       "name": "PR",
+       "text": "Meta opened a new data center."
+      }
+     ],
+     "question": "Did Meta announce a buyback?",
+     "symbol": "META",
+     "venue": "NASDAQ"
+    }
+   ],
+   "expected": [
+    "supported",
+    "not_supported",
+    "abstain",
+    "supported",
+    "abstain",
+    "not_supported",
+    "supported",
+    "abstain",
+    "not_supported"
+   ]
+  }
+ ]
+}
