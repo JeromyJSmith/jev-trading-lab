@@ -3,8 +3,9 @@ import { computed, onBeforeUnmount, ref, watch } from "vue";
 import { ANIM, C, W, H, heroInner } from "../lib/hero-scenes.mjs";
 import type { StreamEvent } from "../lib/api";
 import { signal } from "../lib/viz";
+import FedSummary from "./FedSummary.vue";
 import type { OptionMeta } from "../lib/api";
-import { ABSTAIN_ID, compact, outcomeIndex, tradingAnim, tradingScene } from "../lib/trading-scene";
+import { ABSTAIN_ID, outcomeIndex, tradingAnim, tradingScene } from "../lib/trading-scene";
 
 /**
  * The run, animated on the level's hero. Consumes the SSE events as they arrive and
@@ -26,16 +27,8 @@ const visual = computed<any>(() => (props.meta && !props.meta.original ? (props.
 const anim = computed(() => (visual.value ? tradingAnim(visual.value) : (ANIM as any)[props.n]));
 /** The questions as sent (from the request event); before the first request, the exported preview. */
 const sentQuestions = ref<Record<string, any> | null>(null);
-const fed = computed(() => {
-  const v = visual.value;
-  if (!v) return null;
-  const inp = props.input ?? {};
-  const fields = (v.fed as string[]).map((f) => ({ f, v: compact(inp[f]) })).filter((x) => x.v !== "");
-  const qs = sentQuestions.value
-    ? Object.entries(sentQuestions.value).map(([id, q]: [string, any]) => ({ id, type: q.type, text: q.instructions, options: q.type === "noul" ? [] : Object.keys(q.criteria ?? {}) }))
-    : (v.questions as any[]).map((q) => ({ id: q.id, type: q.type, text: q.text, options: q.type === "noul" ? [] : q.options }));
-  return { fields, qs, sent: !!sentQuestions.value };
-});
+/** Patch 0016: the fed panel is FedSummary (shared with the Results overlay); the scene compacts when it shows. */
+const fed = computed(() => !!visual.value);
 /** Answers written inside the decision node, one line per question. */
 const answerLines = ref<{ text: string; color: string }[]>([]);
 /** The hero markup, minus any element the animation replaces (listed in the spec's `strip`). */
@@ -315,16 +308,7 @@ const labelPos = computed(() => {
         <button class="ghost" @click="emit('close')">Close</button>
       </div>
 
-      <div v-if="fed" class="fed" data-testid="fed-panel">
-        <div class="fed-head"><b>What Jev was fed</b><span class="meta-inline">Set {{ setName }}</span></div>
-        <div class="fed-fields">
-          <span v-for="x in fed.fields" :key="x.f" class="fed-field"><b>{{ x.f }}</b> {{ x.v }}</span>
-        </div>
-        <div class="fed-head sub">{{ fed.sent ? "Questions sent" : "Questions (sent on Run)" }}</div>
-        <div v-for="q in fed.qs" :key="q.id" class="fed-q">
-          <b>{{ q.id }}</b> <span class="meta-inline">{{ q.type }}</span> {{ q.text }}<span v-if="q.options.length" class="fed-opts"> [{{ q.options.slice(0, 8).join(" / ") }}{{ q.options.length > 8 ? " / …" : "" }}]</span>
-        </div>
-      </div>
+      <FedSummary v-if="fed" :visual="visual" :input="input ?? {}" :set-name="setName ?? ''" :sent-questions="sentQuestions" />
 
       <div class="scene-wrap" :class="{ compact: !!fed }">
       <svg class="scene" :viewBox="`0 0 ${W} ${H}`" v-html="hero"></svg>

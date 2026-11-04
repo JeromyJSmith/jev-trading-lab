@@ -9,7 +9,7 @@ const callHtml = computed(() => highlightTs(renderCall(props.call, props.input))
 </script>
 
 <template>
-  <section class="glass wide">
+  <section class="glass wide" data-section="code">
     <h3>Code</h3>
     <div class="meta">The call, with your input</div>
     <pre class="code call" v-html="callHtml"></pre>

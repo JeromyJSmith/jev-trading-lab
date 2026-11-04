@@ -15,6 +15,8 @@ const vw = () => window.innerWidth;
 const vh = () => window.innerHeight;
 const rect = reactive<PanelRect>(loadRect(store, vw(), vh()));
 const sheet = ref(isSheet(vw()));
+/** Patch 0016: pop the panel out to fill the viewport; toggled back it returns to its remembered rect. */
+const full = ref(false);
 const el = ref<HTMLElement | null>(null);
 
 function apply(r: PanelRect) { Object.assign(rect, r); }
@@ -22,7 +24,7 @@ function persist() { saveRect(store, { ...rect }); }
 
 let drag: { px: number; py: number; start: PanelRect } | null = null;
 function down(e: PointerEvent) {
-  if (sheet.value || e.button !== 0 || (e.target as HTMLElement).closest("button")) return;
+  if (sheet.value || full.value || e.button !== 0 || (e.target as HTMLElement).closest("button")) return;
   drag = { px: e.clientX, py: e.clientY, start: { ...rect } };
   (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
   e.preventDefault();
@@ -48,7 +50,7 @@ onMounted(() => {
   window.addEventListener("keydown", onKey, true);
   if (el.value && "ResizeObserver" in window) {
     ro = new ResizeObserver(() => {
-      if (sheet.value || !el.value || drag) return;
+      if (sheet.value || full.value || !el.value || drag) return;
       const w = el.value.offsetWidth, h = el.value.offsetHeight;
       if (Math.abs(w - rect.w) < 2 && Math.abs(h - rect.h) < 2) return;
       apply(clampRect({ ...rect, w, h }, vw(), vh()));
@@ -70,16 +72,17 @@ onBeforeUnmount(() => {
     <div
       ref="el"
       class="results-overlay"
-      :class="{ sheet }"
+      :class="{ sheet: sheet && !full, full }"
       role="dialog"
       aria-label="Results"
       tabindex="-1"
       data-testid="results-overlay"
-      :style="sheet ? undefined : { left: rect.x + 'px', top: rect.y + 'px', width: rect.w + 'px', height: rect.h + 'px' }"
+      :style="sheet || full ? undefined : { left: rect.x + 'px', top: rect.y + 'px', width: rect.w + 'px', height: rect.h + 'px' }"
     >
       <div class="results-head" data-testid="results-handle" @pointerdown="down" @pointermove="move" @pointerup="up" @pointercancel="up">
         <b>Results</b><span class="meta-inline">{{ title }}</span>
         <span class="spacer"></span>
+        <button class="ghost results-full" :aria-pressed="full" data-testid="results-full" @click="full = !full">{{ full ? "Restore panel" : "Pop out to full screen" }}</button>
         <button class="ghost results-x" aria-label="Close results" data-testid="results-close" @click="emit('close')">×</button>
       </div>
       <div class="results-scroll"><slot /></div>

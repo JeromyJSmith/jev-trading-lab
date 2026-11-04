@@ -60,7 +60,7 @@ export function answerHTML(id, a, lead = ""){
     return `<div class="ans ${bucket(signal(id, a))}"><div class="ans-head"><b>${esc(humanize(id))}?</b></div>${bar(lead, a.noul, true, negative)}</div>`;
   }
   if(a.type === "choice"){
-    const rows = Object.entries(a.probabilities).sort((x,y)=>y[1]-x[1]).slice(0,8).map(([k,p]) => bar(esc(k), p, k===a.choice, NEGATIVE_OPTIONS.has(k))).join("");
+    const rows = Object.entries(a.probabilities).sort((x,y)=>y[1]-x[1]).map(([k,p]) => bar(esc(k), p, k===a.choice, NEGATIVE_OPTIONS.has(k))).join("");
     return `<div class="ans ${bucket(signal(id, a))}"><div class="ans-head"><b>${esc(humanize(id))}:</b> <span class="ans-pick">${esc(a.choice)}</span><span class="ans-sub">confidence ${a.confidence.toFixed(2)}</span></div>${rows}</div>`;
   }
   const top = Math.max(...Object.values(a.probabilities).map(Number));

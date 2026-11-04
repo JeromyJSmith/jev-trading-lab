@@ -18,9 +18,9 @@ export function isSheet(vw: number): boolean {
   return vw <= SHEET_MAX;
 }
 
-/** Bottom-right, beside the run modal's View Results button. */
+/** Bottom-right, beside the run modal's View Results button. Patch 0016: wide enough for the Cost table (min(900, 62% of vw)). */
 export function defaultRect(vw: number, vh: number): PanelRect {
-  const w = Math.min(560, vw - 2 * GAP);
+  const w = Math.min(900, Math.max(560, Math.round(vw * 0.62)), vw - 2 * GAP);
   const h = Math.min(Math.round(vh * 0.72), vh - TOP - 2 * GAP);
   return clampRect({ x: vw - w - 24, y: vh - h - 24, w, h }, vw, vh);
 }

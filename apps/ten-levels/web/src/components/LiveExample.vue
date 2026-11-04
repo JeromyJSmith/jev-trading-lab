@@ -12,6 +12,8 @@ import CostTable from "./CostTable.vue";
 import RunVisual from "./RunVisual.vue";
 import ResultsBody from "./ResultsBody.vue";
 import ResultsOverlay from "./ResultsOverlay.vue";
+import ResultsSections from "./ResultsSections.vue";
+import IoBlock from "./IoBlock.vue";
 import AgentChat from "./AgentChat.vue";
 import { visual } from "../lib/store";
 import type { StreamEvent } from "../lib/api";
@@ -96,6 +98,8 @@ watch(input, () => { clearTimeout(checkTimer); checkTimer = setTimeout(checkInpu
 const resultsOpen = ref(false);
 const hasResults = computed(() => !!(answersHtml.value || policy.value || errorText.value || staticNote.value || (build.value && build.value.state)));
 const calls = ref(0);
+/** Patch 0016: the state POST /build built, highlighted, for the Sent block when no Jev call was made. */
+const buildHtml = computed(() => (build.value && build.value.state ? highlightTs(JSON.stringify(build.value.state, null, 2), "json") : ""));
 
 function resetOutputs() {
   status.value = "Waiting for Run live";
@@ -246,8 +250,9 @@ async function run() {
       @results="resultsOpen = true"
     />
     <ResultsOverlay v-if="resultsOpen && hasResults && !agent" :title="`Set ${option.key}${setIndex + 1} · ${option.catalog_id ?? ''} ${option.name}`" @close="resultsOpen = false">
-      <ResultsBody panel :status="status" :static-note="staticNote" :answers-html="answersHtml" :policy="policy" :error-text="errorText" :calls="calls"
-        :sent-html="sentHtml" :received-html="receivedHtml" :build="build" />
+      <ResultsSections :status="status" :static-note="staticNote" :answers-html="answersHtml" :policy="policy" :error-text="errorText" :calls="calls"
+        :sent-html="sentHtml" :received-html="receivedHtml" :sent-text="sentText" :received-text="receivedText" :usage="usage" :build="build"
+        :build-html="buildHtml" :option="option" :input="input" :set-name="`${option.key}${setIndex + 1}`" />
     </ResultsOverlay>
     <div class="section-head live-head" data-testid="live-example-head">
       <h2>Live Example</h2>
@@ -315,26 +320,15 @@ async function run() {
         </div>
         <SchemaForm v-if="option.input_schema" :key="option.key + setIndex" v-model="input" :schema="option.input_schema" :errors="schemaErrors" />
         <InputEditor v-else v-model="input" />
-        <template v-if="sentHtml">
-          <h4>Sent<span v-if="calls > 1" class="meta-inline">call {{ calls }}</span></h4>
-          <div class="meta">POST /decisions, the request body{{ build ? " (state built by POST /build from the inputs)" : "" }}</div>
-          <pre class="code" v-html="sentHtml"></pre>
-        </template>
-        <template v-else-if="build && build.state">
-          <h4>Sent</h4>
-          <div class="meta">Nothing sent to Jev: prechecks rejected the inputs. State POST /build built:</div>
-          <pre class="code" v-html="highlightTs(JSON.stringify(build.state, null, 2), 'json')"></pre>
-        </template>
+        <IoBlock v-if="sentHtml" kind="sent" title="Sent" :calls="calls" :html="sentHtml"
+          :note="`POST /decisions, the request body${build ? ' (state built by POST /build from the inputs)' : ''}`" />
+        <IoBlock v-else-if="buildHtml" kind="sent" title="Sent" :calls="0" :html="buildHtml" note="Nothing sent to Jev: prechecks rejected the inputs. State POST /build built:" />
       </section>
 
       <section class="glass">
         <h3>Outputs</h3>
         <ResultsBody :status="status" :static-note="staticNote" :answers-html="answersHtml" :policy="policy" :error-text="errorText" :calls="calls" />
-        <template v-if="receivedHtml">
-          <h4>Received<span v-if="calls > 1" class="meta-inline">call {{ calls }}</span></h4>
-          <div class="meta">The response body</div>
-          <pre class="code" v-html="receivedHtml"></pre>
-        </template>
+        <IoBlock v-if="receivedHtml" kind="received" title="Received" :calls="calls" :html="receivedHtml" note="The response body" />
       </section>
 
       <CostTable v-if="usage && receivedText" :sent="sentText" :received="receivedText" :usage="usage" />
