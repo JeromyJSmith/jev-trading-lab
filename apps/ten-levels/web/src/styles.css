@@ -403,3 +403,15 @@ body{padding-bottom:70px}
 /* Patch 0013: the real example set card (set id, unlabelled badge, provenance links). */
 .set-card { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 8px 0; }
 .set-card a { font-size: 12px; }
+/* Patch 0014: set pills, Run and Reset in the fixed nav bar. The pills scroll sideways, never overflow. */
+.nav{gap:14px}
+.nav-sets{flex:1;min-width:0;display:flex;gap:8px;overflow-x:auto;justify-content:safe center;padding:4px 6px;scrollbar-width:thin}
+.nav .nav-sets .set{flex:none;font-size:16px;padding:6px 14px;color:var(--muted);background:var(--glass-2);border:1px solid var(--border)}
+.nav .nav-sets .set:hover{color:var(--text);border-color:var(--border-strong)}
+.nav .nav-sets .set.selected{color:var(--accent);border-color:var(--accent);background:rgba(var(--accent-rgb),.10)}
+.nav button.ghost.nav-btn{background:transparent;border:1px solid rgba(var(--accent-rgb),.45)}
+.nav button.run.nav-btn{background:var(--accent);color:var(--page);border:1px solid var(--accent)}
+.nav .nav-sets .set:hover,.nav button.nav-btn:hover{text-decoration:none}
+.nav button.nav-btn{flex:none;padding:7px 16px}
+.nav .toggle{margin-right:4px;flex:none}
+.sets{flex-wrap:wrap}

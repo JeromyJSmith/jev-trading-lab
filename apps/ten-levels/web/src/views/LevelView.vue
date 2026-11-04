@@ -11,6 +11,14 @@ import LevelProgress from "../components/LevelProgress.vue";
 import UseCaseCards from "../components/UseCaseCards.vue";
 import type { Card } from "../lib/trading";
 import LiveExample from "../components/LiveExample.vue";
+import { live } from "../lib/live";
+
+/** Patch 0014: a card click loads and runs its first set; clicking the loaded card runs it again. */
+function choose(key: string) {
+  if (key === selected.value) { live.controls?.selectSet(0); return; }
+  live.autorun = true;
+  selected.value = key;
+}
 
 const props = defineProps<{ n: number }>();
 
@@ -42,6 +50,7 @@ watch(
   () => props.n,
   async (n) => {
     reveal(n);
+    live.autorun = false;
     selected.value = fromQuery();
     showOriginals.value = selected.value.startsWith("O");
     payload.value = null;
@@ -69,15 +78,15 @@ watch(
           Original examples
         </label>
       </div>
-      <UseCaseCards :cases="tradingCards" :selected="selected" @select="selected = $event" @pick="pick" />
+      <UseCaseCards :cases="tradingCards" :selected="selected" @select="choose" @pick="pick" />
       <template v-if="showOriginals">
         <div class="section-head"><h2>Original examples</h2><span class="meta">upstream's use cases, unchanged</span></div>
-        <UseCaseCards :cases="originalCards" :selected="selected" @select="selected = $event" />
+        <UseCaseCards :cases="originalCards" :selected="selected" @select="choose" />
       </template>
     </template>
     <template v-else>
       <div class="section-head"><h2>Use Cases</h2><span class="meta">Pick one to load it below</span></div>
-      <UseCaseCards :cases="originalCards" :selected="selected" @select="selected = $event" />
+      <UseCaseCards :cases="originalCards" :selected="selected" @select="choose" />
     </template>
 
     <div v-if="agentNote" class="agent-note">

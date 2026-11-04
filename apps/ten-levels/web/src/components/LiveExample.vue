@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { computed, onBeforeUnmount, onMounted, ref, watch } from "vue";
+import { computed, onBeforeUnmount, onMounted, reactive, ref, watch } from "vue";
+import { live } from "../lib/live";
 import type { OptionMeta } from "../lib/api";
 import { buildInputs, runOption } from "../lib/api";
 import { highlightTs } from "../lib/highlight";
@@ -116,9 +117,29 @@ function resetOutputs() {
 
 watch(
   () => props.option,
-  () => loadSet(0),
+  () => {
+    loadSet(0);
+    // Patch 0014: a scenario card click loads and runs its first set.
+    if (live.autorun) { live.autorun = false; if (!props.agent && !needsData.value) void run(); }
+  },
   { immediate: true },
 );
+
+/** Patch 0014: Run, Reset and the set pills live in the nav bar; this registers the controls while mounted. */
+const controls = reactive({
+  key: computed(() => props.option.key),
+  sets: computed(() => props.option.inputs.map((_, i) => `${props.option.key}${i + 1}`)),
+  setIndex,
+  running,
+  disabled: needsData,
+  agent: computed(() => !!props.agent),
+  runLabel,
+  run: () => { if (!running.value && !needsData.value && !props.agent) void run(); },
+  reset: () => { if (!running.value) resetExample(); },
+  selectSet: (i: number) => { if (running.value) return; loadSet(i); if (!props.agent && !needsData.value) void run(); },
+});
+live.controls = controls;
+onBeforeUnmount(() => { if (live.controls === controls) live.controls = null; });
 
 function resetExample() {
   loadSet(setIndex.value);
@@ -142,7 +163,7 @@ function toChips(output: unknown): { key: string; value: string }[] {
 
 /** Cmd+Enter (Ctrl+Enter elsewhere) runs the example, even with the cursor in the input editor. */
 function hotkey(e: KeyboardEvent) {
-  if (e.key === "Enter" && (e.metaKey || e.ctrlKey) && !running.value) {
+  if (e.key === "Enter" && (e.metaKey || e.ctrlKey) && !running.value && !needsData.value && !props.agent) {
     e.preventDefault();
     run();
   }
@@ -225,8 +246,7 @@ async function run() {
       <span class="meta">Option {{ option.key }}, {{ option.name }}</span>
       <span class="spacer"></span>
       <button v-if="agent" class="ghost" @click="loadSet(setIndex); chat?.restart()">New session</button>
-      <button v-else class="ghost" :disabled="running" @click="resetExample">Reset</button>
-      <button v-if="!agent" class="run" :disabled="running || needsData" :title="needsData ? 'needs your data' : ''" data-testid="run" @click="run">{{ runLabel }} <kbd>⌘↵</kbd></button>
+      <span v-else class="meta">Run and Reset are in the top bar</span>
     </div>
 
     <div v-if="agent" class="example agent">
@@ -273,7 +293,7 @@ async function run() {
             class="set"
             :class="{ selected: i === setIndex }"
             :disabled="running"
-            @click="loadSet(i)"
+            @click="controls.selectSet(i)"
           >{{ name }}</button>
         </div>
         <div v-if="setMeta" class="set-card" data-testid="set-card">
