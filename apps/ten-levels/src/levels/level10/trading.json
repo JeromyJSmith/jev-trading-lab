@@ -215,7 +215,118 @@
     "proceed",
     "abstain",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "venue",
+     "account",
+     "data_cutoff",
+     "order",
+     "thesis",
+     "headlines"
+    ],
+    "excerpt": "order",
+    "state_fields": [
+     "symbol",
+     "order",
+     "thesis",
+     "headlines"
+    ],
+    "questions": [
+     {
+      "id": "supported",
+      "type": "noul",
+      "short": "supported",
+      "text": "Do `headlines` support `thesis` for `symbol`?",
+      "options": [
+       "yes",
+       "no"
+      ]
+     },
+     {
+      "id": "contradicted",
+      "type": "noul",
+      "short": "contradicted",
+      "text": "Does any headline contradict `thesis`?",
+      "options": [
+       "yes",
+       "no"
+      ]
+     },
+     {
+      "id": "risk",
+      "type": "score",
+      "short": "risk",
+      "text": "How risky is `order` given the news?",
+      "options": [
+       "low",
+       "moderate",
+       "high",
+       "extreme"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "proceed",
+      "meaning": "would submit the PAPER order",
+      "when": [
+       "supported ≥ 0.6"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "revise",
+      "meaning": "would send the plan back to the agent to revise",
+      "when": [
+       "risk ≥ 0.66",
+       "otherwise: thesis not supported"
+      ],
+      "more": 0,
+      "stages": [
+       "route",
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "block",
+      "meaning": "would block the paper order",
+      "when": [
+       "contradicted ≥ 0.6"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "paper accounts only (no live trading)",
+       "venue is not NYSE or Nasdaq: out of scope"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, order, thesis, headlines (data ≤ data_cutoff)",
+     "guards": "guards in code first: paper_only, venue",
+     "output": "gate → route → decide in code",
+     "output_detail": ""
+    }
+   }
   },
   {
    "key": "B",
@@ -384,7 +495,134 @@
     "moved_stop",
     "chased",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "venue",
+     "account",
+     "data_cutoff",
+     "plan",
+     "what_happened"
+    ],
+    "excerpt": "plan",
+    "state_fields": [
+     "plan",
+     "what_happened"
+    ],
+    "questions": [
+     {
+      "id": "followed",
+      "type": "noul",
+      "short": "followed",
+      "text": "Did the trader follow `plan` in `what_happened`?",
+      "options": [
+       "yes",
+       "no"
+      ]
+     },
+     {
+      "id": "mistake",
+      "type": "choice",
+      "short": "mistake",
+      "text": "What was the main mistake, if any?",
+      "options": [
+       "none",
+       "moved_stop",
+       "oversized",
+       "chased",
+       "early_exit"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "tag_clean",
+      "meaning": "journal tag: clean",
+      "when": [
+       "followed ≥ 0.6 and mistake = none"
+      ],
+      "more": 0,
+      "stages": [
+       "route"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "moved_stop",
+      "meaning": "tag: moved stop",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "oversized",
+      "meaning": "tag: oversized",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "chased",
+      "meaning": "tag: chased",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "early_exit",
+      "meaning": "tag: early exit",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "tag_review",
+      "meaning": "tag: needs human review",
+      "when": [
+       "otherwise: deviation without a named mistake"
+      ],
+      "more": 0,
+      "stages": [
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "=mistake.choice",
+      "meaning": "=mistake.choice",
+      "when": [
+       "mistake ≠ none"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from plan, what_happened (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue",
+     "output": "route → decide in code",
+     "output_detail": ""
+    }
+   }
   },
   {
    "key": "C",
@@ -528,7 +766,104 @@
     "agent_fix",
     "human_review",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "venue",
+     "data_cutoff",
+     "command",
+     "output"
+    ],
+    "excerpt": "command",
+    "state_fields": [
+     "command",
+     "output"
+    ],
+    "questions": [
+     {
+      "id": "kind",
+      "type": "choice",
+      "short": "kind",
+      "text": "What kind of failure does `output` show?",
+      "options": [
+       "data_missing",
+       "code_bug",
+       "lookahead",
+       "config",
+       "flaky"
+      ]
+     },
+     {
+      "id": "one_line",
+      "type": "noul",
+      "short": "one line",
+      "text": "Is it a one-line fix?",
+      "options": [
+       "yes",
+       "no"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "agent_fix",
+      "meaning": "agent fixes in an isolated branch (no merge)",
+      "when": [
+       "one_line ≥ 0.6"
+      ],
+      "more": 0,
+      "stages": [
+       "route"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rerun_after_data",
+      "meaning": "would refetch data and rerun",
+      "when": [
+       "kind ∈ flaky/data_missing"
+      ],
+      "more": 0,
+      "stages": [
+       "route"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "human_review",
+      "meaning": "would hand to a person",
+      "when": [
+       "kind = lookahead",
+       "otherwise"
+      ],
+      "more": 0,
+      "stages": [
+       "gate",
+       "decide",
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     }
+    ],
+    "arrows": {
+     "input": "state built from command, output (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue",
+     "output": "gate → route → decide in code",
+     "output_detail": ""
+    }
+   }
   },
   {
    "key": "D",
@@ -688,7 +1023,92 @@
     "paper_forward_test",
     "human_review",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "venue",
+     "data_cutoff",
+     "paths",
+     "diff"
+    ],
+    "excerpt": "diff",
+    "state_fields": [
+     "paths",
+     "diff"
+    ],
+    "questions": [
+     {
+      "id": "risk",
+      "type": "score",
+      "short": "risk",
+      "text": "How risky is `diff` for live behaviour of the strategy?",
+      "options": [
+       "cosmetic",
+       "low",
+       "moderate",
+       "high"
+      ]
+     },
+     {
+      "id": "needs_review",
+      "type": "noul",
+      "short": "needs review",
+      "text": "Should a human review `diff` before it runs even in paper?",
+      "options": [
+       "yes",
+       "no"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "human_review",
+      "meaning": "would require human review",
+      "when": [
+       "touches risk/ or orders/: a human reviews (code)",
+       "risk ≥ 0.66 or needs_review ≥ 0.6",
+       "otherwise"
+      ],
+      "more": 0,
+      "stages": [
+       "guard",
+       "route",
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "paper_forward_test",
+      "meaning": "would run in the paper forward test only",
+      "when": [
+       "otherwise"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     }
+    ],
+    "arrows": {
+     "input": "state built from paths, diff (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue, sensitive_path",
+     "output": "route → decide in code",
+     "output_detail": ""
+    }
+   }
   },
   {
    "key": "E",
@@ -821,7 +1241,111 @@
     "ask_question",
     "plan_code_change",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "venue",
+     "data_cutoff",
+     "request"
+    ],
+    "excerpt": "request",
+    "state_fields": [
+     "request"
+    ],
+    "questions": [
+     {
+      "id": "kind",
+      "type": "choice",
+      "short": "kind",
+      "text": "What does `request` need?",
+      "options": [
+       "config",
+       "code",
+       "human"
+      ]
+     },
+     {
+      "id": "clear",
+      "type": "noul",
+      "short": "clear",
+      "text": "Is `request` clear enough to plan without a question?",
+      "options": [
+       "yes",
+       "no"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "escalate",
+      "meaning": "would escalate to the PM/risk owner",
+      "when": [
+       "kind = human"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "ask_question",
+      "meaning": "would ask the requester",
+      "when": [
+       "clear < 0.6",
+       "otherwise"
+      ],
+      "more": 0,
+      "stages": [
+       "route",
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "plan_config_change",
+      "meaning": "would draft a config change for review",
+      "when": [
+       "kind = config"
+      ],
+      "more": 0,
+      "stages": [
+       "route"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "plan_code_change",
+      "meaning": "would draft a code change in an isolated branch",
+      "when": [
+       "otherwise"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     }
+    ],
+    "arrows": {
+     "input": "state built from request (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue",
+     "output": "gate → route → decide in code",
+     "output_detail": ""
+    }
+   }
   },
   {
    "key": "F",
@@ -1054,7 +1578,80 @@
     "supported",
     "abstain",
     "not_supported"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "venue",
+     "account",
+     "data_cutoff",
+     "question",
+     "documents"
+    ],
+    "excerpt": "question",
+    "state_fields": [
+     "symbol",
+     "question",
+     "documents"
+    ],
+    "questions": [
+     {
+      "id": "answer",
+      "type": "noul",
+      "short": "answer",
+      "text": "Do `documents` support a yes to `question` about `symbol`?",
+      "options": [
+       "yes",
+       "no"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "supported",
+      "meaning": "documents support it",
+      "when": [
+       "answer ≥ 0.6"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "not_supported",
+      "meaning": "documents do not support it",
+      "when": [
+       "otherwise: documents do not support it"
+      ],
+      "more": 0,
+      "stages": [
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "paper accounts only (no live trading)",
+       "venue is not NYSE or Nasdaq: out of scope"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, question, documents (data ≤ data_cutoff)",
+     "guards": "guards in code first: paper_only, venue",
+     "output": "decide in code",
+     "output_detail": ""
+    }
+   }
   }
  ]
 }

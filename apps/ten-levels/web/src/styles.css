@@ -391,3 +391,11 @@ body{padding-bottom:70px}
 /* Patch 0009: static demo banner. */
 .static-banner { padding: 6px 16px; font-size: 13px; background: #3a2f0b; color: #ffe9a8; border-bottom: 1px solid #6b5716; }
 .static-banner a { color: inherit; text-decoration: underline; }
+/* ---- patch 0011: run modal "What Jev was fed" panel ---- */
+.modal .fed{border:1px solid var(--border);border-radius:12px;padding:10px 14px;margin-bottom:10px;font-size:13px;line-height:1.45;max-height:22vh;overflow:auto}
+.modal .fed-head{display:flex;align-items:baseline;gap:10px;color:var(--accent);font-size:14px;margin-bottom:4px}
+.modal .fed-head.sub{font-size:12px;margin:6px 0 2px}
+.modal .fed-fields{display:flex;flex-wrap:wrap;gap:4px 16px}
+.modal .fed-field b,.modal .fed-q b{color:var(--accent);font-weight:600;margin-right:4px}
+.modal .fed-opts{opacity:.7}
+.modal .scene-wrap.compact .scene{max-height:58vh}

@@ -19,6 +19,8 @@ export interface OptionMeta {
   agent?: boolean; original?: boolean; trading?: boolean; catalog_id?: string; blurb?: string;
   thresholds?: Record<string, number>; stage_hint?: string; runs_in?: string; cost_class?: string; jev_calls?: string;
   outputs?: { outcome: string; meaning: string }[];
+  /** Patch 0011: run-modal labels (fed fields, questions, outcome boxes, arrow labels), exported from the spec YAML. */
+  visual?: Record<string, any>;
 }
 
 export interface LevelPayload {

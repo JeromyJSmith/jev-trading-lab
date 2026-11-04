@@ -180,7 +180,124 @@
     "ignore",
     "watch",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "published_at",
+     "headline",
+     "body",
+     "source"
+    ],
+    "excerpt": "headline",
+    "state_fields": [
+     "symbol",
+     "headline",
+     "body"
+    ],
+    "questions": [
+     {
+      "id": "event",
+      "type": "choice",
+      "short": "event",
+      "text": "What kind of event does `headline` report for `symbol`?",
+      "options": [
+       "earnings",
+       "m_and_a",
+       "financing",
+       "legal_regulatory",
+       "management",
+       "product",
+       "routine",
+       "other"
+      ]
+     },
+     {
+      "id": "direction",
+      "type": "choice",
+      "short": "direction",
+      "text": "For `symbol` shareholders, is this news positive, negative or neutral?",
+      "options": [
+       "positive",
+       "negative",
+       "neutral"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "alert",
+      "meaning": "would alert the desk now",
+      "when": [
+       "event ∈ m_and_a/legal_regulatory/financing"
+      ],
+      "more": 0,
+      "stages": [
+       "route"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "watch",
+      "meaning": "would add to the watch list",
+      "when": [
+       "otherwise"
+      ],
+      "more": 0,
+      "stages": [
+       "decide",
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "ignore",
+      "meaning": "no action",
+      "when": [
+       "event ∈ routine/other",
+       "direction = neutral"
+      ],
+      "more": 0,
+      "stages": [
+       "route"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope",
+       "published_at is after the data cutoff (no future data in replay)"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "__abstain__",
+      "meaning": "abstain: no outcome, a person reviews",
+      "when": [
+       "event conf < 0.40"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, headline, body (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue, future_data",
+     "output": "gate → route → decide in code",
+     "output_detail": "review floor 0.40"
+    }
+   }
   },
   {
    "key": "B",
@@ -372,7 +489,135 @@
     "abstain",
     "log_only",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "published_at",
+     "headline",
+     "body",
+     "source"
+    ],
+    "excerpt": "headline",
+    "state_fields": [
+     "symbol",
+     "headline",
+     "body"
+    ],
+    "questions": [
+     {
+      "id": "item",
+      "type": "choice",
+      "short": "item",
+      "text": "Which 8-K item does this filing (`headline`, `body`) mainly report?",
+      "options": [
+       "2_02_results",
+       "1_01_agreement",
+       "5_02_officers",
+       "3_01_delisting",
+       "4_02_restatement",
+       "8_01_other",
+       "none"
+      ]
+     },
+     {
+      "id": "material",
+      "type": "noul",
+      "short": "material",
+      "text": "Is the reported event material to the company's value?",
+      "options": [
+       "yes",
+       "no"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "risk_review",
+      "meaning": "would send to risk review",
+      "when": [
+       "item ∈ 4_02_restatement/3_01_delisting"
+      ],
+      "more": 0,
+      "stages": [
+       "route"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "earnings_reader",
+      "meaning": "would send to the earnings reader",
+      "when": [
+       "item = 2_02_results"
+      ],
+      "more": 0,
+      "stages": [
+       "route"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "analyst_queue",
+      "meaning": "would queue for an analyst",
+      "when": [
+       "otherwise"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "log_only",
+      "meaning": "would log only",
+      "when": [
+       "material < 0.5",
+       "otherwise"
+      ],
+      "more": 0,
+      "stages": [
+       "route",
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope",
+       "published_at is after the data cutoff (no future data in replay)"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "__abstain__",
+      "meaning": "abstain: no outcome, a person reviews",
+      "when": [
+       "item conf < 0.40",
+       "item = none"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, headline, body (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue, future_data",
+     "output": "gate → route → decide in code",
+     "output_detail": "review floor 0.40"
+    }
+   }
   },
   {
    "key": "C",
@@ -551,7 +796,124 @@
     "ignore",
     "ignore",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "published_at",
+     "headline",
+     "body",
+     "source"
+    ],
+    "excerpt": "headline",
+    "state_fields": [
+     "symbol",
+     "headline",
+     "body"
+    ],
+    "questions": [
+     {
+      "id": "action",
+      "type": "choice",
+      "short": "action",
+      "text": "What analyst action on `symbol` does `headline` report?",
+      "options": [
+       "upgrade",
+       "downgrade",
+       "initiate",
+       "target_only",
+       "reiterate",
+       "none"
+      ]
+     },
+     {
+      "id": "rating",
+      "type": "choice",
+      "short": "rating",
+      "text": "What is the resulting rating?",
+      "options": [
+       "buy",
+       "hold",
+       "sell",
+       "unknown"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "bullish_note",
+      "meaning": "would add a bullish analyst note to the symbol",
+      "when": [
+       "action = upgrade or (action = initiate and rating = buy)"
+      ],
+      "more": 0,
+      "stages": [
+       "route"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "bearish_note",
+      "meaning": "would add a bearish analyst note",
+      "when": [
+       "action = downgrade or (action = initiate and rating = sell)"
+      ],
+      "more": 0,
+      "stages": [
+       "route"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "ignore",
+      "meaning": "no rating signal",
+      "when": [
+       "action ∈ target_only/reiterate/none",
+       "otherwise"
+      ],
+      "more": 0,
+      "stages": [
+       "route",
+       "decide",
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope",
+       "published_at is after the data cutoff (no future data in replay)"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "__abstain__",
+      "meaning": "abstain: no outcome, a person reviews",
+      "when": [
+       "action conf < 0.40"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, headline, body (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue, future_data",
+     "output": "gate → route → decide in code",
+     "output_detail": "review floor 0.40"
+    }
+   }
   },
   {
    "key": "D",
@@ -728,7 +1090,121 @@
     "neutral",
     "abstain",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "published_at",
+     "headline",
+     "body",
+     "source"
+    ],
+    "excerpt": "headline",
+    "state_fields": [
+     "symbol",
+     "headline",
+     "body"
+    ],
+    "questions": [
+     {
+      "id": "results",
+      "type": "choice",
+      "short": "results",
+      "text": "Versus expectations, how were the reported results in `headline`/`body`?",
+      "options": [
+       "beat",
+       "inline",
+       "miss",
+       "unclear"
+      ]
+     },
+     {
+      "id": "guidance",
+      "type": "choice",
+      "short": "guidance",
+      "text": "What did forward guidance do?",
+      "options": [
+       "raised",
+       "maintained",
+       "cut",
+       "none"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "long_watch",
+      "meaning": "would add to the post-earnings long watch list",
+      "when": [
+       "results = beat and guidance ∈ raised/maintained"
+      ],
+      "more": 0,
+      "stages": [
+       "route"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "short_watch",
+      "meaning": "would add to the short/avoid list",
+      "when": [
+       "guidance = cut or (results = miss and guidance ≠ raised)"
+      ],
+      "more": 0,
+      "stages": [
+       "route"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "neutral",
+      "meaning": "no post-earnings bias",
+      "when": [
+       "otherwise"
+      ],
+      "more": 0,
+      "stages": [
+       "decide",
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope",
+       "published_at is after the data cutoff (no future data in replay)"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "__abstain__",
+      "meaning": "abstain: no outcome, a person reviews",
+      "when": [
+       "results conf < 0.40",
+       "results = unclear and guidance = none"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, headline, body (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue, future_data",
+     "output": "gate → route → decide in code",
+     "output_detail": "review floor 0.40"
+    }
+   }
   },
   {
    "key": "E",
@@ -909,7 +1385,140 @@
     "reversal",
     "breakout",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "as_of",
+     "timeframe",
+     "chart_description"
+    ],
+    "excerpt": "chart_description",
+    "state_fields": [
+     "symbol",
+     "timeframe",
+     "chart"
+    ],
+    "questions": [
+     {
+      "id": "family",
+      "type": "choice",
+      "short": "family",
+      "text": "Which setup family does `chart_description` on `timeframe` show for `symbol`?",
+      "options": [
+       "breakout",
+       "pullback",
+       "range",
+       "reversal",
+       "none"
+      ]
+     },
+     {
+      "id": "volume_confirms",
+      "type": "noul",
+      "short": "volume confirms",
+      "text": "Does the description say volume confirms the move?",
+      "options": [
+       "yes",
+       "no"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "breakout",
+      "meaning": "would load the breakout playbook",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "pullback",
+      "meaning": "would load the pullback playbook",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "range",
+      "meaning": "would load the range playbook",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "reversal",
+      "meaning": "would load the reversal playbook",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "watch",
+      "meaning": "would watch, not act",
+      "when": [
+       "family = breakout and volume_confirms < 0.5",
+       "otherwise"
+      ],
+      "more": 0,
+      "stages": [
+       "route",
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope",
+       "as_of is after the data cutoff (no future data in replay)"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "=family.choice",
+      "meaning": "=family.choice",
+      "when": [
+       "otherwise"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "__abstain__",
+      "meaning": "abstain: no outcome, a person reviews",
+      "when": [
+       "family conf < 0.40",
+       "family = none"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, timeframe, chart_description (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue, future_data",
+     "output": "gate → route → decide in code",
+     "output_detail": "review floor 0.40"
+    }
+   }
   },
   {
    "key": "F",
@@ -1095,7 +1704,147 @@
     "abstain",
     "ai_compute",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "published_at",
+     "headline",
+     "body",
+     "source"
+    ],
+    "excerpt": "headline",
+    "state_fields": [
+     "symbol",
+     "headline",
+     "body"
+    ],
+    "questions": [
+     {
+      "id": "theme",
+      "type": "choice",
+      "short": "theme",
+      "text": "Which investment theme does `headline` most belong to?",
+      "options": [
+       "ai_compute",
+       "biotech",
+       "energy",
+       "rates_financials",
+       "consumer",
+       "ev_auto",
+       "other"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "ai_compute",
+      "meaning": "bucket ai_compute",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "biotech",
+      "meaning": "bucket biotech",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "energy",
+      "meaning": "bucket energy",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "rates_financials",
+      "meaning": "bucket rates_financials",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "consumer",
+      "meaning": "bucket consumer",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "ev_auto",
+      "meaning": "bucket ev_auto",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "other",
+      "meaning": "no bucket",
+      "when": [
+       "otherwise"
+      ],
+      "more": 0,
+      "stages": [
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope",
+       "published_at is after the data cutoff (no future data in replay)"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "=theme.choice",
+      "meaning": "=theme.choice",
+      "when": [
+       "otherwise"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "__abstain__",
+      "meaning": "abstain: no outcome, a person reviews",
+      "when": [
+       "theme conf < 0.40",
+       "theme = other"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, headline, body (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue, future_data",
+     "output": "gate → decide in code",
+     "output_detail": "review floor 0.40"
+    }
+   }
   },
   {
    "key": "G",
@@ -1255,7 +2004,105 @@
     "draft_paper_ticket",
     "abstain",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "venue",
+     "account",
+     "data_cutoff",
+     "note"
+    ],
+    "excerpt": "note",
+    "state_fields": [
+     "note"
+    ],
+    "questions": [
+     {
+      "id": "side",
+      "type": "choice",
+      "short": "side",
+      "text": "In `note`, does the trader want to buy, sell, or short?",
+      "options": [
+       "buy",
+       "sell",
+       "short",
+       "unclear"
+      ]
+     },
+     {
+      "id": "order_type",
+      "type": "choice",
+      "short": "order type",
+      "text": "What order type does `note` ask for?",
+      "options": [
+       "market",
+       "limit",
+       "stop",
+       "unclear"
+      ]
+     },
+     {
+      "id": "tif",
+      "type": "choice",
+      "short": "tif",
+      "text": "What time in force?",
+      "options": [
+       "day",
+       "gtc",
+       "ext"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "draft_paper_ticket",
+      "meaning": "would draft a PAPER ticket for human confirmation (never sent)",
+      "when": [
+       "otherwise"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "needs_clarification",
+      "meaning": "would ask the trader",
+      "when": [
+       "side = unclear or order_type = unclear",
+       "tif = ext and order_type = market",
+       "otherwise"
+      ],
+      "more": 0,
+      "stages": [
+       "gate",
+       "route",
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "paper accounts only",
+       "venue is not NYSE or Nasdaq: out of scope"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     }
+    ],
+    "arrows": {
+     "input": "state built from note (data ≤ data_cutoff)",
+     "guards": "guards in code first: paper_only, venue",
+     "output": "gate → route → decide in code",
+     "output_detail": "review floor 0.40"
+    }
+   }
   }
  ]
 }

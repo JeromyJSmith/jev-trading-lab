@@ -207,7 +207,124 @@
     "abstain",
     "take",
     "take"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "data_cutoff",
+     "items",
+     "signal"
+    ],
+    "excerpt": "items[0].headline",
+    "state_fields": [
+     "symbol",
+     "gap_pct",
+     "items"
+    ],
+    "questions": [
+     {
+      "id": "catalyst",
+      "type": "choice",
+      "short": "catalyst",
+      "text": "What is the primary catalyst in `items` behind the price gap in `symbol`?",
+      "options": [
+       "fda_or_trial",
+       "contract_or_partnership",
+       "earnings",
+       "buyout",
+       "product",
+       "offering",
+       "reverse_split",
+       "promo_or_no_real_news",
+       "other"
+      ]
+     },
+     {
+      "id": "raising_money",
+      "type": "noul",
+      "short": "raising money",
+      "text": "Is the company raising money through shares, warrants or convertibles?",
+      "options": [
+       "yes",
+       "no"
+      ]
+     },
+     {
+      "id": "substance",
+      "type": "choice",
+      "short": "substance",
+      "text": "How substantial is the company-specific news in `items`?",
+      "options": [
+       "no_real_news",
+       "minor",
+       "real_news",
+       "major"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "take",
+      "meaning": "would hand the gap to the strategy (paper; the strategy owns entry/exit/risk)",
+      "when": [
+       "real_p ≥ 0.50"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "skip",
+      "meaning": "would skip the gap",
+      "when": [
+       "gap below the scanner threshold (code)",
+       "not a microcap (code)",
+       "dollar volume below the liquidity floor (code)",
+       "raising_money ≥ 0.50"
+      ],
+      "more": 2,
+      "stages": [
+       "guard",
+       "route",
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (bad, misaligned or future input)",
+      "when": [
+       "a research item is published after the data cutoff"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "__abstain__",
+      "meaning": "abstain: no outcome, a person reviews",
+      "when": [
+       "no point-in-time research for this signal: missing evidence stays unresolved",
+       "catalyst conf < 0.40"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, signal, items (data ≤ data_cutoff)",
+     "guards": "guards in code first: below_gap_threshold, not_microcap, illiquid, no_research, future_research",
+     "output": "gate → route → decide in code",
+     "output_detail": "review floor 0.40 · min gap pct 20 · max market cap musd 300"
+    }
+   }
   },
   {
    "key": "B",
@@ -437,7 +554,116 @@
     "abstain",
     "proceed",
     "proceed"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "data_cutoff",
+     "items",
+     "signal"
+    ],
+    "excerpt": "items[0].headline",
+    "state_fields": [
+     "symbol",
+     "signal",
+     "items"
+    ],
+    "questions": [
+     {
+      "id": "buyout_risk",
+      "type": "noul",
+      "short": "buyout risk",
+      "text": "Do `items` say `symbol` is being acquired, has a pending buyout, or received a takeover offer?",
+      "options": [
+       "yes",
+       "no"
+      ]
+     },
+     {
+      "id": "company_problem",
+      "type": "noul",
+      "short": "company problem",
+      "text": "Do `items` describe a serious company-specific problem?",
+      "options": [
+       "yes",
+       "no"
+      ]
+     },
+     {
+      "id": "move_category",
+      "type": "choice",
+      "short": "move category",
+      "text": "What best explains the recent move in `symbol` according to `items`?",
+      "options": [
+       "company_news",
+       "earnings",
+       "analyst_action",
+       "sector_or_market",
+       "buyout",
+       "no_news"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "proceed",
+      "meaning": "would take the code signal (paper)",
+      "when": [
+       "otherwise: both risks < 50%: the code signal stands"
+      ],
+      "more": 0,
+      "stages": [
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "skip",
+      "meaning": "would skip the entry",
+      "when": [
+       "buyout_risk ≥ 0.50",
+       "company_problem ≥ 0.50"
+      ],
+      "more": 0,
+      "stages": [
+       "route"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (bad, misaligned or future input)",
+      "when": [
+       "code finds no bullish cross in the signal values",
+       "RSI is not below the dip level",
+       "a research item is published after the data cutoff"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "__abstain__",
+      "meaning": "abstain: no outcome, a person reviews",
+      "when": [
+       "no point-in-time research for this signal: missing evidence stays unresolved"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, signal, items (data ≤ data_cutoff)",
+     "guards": "guards in code first: no_cross, no_dip, no_research, future_research",
+     "output": "route in code",
+     "output_detail": "risk 0.50 · rsi dip 30"
+    }
+   }
   },
   {
    "key": "C",
@@ -605,7 +831,117 @@
     "skip",
     "abstain",
     "would_long"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "data_cutoff",
+     "items",
+     "signal"
+    ],
+    "excerpt": "items[0].headline",
+    "state_fields": [
+     "symbol",
+     "items"
+    ],
+    "questions": [
+     {
+      "id": "guidance",
+      "type": "choice",
+      "short": "guidance",
+      "text": "In the earnings release in `items`, what did `symbol` do with its forward guidance?",
+      "options": [
+       "raised",
+       "kept",
+       "cut",
+       "not_given"
+      ]
+     },
+     {
+      "id": "outlook",
+      "type": "score",
+      "short": "outlook",
+      "text": "How positive does management's outlook sound in `items`?",
+      "options": [
+       "Negative or cautious",
+       "Neutral or mixed",
+       "Positive",
+       "Very positive and confident"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "would_long",
+      "meaning": "gap up confirmed by raised guidance (paper)",
+      "when": [
+       "signal.gap_pct > 0 and P(guidance=raised) ≥ 0.50 and outlook ≥ 0.50"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "would_short",
+      "meaning": "gap down confirmed by a guidance cut (paper; the lab is long/flat)",
+      "when": [
+       "signal.gap_pct < 0 and P(guidance=cut) ≥ 0.50 and outlook ≤ 0.50"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "skip",
+      "meaning": "guidance and gap disagree, or gap too small",
+      "when": [
+       "earnings gap below the minimum size (code)",
+       "otherwise: guidance does not point the gap's way"
+      ],
+      "more": 0,
+      "stages": [
+       "guard",
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (bad, misaligned or future input)",
+      "when": [
+       "a research item is published after the data cutoff"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "__abstain__",
+      "meaning": "abstain: no outcome, a person reviews",
+      "when": [
+       "no point-in-time research for this signal: missing evidence stays unresolved",
+       "guidance conf < 0.50"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, items (data ≤ data_cutoff)",
+     "guards": "guards in code first: no_gap, no_research, future_research",
+     "output": "gate → decide in code",
+     "output_detail": "review floor 0.50 · min gap pct 2 · align 0.50"
+    }
+   }
   },
   {
    "key": "D",
@@ -814,7 +1150,121 @@
     "abstain",
     "calendar",
     "calendar"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "data_cutoff",
+     "candidate_dates",
+     "items"
+    ],
+    "excerpt": "items[0].headline",
+    "state_fields": [
+     "symbol",
+     "items"
+    ],
+    "questions": [
+     {
+      "id": "event_type",
+      "type": "choice",
+      "short": "event type",
+      "text": "What kind of upcoming event does `items` announce for `symbol`?",
+      "options": [
+       "fda_decision",
+       "product_launch",
+       "investor_day",
+       "earnings_date",
+       "shareholder_vote",
+       "conference",
+       "other_event",
+       "no_event"
+      ]
+     },
+     {
+      "id": "scheduled",
+      "type": "noul",
+      "short": "scheduled",
+      "text": "Is the event formally scheduled on a stated date (not speculative, rumoured or 'expected sometime')?",
+      "options": [
+       "yes",
+       "no"
+      ]
+     },
+     {
+      "id": "event_date",
+      "type": "choice",
+      "short": "event date",
+      "text": "Which of these dates is the date the event in `items` takes place?",
+      "options": [
+       "2026-12-12",
+       "2011-01-01",
+       "none"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "calendar",
+      "meaning": "would add the event to the event-strategy calendar (paper)",
+      "when": [
+       "otherwise"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "ignore",
+      "meaning": "not a calendar event",
+      "when": [
+       "code found no dates in the announcement",
+       "event_type = no_event or scheduled < 0.50",
+       "event_date = none",
+       "not after(event_date.choice + T23:59:59Z, data_cutoff)"
+      ],
+      "more": 1,
+      "stages": [
+       "guard",
+       "route",
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (bad, misaligned or future input)",
+      "when": [
+       "a research item is published after the data cutoff"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "__abstain__",
+      "meaning": "abstain: no outcome, a person reviews",
+      "when": [
+       "no point-in-time research for this signal: missing evidence stays unresolved",
+       "event_type conf < 0.50"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, items (data ≤ data_cutoff)",
+     "guards": "guards in code first: no_dates, no_research, future_research",
+     "output": "gate → route → decide in code",
+     "output_detail": "review floor 0.50 · scheduled 0.50"
+    }
+   }
   },
   {
    "key": "E",
@@ -1024,7 +1474,118 @@
     "abstain",
     "proceed",
     "proceed"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "data_cutoff",
+     "items",
+     "signal"
+    ],
+    "excerpt": "items[0].headline",
+    "state_fields": [
+     "symbol",
+     "items"
+    ],
+    "questions": [
+     {
+      "id": "real_reason",
+      "type": "noul",
+      "short": "real reason",
+      "text": "Do `items` give a real company-specific reason for `symbol` breaking out today?",
+      "options": [
+       "yes",
+       "no"
+      ]
+     },
+     {
+      "id": "buyout",
+      "type": "noul",
+      "short": "buyout",
+      "text": "Do `items` say `symbol` is being bought out or acquired?",
+      "options": [
+       "yes",
+       "no"
+      ]
+     },
+     {
+      "id": "reason_type",
+      "type": "choice",
+      "short": "reason type",
+      "text": "What type of reason do `items` give for the move?",
+      "options": [
+       "earnings",
+       "product",
+       "contract",
+       "analyst_action",
+       "buyout",
+       "sector_or_macro",
+       "no_news"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "proceed",
+      "meaning": "would keep the breakout (paper)",
+      "when": [
+       "real_reason ≥ 0.50"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "skip",
+      "meaning": "would skip the breakout",
+      "when": [
+       "relative volume below the breakout floor (code)",
+       "buyout ≥ 0.50",
+       "otherwise: no real reason for the breakout"
+      ],
+      "more": 0,
+      "stages": [
+       "guard",
+       "route",
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (bad, misaligned or future input)",
+      "when": [
+       "close is not above the prior high (code)",
+       "a research item is published after the data cutoff"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "__abstain__",
+      "meaning": "abstain: no outcome, a person reviews",
+      "when": [
+       "no point-in-time research for this signal: missing evidence stays unresolved"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, items (data ≤ data_cutoff)",
+     "guards": "guards in code first: not_breakout, low_volume, no_research, future_research",
+     "output": "route → decide in code",
+     "output_detail": "min rel volume 1.50 · real 0.50 · buyout 0.50"
+    }
+   }
   },
   {
    "key": "F",
@@ -1177,7 +1738,121 @@
     "abstain",
     "follow",
     "follow"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "data_cutoff",
+     "filing"
+    ],
+    "excerpt": "filing.item4_text",
+    "state_fields": [
+     "symbol",
+     "filer",
+     "item4"
+    ],
+    "questions": [
+     {
+      "id": "plan",
+      "type": "choice",
+      "short": "plan",
+      "text": "What does `filer` plan to do according to Item 4 in `item4`?",
+      "options": [
+       "passive_investment",
+       "board_seats",
+       "sale_or_merger",
+       "operational_change",
+       "capital_return",
+       "management_change",
+       "other"
+      ]
+     },
+     {
+      "id": "aggressiveness",
+      "type": "score",
+      "short": "aggressiveness",
+      "text": "How aggressive is the plan in `item4`?",
+      "options": [
+       "Passive: investment only",
+       "Engaged: may talk with management",
+       "Pushing: specific public demands",
+       "Hostile: proxy fight or nomination threat"
+      ]
+     },
+     {
+      "id": "board_engagement",
+      "type": "noul",
+      "short": "board engagement",
+      "text": "Is `filer` already talking to the board or management, or seeking board representation?",
+      "options": [
+       "yes",
+       "no"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "follow",
+      "meaning": "would pass to the activist strategy (paper)",
+      "when": [
+       "aggressiveness ≥ 0.50 or board_engagement ≥ 0.50"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "ignore",
+      "meaning": "not an active campaign",
+      "when": [
+       "not a 13D (a 13G filer is passive by form)",
+       "P(plan=passive_investment) ≥ 0.50",
+       "otherwise: plan stated but no active campaign"
+      ],
+      "more": 0,
+      "stages": [
+       "guard",
+       "route",
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (bad, misaligned or future input)",
+      "when": [
+       "ownership below 5% is not a 13D trigger",
+       "filing is after the data cutoff"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "__abstain__",
+      "meaning": "abstain: no outcome, a person reviews",
+      "when": [
+       "Item 4 text missing: unresolved",
+       "plan conf < 0.50"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, filing (data ≤ data_cutoff)",
+     "guards": "guards in code first: not_13d, below_5pct, future_filing, no_item4",
+     "output": "gate → route → decide in code",
+     "output_detail": "review floor 0.50 · min pct 5 · passive 0.50"
+    }
+   }
   },
   {
    "key": "G",
@@ -1414,7 +2089,115 @@
     "JETF",
     "SKYJ",
     "GLPQ"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "data_cutoff",
+     "lead",
+     "peers"
+    ],
+    "excerpt": "lead.headline",
+    "state_fields": [
+     "lead_symbol",
+     "headline",
+     "news"
+    ],
+    "questions": [
+     {
+      "id": "spillover",
+      "type": "noul",
+      "short": "spillover",
+      "text": "Does the news about `lead_symbol` change demand, supply, pricing or regulation for OTHER companies in the same business (not only the lead company's own execution)?",
+      "options": [
+       "yes",
+       "no"
+      ]
+     },
+     {
+      "id": "most_affected",
+      "type": "choice",
+      "short": "most affected",
+      "text": "Which listed peer's business is most directly affected by the news about `lead_symbol`?",
+      "options": [
+       "FABX",
+       "MEMQ",
+       "SOFTA",
+       "BEVQ",
+       "none"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "no_play",
+      "meaning": "no sympathy play",
+      "when": [
+       "lead move below the threshold (code)",
+       "most_affected = none or spillover < 0.50",
+       "otherwise"
+      ],
+      "more": 0,
+      "stages": [
+       "guard",
+       "route",
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "peer",
+      "meaning": "outcome is the peer symbol (paper candidate)",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (bad, misaligned or future input)",
+      "when": [
+       "no peer list",
+       "lead news is after the data cutoff"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "=most_affected.choice",
+      "meaning": "=most affected.choice",
+      "when": [
+       "otherwise"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "__abstain__",
+      "meaning": "abstain: no outcome, a person reviews",
+      "when": [
+       "most_affected conf < 0.40"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, lead (data ≤ data_cutoff)",
+     "guards": "guards in code first: no_peers, small_move, future_news",
+     "output": "gate → route → decide in code",
+     "output_detail": "review floor 0.40 · min lead move pct 5 · spillover 0.50"
+    }
+   }
   },
   {
    "key": "H",
@@ -1567,7 +2350,120 @@
     "abstain",
     "kill",
     "kill"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "data_cutoff",
+     "items"
+    ],
+    "excerpt": "items[0].headline",
+    "state_fields": [
+     "symbol",
+     "items"
+    ],
+    "questions": [
+     {
+      "id": "event_type",
+      "type": "choice",
+      "short": "event type",
+      "text": "What kind of event about `symbol` do `items` report?",
+      "options": [
+       "routine",
+       "offering",
+       "guidance_cut",
+       "executive_departure",
+       "legal_or_regulatory",
+       "accounting",
+       "product_or_safety",
+       "other_adverse"
+      ]
+     },
+     {
+      "id": "severity",
+      "type": "choice",
+      "short": "severity",
+      "text": "How severe is this news for `symbol` shareholders?",
+      "options": [
+       "none",
+       "minor",
+       "serious",
+       "severe"
+      ]
+     },
+     {
+      "id": "sudden_departure",
+      "type": "noul",
+      "short": "sudden departure",
+      "text": "If an executive is leaving, is the departure sudden or unplanned?",
+      "options": [
+       "yes",
+       "no"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "kill",
+      "meaning": "would alert risk controls to cut the position (paper)",
+      "when": [
+       "otherwise"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "hold",
+      "meaning": "no action",
+      "when": [
+       "event_type = routine",
+       "serious_p < 0.50",
+       "event_type = executive_departure and sudden_departure < 0.50",
+       "otherwise"
+      ],
+      "more": 0,
+      "stages": [
+       "route",
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (bad, misaligned or future input)",
+      "when": [
+       "a research item is published after the data cutoff"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "__abstain__",
+      "meaning": "abstain: no outcome, a person reviews",
+      "when": [
+       "no point-in-time research for this signal: missing evidence stays unresolved",
+       "event_type conf < 0.40"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, items (data ≤ data_cutoff)",
+     "guards": "guards in code first: no_research, future_research",
+     "output": "gate → route → decide in code",
+     "output_detail": "review floor 0.40 · severity 0.50 · sudden 0.50"
+    }
+   }
   },
   {
    "key": "I",
@@ -1705,7 +2601,116 @@
     "no_change",
     "abstain",
     "exit_review"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "data_cutoff",
+     "changed_risk_text",
+     "filing"
+    ],
+    "excerpt": "changed_risk_text",
+    "state_fields": [
+     "symbol",
+     "changed_risk_text"
+    ],
+    "questions": [
+     {
+      "id": "new_material_risk",
+      "type": "noul",
+      "short": "new material risk",
+      "text": "Does `changed_risk_text` add or materially expand a company-specific risk compared with last year?",
+      "options": [
+       "yes",
+       "no"
+      ]
+     },
+     {
+      "id": "risk_category",
+      "type": "choice",
+      "short": "risk category",
+      "text": "Which category best describes the changed risk text?",
+      "options": [
+       "going_concern",
+       "liquidity_or_debt",
+       "customer_concentration",
+       "regulatory_or_legal",
+       "supply_chain",
+       "competition_or_demand",
+       "boilerplate"
+      ]
+     },
+     {
+      "id": "going_concern",
+      "type": "noul",
+      "short": "going concern",
+      "text": "Does `changed_risk_text` raise substantial doubt about the company's ability to continue as a going concern?",
+      "options": [
+       "yes",
+       "no"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "exit_review",
+      "meaning": "would send the holding to an exit review (paper)",
+      "when": [
+       "going_concern ≥ 0.50"
+      ],
+      "more": 0,
+      "stages": [
+       "route"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "flag",
+      "meaning": "would flag for review",
+      "when": [
+       "new_material_risk ≥ 0.50 and risk_category ≠ boilerplate"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "no_change",
+      "meaning": "no new material risk",
+      "when": [
+       "code diff found no changed risk text",
+       "otherwise: no new material risk"
+      ],
+      "more": 0,
+      "stages": [
+       "guard",
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (bad, misaligned or future input)",
+      "when": [
+       "not an annual report",
+       "filing is after the data cutoff"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, changed_risk_text (data ≤ data_cutoff)",
+     "guards": "guards in code first: not_10k, future_filing, no_changes",
+     "output": "route → decide in code",
+     "output_detail": "going concern 0.50 · material 0.50"
+    }
+   }
   },
   {
    "key": "J",
@@ -1913,7 +2918,106 @@
     "abstain",
     "approve",
     "approve"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "account",
+     "data_cutoff",
+     "allowed_setups",
+     "proposal"
+    ],
+    "excerpt": "data_cutoff",
+    "state_fields": [
+     "symbol",
+     "allowed_setups",
+     "side",
+     "stop",
+     "invalidation",
+     "reasoning",
+     "daily_pnl_pct"
+    ],
+    "questions": [
+     {
+      "id": "setup_violation",
+      "type": "noul",
+      "short": "setup violation",
+      "text": "Does `reasoning` rely on a tip, rumor or gut feeling instead of one of `allowed_setups`?",
+      "options": [
+       "yes",
+       "no"
+      ]
+     },
+     {
+      "id": "revenge_trading",
+      "type": "noul",
+      "short": "revenge trading",
+      "text": "Is the trade motivated by recovering a loss? Negative daily P&L alone is not revenge trading.",
+      "options": [
+       "yes",
+       "no"
+      ]
+     },
+     {
+      "id": "missing_stop",
+      "type": "noul",
+      "short": "missing stop",
+      "text": "Is a concrete stop or actionable invalidation missing from `stop`, `invalidation` and `reasoning`?",
+      "options": [
+       "yes",
+       "no"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "approve",
+      "meaning": "would pass to execution checks (paper; never submitted)",
+      "when": [
+       "otherwise: all violations < 0.5: passes to freshness/account/execution checks (approval is not an order)"
+      ],
+      "more": 0,
+      "stages": [
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "block",
+      "meaning": "proposal stops here",
+      "when": [
+       "position size above the limit (code)",
+       "adds to a losing position (code)",
+       "event restriction window (code)",
+       "setup_violation ≥ 0.50"
+      ],
+      "more": 2,
+      "stages": [
+       "guard",
+       "route"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (bad, misaligned or future input)",
+      "when": [
+       "no allowed setups configured"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, allowed_setups, proposal, account (data ≤ data_cutoff)",
+     "guards": "guards in code first: no_allowed_setups, oversize, adding_to_loser, event_restricted",
+     "output": "route in code",
+     "output_detail": "max size pct 5 · violation 0.50"
+    }
+   }
   }
  ]
 }

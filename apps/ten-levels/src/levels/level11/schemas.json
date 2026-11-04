@@ -177,7 +177,145 @@
     "mean_reversion",
     "range_bound",
     "gap_and_go"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "data_cutoff",
+     "as_of",
+     "timeframe",
+     "observation"
+    ],
+    "excerpt": "data_cutoff",
+    "state_fields": [
+     "symbol",
+     "timeframe",
+     "observations",
+     "notes"
+    ],
+    "questions": [
+     {
+      "id": "family",
+      "type": "choice",
+      "short": "family",
+      "text": "Which setup family do `observations` for `symbol` on `timeframe` describe?",
+      "options": [
+       "breakout",
+       "pullback_continuation",
+       "mean_reversion",
+       "range_bound",
+       "gap_and_go",
+       "reversal",
+       "unclear",
+       "other"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "breakout",
+      "meaning": "breakout setup",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "pullback_continuation",
+      "meaning": "pullback in a trend",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "mean_reversion",
+      "meaning": "stretched, reverting",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "range_bound",
+      "meaning": "inside a range",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "gap_and_go",
+      "meaning": "gap that holds",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "reversal",
+      "meaning": "trend reversal",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "unclear",
+      "meaning": "abstain label (kept on abstained runs)",
+      "when": [
+       "observation marked unreadable",
+       "family conf < 0.55"
+      ],
+      "more": 0,
+      "stages": [
+       "guard",
+       "gate"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "other",
+      "meaning": "abstain label (kept on abstained runs)",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any call",
+      "when": [
+       "symbol/timeframe/cutoff misaligned, stale, or future data"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "=family.choice",
+      "meaning": "=family.choice",
+      "when": [
+       "family ∈ unclear/other",
+       "otherwise"
+      ],
+      "more": 0,
+      "stages": [
+       "gate",
+       "decide"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, timeframe, observation (data ≤ data_cutoff)",
+     "guards": "guards in code first: misaligned, unreadable",
+     "output": "gate → decide in code",
+     "output_detail": "family conf 0.55 · max observation age s 900"
+    }
+   }
   },
   {
    "key": "B",
@@ -380,7 +518,131 @@
     "watch",
     "abstain",
     "paper_candidate"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "data_cutoff",
+     "as_of",
+     "timeframe",
+     "hypothesis",
+     "features",
+     "observation"
+    ],
+    "excerpt": "hypothesis",
+    "state_fields": [
+     "hypothesis",
+     "symbol",
+     "timeframe",
+     "observations",
+     "features"
+    ],
+    "questions": [
+     {
+      "id": "matches",
+      "type": "choice",
+      "short": "matches",
+      "text": "Do `observations` and `features` fit `hypothesis` for `symbol` on `timeframe`?",
+      "options": [
+       "matches",
+       "partial",
+       "contradicts",
+       "unclear"
+      ]
+     },
+     {
+      "id": "observation_quality",
+      "type": "score",
+      "short": "observation quality",
+      "text": "How complete and consistent are `observations`?",
+      "options": [
+       "Sparse or contradictory",
+       "Usable with gaps",
+       "Complete and internally consistent"
+      ]
+     },
+     {
+      "id": "conflicting_evidence",
+      "type": "noul",
+      "short": "conflicting evidence",
+      "text": "Does anything in `observations` or `features` state the OPPOSITE of a condition in `hypothesis`?",
+      "options": [
+       "yes",
+       "no"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "paper_candidate",
+      "meaning": "candidate for paper review only (never an order)",
+      "when": [
+       "matches = matches and matches conf ≥ 0.70 and observation_quality ≥ 0…"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "watch",
+      "meaning": "partial fit, keep watching",
+      "when": [
+       "otherwise: partial fit"
+      ],
+      "more": 0,
+      "stages": [
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "reject",
+      "meaning": "contradicted, conflicting, or out-of-bounds feature",
+      "when": [
+       "a numeric feature is outside its bounds",
+       "matches = contradicts or conflicting_evidence ≥ 0.60"
+      ],
+      "more": 0,
+      "stages": [
+       "guard",
+       "route"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any call",
+      "when": [
+       "misaligned/stale/future data or a missing feature"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "__abstain__",
+      "meaning": "abstain: no outcome, a person reviews",
+      "when": [
+       "matches = unclear or matches conf < 0.50"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from hypothesis, symbol, timeframe, observation, features (data ≤ data_cutoff)",
+     "guards": "guards in code first: feature_out_of_bounds, misaligned_or_missing",
+     "output": "gate → route → decide in code",
+     "output_detail": "review floor 0.50 · match conf 0.70 · min quality 0.50"
+    }
+   }
   },
   {
    "key": "C",
@@ -522,7 +784,126 @@
     "needs_more_evidence",
     "eligible_for_frozen_evaluation",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "metrics",
+     "config_summary",
+     "notes",
+     "evaluation_frozen"
+    ],
+    "excerpt": "config_summary",
+    "state_fields": [
+     "metrics",
+     "config_summary",
+     "notes"
+    ],
+    "questions": [
+     {
+      "id": "lookahead_risk",
+      "type": "noul",
+      "short": "lookahead risk",
+      "text": "Does `config_summary` or `notes` suggest the backtest used information not available at decision time?",
+      "options": [
+       "yes",
+       "no"
+      ]
+     },
+     {
+      "id": "overfit_risk",
+      "type": "score",
+      "short": "overfit risk",
+      "text": "How likely is the result in `metrics` an artefact of tuning described in `config_summary`?",
+      "options": [
+       "Few parameters fixed in advance, out-of-sample tested",
+       "Some tuning, partial out-of-sample",
+       "Many tuned parameters, no out-of-sample, or cherry-picked periods"
+      ]
+     },
+     {
+      "id": "cost_realism",
+      "type": "score",
+      "short": "cost realism",
+      "text": "How realistic are the costs and fills in `config_summary`?",
+      "options": [
+       "No costs or slippage modelled",
+       "Commissions only or fixed slippage",
+       "Commissions, spread, slippage and fill rules"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "reject",
+      "meaning": "lookahead risk",
+      "when": [
+       "lookahead_risk ≥ 0.50"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "needs_more_evidence",
+      "meaning": "overfit or cost realism problem",
+      "when": [
+       "cost_realism conf ≥ 0.34 and cost_realism < 0.50",
+       "overfit_risk conf ≥ 0.34 and overfit_risk ≥ 0.60",
+       "overfit_risk ≥ 0.60 or cost_realism < 0.50"
+      ],
+      "more": 0,
+      "stages": [
+       "gate",
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "eligible_for_frozen_evaluation",
+      "meaning": "may enter a frozen evaluation; not a promotion",
+      "when": [
+       "otherwise: passes qualitative review (never promotes)"
+      ],
+      "more": 0,
+      "stages": [
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "insufficient_sample",
+      "meaning": "too few trades (no call)",
+      "when": [
+       "too few trades to review"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "__abstain__",
+      "meaning": "abstain: no outcome, a person reviews",
+      "when": [
+       "min([overfit_risk conf, cost_realism conf]) < 0.34"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from metrics, config_summary, notes",
+     "guards": "guards in code first: insufficient_sample",
+     "output": "guard → gate → decide in code",
+     "output_detail": "min trades 30 · lookahead 0.50 · overfit 0.60"
+    }
+   }
   },
   {
    "key": "D",
@@ -585,7 +966,64 @@
     "flag_as_data",
     "flag_as_data",
     "flag_as_data"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "content",
+     "origin"
+    ],
+    "excerpt": "content",
+    "state_fields": [
+     "origin",
+     "content"
+    ],
+    "questions": [
+     {
+      "id": "injection",
+      "type": "noul",
+      "short": "injection",
+      "text": "Does `content` contain instructions aimed at an AI agent rather than information?",
+      "options": [
+       "yes",
+       "no"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "flag_as_data",
+      "meaning": "keep the content, mark it as data with a banner",
+      "when": [
+       "injection ≥ 0.70"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "clean",
+      "meaning": "no instructions aimed at an agent",
+      "when": [
+       "empty content",
+       "otherwise: below the injection threshold"
+      ],
+      "more": 0,
+      "stages": [
+       "guard",
+       "default"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from origin, content",
+     "guards": "guards in code first: empty",
+     "output": "guard in code",
+     "output_detail": "injection 0.70"
+    }
+   }
   }
  ]
 }

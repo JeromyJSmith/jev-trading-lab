@@ -289,7 +289,165 @@
     "range",
     "gap_fill",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "session_date",
+     "data_cutoff",
+     "features_cutoff",
+     "timeframe",
+     "bars",
+     "features",
+     "shape_summary",
+     "gap_raw"
+    ],
+    "excerpt": "shape_summary",
+    "state_fields": [
+     "symbol",
+     "timeframe",
+     "close_vs_open_pct",
+     "range_pct",
+     "residual_slope",
+     "residual_r2",
+     "max_up_pct",
+     "max_down_pct",
+     "extreme_time_frac",
+     "mean_crossings",
+     "open_gap_pct",
+     "gap_size_class",
+     "gap_threshold_pct",
+     "real_gap_filled",
+     "shape_summary"
+    ],
+    "questions": [
+     {
+      "id": "family",
+      "type": "choice",
+      "short": "family",
+      "text": "Which intraday pattern family do the features (and `shape_summary`) for `symbol` on `timeframe` describe? Judge the intraday path first; the gap fields are already thresholded in code.",
+      "options": [
+       "trend_day",
+       "reversal",
+       "range",
+       "gap_fill",
+       "unclear",
+       "other"
+      ]
+     },
+     {
+      "id": "clarity",
+      "type": "score",
+      "short": "clarity",
+      "text": "How clearly do `features` show a single pattern?",
+      "options": [
+       "Mixed or contradictory signals",
+       "One pattern is suggested but weak",
+       "One pattern is clear in every feature"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "trend_day",
+      "meaning": "one-way session",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "reversal",
+      "meaning": "early move retraced through the open",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "range",
+      "meaning": "oscillation around the baseline",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "gap_fill",
+      "meaning": "opening gap closed back",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "unclear",
+      "meaning": "abstain label",
+      "when": [
+       "family = gap_fill and (len(missing(features, [real_gap_filled])) > 0 …",
+       "family conf < 0.55"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "other",
+      "meaning": "abstain label",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any call",
+      "when": [
+       "features use bars after the decision cutoff (future data)",
+       "a required feature is missing"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "insufficient_bars",
+      "meaning": "too few bars (no call)",
+      "when": [
+       "too few bars to classify a session shape"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "=family.choice",
+      "meaning": "=family.choice",
+      "when": [
+       "family ∈ unclear/other",
+       "otherwise"
+      ],
+      "more": 0,
+      "stages": [
+       "gate",
+       "decide"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, timeframe, features, shape_summary (data ≤ data_cutoff)",
+     "guards": "guards in code first: future_features, missing_features, too_few_bars",
+     "output": "gate → decide in code",
+     "output_detail": "family conf 0.55 · min bars 30"
+    }
+   }
   },
   {
    "key": "B",
@@ -577,7 +735,151 @@
     "range",
     "gap_fill",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "session_date",
+     "data_cutoff",
+     "features_cutoff",
+     "timeframe",
+     "bars",
+     "features",
+     "shape_summary",
+     "gap_raw"
+    ],
+    "excerpt": "shape_summary",
+    "state_fields": [
+     "symbol",
+     "timeframe",
+     "close_vs_open_pct",
+     "range_pct",
+     "residual_slope",
+     "residual_r2",
+     "max_up_pct",
+     "max_down_pct",
+     "extreme_time_frac",
+     "mean_crossings",
+     "shape_summary"
+    ],
+    "questions": [
+     {
+      "id": "family",
+      "type": "choice",
+      "short": "family",
+      "text": "Which intraday pattern family do the features (and `shape_summary`) for `symbol` on `timeframe` describe? Judge the intraday path.",
+      "options": [
+       "trend_day",
+       "reversal",
+       "range",
+       "unclear",
+       "other"
+      ]
+     },
+     {
+      "id": "clarity",
+      "type": "score",
+      "short": "clarity",
+      "text": "How clearly do `features` show a single pattern?",
+      "options": [
+       "Mixed or contradictory signals",
+       "One pattern is suggested but weak",
+       "One pattern is clear in every feature"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "trend_day",
+      "meaning": "one-way session",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "reversal",
+      "meaning": "early move retraced through the open",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "range",
+      "meaning": "oscillation around the baseline",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "unclear",
+      "meaning": "abstain label",
+      "when": [
+       "family conf < 0.55"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "other",
+      "meaning": "abstain label",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any call",
+      "when": [
+       "features use bars after the decision cutoff (future data)",
+       "a required feature is missing"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "insufficient_bars",
+      "meaning": "too few bars (no call)",
+      "when": [
+       "too few bars to classify a session shape"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "=family.choice",
+      "meaning": "=family.choice",
+      "when": [
+       "family ∈ unclear/other",
+       "otherwise"
+      ],
+      "more": 0,
+      "stages": [
+       "gate",
+       "decide"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, timeframe, features, shape_summary (data ≤ data_cutoff)",
+     "guards": "guards in code first: future_features, missing_features, too_few_bars",
+     "output": "gate → decide in code",
+     "output_detail": "family conf 0.55 · min bars 30"
+    }
+   }
   }
  ]
 }

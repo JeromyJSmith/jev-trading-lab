@@ -160,7 +160,92 @@
     "clear",
     "abstain",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "filed_at",
+     "form",
+     "document"
+    ],
+    "excerpt": "document",
+    "state_fields": [
+     "symbol",
+     "form",
+     "document"
+    ],
+    "questions": [
+     {
+      "id": "going_concern",
+      "type": "noul",
+      "short": "going concern",
+      "text": "Does `document` state substantial doubt about the company's ability to continue as a going concern?",
+      "options": [
+       "yes",
+       "no"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "flag_going_concern",
+      "meaning": "would flag the symbol: no new longs, review held positions",
+      "when": [
+       "going_concern ≥ 0.60"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "clear",
+      "meaning": "no going-concern language",
+      "when": [
+       "otherwise: no going-concern doubt"
+      ],
+      "more": 0,
+      "stages": [
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope",
+       "filed_at is after the data cutoff (no future data in replay)"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "__abstain__",
+      "meaning": "abstain: no outcome, a person reviews",
+      "when": [
+       "empty document"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, form, document (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue, future_data, empty_doc",
+     "output": "decide in code",
+     "output_detail": "threshold 0.60"
+    }
+   }
   },
   {
    "key": "B",
@@ -331,7 +416,117 @@
     "clear",
     "note",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "filed_at",
+     "form",
+     "document"
+    ],
+    "excerpt": "document",
+    "state_fields": [
+     "symbol",
+     "form",
+     "document"
+    ],
+    "questions": [
+     {
+      "id": "change",
+      "type": "choice",
+      "short": "change",
+      "text": "What does `document` report about the company's auditor?",
+      "options": [
+       "resigned",
+       "dismissed",
+       "none"
+      ]
+     },
+     {
+      "id": "disagreement",
+      "type": "noul",
+      "short": "disagreement",
+      "text": "Does it report disagreements or reportable events with the auditor?",
+      "options": [
+       "yes",
+       "no"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "red_flag",
+      "meaning": "would flag accounting risk",
+      "when": [
+       "change = resigned or disagreement ≥ 0.5"
+      ],
+      "more": 0,
+      "stages": [
+       "route"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "note",
+      "meaning": "would note a routine auditor change",
+      "when": [
+       "otherwise"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "clear",
+      "meaning": "no auditor change",
+      "when": [
+       "change = none",
+       "otherwise"
+      ],
+      "more": 0,
+      "stages": [
+       "route",
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope",
+       "filed_at is after the data cutoff (no future data in replay)"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "__abstain__",
+      "meaning": "abstain: no outcome, a person reviews",
+      "when": [
+       "empty document"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, form, document (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue, future_data, empty_doc",
+     "output": "route → decide in code",
+     "output_detail": ""
+    }
+   }
   },
   {
    "key": "C",
@@ -491,7 +686,92 @@
     "review_risk",
     "no_change",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "filed_at",
+     "form",
+     "document"
+    ],
+    "excerpt": "document",
+    "state_fields": [
+     "symbol",
+     "form",
+     "document"
+    ],
+    "questions": [
+     {
+      "id": "new_risk",
+      "type": "noul",
+      "short": "new risk",
+      "text": "Does `document` add a new, company-specific material risk factor (not generic boilerplate)?",
+      "options": [
+       "yes",
+       "no"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "review_risk",
+      "meaning": "would queue Item 1A for analyst review",
+      "when": [
+       "new_risk ≥ 0.60"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "no_change",
+      "meaning": "no new material risk",
+      "when": [
+       "otherwise: no new material risk"
+      ],
+      "more": 0,
+      "stages": [
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope",
+       "filed_at is after the data cutoff (no future data in replay)"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "__abstain__",
+      "meaning": "abstain: no outcome, a person reviews",
+      "when": [
+       "empty document"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, form, document (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue, future_data, empty_doc",
+     "output": "decide in code",
+     "output_detail": "threshold 0.60"
+    }
+   }
   },
   {
    "key": "D",
@@ -665,7 +945,120 @@
     "negative_read",
     "neutral_read",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "filed_at",
+     "form",
+     "document"
+    ],
+    "excerpt": "document",
+    "state_fields": [
+     "symbol",
+     "form",
+     "document"
+    ],
+    "questions": [
+     {
+      "id": "guidance",
+      "type": "choice",
+      "short": "guidance",
+      "text": "What does management do to guidance in `document`?",
+      "options": [
+       "raised",
+       "maintained",
+       "cut",
+       "none"
+      ]
+     },
+     {
+      "id": "tone",
+      "type": "score",
+      "short": "tone",
+      "text": "How confident is management's tone?",
+      "options": [
+       "defensive",
+       "cautious",
+       "neutral",
+       "confident"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "positive_read",
+      "meaning": "positive call read",
+      "when": [
+       "guidance = raised and tone ≥ 0.5"
+      ],
+      "more": 0,
+      "stages": [
+       "route"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "negative_read",
+      "meaning": "negative call read",
+      "when": [
+       "guidance = cut"
+      ],
+      "more": 0,
+      "stages": [
+       "route"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "neutral_read",
+      "meaning": "neutral call read",
+      "when": [
+       "otherwise"
+      ],
+      "more": 0,
+      "stages": [
+       "decide",
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope",
+       "filed_at is after the data cutoff (no future data in replay)"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "__abstain__",
+      "meaning": "abstain: no outcome, a person reviews",
+      "when": [
+       "empty document",
+       "guidance = none"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, form, document (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue, future_data, empty_doc",
+     "output": "gate → route → decide in code",
+     "output_detail": ""
+    }
+   }
   },
   {
    "key": "E",
@@ -831,7 +1224,110 @@
     "abstain",
     "ignore",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "filed_at",
+     "form",
+     "document"
+    ],
+    "excerpt": "document",
+    "state_fields": [
+     "symbol",
+     "form",
+     "document"
+    ],
+    "questions": [
+     {
+      "id": "kind",
+      "type": "choice",
+      "short": "kind",
+      "text": "What transaction does this Form 4 (`document`) report?",
+      "options": [
+       "open_buy",
+       "open_sell",
+       "plan_sell",
+       "grant",
+       "exercise",
+       "other"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "insider_buy_signal",
+      "meaning": "would add to the insider-buying signal",
+      "when": [
+       "kind = open_buy"
+      ],
+      "more": 0,
+      "stages": [
+       "route"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "insider_sell_note",
+      "meaning": "would note a discretionary insider sale",
+      "when": [
+       "kind = open_sell"
+      ],
+      "more": 0,
+      "stages": [
+       "route"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "ignore",
+      "meaning": "no signal",
+      "when": [
+       "otherwise"
+      ],
+      "more": 0,
+      "stages": [
+       "decide",
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope",
+       "filed_at is after the data cutoff (no future data in replay)"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "__abstain__",
+      "meaning": "abstain: no outcome, a person reviews",
+      "when": [
+       "empty document",
+       "kind = other"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, form, document (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue, future_data, empty_doc",
+     "output": "gate → route → decide in code",
+     "output_detail": ""
+    }
+   }
   },
   {
    "key": "F",
@@ -998,7 +1494,106 @@
     "ignore",
     "abstain",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "filed_at",
+     "form",
+     "document"
+    ],
+    "excerpt": "document",
+    "state_fields": [
+     "symbol",
+     "form",
+     "document"
+    ],
+    "questions": [
+     {
+      "id": "intent",
+      "type": "score",
+      "short": "intent",
+      "text": "How activist is the filer's intent in Item 4 of `document`?",
+      "options": [
+       "passive investment",
+       "engagement with management",
+       "board seats or strategic changes",
+       "proxy fight or sale of the company"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "activist_catalyst",
+      "meaning": "would tag an activist catalyst",
+      "when": [
+       "intent ≥ 0.66"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "watch",
+      "meaning": "would watch the engagement",
+      "when": [
+       "intent ≥ 0.33"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "ignore",
+      "meaning": "passive",
+      "when": [
+       "otherwise: passive"
+      ],
+      "more": 0,
+      "stages": [
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope",
+       "filed_at is after the data cutoff (no future data in replay)"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "__abstain__",
+      "meaning": "abstain: no outcome, a person reviews",
+      "when": [
+       "empty document"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, form, document (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue, future_data, empty_doc",
+     "output": "decide in code",
+     "output_detail": "hot 0.66 · warm 0.33"
+    }
+   }
   },
   {
    "key": "G",
@@ -1190,7 +1785,107 @@
     "high_dilution_risk",
     "abstain",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "filed_at",
+     "form",
+     "document",
+     "shelf_musd",
+     "market_cap_musd"
+    ],
+    "excerpt": "document",
+    "state_fields": [
+     "symbol",
+     "document"
+    ],
+    "questions": [
+     {
+      "id": "imminent",
+      "type": "score",
+      "short": "imminent",
+      "text": "How imminent is the company's use of this shelf in `document`?",
+      "options": [
+       "no stated plan",
+       "general purposes",
+       "ATM or offering planned",
+       "offering being priced now"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "high_dilution_risk",
+      "meaning": "would block new longs",
+      "when": [
+       "shelf_ratio ≥ 0.30 and imminent ≥ 0.66"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "moderate_dilution_risk",
+      "meaning": "would halve size",
+      "when": [
+       "shelf_ratio ≥ 0.30 or imminent ≥ 0.66"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "low_dilution_risk",
+      "meaning": "no dilution flag",
+      "when": [
+       "otherwise: small and not imminent"
+      ],
+      "more": 0,
+      "stages": [
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope",
+       "filed_at is after the data cutoff (no future data in replay)"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "__abstain__",
+      "meaning": "abstain: no outcome, a person reviews",
+      "when": [
+       "empty document"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, document (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue, future_data, empty_doc",
+     "output": "decide in code",
+     "output_detail": "big shelf 0.30 · imminent 0.66"
+    }
+   }
   }
  ]
 }

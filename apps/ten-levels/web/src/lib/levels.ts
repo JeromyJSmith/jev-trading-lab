@@ -20,7 +20,7 @@ export function splitUse(sub: string): [string, string] {
 }
 
 export const LEVELS: LevelMeta[] = [
-  { n: 1, pattern: "Smart If (Noul Gate)", title: "News Yes/No Checks", sub: "Use This For: one yes-or-no read on a headline or release that a keyword scan keeps getting wrong. Is it really about this ticker? Is it dilution, a guidance cut, a halt? Code owns the threshold; Jev reads the meaning." },
+  { n: 1, pattern: "Smart If (Noul Gate)", title: "Trading Yes/No Checks", sub: "Use This For: any single yes-or-no trading judgment that a keyword or regex check gets wrong, on news, filings, trade plans and order notes, order requests, chat or desk messages, journal entries, broker or system messages, setup descriptions. Is it about this ticker? Does the plan have an exit? Is this a live order? A margin call? Code owns the threshold; Jev reads the meaning." },
   { n: 2, pattern: "Choice Classifier", title: "Headline and Filing Classifier", sub: "Use This For: sorting news, 8-K items, analyst actions and setups into the buckets your strategy defines, one or more labels per call, so the right rule handles each event." },
   { n: 3, pattern: "Weighted Score", title: "Catalyst and Idea Scoring", sub: "Use This For: grading a catalyst, trade idea, earnings print or backtest on scales you define. One score per factor; the weights that combine them live in code, so tuning is a number change, not a prompt." },
   { n: 4, pattern: "Confidence Gate", title: "Confidence-Gated Trade Actions", sub: "Use This For: actions where a wrong call costs more than asking you: halts, order changes, stop moves, fill breaks. Confident runs automatically, unsure asks to confirm, low goes to a human." },

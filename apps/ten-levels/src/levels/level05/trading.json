@@ -166,7 +166,98 @@
     "cheap_rule",
     "analyst",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "published_at",
+     "headline",
+     "body",
+     "source"
+    ],
+    "excerpt": "headline",
+    "state_fields": [
+     "symbol",
+     "headline",
+     "body"
+    ],
+    "questions": [
+     {
+      "id": "depth",
+      "type": "choice",
+      "short": "depth",
+      "text": "How much work does `headline` need before it can affect a trade in `symbol`?",
+      "options": [
+       "rule",
+       "deep",
+       "analyst"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "cheap_rule",
+      "meaning": "would apply the cheap rule (no model)",
+      "when": [
+       "depth = rule"
+      ],
+      "more": 0,
+      "stages": [
+       "route"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "deep_review",
+      "meaning": "would send to the deep model review",
+      "when": [
+       "depth = deep"
+      ],
+      "more": 0,
+      "stages": [
+       "route"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "analyst",
+      "meaning": "would route to an analyst",
+      "when": [
+       "depth conf < 0.50",
+       "depth = analyst",
+       "otherwise: unmapped label -> person"
+      ],
+      "more": 0,
+      "stages": [
+       "gate",
+       "route",
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope",
+       "published_at is after the data cutoff (no future data in replay)"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, headline, body (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue, future_data",
+     "output": "gate → route in code",
+     "output_detail": "review floor 0.50"
+    }
+   }
   },
   {
    "key": "B",
@@ -300,7 +391,93 @@
     "data_lookup",
     "research_model",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "question"
+    ],
+    "excerpt": "question",
+    "state_fields": [
+     "question",
+     "symbol"
+    ],
+    "questions": [
+     {
+      "id": "route",
+      "type": "choice",
+      "short": "route",
+      "text": "What does `question` need to be answered?",
+      "options": [
+       "lookup",
+       "research",
+       "judgment"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "data_lookup",
+      "meaning": "would answer from a data lookup (no LLM)",
+      "when": [
+       "route = lookup"
+      ],
+      "more": 0,
+      "stages": [
+       "route"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "research_model",
+      "meaning": "would send to the research model",
+      "when": [
+       "route = research"
+      ],
+      "more": 0,
+      "stages": [
+       "route"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "analyst",
+      "meaning": "would route to a human analyst",
+      "when": [
+       "route conf < 0.50",
+       "route = judgment",
+       "otherwise: unmapped label -> person"
+      ],
+      "more": 0,
+      "stages": [
+       "gate",
+       "route",
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     }
+    ],
+    "arrows": {
+     "input": "state built from question, symbol (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue",
+     "output": "gate → route in code",
+     "output_detail": "review floor 0.50"
+    }
+   }
   },
   {
    "key": "C",
@@ -432,7 +609,102 @@
     "small_model",
     "large_model",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "venue",
+     "data_cutoff",
+     "task"
+    ],
+    "excerpt": "task",
+    "state_fields": [
+     "task"
+    ],
+    "questions": [
+     {
+      "id": "tier",
+      "type": "choice",
+      "short": "tier",
+      "text": "Which is the least costly model tier that can complete `task` well?",
+      "options": [
+       "small",
+       "large",
+       "human"
+      ]
+     },
+     {
+      "id": "effort",
+      "type": "score",
+      "short": "effort",
+      "text": "How much reasoning depth does `task` need?",
+      "options": [
+       "minimal",
+       "some",
+       "deep"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "small_model",
+      "meaning": "would use the small model",
+      "when": [
+       "tier = small"
+      ],
+      "more": 0,
+      "stages": [
+       "route"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "large_model",
+      "meaning": "would use the large model",
+      "when": [
+       "tier = large"
+      ],
+      "more": 0,
+      "stages": [
+       "route"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "analyst",
+      "meaning": "would route to an analyst",
+      "when": [
+       "tier conf < 0.50",
+       "tier = human",
+       "otherwise: unmapped label -> person"
+      ],
+      "more": 0,
+      "stages": [
+       "gate",
+       "route",
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     }
+    ],
+    "arrows": {
+     "input": "state built from task (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue",
+     "output": "gate → route in code",
+     "output_detail": "review floor 0.50"
+    }
+   }
   },
   {
    "key": "D",
@@ -568,7 +840,92 @@
     "page_on_call",
     "log_only",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "venue",
+     "account",
+     "data_cutoff",
+     "alert"
+    ],
+    "excerpt": "alert",
+    "state_fields": [
+     "alert"
+    ],
+    "questions": [
+     {
+      "id": "severity",
+      "type": "choice",
+      "short": "severity",
+      "text": "How urgent is `alert` for the paper trading desk?",
+      "options": [
+       "log",
+       "notify",
+       "page"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "log_only",
+      "meaning": "would log only",
+      "when": [
+       "severity = log"
+      ],
+      "more": 0,
+      "stages": [
+       "route"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "notify_desk",
+      "meaning": "would notify the desk channel",
+      "when": [
+       "severity = notify"
+      ],
+      "more": 0,
+      "stages": [
+       "route"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "page_on_call",
+      "meaning": "would page the on-call person",
+      "when": [
+       "severity conf < 0.50",
+       "severity = page",
+       "otherwise: unmapped label -> person"
+      ],
+      "more": 0,
+      "stages": [
+       "gate",
+       "route",
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     }
+    ],
+    "arrows": {
+     "input": "state built from alert (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue",
+     "output": "gate → route in code",
+     "output_detail": "review floor 0.50"
+    }
+   }
   },
   {
    "key": "E",
@@ -740,7 +1097,123 @@
     "full_analysis",
     "abstain",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "published_at",
+     "form",
+     "headline",
+     "body"
+    ],
+    "excerpt": "headline",
+    "state_fields": [
+     "symbol",
+     "form",
+     "headline"
+    ],
+    "questions": [
+     {
+      "id": "handling",
+      "type": "choice",
+      "short": "handling",
+      "text": "How should our desk handle this `form` filing for `symbol` described by `headline`?",
+      "options": [
+       "skip",
+       "summary",
+       "full",
+       "legal"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "skip",
+      "meaning": "would skip",
+      "when": [
+       "handling = skip"
+      ],
+      "more": 0,
+      "stages": [
+       "route"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "summarize",
+      "meaning": "would summarize cheaply",
+      "when": [
+       "handling = summary"
+      ],
+      "more": 0,
+      "stages": [
+       "route"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "full_analysis",
+      "meaning": "would run the full analysis",
+      "when": [
+       "handling = full"
+      ],
+      "more": 0,
+      "stages": [
+       "route"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "legal_review",
+      "meaning": "would send to legal review",
+      "when": [
+       "handling conf < 0.50",
+       "handling = legal",
+       "otherwise: unmapped label -> person"
+      ],
+      "more": 0,
+      "stages": [
+       "gate",
+       "route",
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope",
+       "published_at is after the data cutoff (no future data in replay)"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "__abstain__",
+      "meaning": "abstain: no outcome, a person reviews",
+      "when": [
+       "form on the ignore list: skipped in code"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, form, headline (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue, future_data, ignore_form",
+     "output": "gate → route in code",
+     "output_detail": "review floor 0.50"
+    }
+   }
   },
   {
    "key": "F",
@@ -876,7 +1349,92 @@
     "ops",
     "compliance",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "venue",
+     "account",
+     "data_cutoff",
+     "message"
+    ],
+    "excerpt": "message",
+    "state_fields": [
+     "message"
+    ],
+    "questions": [
+     {
+      "id": "desk",
+      "type": "choice",
+      "short": "desk",
+      "text": "Which desk should handle `message`?",
+      "options": [
+       "ops",
+       "compliance",
+       "risk"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "ops",
+      "meaning": "would route to ops",
+      "when": [
+       "desk = ops"
+      ],
+      "more": 0,
+      "stages": [
+       "route"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "compliance",
+      "meaning": "would route to compliance",
+      "when": [
+       "desk conf < 0.50",
+       "desk = compliance",
+       "otherwise: unmapped label -> person"
+      ],
+      "more": 0,
+      "stages": [
+       "gate",
+       "route",
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "risk_desk",
+      "meaning": "would route to the risk desk",
+      "when": [
+       "desk = risk"
+      ],
+      "more": 0,
+      "stages": [
+       "route"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     }
+    ],
+    "arrows": {
+     "input": "state built from message (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue",
+     "output": "gate → route in code",
+     "output_detail": "review floor 0.50"
+    }
+   }
   }
  ]
 }

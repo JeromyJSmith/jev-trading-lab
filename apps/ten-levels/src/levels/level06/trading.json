@@ -265,7 +265,93 @@
     "block",
     "abstain",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "venue",
+     "side",
+     "account",
+     "data_cutoff",
+     "session",
+     "qty",
+     "limit_price",
+     "stop_price",
+     "equity",
+     "rationale",
+     "days_to_earnings",
+     "restricted"
+    ],
+    "excerpt": "rationale",
+    "state_fields": [
+     "symbol",
+     "side",
+     "qty",
+     "limit_price",
+     "stop_price",
+     "rationale"
+    ],
+    "questions": [
+     {
+      "id": "impulse",
+      "type": "noul",
+      "short": "impulse",
+      "text": "Does `rationale` read as an impulsive, revenge or FOMO trade rather than a planned one?",
+      "options": [
+       "yes",
+       "no"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "block",
+      "meaning": "would block the paper order; the agent sees only the reason",
+      "when": [
+       "order has no stop: blocked in code",
+       "stop is on the wrong side of the entry: blocked in code",
+       "impulse ≥ 0.70"
+      ],
+      "more": 0,
+      "stages": [
+       "guard",
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "allow",
+      "meaning": "would let the paper order through",
+      "when": [
+       "otherwise: no guard fired"
+      ],
+      "more": 0,
+      "stages": [
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "paper accounts only (no live trading)",
+       "venue is not NYSE or Nasdaq: out of scope"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, side, qty, limit_price, stop_price, rationale (data ≤ data_cutoff)",
+     "guards": "guards in code first: paper_only, venue, no_stop, stop_wrong_side",
+     "output": "decide in code",
+     "output_detail": "impulse 0.70"
+    }
+   }
   },
   {
    "key": "B",
@@ -517,7 +603,93 @@
     "block",
     "block",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "venue",
+     "side",
+     "account",
+     "data_cutoff",
+     "session",
+     "qty",
+     "limit_price",
+     "stop_price",
+     "equity",
+     "rationale",
+     "days_to_earnings",
+     "restricted"
+    ],
+    "excerpt": "rationale",
+    "state_fields": [
+     "symbol",
+     "side",
+     "qty",
+     "limit_price",
+     "stop_price",
+     "rationale"
+    ],
+    "questions": [
+     {
+      "id": "certainty",
+      "type": "noul",
+      "short": "certainty",
+      "text": "Does `rationale` claim certainty ('can't lose', 'guaranteed', 'all in')?",
+      "options": [
+       "yes",
+       "no"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "block",
+      "meaning": "would block the paper order; the agent sees only the reason",
+      "when": [
+       "position > 10% of equity: blocked in code",
+       "risk to stop > 1% of equity: blocked in code",
+       "certainty ≥ 0.70"
+      ],
+      "more": 0,
+      "stages": [
+       "guard",
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "allow",
+      "meaning": "would let the paper order through",
+      "when": [
+       "otherwise: no guard fired"
+      ],
+      "more": 0,
+      "stages": [
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "paper accounts only (no live trading)",
+       "venue is not NYSE or Nasdaq: out of scope"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, side, qty, limit_price, stop_price, rationale (data ≤ data_cutoff)",
+     "guards": "guards in code first: paper_only, venue, oversize, risk_too_big",
+     "output": "decide in code",
+     "output_detail": "max position pct 0.10 · max risk pct 0.01 · certainty 0.70"
+    }
+   }
   },
   {
    "key": "C",
@@ -770,7 +942,93 @@
     "block",
     "allow",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "venue",
+     "side",
+     "account",
+     "data_cutoff",
+     "session",
+     "qty",
+     "limit_price",
+     "stop_price",
+     "equity",
+     "rationale",
+     "days_to_earnings",
+     "restricted"
+    ],
+    "excerpt": "rationale",
+    "state_fields": [
+     "symbol",
+     "side",
+     "qty",
+     "limit_price",
+     "stop_price",
+     "rationale"
+    ],
+    "questions": [
+     {
+      "id": "mnpi",
+      "type": "noul",
+      "short": "mnpi",
+      "text": "Does `rationale` rely on non-public information (a friend at the company, an unannounced deal, a leaked number)?",
+      "options": [
+       "yes",
+       "no"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "block",
+      "meaning": "would block the paper order; the agent sees only the reason",
+      "when": [
+       "symbol on the restricted list: blocked in code",
+       "inside the earnings blackout: blocked in code",
+       "mnpi ≥ 0.60"
+      ],
+      "more": 0,
+      "stages": [
+       "guard",
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "allow",
+      "meaning": "would let the paper order through",
+      "when": [
+       "otherwise: no guard fired"
+      ],
+      "more": 0,
+      "stages": [
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "paper accounts only (no live trading)",
+       "venue is not NYSE or Nasdaq: out of scope"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, side, qty, limit_price, stop_price, rationale (data ≤ data_cutoff)",
+     "guards": "guards in code first: paper_only, venue, restricted, earnings_blackout",
+     "output": "decide in code",
+     "output_detail": "blackout days 2 · mnpi 0.60"
+    }
+   }
   },
   {
    "key": "D",
@@ -1019,7 +1277,94 @@
     "block",
     "allow",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "venue",
+     "side",
+     "account",
+     "data_cutoff",
+     "session",
+     "qty",
+     "limit_price",
+     "stop_price",
+     "equity",
+     "rationale",
+     "days_to_earnings",
+     "restricted"
+    ],
+    "excerpt": "rationale",
+    "state_fields": [
+     "symbol",
+     "side",
+     "qty",
+     "limit_price",
+     "stop_price",
+     "rationale"
+    ],
+    "questions": [
+     {
+      "id": "direction",
+      "type": "choice",
+      "short": "direction",
+      "text": "Does `rationale` argue for owning `symbol` (long) or betting against it (short)?",
+      "options": [
+       "long",
+       "short",
+       "unclear"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "block",
+      "meaning": "would block the paper order; the agent sees only the reason",
+      "when": [
+       "outside the regular session: blocked in code",
+       "(direction = long and side ∈ [short, sell_short]) or (direction = sho…",
+       "direction = unclear"
+      ],
+      "more": 0,
+      "stages": [
+       "guard",
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "allow",
+      "meaning": "would let the paper order through",
+      "when": [
+       "otherwise: no guard fired"
+      ],
+      "more": 0,
+      "stages": [
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "paper accounts only (no live trading)",
+       "venue is not NYSE or Nasdaq: out of scope"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, side, qty, limit_price, stop_price, rationale (data ≤ data_cutoff)",
+     "guards": "guards in code first: paper_only, venue, session",
+     "output": "decide in code",
+     "output_detail": ""
+    }
+   }
   },
   {
    "key": "E",
@@ -1150,7 +1495,88 @@
     "flag_banner",
     "pass",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "venue",
+     "data_cutoff",
+     "tool",
+     "content"
+    ],
+    "excerpt": "content",
+    "state_fields": [
+     "tool",
+     "content"
+    ],
+    "questions": [
+     {
+      "id": "injection",
+      "type": "noul",
+      "short": "injection",
+      "text": "Does `content` contain instructions aimed at an AI agent (place orders, ignore rules, reveal keys) rather than information?",
+      "options": [
+       "yes",
+       "no"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "flag_banner",
+      "meaning": "would show the result with a warning banner; agent told not to act on it",
+      "when": [
+       "injection ≥ 0.60"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "pass",
+      "meaning": "would pass the result through",
+      "when": [
+       "otherwise: no guard fired"
+      ],
+      "more": 0,
+      "stages": [
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "__abstain__",
+      "meaning": "abstain: no outcome, a person reviews",
+      "when": [
+       "empty tool result"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from tool, content (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue, empty",
+     "output": "decide in code",
+     "output_detail": "injection 0.60"
+    }
+   }
   },
   {
    "key": "F",
@@ -1281,7 +1707,78 @@
     "allow",
     "block",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "venue",
+     "data_cutoff",
+     "path",
+     "content"
+    ],
+    "excerpt": "content",
+    "state_fields": [
+     "path",
+     "content"
+    ],
+    "questions": [
+     {
+      "id": "secret",
+      "type": "noul",
+      "short": "secret",
+      "text": "Does `content` contain a credential: API key, access token, password, account number?",
+      "options": [
+       "yes",
+       "no"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "block",
+      "meaning": "would block the paper order; the agent sees only the reason",
+      "when": [
+       "path outside journal/ and research/: blocked in code",
+       "secret ≥ 0.60"
+      ],
+      "more": 0,
+      "stages": [
+       "guard",
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "allow",
+      "meaning": "would let the paper order through",
+      "when": [
+       "otherwise: no guard fired"
+      ],
+      "more": 0,
+      "stages": [
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     }
+    ],
+    "arrows": {
+     "input": "state built from path, content (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue, outside",
+     "output": "decide in code",
+     "output_detail": "secret 0.60"
+    }
+   }
   },
   {
    "key": "G",
@@ -1412,7 +1909,80 @@
     "block",
     "block",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "venue",
+     "data_cutoff",
+     "command",
+     "cwd"
+    ],
+    "excerpt": "command",
+    "state_fields": [
+     "command",
+     "cwd"
+    ],
+    "questions": [
+     {
+      "id": "effect",
+      "type": "choice",
+      "short": "effect",
+      "text": "What does `command` do to the trading workbench?",
+      "options": [
+       "read_only",
+       "reversible",
+       "irreversible"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "block",
+      "meaning": "would block the paper order; the agent sees only the reason",
+      "when": [
+       "live trading or broker credentials in the command: blocked in code",
+       "effect = irreversible and effect conf ≥ 0.50",
+       "effect conf < 0.50"
+      ],
+      "more": 0,
+      "stages": [
+       "guard",
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "allow",
+      "meaning": "would let the paper order through",
+      "when": [
+       "otherwise: no guard fired"
+      ],
+      "more": 0,
+      "stages": [
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     }
+    ],
+    "arrows": {
+     "input": "state built from command, cwd (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue, live_flag",
+     "output": "decide in code",
+     "output_detail": "floor 0.50"
+    }
+   }
   }
  ]
 }

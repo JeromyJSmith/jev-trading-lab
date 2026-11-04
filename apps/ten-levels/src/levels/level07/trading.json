@@ -181,7 +181,116 @@
     "silent",
     "request",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "venue",
+     "data_cutoff",
+     "strategy",
+     "tuned_on",
+     "recent",
+     "vol_ratio"
+    ],
+    "excerpt": "recent",
+    "state_fields": [
+     "tuned_on",
+     "recent",
+     "vol_ratio"
+    ],
+    "questions": [
+     {
+      "id": "moved_on",
+      "type": "noul",
+      "short": "moved on",
+      "text": "Has the market regime in `recent` moved on from the one in `tuned_on` (trend, volatility, correlation, leadership)?",
+      "options": [
+       "yes",
+       "no"
+      ]
+     },
+     {
+      "id": "what_changed",
+      "type": "choice",
+      "short": "what changed",
+      "text": "What changed most?",
+      "options": [
+       "volatility",
+       "trend",
+       "correlation",
+       "liquidity",
+       "none"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "silent",
+      "meaning": "nothing said",
+      "when": [
+       "otherwise"
+      ],
+      "more": 0,
+      "stages": [
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "notice",
+      "meaning": "would show a notice",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "recommend",
+      "meaning": "would recommend a review",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "request",
+      "meaning": "would request a stop-and-review before new paper trades",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "=['silent', 'notice', 'recommend', 'request'][d.tier]",
+      "meaning": "=['silent', 'notice', 'recommend', 'request'][d.tier]",
+      "when": [
+       "otherwise"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from tuned_on, recent, vol_ratio (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue",
+     "output": "decide in code",
+     "output_detail": "notice 1.20 · recommend 1.50 · request 2"
+    }
+   }
   },
   {
    "key": "B",
@@ -351,7 +460,104 @@
     "recommend",
     "silent",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "thesis",
+     "since",
+     "days_held"
+    ],
+    "excerpt": "since",
+    "state_fields": [
+     "symbol",
+     "thesis",
+     "since",
+     "days_held"
+    ],
+    "questions": [
+     {
+      "id": "contradicts",
+      "type": "noul",
+      "short": "contradicts",
+      "text": "Does what happened `since` entry contradict `thesis` for `symbol`?",
+      "options": [
+       "yes",
+       "no"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "silent",
+      "meaning": "nothing said",
+      "when": [
+       "otherwise"
+      ],
+      "more": 0,
+      "stages": [
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "notice",
+      "meaning": "would show a notice",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "recommend",
+      "meaning": "would recommend a review",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "request",
+      "meaning": "would request a stop-and-review before new paper trades",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "=['silent', 'notice', 'recommend', 'request'][d.tier]",
+      "meaning": "=['silent', 'notice', 'recommend', 'request'][d.tier]",
+      "when": [
+       "otherwise"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, thesis, since, days_held (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue",
+     "output": "decide in code",
+     "output_detail": "notice 10 · recommend 20 · request 40"
+    }
+   }
   },
   {
    "key": "C",
@@ -514,7 +720,112 @@
     "silent",
     "recommend",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "venue",
+     "data_cutoff",
+     "usage_pct",
+     "recent_turns",
+     "next_request"
+    ],
+    "excerpt": "next_request",
+    "state_fields": [
+     "usage_pct",
+     "recent_turns",
+     "next_request"
+    ],
+    "questions": [
+     {
+      "id": "new_topic",
+      "type": "noul",
+      "short": "new topic",
+      "text": "Is `next_request` a different topic from `recent_turns`?",
+      "options": [
+       "yes",
+       "no"
+      ]
+     },
+     {
+      "id": "needs_old",
+      "type": "noul",
+      "short": "needs old",
+      "text": "Does `next_request` need details only found in the older turns?",
+      "options": [
+       "yes",
+       "no"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "silent",
+      "meaning": "nothing said",
+      "when": [
+       "otherwise"
+      ],
+      "more": 0,
+      "stages": [
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "notice",
+      "meaning": "would show a notice",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "recommend",
+      "meaning": "would recommend a review",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "request",
+      "meaning": "would request a stop-and-review before new paper trades",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "=['silent', 'notice', 'recommend', 'request'][d.tier]",
+      "meaning": "=['silent', 'notice', 'recommend', 'request'][d.tier]",
+      "when": [
+       "otherwise"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from usage_pct, recent_turns, next_request (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue",
+     "output": "decide in code",
+     "output_detail": "notice 50 · recommend 70 · request 85"
+    }
+   }
   },
   {
    "key": "D",
@@ -671,7 +982,102 @@
     "notice",
     "silent",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "intraday_vol_ratio",
+     "context"
+    ],
+    "excerpt": "context",
+    "state_fields": [
+     "symbol",
+     "ratio",
+     "context"
+    ],
+    "questions": [
+     {
+      "id": "unscheduled",
+      "type": "noul",
+      "short": "unscheduled",
+      "text": "Is the move described in `context` an unscheduled shock rather than a known scheduled event?",
+      "options": [
+       "yes",
+       "no"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "silent",
+      "meaning": "nothing said",
+      "when": [
+       "otherwise"
+      ],
+      "more": 0,
+      "stages": [
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "notice",
+      "meaning": "would show a notice",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "recommend",
+      "meaning": "would recommend a review",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "request",
+      "meaning": "would request a stop-and-review before new paper trades",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "=['silent', 'notice', 'recommend', 'request'][d.tier]",
+      "meaning": "=['silent', 'notice', 'recommend', 'request'][d.tier]",
+      "when": [
+       "otherwise"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, intraday_vol_ratio, context (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue",
+     "output": "decide in code",
+     "output_detail": "notice 1.50 · recommend 2.50 · request 4"
+    }
+   }
   },
   {
    "key": "E",
@@ -827,7 +1233,101 @@
     "notice",
     "silent",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "venue",
+     "data_cutoff",
+     "strategy",
+     "drawdown_pct",
+     "recent_trades"
+    ],
+    "excerpt": "data_cutoff",
+    "state_fields": [
+     "drawdown_pct",
+     "recent_trades"
+    ],
+    "questions": [
+     {
+      "id": "edge_break",
+      "type": "noul",
+      "short": "edge break",
+      "text": "Do `recent_trades` show the strategy's edge breaking (the same failure repeating, a changed market) rather than normal noise?",
+      "options": [
+       "yes",
+       "no"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "silent",
+      "meaning": "nothing said",
+      "when": [
+       "otherwise"
+      ],
+      "more": 0,
+      "stages": [
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "notice",
+      "meaning": "would show a notice",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "recommend",
+      "meaning": "would recommend a review",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "request",
+      "meaning": "would request a stop-and-review before new paper trades",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "=['silent', 'notice', 'recommend', 'request'][d.tier]",
+      "meaning": "=['silent', 'notice', 'recommend', 'request'][d.tier]",
+      "when": [
+       "otherwise"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from drawdown_pct, recent_trades (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue",
+     "output": "decide in code",
+     "output_detail": "notice 2 · recommend 4 · request 6"
+    }
+   }
   },
   {
    "key": "F",
@@ -1077,7 +1577,90 @@
     "abstain",
     "n2",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "venue",
+     "data_cutoff",
+     "current_task",
+     "notes"
+    ],
+    "excerpt": "notes[0].text",
+    "state_fields": [
+     "current_task",
+     "notes"
+    ],
+    "questions": [
+     {
+      "id": "live_from",
+      "type": "choice",
+      "short": "live from",
+      "text": "From which note in `notes` does the work on `current_task` start?",
+      "options": [
+       "n1",
+       "n2",
+       "n3",
+       "n4",
+       "none"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "cut",
+      "meaning": "the outcome is the note id to keep from",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope",
+       "duplicate note ids"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "=live_from.choice",
+      "meaning": "=live from.choice",
+      "when": [
+       "otherwise"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "__abstain__",
+      "meaning": "abstain: no outcome, a person reviews",
+      "when": [
+       "fewer than two notes: nothing to cut",
+       "live_from = none",
+       "live_from conf < 0.40"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from current_task, notes (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue, dupes, few",
+     "output": "gate → decide in code",
+     "output_detail": "review floor 0.40"
+    }
+   }
   }
  ]
 }

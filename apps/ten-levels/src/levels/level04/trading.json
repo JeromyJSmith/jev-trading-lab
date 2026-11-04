@@ -185,7 +185,116 @@
     "skip_entries",
     "ask_human",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "published_at",
+     "headline",
+     "body",
+     "halt_code",
+     "has_position"
+    ],
+    "excerpt": "headline",
+    "state_fields": [
+     "symbol",
+     "headline",
+     "halt_code",
+     "has_position"
+    ],
+    "questions": [
+     {
+      "id": "halt_kind",
+      "type": "choice",
+      "short": "halt kind",
+      "text": "Why is `symbol` halted according to `headline` and `halt_code`?",
+      "options": [
+       "news_pending",
+       "volatility",
+       "regulatory",
+       "merger",
+       "other"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "ask_human",
+      "meaning": "would ask human (paper)",
+      "when": [
+       "halt_kind conf < 0.50",
+       "halt_kind = other",
+       "otherwise: unmapped label"
+      ],
+      "more": 0,
+      "stages": [
+       "gate",
+       "decide",
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "confirm",
+      "meaning": "would ask for one-click confirmation",
+      "when": [
+       "halt_kind ∈ regulatory and halt_kind conf < 0.90"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "skip_entries",
+      "meaning": "would skip entries (paper)",
+      "when": [
+       "halt_kind = news_pending",
+       "halt_kind = volatility",
+       "halt_kind = merger"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "flatten_paper_position",
+      "meaning": "would flatten paper position (paper)",
+      "when": [
+       "halt_kind = regulatory"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope",
+       "published_at is after the data cutoff (no future data in replay)"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, headline, halt_code, has_position (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue, future_data",
+     "output": "gate → decide in code",
+     "output_detail": "review floor 0.50 · destructive bar 0.90"
+    }
+   }
   },
   {
    "key": "B",
@@ -336,7 +445,132 @@
     "show_status",
     "confirm",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "account",
+     "data_cutoff",
+     "message",
+     "open_orders"
+    ],
+    "excerpt": "message",
+    "state_fields": [
+     "message",
+     "open_orders"
+    ],
+    "questions": [
+     {
+      "id": "action",
+      "type": "choice",
+      "short": "action",
+      "text": "What does `message` ask the paper trading assistant to do?",
+      "options": [
+       "status",
+       "cancel_one",
+       "cancel_all",
+       "flatten",
+       "other"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "ask_human",
+      "meaning": "would ask human (paper)",
+      "when": [
+       "action conf < 0.50",
+       "action = other",
+       "otherwise: unmapped label"
+      ],
+      "more": 0,
+      "stages": [
+       "gate",
+       "decide",
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "confirm",
+      "meaning": "would ask for one-click confirmation",
+      "when": [
+       "action ∈ cancel_all/flatten and action conf < 0.90"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "show_status",
+      "meaning": "would show status (paper)",
+      "when": [
+       "action = status"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "cancel_one_paper_order",
+      "meaning": "would cancel one paper order (paper)",
+      "when": [
+       "action = cancel_one"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "cancel_all_paper_orders",
+      "meaning": "would cancel all paper orders (paper)",
+      "when": [
+       "action = cancel_all"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "flatten_paper_book",
+      "meaning": "would flatten paper book (paper)",
+      "when": [
+       "action = flatten"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "paper accounts only",
+       "venue is not NYSE or Nasdaq: out of scope"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     }
+    ],
+    "arrows": {
+     "input": "state built from message, open_orders (data ≤ data_cutoff)",
+     "guards": "guards in code first: paper_only, venue",
+     "output": "gate → decide in code",
+     "output_detail": "review floor 0.50 · destructive bar 0.90"
+    }
+   }
   },
   {
    "key": "C",
@@ -507,7 +741,121 @@
     "drop_citation",
     "attach_evidence",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "claim",
+     "quote",
+     "source_text"
+    ],
+    "excerpt": "source_text",
+    "state_fields": [
+     "claim",
+     "quote",
+     "source"
+    ],
+    "questions": [
+     {
+      "id": "support",
+      "type": "choice",
+      "short": "support",
+      "text": "Does `quote` within `source_text` support `claim`?",
+      "options": [
+       "supports",
+       "partial",
+       "contradicts",
+       "unrelated"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "ask_human",
+      "meaning": "would ask human (paper)",
+      "when": [
+       "support conf < 0.50",
+       "support = partial",
+       "otherwise: unmapped label"
+      ],
+      "more": 0,
+      "stages": [
+       "gate",
+       "decide",
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "confirm",
+      "meaning": "would ask for one-click confirmation",
+      "when": [
+       "support ∈ contradicts and support conf < 0.90"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "attach_evidence",
+      "meaning": "would attach evidence (paper)",
+      "when": [
+       "support = supports"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "mark_thesis_broken",
+      "meaning": "would mark thesis broken (paper)",
+      "when": [
+       "support = contradicts"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "drop_citation",
+      "meaning": "would drop citation (paper)",
+      "when": [
+       "support = unrelated"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     }
+    ],
+    "arrows": {
+     "input": "state built from claim, quote, source_text (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue",
+     "output": "gate → decide in code",
+     "output_detail": "review floor 0.50 · destructive bar 0.90"
+    }
+   }
   },
   {
    "key": "D",
@@ -654,7 +1002,119 @@
     "reverse_paper_fill",
     "book_partial",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "account",
+     "data_cutoff",
+     "intended",
+     "report"
+    ],
+    "excerpt": "report",
+    "state_fields": [
+     "intended",
+     "report"
+    ],
+    "questions": [
+     {
+      "id": "match",
+      "type": "choice",
+      "short": "match",
+      "text": "Does `report` match the `intended` paper order (symbol, side, quantity, price limit)?",
+      "options": [
+       "match",
+       "partial",
+       "mismatch",
+       "unreadable"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "ask_human",
+      "meaning": "would ask human (paper)",
+      "when": [
+       "match conf < 0.50",
+       "match = unreadable",
+       "otherwise: unmapped label"
+      ],
+      "more": 0,
+      "stages": [
+       "gate",
+       "decide",
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "confirm",
+      "meaning": "would ask for one-click confirmation",
+      "when": [
+       "match ∈ mismatch and match conf < 0.90"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "book_fill",
+      "meaning": "would book fill (paper)",
+      "when": [
+       "match = match"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "book_partial",
+      "meaning": "would book partial (paper)",
+      "when": [
+       "match = partial"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "reverse_paper_fill",
+      "meaning": "would reverse paper fill (paper)",
+      "when": [
+       "match = mismatch"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "paper accounts only",
+       "venue is not NYSE or Nasdaq: out of scope"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     }
+    ],
+    "arrows": {
+     "input": "state built from intended, report (data ≤ data_cutoff)",
+     "guards": "guards in code first: paper_only, venue",
+     "output": "gate → decide in code",
+     "output_detail": "review floor 0.50 · destructive bar 0.90"
+    }
+   }
   },
   {
    "key": "E",
@@ -821,7 +1281,100 @@
     "confirm",
     "ask_human",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "published_at",
+     "headline",
+     "body",
+     "source"
+    ],
+    "excerpt": "headline",
+    "state_fields": [
+     "symbol",
+     "headline",
+     "body"
+    ],
+    "questions": [
+     {
+      "id": "date_status",
+      "type": "choice",
+      "short": "date status",
+      "text": "Does `headline` give a company-confirmed earnings date for `symbol`?",
+      "options": [
+       "confirmed",
+       "estimated",
+       "none"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "ask_human",
+      "meaning": "would ask human (paper)",
+      "when": [
+       "date_status conf < 0.50",
+       "date_status = none",
+       "otherwise: unmapped label"
+      ],
+      "more": 0,
+      "stages": [
+       "gate",
+       "decide",
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "confirm",
+      "meaning": "would confirm (paper)",
+      "when": [
+       "date_status ∈ confirmed and date_status conf < 0.90",
+       "date_status = estimated"
+      ],
+      "more": 0,
+      "stages": [
+       "gate",
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "arm_blackout",
+      "meaning": "would arm blackout (paper)",
+      "when": [
+       "date_status = confirmed"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope",
+       "published_at is after the data cutoff (no future data in replay)"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, headline, body (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue, future_data",
+     "output": "gate → decide in code",
+     "output_detail": "review floor 0.50 · destructive bar 0.90"
+    }
+   }
   },
   {
    "key": "F",
@@ -1009,7 +1562,138 @@
     "ask_human",
     "abstain",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "venue",
+     "account",
+     "data_cutoff",
+     "message",
+     "current_stop",
+     "requested_stop"
+    ],
+    "excerpt": "message",
+    "state_fields": [
+     "symbol",
+     "message",
+     "current_stop",
+     "requested_stop"
+    ],
+    "questions": [
+     {
+      "id": "change",
+      "type": "choice",
+      "short": "change",
+      "text": "What does `message` ask to do with the stop on `symbol`?",
+      "options": [
+       "tighten",
+       "widen",
+       "remove",
+       "keep",
+       "other"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "ask_human",
+      "meaning": "would ask human (paper)",
+      "when": [
+       "change conf < 0.50",
+       "change = remove",
+       "change = other",
+       "otherwise: unmapped label"
+      ],
+      "more": 0,
+      "stages": [
+       "gate",
+       "decide",
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "confirm",
+      "meaning": "would ask for one-click confirmation",
+      "when": [
+       "change ∈ widen/remove and change conf < 0.90"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "tighten_paper_stop",
+      "meaning": "would tighten paper stop (paper)",
+      "when": [
+       "change = tighten"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "widen_paper_stop",
+      "meaning": "would widen paper stop (paper)",
+      "when": [
+       "change = widen"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "no_change",
+      "meaning": "would no change (paper)",
+      "when": [
+       "change = keep"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "paper accounts only",
+       "venue is not NYSE or Nasdaq: out of scope"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "__abstain__",
+      "meaning": "abstain: no outcome, a person reviews",
+      "when": [
+       "requested stop widens more than 5%: blocked in code"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, message, current_stop, requested_stop (data ≤ data_cutoff)",
+     "guards": "guards in code first: paper_only, venue, widen_cap",
+     "output": "gate → decide in code",
+     "output_detail": "review floor 0.50 · destructive bar 0.90"
+    }
+   }
   }
  ]
 }

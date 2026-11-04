@@ -454,7 +454,92 @@
     "abstain",
     "f4",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "items"
+    ],
+    "excerpt": "items[0].text",
+    "state_fields": [
+     "symbol",
+     "items"
+    ],
+    "questions": [
+     {
+      "id": "open_first",
+      "type": "choice",
+      "short": "open first",
+      "text": "Which filing in `items` should an analyst open first to find going-concern or dilution risk for its company?",
+      "options": [
+       "f1",
+       "f2",
+       "f3",
+       "f4",
+       "none"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "pick",
+      "meaning": "the outcome is the picked item id",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope",
+       "an item is published after the data cutoff",
+       "duplicate item ids: rejected in code",
+       "more than 40 items in one batch: split in code"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "=open_first.choice",
+      "meaning": "=open first.choice",
+      "when": [
+       "otherwise"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "__abstain__",
+      "meaning": "abstain: no outcome, a person reviews",
+      "when": [
+       "no items: missing evidence stays unresolved",
+       "open_first = none",
+       "open_first conf < 0.40"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, items (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue, no_items, future_items, dupes, over_cap",
+     "output": "gate → decide in code",
+     "output_detail": "review floor 0.40"
+    }
+   }
   },
   {
    "key": "B",
@@ -704,7 +789,93 @@
     "h1",
     "abstain",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "items",
+     "move"
+    ],
+    "excerpt": "items[0].text",
+    "state_fields": [
+     "symbol",
+     "items",
+     "move"
+    ],
+    "questions": [
+     {
+      "id": "driver",
+      "type": "choice",
+      "short": "driver",
+      "text": "Which item in `items` best explains the price move in `symbol` described by `move`?",
+      "options": [
+       "h1",
+       "h2",
+       "h3",
+       "none"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "pick",
+      "meaning": "the outcome is the picked item id",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope",
+       "an item is published after the data cutoff",
+       "duplicate item ids: rejected in code",
+       "more than 40 items in one batch: split in code"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "=driver.choice",
+      "meaning": "=driver.choice",
+      "when": [
+       "otherwise"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "__abstain__",
+      "meaning": "abstain: no outcome, a person reviews",
+      "when": [
+       "no items: missing evidence stays unresolved",
+       "driver = none",
+       "driver conf < 0.40"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, items, move (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue, no_items, future_items, dupes, over_cap",
+     "output": "gate → decide in code",
+     "output_detail": "review floor 0.40"
+    }
+   }
   },
   {
    "key": "C",
@@ -942,7 +1113,91 @@
     "INTC",
     "abstain",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "items"
+    ],
+    "excerpt": "items[0].text",
+    "state_fields": [
+     "symbol",
+     "items"
+    ],
+    "questions": [
+     {
+      "id": "first",
+      "type": "choice",
+      "short": "first",
+      "text": "Which candidate in `items` has the cleanest, most specific catalyst today?",
+      "options": [
+       "NFLX",
+       "GME",
+       "KO",
+       "none"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "pick",
+      "meaning": "the outcome is the picked item id",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope",
+       "an item is published after the data cutoff",
+       "duplicate item ids: rejected in code",
+       "more than 40 items in one batch: split in code"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "=first.choice",
+      "meaning": "=first.choice",
+      "when": [
+       "otherwise"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "__abstain__",
+      "meaning": "abstain: no outcome, a person reviews",
+      "when": [
+       "no items: missing evidence stays unresolved",
+       "first = none",
+       "first conf < 0.40"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, items (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue, no_items, future_items, dupes, over_cap",
+     "output": "gate → decide in code",
+     "output_detail": "review floor 0.40"
+    }
+   }
   },
   {
    "key": "D",
@@ -1187,7 +1442,93 @@
     "LCID",
     "abstain",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "items",
+     "news"
+    ],
+    "excerpt": "items[0].text",
+    "state_fields": [
+     "symbol",
+     "items",
+     "news"
+    ],
+    "questions": [
+     {
+      "id": "peer",
+      "type": "choice",
+      "short": "peer",
+      "text": "Given `news` about `symbol`, which peer in `items` is most directly exposed to the same driver?",
+      "options": [
+       "AMD",
+       "KO",
+       "JPM",
+       "none"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "pick",
+      "meaning": "the outcome is the picked item id",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope",
+       "an item is published after the data cutoff",
+       "duplicate item ids: rejected in code",
+       "more than 40 items in one batch: split in code"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "=peer.choice",
+      "meaning": "=peer.choice",
+      "when": [
+       "otherwise"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "__abstain__",
+      "meaning": "abstain: no outcome, a person reviews",
+      "when": [
+       "no items: missing evidence stays unresolved",
+       "peer = none",
+       "peer conf < 0.40"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, items, news (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue, no_items, future_items, dupes, over_cap",
+     "output": "gate → decide in code",
+     "output_detail": "review floor 0.40"
+    }
+   }
   },
   {
    "key": "E",
@@ -1426,7 +1767,92 @@
     "e1",
     "abstain",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "items",
+     "headline"
+    ],
+    "excerpt": "headline",
+    "state_fields": [
+     "symbol",
+     "items",
+     "headline"
+    ],
+    "questions": [
+     {
+      "id": "duplicate_of",
+      "type": "choice",
+      "short": "duplicate of",
+      "text": "Which earlier item in `items` reports the same event as `headline`? Pick none if it is new.",
+      "options": [
+       "e1",
+       "e2",
+       "none"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "pick",
+      "meaning": "the outcome is the picked item id",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope",
+       "an item is published after the data cutoff",
+       "duplicate item ids: rejected in code",
+       "more than 40 items in one batch: split in code"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "=duplicate_of.choice",
+      "meaning": "=duplicate of.choice",
+      "when": [
+       "otherwise"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "__abstain__",
+      "meaning": "abstain: no outcome, a person reviews",
+      "when": [
+       "no items: missing evidence stays unresolved",
+       "duplicate_of = none",
+       "duplicate_of conf < 0.40"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, items, headline (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue, no_items, future_items, dupes, over_cap",
+     "output": "gate → decide in code",
+     "output_detail": "review floor 0.40"
+    }
+   }
   },
   {
    "key": "F",
@@ -1871,7 +2297,93 @@
     "COST",
     "abstain",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "items",
+     "thesis"
+    ],
+    "excerpt": "items[0].text",
+    "state_fields": [
+     "symbol",
+     "items",
+     "thesis"
+    ],
+    "questions": [
+     {
+      "id": "best",
+      "type": "choice",
+      "short": "best",
+      "text": "Which company in `items` best fits `thesis`?",
+      "options": [
+       "VRT",
+       "KO",
+       "PEP",
+       "none"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "pick",
+      "meaning": "the outcome is the picked item id",
+      "when": [],
+      "more": 0,
+      "stages": [],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope",
+       "an item is published after the data cutoff",
+       "duplicate item ids: rejected in code",
+       "more than 40 items in one batch: split in code"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "=best.choice",
+      "meaning": "=best.choice",
+      "when": [
+       "otherwise"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "__abstain__",
+      "meaning": "abstain: no outcome, a person reviews",
+      "when": [
+       "no items: missing evidence stays unresolved",
+       "best = none",
+       "best conf < 0.40"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, items, thesis (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue, no_items, future_items, dupes, over_cap",
+     "output": "gate → decide in code",
+     "output_detail": "review floor 0.40"
+    }
+   }
   }
  ]
 }

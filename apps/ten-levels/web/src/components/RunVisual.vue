@@ -3,6 +3,8 @@ import { computed, onBeforeUnmount, ref, watch } from "vue";
 import { ANIM, C, W, H, heroInner } from "../lib/hero-scenes.mjs";
 import type { StreamEvent } from "../lib/api";
 import { signal } from "../lib/viz";
+import type { OptionMeta } from "../lib/api";
+import { ABSTAIN_ID, compact, outcomeIndex, tradingAnim, tradingScene } from "../lib/trading-scene";
 
 /**
  * The run, animated on the level's hero. Consumes the SSE events as they arrive and
@@ -12,12 +14,33 @@ import { signal } from "../lib/viz";
  *   response  the packet travels to the outcome, which lights in the answer's bucket color
  *   done      View Results closes the modal; the results are already on the page below
  */
-const props = defineProps<{ n: number; title: string; option: string; events: StreamEvent[]; finished: boolean }>();
+const props = defineProps<{
+  n: number; title: string; option: string; events: StreamEvent[]; finished: boolean;
+  /** Patch 0011: the option's metadata, the current input set and its name (C1, C2, ...). */
+  meta?: OptionMeta; input?: Record<string, unknown>; setName?: string;
+}>();
 const emit = defineEmits<{ close: [] }>();
 
-const anim = computed(() => (ANIM as any)[props.n]);
+/** Patch 0011: spec-backed options draw a scene from their exported `visual` block; upstream originals keep the hero. */
+const visual = computed<any>(() => (props.meta && !props.meta.original ? (props.meta as any).visual : undefined));
+const anim = computed(() => (visual.value ? tradingAnim(visual.value) : (ANIM as any)[props.n]));
+/** The questions as sent (from the request event); before the first request, the exported preview. */
+const sentQuestions = ref<Record<string, any> | null>(null);
+const fed = computed(() => {
+  const v = visual.value;
+  if (!v) return null;
+  const inp = props.input ?? {};
+  const fields = (v.fed as string[]).map((f) => ({ f, v: compact(inp[f]) })).filter((x) => x.v !== "");
+  const qs = sentQuestions.value
+    ? Object.entries(sentQuestions.value).map(([id, q]: [string, any]) => ({ id, type: q.type, text: q.instructions, options: q.type === "noul" ? [] : Object.keys(q.criteria ?? {}) }))
+    : (v.questions as any[]).map((q) => ({ id: q.id, type: q.type, text: q.text, options: q.type === "noul" ? [] : q.options }));
+  return { fields, qs, sent: !!sentQuestions.value };
+});
+/** Answers written inside the decision node, one line per question. */
+const answerLines = ref<{ text: string; color: string }[]>([]);
 /** The hero markup, minus any element the animation replaces (listed in the spec's `strip`). */
 const hero = computed(() => {
+  if (visual.value) return tradingScene(visual.value, props.input ?? {}, props.setName ?? "");
   let svg = heroInner(props.n, { lit: false }); // nothing lit until Jev answers
   for (const needle of anim.value?.strip ?? []) {
     svg = svg.replace(new RegExp(`<(?:path|circle|rect)[^>]*${needle.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}[^>]*/>`), "");
@@ -94,6 +117,7 @@ async function step(e: StreamEvent) {
   const d = e.data;
   if (e.event === "request") {
     lastQuestions = d.questions ?? {};
+    sentQuestions.value = d.questions ?? null;
     calls.value++;
     status.value = calls.value === 1 ? "Sending the state to Jev" : `Call ${calls.value}: sending the state to Jev`;
     phase.value = "request";
@@ -111,6 +135,17 @@ async function step(e: StreamEvent) {
     litColor.value = answerColor.value;
     status.value = `Jev answered in ${d.result.meta.elapsedMs} ms`;
     phase.value = "response";
+    if (visual.value) {
+      // Patch 0011: answers go inside the decision node; the branch lights when the policy event names the outcome.
+      answerLines.value = (Object.entries(d.result.answers) as [string, any][]).slice(0, 3).map(([qid, a]) => {
+        const p = a.type === "noul" ? a.noul : a.confidence;
+        const pick = a.type === "noul" ? (a.noul > 0.5 ? "yes" : "no") : a.type === "choice" ? a.choice : `${a.score.toFixed(1)}`;
+        return { text: `${pick} ${Number(p).toFixed(2)}`, color: bucketColor(signal(qid, a)) };
+      });
+      answerLabel.value = "";
+      status.value = `Jev answered in ${d.result.meta.elapsedMs} ms; the policy runs in code`;
+      return;
+    }
     if (spec.rows) {
       // One question per row: travel to the row, then light the box of the option it picked.
       const entries = Object.entries(d.result.answers) as [string, any][];
@@ -146,8 +181,20 @@ async function step(e: StreamEvent) {
     }
     light(idx);
     phase.value = "thinking";
+  } else if (e.event === "policy" && visual.value) {
+    const idx = outcomeIndex(visual.value, d);
+    if (idx < 0) {
+      status.value = d.offline ? "Policy engine not available here: no branch lit (the outcome needs the decisions service)" : "No outcome";
+      return;
+    }
+    litColor.value = d.status === "abstained" || visual.value.outcomes[idx].id === ABSTAIN_ID ? C.warn
+      : visual.value.outcomes[idx].code_only ? C.bad : C.accent;
+    await travel(spec.responses[idx], 700);
+    light(idx);
+    const o = visual.value.outcomes[idx];
+    status.value = `Outcome ${o.id === ABSTAIN_ID ? "abstain" : o.id}${d.rule ? ` by rule ${d.rule}` : ""} (${d.status ?? "policy"})`;
   } else if (e.event === "decision") {
-    if (spec.rows) return; // the picks are already on the boxes
+    if (spec.rows || visual.value) return; // the picks are already on the boxes
     const out = d.output;
     const idx = spec.pick(out, lastAnswer);
     if (idx !== undefined) light(idx);
@@ -232,6 +279,8 @@ function reset() {
   labelBelow.value = false;
   boxColor.value = {};
   boxLabel.value = [];
+  answerLines.value = [];
+  sentQuestions.value = null;
   cursor = 0;
   lastAnswer = null;
 }
@@ -260,13 +309,24 @@ const labelPos = computed(() => {
       <div class="modal-head">
         <div>
           <div class="lvl">Level {{ n }}</div>
-          <h2>{{ title }}<span class="meta-inline">Option {{ option }}</span></h2>
+          <h2>{{ title }}<span class="meta-inline">Option {{ option }}{{ visual && meta ? ` · ${meta.catalog_id ?? ""} ${meta.name}` : "" }}</span></h2>
         </div>
         <span class="spacer"></span>
         <button class="ghost" @click="emit('close')">Close</button>
       </div>
 
-      <div class="scene-wrap">
+      <div v-if="fed" class="fed" data-testid="fed-panel">
+        <div class="fed-head"><b>What Jev was fed</b><span class="meta-inline">Set {{ setName }}</span></div>
+        <div class="fed-fields">
+          <span v-for="x in fed.fields" :key="x.f" class="fed-field"><b>{{ x.f }}</b> {{ x.v }}</span>
+        </div>
+        <div class="fed-head sub">{{ fed.sent ? "Questions sent" : "Questions (sent on Run)" }}</div>
+        <div v-for="q in fed.qs" :key="q.id" class="fed-q">
+          <b>{{ q.id }}</b> <span class="meta-inline">{{ q.type }}</span> {{ q.text }}<span v-if="q.options.length" class="fed-opts"> [{{ q.options.slice(0, 8).join(" / ") }}{{ q.options.length > 8 ? " / …" : "" }}]</span>
+        </div>
+      </div>
+
+      <div class="scene-wrap" :class="{ compact: !!fed }">
       <svg class="scene" :viewBox="`0 0 ${W} ${H}`" v-html="hero"></svg>
       <svg class="scene overlay" :viewBox="`0 0 ${W} ${H}`">
         <defs>
@@ -301,6 +361,9 @@ const labelPos = computed(() => {
           <animateMotion :path="packetPath" dur="0.7s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" keyTimes="0;1"/>
         </circle>
 
+        <template v-if="visual">
+          <text v-for="(l, i) in answerLines" :key="'a' + i" :x="anim.jev.x" :y="anim.jev.y + 30 + i * 30" text-anchor="middle" font-size="26" font-weight="700" :fill="l.color" class="ui-text">{{ l.text }}</text>
+        </template>
         <text v-if="phase === 'thinking'" :x="labelPos.x" :y="labelPos.y" text-anchor="middle" font-size="34" font-weight="700" :fill="C.accent" class="ui-text">
           Jev {{ elapsed }} ms
         </text>

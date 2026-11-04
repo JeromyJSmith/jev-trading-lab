@@ -192,7 +192,131 @@
     "grade_c",
     "grade_a",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "published_at",
+     "headline",
+     "body",
+     "source"
+    ],
+    "excerpt": "headline",
+    "state_fields": [
+     "symbol",
+     "headline",
+     "body"
+    ],
+    "questions": [
+     {
+      "id": "novelty",
+      "type": "score",
+      "short": "novelty",
+      "text": "How new is the information in `headline` for `symbol` (vs already known/expected)?",
+      "options": [
+       "already known",
+       "partly new",
+       "mostly new",
+       "complete surprise"
+      ]
+     },
+     {
+      "id": "magnitude",
+      "type": "score",
+      "short": "magnitude",
+      "text": "How large is the likely effect on `symbol`'s revenue or valuation?",
+      "options": [
+       "negligible",
+       "small",
+       "material",
+       "transformational"
+      ]
+     },
+     {
+      "id": "credibility",
+      "type": "score",
+      "short": "credibility",
+      "text": "How credible is the source and wording?",
+      "options": [
+       "rumour or promo",
+       "unnamed sources",
+       "named outlet",
+       "company filing or press release"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "grade_a",
+      "meaning": "A catalyst: would size normally",
+      "when": [
+       "weighted ≥ 0.75"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "grade_b",
+      "meaning": "B catalyst: would size half",
+      "when": [
+       "weighted ≥ 0.50"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "grade_c",
+      "meaning": "C: would not trade the catalyst",
+      "when": [
+       "otherwise: below every band"
+      ],
+      "more": 0,
+      "stages": [
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope",
+       "published_at is after the data cutoff (no future data in replay)"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "__abstain__",
+      "meaning": "abstain: no outcome, a person reviews",
+      "when": [
+       "novelty conf < 0.40 or magnitude conf < 0.40 or credibility conf < 0.…"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, headline, body (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue, future_data",
+     "output": "gate → decide in code",
+     "output_detail": "review floor 0.40 · w novelty 0.30 · w magnitude 0.50"
+    }
+   }
   },
   {
    "key": "B",
@@ -380,7 +504,140 @@
     "review",
     "pass",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "thesis",
+     "plan"
+    ],
+    "excerpt": "plan",
+    "state_fields": [
+     "symbol",
+     "thesis",
+     "plan"
+    ],
+    "questions": [
+     {
+      "id": "clarity",
+      "type": "score",
+      "short": "clarity",
+      "text": "How clear and falsifiable is `thesis`?",
+      "options": [
+       "none",
+       "low",
+       "medium",
+       "high"
+      ]
+     },
+     {
+      "id": "edge",
+      "type": "score",
+      "short": "edge",
+      "text": "How specific is the edge (why others are wrong)?",
+      "options": [
+       "none",
+       "low",
+       "medium",
+       "high"
+      ]
+     },
+     {
+      "id": "risk",
+      "type": "score",
+      "short": "risk",
+      "text": "How well does `plan` define entry, stop and size?",
+      "options": [
+       "none",
+       "low",
+       "medium",
+       "high"
+      ]
+     },
+     {
+      "id": "timing",
+      "type": "score",
+      "short": "timing",
+      "text": "How well defined is the catalyst or time window?",
+      "options": [
+       "none",
+       "low",
+       "medium",
+       "high"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "review",
+      "meaning": "would send to the human review queue",
+      "when": [
+       "weighted ≥ 0.70"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "watch",
+      "meaning": "would keep on the idea list",
+      "when": [
+       "weighted ≥ 0.45"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "pass",
+      "meaning": "would drop the idea",
+      "when": [
+       "otherwise: below every band"
+      ],
+      "more": 0,
+      "stages": [
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "__abstain__",
+      "meaning": "abstain: no outcome, a person reviews",
+      "when": [
+       "clarity conf < 0.40 or edge conf < 0.40 or risk conf < 0.40 or timing…"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, thesis, plan (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue",
+     "output": "gate → decide in code",
+     "output_detail": "review floor 0.40 · w clarity 0.30 · w edge 0.25"
+    }
+   }
   },
   {
    "key": "C",
@@ -583,7 +840,143 @@
     "drift_candidate",
     "fade_candidate",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "published_at",
+     "headline",
+     "body",
+     "source"
+    ],
+    "excerpt": "headline",
+    "state_fields": [
+     "symbol",
+     "headline",
+     "body"
+    ],
+    "questions": [
+     {
+      "id": "revenue",
+      "type": "score",
+      "short": "revenue",
+      "text": "How strong and organic is the revenue line in `headline`/`body`?",
+      "options": [
+       "none",
+       "low",
+       "medium",
+       "high"
+      ]
+     },
+     {
+      "id": "margins",
+      "type": "score",
+      "short": "margins",
+      "text": "How did margins move?",
+      "options": [
+       "contracted sharply",
+       "contracted",
+       "stable",
+       "expanded"
+      ]
+     },
+     {
+      "id": "guidance",
+      "type": "score",
+      "short": "guidance",
+      "text": "How strong is forward guidance?",
+      "options": [
+       "cut or withdrawn",
+       "maintained",
+       "raised slightly",
+       "raised clearly"
+      ]
+     },
+     {
+      "id": "clean",
+      "type": "score",
+      "short": "clean",
+      "text": "How free of one-offs (tax gains, asset sales, adjusted add-backs) is the beat?",
+      "options": [
+       "mostly one-offs",
+       "some one-offs",
+       "few",
+       "clean"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "drift_candidate",
+      "meaning": "would add to post-earnings drift watch",
+      "when": [
+       "weighted ≥ 0.70"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "neutral",
+      "meaning": "no bias",
+      "when": [
+       "weighted ≥ 0.40"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "fade_candidate",
+      "meaning": "would add to fade/avoid list",
+      "when": [
+       "otherwise: below every band"
+      ],
+      "more": 0,
+      "stages": [
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope",
+       "published_at is after the data cutoff (no future data in replay)"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "__abstain__",
+      "meaning": "abstain: no outcome, a person reviews",
+      "when": [
+       "revenue conf < 0.40 or margins conf < 0.40 or guidance conf < 0.40 or…"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, headline, body (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue, future_data",
+     "output": "gate → decide in code",
+     "output_detail": "review floor 0.40 · w revenue 0.30 · w margins 0.25"
+    }
+   }
   },
   {
    "key": "D",
@@ -763,7 +1156,130 @@
     "credible",
     "abstain",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "venue",
+     "data_cutoff",
+     "strategy",
+     "report",
+     "trades",
+     "oos_sharpe"
+    ],
+    "excerpt": "report",
+    "state_fields": [
+     "strategy",
+     "report"
+    ],
+    "questions": [
+     {
+      "id": "overfit",
+      "type": "score",
+      "short": "overfit",
+      "text": "How free of overfitting signs (many params, cherry-picked window, curve-fit) is `report`?",
+      "options": [
+       "clearly overfit",
+       "suspicious",
+       "some care",
+       "robust"
+      ]
+     },
+     {
+      "id": "oos",
+      "type": "score",
+      "short": "oos",
+      "text": "How strong is the out-of-sample or walk-forward evidence in `report`?",
+      "options": [
+       "none",
+       "weak",
+       "decent",
+       "strong"
+      ]
+     },
+     {
+      "id": "costs",
+      "type": "score",
+      "short": "costs",
+      "text": "How realistic are commissions, slippage and borrow assumptions?",
+      "options": [
+       "ignored",
+       "optimistic",
+       "reasonable",
+       "conservative"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "credible",
+      "meaning": "would send to paper forward test (human approves promotion)",
+      "when": [
+       "weighted ≥ 0.70"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "needs_work",
+      "meaning": "would return to research",
+      "when": [
+       "weighted ≥ 0.40"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "reject",
+      "meaning": "would archive",
+      "when": [
+       "otherwise: below every band"
+      ],
+      "more": 0,
+      "stages": [
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope",
+       "cutoff after the replay window"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "__abstain__",
+      "meaning": "abstain: no outcome, a person reviews",
+      "when": [
+       "fewer than 30 trades: too small a sample, no call",
+       "overfit conf < 0.40 or oos conf < 0.40 or costs conf < 0.40"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from strategy, report (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue, too_few_trades, future_report",
+     "output": "gate → decide in code",
+     "output_detail": "review floor 0.40 · w overfit 0.40 · w oos 0.40"
+    }
+   }
   },
   {
    "key": "E",
@@ -956,7 +1472,132 @@
     "neutral",
     "bearish",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "symbol",
+     "venue",
+     "data_cutoff",
+     "published_at",
+     "headline",
+     "body",
+     "source"
+    ],
+    "excerpt": "headline",
+    "state_fields": [
+     "symbol",
+     "headline",
+     "body"
+    ],
+    "questions": [
+     {
+      "id": "tone",
+      "type": "score",
+      "short": "tone",
+      "text": "How negative or positive is `headline` for `symbol`?",
+      "options": [
+       "very negative",
+       "negative",
+       "neutral",
+       "positive",
+       "very positive"
+      ]
+     },
+     {
+      "id": "specific",
+      "type": "score",
+      "short": "specific",
+      "text": "How specific is it (numbers, dates, named parties)?",
+      "options": [
+       "none",
+       "low",
+       "medium",
+       "high"
+      ]
+     },
+     {
+      "id": "reliable",
+      "type": "score",
+      "short": "reliable",
+      "text": "How reliable is the source?",
+      "options": [
+       "anonymous or promo",
+       "secondary",
+       "major outlet",
+       "primary (filing, company)"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "bullish",
+      "meaning": "bullish sentiment tag",
+      "when": [
+       "weighted ≥ 0.75"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "neutral",
+      "meaning": "neutral tag",
+      "when": [
+       "weighted ≥ 0.45"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "bearish",
+      "meaning": "bearish sentiment tag (held names go to review)",
+      "when": [
+       "otherwise: below every band"
+      ],
+      "more": 0,
+      "stages": [
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "venue is not NYSE or Nasdaq: out of scope",
+       "published_at is after the data cutoff (no future data in replay)"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "__abstain__",
+      "meaning": "abstain: no outcome, a person reviews",
+      "when": [
+       "tone conf < 0.40 or specific conf < 0.40 or reliable conf < 0.40"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from symbol, headline, body (data ≤ data_cutoff)",
+     "guards": "guards in code first: venue, future_data",
+     "output": "gate → decide in code",
+     "output_detail": "review floor 0.40 · w tone 0.50 · w specific 0.25"
+    }
+   }
   },
   {
    "key": "F",
@@ -1118,7 +1759,127 @@
     "reduce_risk",
     "abstain",
     "abstain"
-   ]
+   ],
+   "visual": {
+    "fed": [
+     "account",
+     "data_cutoff",
+     "book",
+     "gross_exposure_pct"
+    ],
+    "excerpt": "book",
+    "state_fields": [
+     "book"
+    ],
+    "questions": [
+     {
+      "id": "concentration",
+      "type": "score",
+      "short": "concentration",
+      "text": "How concentrated is `book` in a single name or theme?",
+      "options": [
+       "well spread",
+       "some",
+       "high",
+       "extreme"
+      ]
+     },
+     {
+      "id": "correlation",
+      "type": "score",
+      "short": "correlation",
+      "text": "How correlated are the positions (same factor, sector, beta)?",
+      "options": [
+       "diversified",
+       "some overlap",
+       "high",
+       "one bet"
+      ]
+     },
+     {
+      "id": "events",
+      "type": "score",
+      "short": "events",
+      "text": "How many positions face a binary event (earnings, FDA, court) in the next 5 days?",
+      "options": [
+       "none",
+       "one",
+       "several",
+       "most"
+      ]
+     }
+    ],
+    "outcomes": [
+     {
+      "id": "reduce_risk",
+      "meaning": "would ask a human to cut risk before new trades",
+      "when": [
+       "weighted ≥ 0.60"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "trim_review",
+      "meaning": "would flag for trim review",
+      "when": [
+       "weighted ≥ 0.35"
+      ],
+      "more": 0,
+      "stages": [
+       "decide"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "ok",
+      "meaning": "within risk appetite",
+      "when": [
+       "otherwise: below every band"
+      ],
+      "more": 0,
+      "stages": [
+       "default"
+      ],
+      "code_only": false
+     },
+     {
+      "id": "rejected_input",
+      "meaning": "rejected in code before any Jev call (non NYSE/Nasdaq venue, future data, or bad input)",
+      "when": [
+       "paper accounts only",
+       "venue is not NYSE or Nasdaq: out of scope"
+      ],
+      "more": 0,
+      "stages": [
+       "guard"
+      ],
+      "code_only": true
+     },
+     {
+      "id": "__abstain__",
+      "meaning": "abstain: no outcome, a person reviews",
+      "when": [
+       "gross exposure > 150%: blocked in code, a human must cut",
+       "concentration conf < 0.40 or correlation conf < 0.40 or events conf <…"
+      ],
+      "more": 0,
+      "stages": [
+       "gate"
+      ],
+      "code_only": false
+     }
+    ],
+    "arrows": {
+     "input": "state built from book (data ≤ data_cutoff)",
+     "guards": "guards in code first: paper_only, venue, gross_cap",
+     "output": "gate → decide in code",
+     "output_detail": "review floor 0.40 · w concentration 0.40 · w correlation 0.35"
+    }
+   }
   }
  ]
 }
