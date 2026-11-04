@@ -5,7 +5,7 @@ import { visual } from "../lib/store";
 
 <template>
   <nav class="nav">
-    <RouterLink class="brand" to="/"><img class="logo" :src="`${base}logo.svg`" alt="10J" width="54" height="36" /><span>10 Levels of <b>Jev</b></span></RouterLink>
+    <RouterLink class="brand" to="/"><img class="logo" :src="`${base}logo.svg`" alt="JTL" width="54" height="36" /><span>Jev <b>Trading Lab</b></span></RouterLink>
     <span class="spacer"></span>
     <label class="toggle" :class="{ on: visual }">
       <input v-model="visual" type="checkbox" />
