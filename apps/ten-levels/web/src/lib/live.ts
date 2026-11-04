@@ -17,6 +17,10 @@ export interface LiveControls {
   run: () => void;
   reset: () => void;
   selectSet: (i: number) => void;
+  /** Patch 0015: the run produced something to show; the nav Results toggle opens the floating panel. */
+  hasResults: boolean;
+  resultsOpen: boolean;
+  toggleResults: () => void;
 }
 
 export const live = reactive<{ controls: LiveControls | null; autorun: boolean }>({ controls: null, autorun: false });

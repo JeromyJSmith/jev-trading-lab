@@ -25,6 +25,15 @@ import { live } from "../lib/live";
       Visual
     </label>
     <template v-if="live.controls && !live.controls.agent">
+      <button
+        class="ghost nav-btn"
+        :class="{ on: live.controls.resultsOpen }"
+        :disabled="!live.controls.hasResults"
+        :aria-pressed="live.controls.resultsOpen"
+        title="Show the last run's results in a floating panel"
+        data-testid="nav-results"
+        @click="live.controls.toggleResults()"
+      >Results</button>
       <button class="ghost nav-btn" :disabled="live.controls.running" data-testid="reset" @click="live.controls.reset()">Reset</button>
       <button
         class="run nav-btn"

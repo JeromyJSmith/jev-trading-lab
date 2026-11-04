@@ -10,6 +10,8 @@ import SchemaForm from "./SchemaForm.vue";
 import CodeView from "./CodeView.vue";
 import CostTable from "./CostTable.vue";
 import RunVisual from "./RunVisual.vue";
+import ResultsBody from "./ResultsBody.vue";
+import ResultsOverlay from "./ResultsOverlay.vue";
 import AgentChat from "./AgentChat.vue";
 import { visual } from "../lib/store";
 import type { StreamEvent } from "../lib/api";
@@ -90,9 +92,10 @@ async function checkInputs() {
   }
 }
 watch(input, () => { clearTimeout(checkTimer); checkTimer = setTimeout(checkInputs, 250); }, { deep: true });
-const PILL: Record<string, string> = { pass: "ok", fail: "bad", abstain: "warn" };
+/** Patch 0015: the floating Results panel (View Results in the run modal, Results in the nav bar). */
+const resultsOpen = ref(false);
+const hasResults = computed(() => !!(answersHtml.value || policy.value || errorText.value || staticNote.value || (build.value && build.value.state)));
 const calls = ref(0);
-const vizEl = ref<HTMLDivElement | null>(null);
 
 function resetOutputs() {
   status.value = "Waiting for Run live";
@@ -109,10 +112,7 @@ function resetOutputs() {
   policy.value = null;
   build.value = null;
   staticNote.value = null;
-  if (vizEl.value) {
-    vizEl.value.innerHTML = "";
-    vizEl.value.classList.remove("on");
-  }
+  resultsOpen.value = false;
 }
 
 watch(
@@ -136,6 +136,9 @@ const controls = reactive({
   runLabel,
   run: () => { if (!running.value && !needsData.value && !props.agent) void run(); },
   reset: () => { if (!running.value) resetExample(); },
+  hasResults,
+  resultsOpen,
+  toggleResults: () => { resultsOpen.value = !resultsOpen.value && hasResults.value; },
   selectSet: (i: number) => { if (running.value) return; loadSet(i); if (!props.agent && !needsData.value) void run(); },
 });
 live.controls = controls;
@@ -240,8 +243,13 @@ async function run() {
       :events="visualEvents"
       :finished="visualDone"
       @close="visualOpen = false"
+      @results="resultsOpen = true"
     />
-    <div class="section-head">
+    <ResultsOverlay v-if="resultsOpen && hasResults && !agent" :title="`Set ${option.key}${setIndex + 1} · ${option.catalog_id ?? ''} ${option.name}`" @close="resultsOpen = false">
+      <ResultsBody panel :status="status" :static-note="staticNote" :answers-html="answersHtml" :policy="policy" :error-text="errorText" :calls="calls"
+        :sent-html="sentHtml" :received-html="receivedHtml" :build="build" />
+    </ResultsOverlay>
+    <div class="section-head live-head" data-testid="live-example-head">
       <h2>Live Example</h2>
       <span class="meta">Option {{ option.key }}, {{ option.name }}</span>
       <span class="spacer"></span>
@@ -321,28 +329,7 @@ async function run() {
 
       <section class="glass">
         <h3>Outputs</h3>
-        <div class="meta">{{ status }}</div>
-        <div v-if="staticNote" class="lane" data-testid="static-note"><span class="pill" :class="staticNote.source === 'recorded' ? 'ok' : 'warn'">{{ staticNote.source === "recorded" ? "recorded" : "run locally" }}</span><span>{{ staticNote.label }}</span></div>
-        <div ref="vizEl" class="viz-slot"></div>
-        <template v-if="answersHtml">
-          <h4>Answers</h4>
-          <div v-html="answersHtml"></div>
-        </template>
-        <template v-if="policy">
-          <h4>Policy<span class="meta-inline">{{ policy.decision }}{{ policy.version ? ` v${policy.version}` : "" }}</span></h4>
-          <div v-if="policy.static_unavailable" class="lane"><span class="pill warn">demo</span><span>policy engine not available in demo (edited inputs); review floor gate shown instead</span></div>
-          <div v-else-if="policy.offline" class="lane"><span class="pill warn">offline</span><span>policy engine offline, review floor gate shown instead</span></div>
-          <template v-else>
-            <div v-if="policy.static_policy_note" class="meta">{{ policy.static_policy_note }}</div>
-            <div class="meta">decisions service, inputs from {{ policy.inputs_source === "request" ? "the form" : policy.inputs_source }}{{ policy.state_matches === false ? ", WARNING: state differs from the one built from the inputs" : "" }}</div>
-            <div v-for="s in policy.steps" :key="s.stage + s.id" class="lane" :class="{ chosen: s.id === policy.rule }">
-              <span class="dot"></span><span class="pill" :class="PILL[s.verdict]">{{ s.verdict }}</span>
-              <span><b>{{ s.stage }}</b> {{ s.id }}: {{ s.reason }}</span>
-            </div>
-            <div class="vbox"><span class="pill" :class="policy.status === 'completed' ? 'ok' : policy.status === 'abstained' ? 'warn' : 'bad'">{{ policy.status }}</span> <b>outcome {{ policy.outcome ?? "none" }}</b> by rule {{ policy.rule }}</div>
-          </template>
-        </template>
-        <pre v-if="errorText" class="code">{{ errorText }}</pre>
+        <ResultsBody :status="status" :static-note="staticNote" :answers-html="answersHtml" :policy="policy" :error-text="errorText" :calls="calls" />
         <template v-if="receivedHtml">
           <h4>Received<span v-if="calls > 1" class="meta-inline">call {{ calls }}</span></h4>
           <div class="meta">The response body</div>

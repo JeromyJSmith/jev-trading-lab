@@ -12,14 +12,14 @@ import { ABSTAIN_ID, compact, outcomeIndex, tradingAnim, tradingScene } from "..
  *   request   a packet travels from the input to the Jev node
  *   thinking  the Jev node pulses until the answer lands, elapsed time ticking
  *   response  the packet travels to the outcome, which lights in the answer's bucket color
- *   done      View Results closes the modal; the results are already on the page below
+ *   done      View Results opens the floating Results panel over the modal (patch 0015); the diagram stays open
  */
 const props = defineProps<{
   n: number; title: string; option: string; events: StreamEvent[]; finished: boolean;
   /** Patch 0011: the option's metadata, the current input set and its name (C1, C2, ...). */
   meta?: OptionMeta; input?: Record<string, unknown>; setName?: string;
 }>();
-const emit = defineEmits<{ close: [] }>();
+const emit = defineEmits<{ close: []; results: [] }>();
 
 /** Patch 0011: spec-backed options draw a scene from their exported `visual` block; upstream originals keep the hero. */
 const visual = computed<any>(() => (props.meta && !props.meta.original ? (props.meta as any).visual : undefined));
@@ -379,7 +379,7 @@ const labelPos = computed(() => {
       <div class="modal-foot">
         <span class="status" :class="{ done: phase === 'done' }">{{ status }}</span>
         <span class="spacer"></span>
-        <button class="run" :disabled="phase !== 'done'" @click="emit('close')">View Results</button>
+        <button class="run" :disabled="phase !== 'done'" data-testid="view-results" @click="emit('results')">View Results</button>
       </div>
     </div>
   </div>
